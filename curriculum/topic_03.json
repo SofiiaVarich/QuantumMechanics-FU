@@ -1,0 +1,20 @@
+{
+  "number": 3,
+  "title": "Stefan–Boltzmann law",
+  "title_de": "Stefan–Boltzmann-Gesetz",
+  "professor": "Franke",
+  "date": "05.11.2026",
+  "terms": [],
+  "formulas": [
+    {
+      "id": "c3-stefan-boltzmann",
+      "name": "Stefan–Boltzmann law",
+      "name_de": "Stefan–Boltzmann-Gesetz",
+      "equation": "M = σT⁴",
+      "symbols": {"M": "radiant exitance (emitted power per unit area)", "σ": "Stefan–Boltzmann constant", "T": "absolute temperature"},
+      "when_to_use": "To find the total thermal power emitted per unit area by an ideal blackbody.",
+      "assumptions": ["Ideal blackbody", "Absolute temperature in kelvin"],
+      "common_mistakes": ["Using Celsius instead of kelvin", "Forgetting the fourth power"]
+    }
+  ]
+}

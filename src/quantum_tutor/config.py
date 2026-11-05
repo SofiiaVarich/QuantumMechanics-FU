@@ -12,7 +12,7 @@ class Settings:
     telegram_token: str
     database_path: Path
     curriculum_path: Path
-    allowed_user_id: int
+    allowed_user_ids: tuple[int, ...]
     timezone: str
     reminder_times: str
 
@@ -22,18 +22,26 @@ class Settings:
         token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
         if not token:
             raise RuntimeError("TELEGRAM_BOT_TOKEN is missing. Copy .env.example to .env and set it.")
-        user_id = os.getenv("TELEGRAM_ALLOWED_USER_ID", "").strip()
-        if not user_id:
-            raise RuntimeError("TELEGRAM_ALLOWED_USER_ID is missing from .env")
+        user_ids = os.getenv("TELEGRAM_ALLOWED_USER_IDS", "").strip()
+        if not user_ids:
+            user_ids = os.getenv("TELEGRAM_ALLOWED_USER_ID", "").strip()
+        if not user_ids:
+            raise RuntimeError("TELEGRAM_ALLOWED_USER_IDS is missing from .env")
         try:
-            allowed_user_id = int(user_id)
+            allowed_user_ids = tuple(
+                int(value.strip()) for value in user_ids.split(",") if value.strip()
+            )
         except ValueError as error:
-            raise RuntimeError("TELEGRAM_ALLOWED_USER_ID must be a numeric Telegram user ID") from error
+            raise RuntimeError(
+                "TELEGRAM_ALLOWED_USER_IDS must contain comma-separated numeric IDs"
+            ) from error
+        if not allowed_user_ids:
+            raise RuntimeError("At least one Telegram user ID is required")
         return cls(
             telegram_token=token,
             database_path=Path(os.getenv("DATABASE_PATH", "quantum_tutor.db")),
             curriculum_path=Path(os.getenv("CURRICULUM_PATH", "curriculum")),
-            allowed_user_id=allowed_user_id,
+            allowed_user_ids=allowed_user_ids,
             timezone=os.getenv("TZ", "Europe/Berlin"),
             reminder_times=os.getenv("REMINDER_TIMES", "05:30,20:00"),
         )

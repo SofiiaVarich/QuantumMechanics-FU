@@ -1,1 +1,39 @@
-{"number":4,"title":"Density operators","title_de":"Dichteoperatoren","source_url":"https://www.physik.fu-berlin.de/","terms":[],"formulas":[]}
+{
+  "number": 4,
+  "title": "Density operators",
+  "title_de": "Dichteoperatoren",
+  "source_url": "https://www.physik.fu-berlin.de/",
+  "terms": [],
+  "formulas": [
+    {
+      "id": "c4-pure-state-condition",
+      "name": "Pure state condition",
+      "name_de": "Bedingung für reine Zustände",
+      "equation": "Tr(ρ²) = 1",
+      "symbols": {"ρ": "density operator", "Tr": "trace"},
+      "when_to_use": "To check if a quantum state represented by a density matrix is pure.",
+      "assumptions": ["ρ is a valid density operator"],
+      "common_mistakes": ["Using Tr(ρ) instead of Tr(ρ²)"]
+    },
+    {
+      "id": "c4-mixed-state-condition",
+      "name": "Mixed state condition",
+      "name_de": "Bedingung für gemischte Zustände",
+      "equation": "Tr(ρ²) < 1",
+      "symbols": {"ρ": "density operator", "Tr": "trace"},
+      "when_to_use": "To determine if a quantum state is a statistical mixture of states.",
+      "assumptions": ["ρ is a valid density operator"],
+      "common_mistakes": ["Forgetting that Tr(ρ) is always 1"]
+    },
+    {
+      "id": "c4-expectation-value",
+      "name": "Expectation value (density operator)",
+      "name_de": "Erwartungswert (Dichteoperator)",
+      "equation": "⟨A⟩ = Tr(ρA)",
+      "symbols": {"A": "observable operator", "ρ": "density operator"},
+      "when_to_use": "To calculate the average outcome of measuring an observable A on state ρ.",
+      "assumptions": ["A is a self-adjoint operator"],
+      "common_mistakes": ["Using ρA instead of its trace"]
+    }
+  ]
+}

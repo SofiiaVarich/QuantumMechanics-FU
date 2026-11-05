@@ -4,18 +4,20 @@ import logging
 from datetime import time
 from zoneinfo import ZoneInfo
 
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+from telegram import KeyboardButton, ReplyKeyboardMarkup
 from telegram.ext import Application
 
 logger = logging.getLogger(__name__)
 
-REMINDER_MENU = InlineKeyboardMarkup([
+REMINDER_MENU = ReplyKeyboardMarkup(
     [
-        InlineKeyboardButton("📚 Study terms", callback_data="menu:terms"),
-        InlineKeyboardButton("🧮 Practice formulas", callback_data="menu:formulas"),
+        [KeyboardButton("🎯 Learn")],
+        [KeyboardButton("⚖️ Laws & Rules"), KeyboardButton("🧮 Formulas")],
+        [KeyboardButton("🔁 Review"), KeyboardButton("📈 Progress")],
     ],
-    [InlineKeyboardButton("📈 Show progress", callback_data="menu:progress")],
-])
+    resize_keyboard=True,
+    is_persistent=True,
+)
 
 
 def parse_reminder_times(value: str) -> tuple[time, ...]:
@@ -54,7 +56,7 @@ def schedule_reminders(
             time=localized_time,
             chat_id=user_id,
             user_id=user_id,
-            name=f"study-reminder-{reminder_time.strftime('%H%M')}",
+            name=f"study-reminder-{user_id}-{reminder_time.strftime('%H%M')}",
         )
         logger.info("Scheduled study reminder at %s %s", reminder_time.strftime("%H:%M"), timezone_name)
 

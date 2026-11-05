@@ -30,7 +30,9 @@ class Chapter:
     number: int
     title: str
     title_de: str
-    source_url: str
+    professor: str
+    date: str | None = None
+    source_url: str = ""
     terms: tuple[Term, ...] = ()
     formulas: tuple[Formula, ...] = ()
 
@@ -40,6 +42,8 @@ class Chapter:
             number=data["number"],
             title=data["title"],
             title_de=data.get("title_de", data["title"]),
+            professor=data.get("professor", "Eisert"),
+            date=data.get("date"),
             source_url=data.get("source_url", ""),
             terms=tuple(Term(**item) for item in data.get("terms", [])),
             formulas=tuple(Formula(**item) for item in data.get("formulas", [])),

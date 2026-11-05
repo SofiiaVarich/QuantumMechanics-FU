@@ -1,0 +1,20 @@
+{
+  "number": 5,
+  "title": "Compton effect",
+  "title_de": "Compton-Effekt",
+  "professor": "Franke",
+  "date": "10.11.2026",
+  "terms": [],
+  "formulas": [
+    {
+      "id": "c5-compton",
+      "name": "Compton shift relation",
+      "name_de": "Compton-Verschiebung",
+      "equation": "Δλ = h/(mₑc) · (1 − cos θ)",
+      "symbols": {"Δλ": "wavelength shift", "mₑ": "electron mass", "θ": "photon scattering angle"},
+      "when_to_use": "To calculate the wavelength change of a photon scattered by a nearly free electron.",
+      "assumptions": ["Electron initially approximately at rest", "Relativistic energy and momentum conservation"],
+      "common_mistakes": ["Using the electron scattering angle instead of the photon angle"]
+    }
+  ]
+}

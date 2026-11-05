@@ -21,6 +21,56 @@
       "when_to_use": "To relate a particle's momentum to its matter wavelength.",
       "assumptions": ["The momentum is well defined."],
       "common_mistakes": ["Using energy instead of momentum in the denominator."]
+    },
+    {
+      "id": "c1-planck-einstein",
+      "name": "Planck–Einstein relation",
+      "name_de": "Planck–Einstein-Beziehung",
+      "equation": "E = hν = ℏω",
+      "symbols": {"E": "photon energy", "ν": "frequency", "ω": "angular frequency"},
+      "when_to_use": "To calculate the energy carried by a photon from its frequency.",
+      "assumptions": ["The electromagnetic excitation is treated as a photon."],
+      "common_mistakes": ["Mixing ordinary frequency ν with angular frequency ω."]
+    },
+    {
+      "id": "c1-stefan-boltzmann",
+      "name": "Stefan–Boltzmann law",
+      "name_de": "Stefan–Boltzmann-Gesetz",
+      "equation": "M = σT⁴",
+      "symbols": {"M": "radiant exitance (emitted power per unit area)", "σ": "Stefan–Boltzmann constant", "T": "absolute temperature"},
+      "when_to_use": "To find the total thermal power emitted per unit area by an ideal blackbody.",
+      "assumptions": ["Ideal blackbody", "Absolute temperature in kelvin"],
+      "common_mistakes": ["Using Celsius instead of kelvin", "Forgetting the fourth power"]
+    },
+    {
+      "id": "c1-photoelectric",
+      "name": "Einstein photoelectric equation",
+      "name_de": "Einsteinsche Gleichung des Photoeffekts",
+      "equation": "Kₘₐₓ = hν − Φ",
+      "symbols": {"Kₘₐₓ": "maximum electron kinetic energy", "Φ": "work function", "ν": "light frequency"},
+      "when_to_use": "To determine the maximum kinetic energy of electrons released by incident light.",
+      "assumptions": ["Single-photon absorption", "Frequency above the threshold frequency"],
+      "common_mistakes": ["Using light intensity instead of frequency to set electron energy"]
+    },
+    {
+      "id": "c1-compton",
+      "name": "Compton shift relation",
+      "name_de": "Compton-Verschiebung",
+      "equation": "Δλ = h/(mₑc) · (1 − cos θ)",
+      "symbols": {"Δλ": "wavelength shift", "mₑ": "electron mass", "θ": "photon scattering angle"},
+      "when_to_use": "To calculate the wavelength change of a photon scattered by a nearly free electron.",
+      "assumptions": ["Electron initially approximately at rest", "Relativistic energy and momentum conservation"],
+      "common_mistakes": ["Using the electron scattering angle instead of the photon angle"]
+    },
+    {
+      "id": "c1-wien",
+      "name": "Wien displacement law",
+      "name_de": "Wiensches Verschiebungsgesetz",
+      "equation": "λₘₐₓT = b",
+      "symbols": {"λₘₐₓ": "peak wavelength", "T": "absolute temperature", "b": "Wien displacement constant"},
+      "when_to_use": "To relate a blackbody's temperature to the wavelength where its spectrum peaks.",
+      "assumptions": ["Ideal blackbody spectrum", "Temperature in kelvin"],
+      "common_mistakes": ["Confusing the spectral peak with total emitted power"]
     }
   ]
 }

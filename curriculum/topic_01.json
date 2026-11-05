@@ -1,0 +1,19 @@
+{
+  "number": 1,
+  "title": "Introduction",
+  "title_de": "Einführung in die Quantenmechanik",
+  "professor": "Eisert",
+  "terms": [],
+  "formulas": [
+    {
+      "id": "c1-de-broglie",
+      "name": "de Broglie relation",
+      "name_de": "de-Broglie-Beziehung",
+      "equation": "λ = h / p",
+      "symbols": {"λ": "wavelength", "h": "Planck constant", "p": "momentum"},
+      "when_to_use": "To relate a particle's momentum to its matter wavelength.",
+      "assumptions": ["The momentum is well defined."],
+      "common_mistakes": ["Using energy instead of momentum in the denominator."]
+    }
+  ]
+}
