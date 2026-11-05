@@ -1,0 +1,26 @@
+{
+  "number": 3,
+  "title": "Quantum dynamics",
+  "title_de": "Quantendynamik",
+  "source_url": "https://www.physik.fu-berlin.de/",
+  "terms": [
+    {
+      "id": "c3-hamiltonian",
+      "german": "Hamiltonoperator",
+      "english": "Hamiltonian",
+      "definition": "The observable generating time evolution and representing total energy."
+    }
+  ],
+  "formulas": [
+    {
+      "id": "c3-schrodinger",
+      "name": "Time-dependent Schrödinger equation",
+      "name_de": "Zeitabhängige Schrödingergleichung",
+      "equation": "iℏ ∂|ψ⟩/∂t = H|ψ⟩",
+      "symbols": {"ℏ": "reduced Planck constant", "H": "Hamiltonian"},
+      "when_to_use": "To determine the time evolution of a closed quantum state.",
+      "assumptions": ["Non-relativistic quantum mechanics."],
+      "common_mistakes": ["Dropping the factor i."]
+    }
+  ]
+}

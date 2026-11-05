@@ -1,0 +1,48 @@
+{
+  "number": 2,
+  "title": "Quantum states and observables",
+  "title_de": "Quantenzustände und Observablen",
+  "source_url": "https://www.physik.fu-berlin.de/",
+  "terms": [
+    {
+      "id": "c2-observable",
+      "german": "Observable",
+      "english": "observable",
+      "definition": "A measurable quantity represented by a self-adjoint operator."
+    },
+    {
+      "id": "c2-eigenstate",
+      "german": "Eigenzustand",
+      "english": "eigenstate",
+      "definition": "A state on which an operator acts by multiplication with its eigenvalue."
+    },
+    {
+      "id": "c2-projector",
+      "german": "Projektor",
+      "english": "projector",
+      "definition": "An operator P satisfying P² = P that selects a subspace."
+    }
+  ],
+  "formulas": [
+    {
+      "id": "c2-born-rule",
+      "name": "Born rule",
+      "name_de": "Bornsche Regel",
+      "equation": "P(a) = ⟨ψ|Pₐ|ψ⟩",
+      "symbols": {"Pₐ": "projector onto outcome a", "|ψ⟩": "normalized state"},
+      "when_to_use": "To calculate the probability of a projective measurement outcome.",
+      "assumptions": ["The state is normalized.", "The measurement is projective."],
+      "common_mistakes": ["Not taking the absolute square.", "Ignoring degeneracy."]
+    },
+    {
+      "id": "c2-uncertainty",
+      "name": "Robertson uncertainty relation",
+      "name_de": "Robertsonsche Unschärferelation",
+      "equation": "ΔA ΔB ≥ ½ |⟨[A,B]⟩|",
+      "symbols": {"ΔA": "standard deviation of A", "[A,B]": "commutator AB − BA"},
+      "when_to_use": "To bound simultaneous uncertainties of two observables.",
+      "assumptions": ["The variances exist."],
+      "common_mistakes": ["Treating uncertainty as measurement-device error."]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantum-tutor"
+version = "0.1.0"
+description = "Telegram learning bot for FU Berlin quantum mechanics"
+requires-python = ">=3.11"
+dependencies = [
+  "python-dotenv>=1.0,<2",
+  "python-telegram-bot[job-queue]>=21,<23",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+quantum-tutor = "quantum_tutor.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,26 @@
+{
+  "number": 1,
+  "title": "Introduction",
+  "title_de": "Einführung",
+  "source_url": "https://www.physik.fu-berlin.de/",
+  "terms": [
+    {
+      "id": "c1-wave-particle-duality",
+      "german": "Welle-Teilchen-Dualismus",
+      "english": "wave-particle duality",
+      "definition": "Quantum objects display wave-like or particle-like behavior depending on the experiment."
+    }
+  ],
+  "formulas": [
+    {
+      "id": "c1-de-broglie",
+      "name": "de Broglie relation",
+      "name_de": "de-Broglie-Beziehung",
+      "equation": "λ = h / p",
+      "symbols": {"λ": "wavelength", "h": "Planck constant", "p": "momentum"},
+      "when_to_use": "To relate a particle's momentum to its matter wavelength.",
+      "assumptions": ["The momentum is well defined."],
+      "common_mistakes": ["Using energy instead of momentum in the denominator."]
+    }
+  ]
+}
