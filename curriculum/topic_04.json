@@ -1,20 +1,145 @@
 {
   "number": 4,
-  "title": "Photoelectric effect",
-  "title_de": "Photoeffekt",
-  "professor": "Franke",
-  "date": "10.11.2026",
+  "title": "Density operators",
+  "title_de": "Dichteoperatoren",
+  "professor": "Eisert",
+  "date": null,
+  "source_url": "",
+  "source_status": "User-provided topic sequence and dates; not independently verified",
   "terms": [],
   "formulas": [
     {
-      "id": "c4-photoelectric",
-      "name": "Einstein photoelectric equation",
-      "name_de": "Einsteinsche Gleichung des Photoeffekts",
-      "equation": "Kₘₐₓ = hν − Φ",
-      "symbols": {"Kₘₐₓ": "maximum electron kinetic energy", "Φ": "work function", "ν": "light frequency"},
-      "when_to_use": "To determine the maximum kinetic energy of electrons released by incident light.",
-      "assumptions": ["Single-photon absorption", "Frequency above the threshold frequency"],
-      "common_mistakes": ["Using light intensity instead of frequency to set electron energy"]
+      "id": "c4-pure-state-condition",
+      "name": "Pure state condition",
+      "name_de": "Bedingung für reine Zustände",
+      "equation": "Tr(ρ²) = 1",
+      "symbols": {
+        "ρ": "density operator",
+        "Tr": "trace"
+      },
+      "when_to_use": "To check if a quantum state represented by a density matrix is pure.",
+      "assumptions": [
+        "ρ is a valid density operator"
+      ],
+      "common_mistakes": [
+        "Using Tr(ρ) instead of Tr(ρ²)"
+      ]
+    },
+    {
+      "id": "c4-mixed-state-condition",
+      "name": "Mixed state condition",
+      "name_de": "Bedingung für gemischte Zustände",
+      "equation": "Tr(ρ²) < 1",
+      "symbols": {
+        "ρ": "density operator",
+        "Tr": "trace"
+      },
+      "when_to_use": "To determine if a quantum state is a statistical mixture of states.",
+      "assumptions": [
+        "ρ is a valid density operator"
+      ],
+      "common_mistakes": [
+        "Forgetting that Tr(ρ) is always 1"
+      ]
+    },
+    {
+      "id": "c4-expectation-value",
+      "name": "Expectation value (density operator)",
+      "name_de": "Erwartungswert (Dichteoperator)",
+      "equation": "⟨A⟩ = Tr(ρA)",
+      "symbols": {
+        "A": "observable operator",
+        "ρ": "density operator"
+      },
+      "when_to_use": "To calculate the average outcome of measuring an observable A on state ρ.",
+      "assumptions": [
+        "A is a self-adjoint operator"
+      ],
+      "common_mistakes": [
+        "Using ρA instead of its trace"
+      ]
+    }
+  ],
+  "script_file": "QMChapter4.pdf",
+  "outline_source": "User-supplied contents; German translations authored for the bot; not independently verified",
+  "sections": [
+    {
+      "id": "4.1",
+      "page": 3,
+      "title": "Motivation",
+      "title_de": "Motivation"
+    },
+    {
+      "id": "4.2",
+      "page": 4,
+      "title": "Definition of a density operator",
+      "title_de": "Definition eines Dichteoperators"
+    },
+    {
+      "id": "4.2.1",
+      "page": 4,
+      "title": "Traces",
+      "title_de": "Spuren"
+    },
+    {
+      "id": "4.2.2",
+      "page": 5,
+      "title": "Density operators of pure states",
+      "title_de": "Dichteoperatoren reiner Zustände"
+    },
+    {
+      "id": "4.2.3",
+      "page": 6,
+      "title": "General density operators",
+      "title_de": "Allgemeine Dichteoperatoren"
+    },
+    {
+      "id": "4.2.4",
+      "page": 8,
+      "title": "Examples",
+      "title_de": "Beispiele"
+    },
+    {
+      "id": "4.2.5",
+      "page": 9,
+      "title": "Non-uniqueness of ensemble representations",
+      "title_de": "Nicht-Eindeutigkeit von Ensembledarstellungen"
+    },
+    {
+      "id": "4.3",
+      "page": 9,
+      "title": "Von-Neumann equation",
+      "title_de": "Von-Neumann-Gleichung"
+    },
+    {
+      "id": "4.4",
+      "page": 10,
+      "title": "Measurement for density operators",
+      "title_de": "Messung bei Dichteoperatoren"
+    },
+    {
+      "id": "4.5",
+      "page": 11,
+      "title": "Mixing and states of composite systems",
+      "title_de": "Mischungen und Zustände zusammengesetzter Systeme"
+    },
+    {
+      "id": "4.5.1",
+      "page": 11,
+      "title": "Mixing quantum states",
+      "title_de": "Mischen von Quantenzuständen"
+    },
+    {
+      "id": "4.5.2",
+      "page": 12,
+      "title": "Partial traces",
+      "title_de": "Partielle Spuren"
+    },
+    {
+      "id": "4.5.3",
+      "page": 13,
+      "title": "Entangled states",
+      "title_de": "Verschränkte Zustände"
     }
   ]
 }

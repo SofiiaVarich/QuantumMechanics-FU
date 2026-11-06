@@ -1,0 +1,63 @@
+{
+  "number": 6,
+  "title": "Perturbation theory",
+  "title_de": "Störungstheorie",
+  "professor": "Eisert",
+  "date": null,
+  "source_url": "",
+  "source_status": "User-provided topic sequence and dates; not independently verified",
+  "terms": [],
+  "formulas": [],
+  "script_file": "QMChapter6.pdf",
+  "outline_source": "User-supplied contents; German translations authored for the bot; not independently verified",
+  "sections": [
+    {
+      "id": "6.1",
+      "page": 3,
+      "title": "Time independent perturbation theory",
+      "title_de": "Zeitunabhängige Störungstheorie"
+    },
+    {
+      "id": "6.1.1",
+      "page": 4,
+      "title": "Non-degenerate situation",
+      "title_de": "Nichtentarteter Fall"
+    },
+    {
+      "id": "6.1.2",
+      "page": 7,
+      "title": "An example: The anharmonic oscillator",
+      "title_de": "Beispiel: der anharmonische Oszillator"
+    },
+    {
+      "id": "6.1.3",
+      "page": 8,
+      "title": "Degenerate situation",
+      "title_de": "Entarteter Fall"
+    },
+    {
+      "id": "6.2",
+      "page": 8,
+      "title": "Time-dependent perturbation theory",
+      "title_de": "Zeitabhängige Störungstheorie"
+    },
+    {
+      "id": "6.2.1",
+      "page": 8,
+      "title": "Interaction picture",
+      "title_de": "Wechselwirkungsbild"
+    },
+    {
+      "id": "6.2.2",
+      "page": 10,
+      "title": "Applications: Transitions of first order",
+      "title_de": "Anwendungen: Übergänge erster Ordnung"
+    },
+    {
+      "id": "6.3",
+      "page": 11,
+      "title": "Some words on more general concepts of perturbation",
+      "title_de": "Allgemeinere Störungskonzepte"
+    }
+  ]
+}

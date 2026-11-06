@@ -94,6 +94,15 @@ class ProgressRepository:
             ).fetchall()
         return [str(row["item_id"]) for row in rows]
 
+    def known_item_ids(self, user_id: int) -> set[str]:
+        """Latest correct recognition/recall, not a claim of durable mastery."""
+        with self._connect() as connection:
+            rows = connection.execute(
+                "SELECT item_id FROM reviews WHERE user_id=? AND repetitions>0",
+                (user_id,),
+            ).fetchall()
+        return {str(row["item_id"]) for row in rows}
+
     def chapter_statistics(self, user_id: int, item_ids: list[str]) -> tuple[int, int]:
         """Return (total, correct) statistics for a specific set of item IDs."""
         if not item_ids:

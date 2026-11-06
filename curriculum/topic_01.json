@@ -3,6 +3,9 @@
   "title": "Introduction",
   "title_de": "Einführung in die Quantenmechanik",
   "professor": "Eisert",
+  "date": null,
+  "source_url": "",
+  "source_status": "User-provided topic sequence and dates; not independently verified",
   "terms": [],
   "formulas": [
     {
@@ -10,10 +13,82 @@
       "name": "de Broglie relation",
       "name_de": "de-Broglie-Beziehung",
       "equation": "λ = h / p",
-      "symbols": {"λ": "wavelength", "h": "Planck constant", "p": "momentum"},
+      "symbols": {
+        "λ": "wavelength",
+        "h": "Planck constant",
+        "p": "momentum"
+      },
       "when_to_use": "To relate a particle's momentum to its matter wavelength.",
-      "assumptions": ["The momentum is well defined."],
-      "common_mistakes": ["Using energy instead of momentum in the denominator."]
+      "assumptions": [
+        "The momentum is well defined."
+      ],
+      "common_mistakes": [
+        "Using energy instead of momentum in the denominator."
+      ]
+    }
+  ],
+  "script_file": "QMChapter1.pdf",
+  "outline_source": "User-supplied contents; German translations authored for the bot; not independently verified",
+  "sections": [
+    {
+      "id": "1.1",
+      "page": 3,
+      "title": "What is quantum mechanics?",
+      "title_de": "Was ist Quantenmechanik?"
+    },
+    {
+      "id": "1.1.1",
+      "page": 3,
+      "title": "Boxes and Stern-Gerlach devices",
+      "title_de": "Boxen und Stern-Gerlach-Apparaturen"
+    },
+    {
+      "id": "1.1.2",
+      "page": 6,
+      "title": "More boxes and Stern-Gerlach devices",
+      "title_de": "Weitere Boxen und Stern-Gerlach-Apparaturen"
+    },
+    {
+      "id": "1.1.3",
+      "page": 8,
+      "title": "Randomness in quantum physics",
+      "title_de": "Zufall in der Quantenphysik"
+    },
+    {
+      "id": "1.2",
+      "page": 9,
+      "title": "Historical overview",
+      "title_de": "Historischer Überblick"
+    },
+    {
+      "id": "1.2.1",
+      "page": 9,
+      "title": "Spectrum of black-body radiation",
+      "title_de": "Spektrum der Schwarzkörperstrahlung"
+    },
+    {
+      "id": "1.2.2",
+      "page": 10,
+      "title": "Photoelectric effect",
+      "title_de": "Photoeffekt"
+    },
+    {
+      "id": "1.2.3",
+      "page": 11,
+      "title": "Double-slit experiments",
+      "title_de": "Doppelspaltexperimente"
+    },
+    {
+      "id": "1.2.4",
+      "page": 12,
+      "title": "An explosion of ideas",
+      "title_de": "Eine Vielzahl neuer Ideen"
+    },
+    {
+      "id": "1.2.5",
+      "page": 14,
+      "title": "A word on quantum mechanics in the modern world",
+      "title_de": "Quantenmechanik in der modernen Welt"
     }
   ]
 }

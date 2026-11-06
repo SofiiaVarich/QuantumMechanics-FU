@@ -1,0 +1,69 @@
+{
+  "number": 7,
+  "title": "Addition of angular momenta",
+  "title_de": "Addition von Drehimpulsen",
+  "professor": "Eisert",
+  "date": null,
+  "source_url": "",
+  "source_status": "User-provided topic sequence and dates; not independently verified",
+  "terms": [],
+  "formulas": [],
+  "script_file": "QMChapter7.pdf",
+  "outline_source": "User-supplied contents; German translations authored for the bot; not independently verified",
+  "sections": [
+    {
+      "id": "7.1",
+      "page": 3,
+      "title": "Spin and the problem of adding angular momenta",
+      "title_de": "Spin und Addition von Drehimpulsen"
+    },
+    {
+      "id": "7.1.1",
+      "page": 3,
+      "title": "Spin operators",
+      "title_de": "Spinoperatoren"
+    },
+    {
+      "id": "7.1.2",
+      "page": 4,
+      "title": "Stating the general problem",
+      "title_de": "Formulierung des allgemeinen Problems"
+    },
+    {
+      "id": "7.1.3",
+      "page": 5,
+      "title": "Coupling of two spins",
+      "title_de": "Kopplung zweier Spins"
+    },
+    {
+      "id": "7.2",
+      "page": 6,
+      "title": "The general problem for two systems",
+      "title_de": "Das allgemeine Problem für zwei Systeme"
+    },
+    {
+      "id": "7.2.1",
+      "page": 6,
+      "title": "Possible values",
+      "title_de": "Mögliche Werte"
+    },
+    {
+      "id": "7.2.2",
+      "page": 8,
+      "title": "Glebsch-Gordan coefficients",
+      "title_de": "Clebsch–Gordan-Koeffizienten"
+    },
+    {
+      "id": "7.2.3",
+      "page": 9,
+      "title": "An optional remark on group theory",
+      "title_de": "Optionaler Hinweis zur Gruppentheorie"
+    },
+    {
+      "id": "7.2.4",
+      "page": 9,
+      "title": "Adding orbital angular momentum and a spin",
+      "title_de": "Addition von Bahndrehimpuls und Spin"
+    }
+  ]
+}

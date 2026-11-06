@@ -1,0 +1,69 @@
+{
+  "number": 8,
+  "title": "Particles in electromagnetic fields",
+  "title_de": "Teilchen in elektromagnetischen Feldern",
+  "professor": "Eisert",
+  "date": null,
+  "source_url": "",
+  "source_status": "User-provided topic sequence and dates; not independently verified",
+  "terms": [],
+  "formulas": [],
+  "script_file": "QMChapter8.pdf",
+  "outline_source": "User-supplied contents; German translations authored for the bot; not independently verified",
+  "sections": [
+    {
+      "id": "8.1",
+      "page": 3,
+      "title": "Hamilton operator of spinless particles",
+      "title_de": "Hamiltonoperator spinloser Teilchen"
+    },
+    {
+      "id": "8.2",
+      "page": 4,
+      "title": "Constant magnetic field",
+      "title_de": "Konstantes Magnetfeld"
+    },
+    {
+      "id": "8.2.1",
+      "page": 4,
+      "title": "Hamiltonian of a particle in a constant magnetic field",
+      "title_de": "Hamiltonoperator eines Teilchens im konstanten Magnetfeld"
+    },
+    {
+      "id": "8.2.2",
+      "page": 4,
+      "title": "Normal Zeeman effect",
+      "title_de": "Normaler Zeeman-Effekt"
+    },
+    {
+      "id": "8.2.3",
+      "page": 5,
+      "title": "Anomalous Zeeman effect",
+      "title_de": "Anomaler Zeeman-Effekt"
+    },
+    {
+      "id": "8.3",
+      "page": 5,
+      "title": "Concluding remarks",
+      "title_de": "Abschließende Bemerkungen"
+    },
+    {
+      "id": "8.3.1",
+      "page": 6,
+      "title": "Aharanov Bohm effect",
+      "title_de": "Aharonov–Bohm-Effekt"
+    },
+    {
+      "id": "8.3.2",
+      "page": 6,
+      "title": "Flux quantization in superconductors",
+      "title_de": "Flussquantisierung in Supraleitern"
+    },
+    {
+      "id": "8.3.3",
+      "page": 6,
+      "title": "Landau levels",
+      "title_de": "Landau-Niveaus"
+    }
+  ]
+}

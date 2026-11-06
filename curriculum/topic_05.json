@@ -1,20 +1,69 @@
 {
   "number": 5,
-  "title": "Compton effect",
-  "title_de": "Compton-Effekt",
-  "professor": "Franke",
-  "date": "10.11.2026",
+  "title": "Angular momentum and rotationally invariant problems",
+  "title_de": "Drehimpuls und rotationsinvariante Probleme",
+  "professor": "Eisert",
+  "date": null,
+  "source_url": "",
+  "source_status": "User-provided topic sequence and dates; not independently verified",
   "terms": [],
-  "formulas": [
+  "formulas": [],
+  "script_file": "QMChapter5.pdf",
+  "outline_source": "User-supplied contents; German translations authored for the bot; not independently verified",
+  "sections": [
     {
-      "id": "c5-compton",
-      "name": "Compton shift relation",
-      "name_de": "Compton-Verschiebung",
-      "equation": "Δλ = h/(mₑc) · (1 − cos θ)",
-      "symbols": {"Δλ": "wavelength shift", "mₑ": "electron mass", "θ": "photon scattering angle"},
-      "when_to_use": "To calculate the wavelength change of a photon scattered by a nearly free electron.",
-      "assumptions": ["Electron initially approximately at rest", "Relativistic energy and momentum conservation"],
-      "common_mistakes": ["Using the electron scattering angle instead of the photon angle"]
+      "id": "5.1",
+      "page": 3,
+      "title": "Angular momentum",
+      "title_de": "Drehimpuls"
+    },
+    {
+      "id": "5.1.1",
+      "page": 3,
+      "title": "Definition",
+      "title_de": "Definition"
+    },
+    {
+      "id": "5.1.2",
+      "page": 4,
+      "title": "Angular momentum operator as generator of rotations",
+      "title_de": "Drehimpulsoperator als Generator von Drehungen"
+    },
+    {
+      "id": "5.1.3",
+      "page": 5,
+      "title": "Spectrum of the angular momentum operator",
+      "title_de": "Spektrum des Drehimpulsoperators"
+    },
+    {
+      "id": "5.1.4",
+      "page": 7,
+      "title": "Angular momentum operator in the position representation",
+      "title_de": "Drehimpulsoperator in der Ortsdarstellung"
+    },
+    {
+      "id": "5.2",
+      "page": 10,
+      "title": "Rotationally invariant problems",
+      "title_de": "Rotationsinvariante Probleme"
+    },
+    {
+      "id": "5.2.1",
+      "page": 10,
+      "title": "General considerations",
+      "title_de": "Allgemeine Überlegungen"
+    },
+    {
+      "id": "5.2.2",
+      "page": 12,
+      "title": "Spectrum of the hydrogen atom",
+      "title_de": "Spektrum des Wasserstoffatoms"
+    },
+    {
+      "id": "5.2.3",
+      "page": 14,
+      "title": "Orbitals of the hydrogen atom",
+      "title_de": "Orbitale des Wasserstoffatoms"
     }
   ]
 }

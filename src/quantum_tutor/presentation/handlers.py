@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import random
 import time
 
 from telegram import KeyboardButton, Message, ReplyKeyboardMarkup, Update, User
@@ -7,6 +8,7 @@ from telegram.ext import ContextTypes
 
 from quantum_tutor.application.study import Exercise, Question, StudyService
 from quantum_tutor.domain.spaced_repetition import ReviewRating
+from quantum_tutor.domain.study_set import StudySet
 from quantum_tutor.infrastructure.curriculum import CurriculumRepository
 
 LEARN = "🎯 Learn"
@@ -22,6 +24,8 @@ OKAY = "🔵 Okay"
 EASY = "🟢 Easy"
 NEXT = "➡️ Next exercise"
 HOME = "🏠 Main menu"
+DONT_KNOW = "🔁 Don't know"
+KNOW = "✅ Know"
 
 MAIN_MENU = ReplyKeyboardMarkup(
     [
@@ -41,10 +45,28 @@ def build_handlers(
     allowed_user_ids: tuple[int, ...],
 ):
     chapters = curriculum.chapters()
-    number_emojis = ("1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟")
+    digits = ("0️⃣", "1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣")
+    number_emojis = tuple(
+        "🔟" if number == 10 else "".join(digits[int(digit)] for digit in str(number))
+        for number in range(1, max((chapter.number for chapter in chapters), default=0) + 1)
+    )
     topic_labels = {
-        f"{number_emojis[chapter.number - 1]} {chapter.title_de}": chapter.number
+        (
+            f"{number_emojis[chapter.number - 1]} {chapter.title_de}"
+            if chapter.professor == "Eisert"
+            else f"🔬 {chapter.date or 'Termin offen'} · {chapter.title_de}"
+        ): chapter.number
         for chapter in chapters
+    }
+    section_labels = {
+        f"{section.id} {section.title}": (chapter.number, section)
+        for chapter in chapters
+        for section in chapter.sections
+    }
+    concept_labels = {
+        f"📖 {card.front}": (chapter.number, card)
+        for chapter in chapters
+        for card in chapter.concepts
     }
     topics_keyboard = ReplyKeyboardMarkup(
         [[KeyboardButton(label)] for label in topic_labels] + [[KeyboardButton(HOME)]],
@@ -84,10 +106,25 @@ def build_handlers(
     async def send_menu(message: Message, text: str = "✨ What would you like to study?") -> None:
         await message.reply_text(text, reply_markup=MAIN_MENU)
 
-    async def show_topics(message: Message) -> None:
+    def progress_label(ids: set[str], known: set[str]) -> str:
+        if not ids:
+            return "— no cards"
+        return f"{round(100 * len(ids & known) / len(ids))}%"
+
+    async def show_topics(message: Message, user_id: int) -> None:
+        known = study.progress.known_item_ids(user_id)
+        labels = []
+        for label, number in topic_labels.items():
+            chapter = curriculum.chapter(number)
+            ids = {card.id for card in chapter.concepts} | {formula.id for formula in chapter.formulas} if chapter else set()
+            labels.append(f"{label} · {progress_label(ids, known)}")
+        keyboard = ReplyKeyboardMarkup(
+            [[KeyboardButton(label)] for label in labels] + [[KeyboardButton(HOME)]],
+            resize_keyboard=True, is_persistent=True,
+        )
         await message.reply_text(
-            "🗂✨ Themen auswählen\n\nTippe unten auf ein Kapitel, um nur Material aus diesem Thema zu lernen.",
-            reply_markup=topics_keyboard,
+            "🗂 Themen auswählen\n\n1️⃣–🔟 Theorie · Eisert\n🔬 Experimentalphysik · Franke\n\nTippe unten auf ein Thema, um gezielt zu lernen.",
+            reply_markup=keyboard,
         )
 
     async def select_topic(
@@ -98,25 +135,106 @@ def build_handlers(
         if context.user_data is None:
             raise RuntimeError("Per-user storage is unavailable")
         context.user_data["selected_chapter"] = chapter_number
+        context.user_data.pop("study_set", None)
+        context.user_data.pop("question", None)
         context.user_data["session_index"] = 1
         chapter = curriculum.chapter(chapter_number)
         if chapter is None:
-            await show_topics(message)
+            await show_topics(message, int(context.user_data.get("viewer_id", 0)))
             return
         laws = study.item_count("law", chapter_number)
+        known = study.progress.known_item_ids(int(context.user_data.get("viewer_id", 0)))
+        ids = {card.id for card in chapter.concepts} | {formula.id for formula in chapter.formulas}
+        details = f"{chapter.professor} · {progress_label(ids, known)} learned"
+        if chapter.date:
+            details += f" · {chapter.date} (von dir angegeben)"
+        elif chapter.professor == "Franke":
+            details += " · Termin offen"
         if laws == 0:
             text = (
-                f"{number_emojis[chapter_number - 1]} {chapter.title_de}\n\n"
+                f"{number_emojis[chapter_number - 1]} {chapter.title_de}\n{details}\n\n"
                 "⚠️ Für dieses Kapitel gibt es noch keine geprüften Lernkarten.\n"
                 "Du kannst ein anderes Thema auswählen."
             )
         else:
             text = (
-                f"{number_emojis[chapter_number - 1]} {chapter.title_de}\n\n"
+                f"{number_emojis[chapter_number - 1]} {chapter.title_de}\n{details}\n\n"
                 f"⚖️ Gesetze und Formeln: {laws}\n\n"
                 "Wähle jetzt einen Lernmodus. Alle Fragen bleiben in diesem Kapitel."
             )
         await message.reply_text(text, reply_markup=topic_actions_keyboard)
+        if chapter.sections:
+            known = study.progress.known_item_ids(int(context.user_data.get("viewer_id", 0)))
+            def section_label(section):
+                ids = {
+                    card.id for card in chapter.concepts
+                    if card.section_id == section.id or card.section_id.startswith(section.id + ".")
+                }
+                return f"{section.id} {section.title} · {progress_label(ids, known)}"
+            section_keyboard = ReplyKeyboardMarkup(
+                [[KeyboardButton(section_label(section))] for section in chapter.sections]
+                + [[KeyboardButton(TOPICS), KeyboardButton(HOME)]],
+                resize_keyboard=True,
+                is_persistent=True,
+            )
+            lines = ["📖 Contents", ""]
+            for section in chapter.sections:
+                indent = "  • " if section.id.count(".") > 1 else ""
+                lines.append(
+                    f"{indent}p. {section.page} · {section_label(section)}"
+                )
+            # Keep messages below Telegram's 4096-character limit without splitting sections.
+            chunk = ""
+            for line in lines:
+                if len(chunk) + len(line) + 1 > 3800:
+                    await message.reply_text(chunk)
+                    chunk = ""
+                chunk += line + "\n"
+            if chunk:
+                await message.reply_text(chunk, reply_markup=section_keyboard)
+
+    async def present_set_card(message: Message, context: ContextTypes.DEFAULT_TYPE) -> None:
+        if context.user_data is None:
+            return
+        session: StudySet | None = context.user_data.get("study_set")
+        if session is None:
+            return
+        card = session.current
+        if card is None:
+            chapter_number = selected_chapter(context)
+            await message.reply_text(
+                f"✅ Set complete · {len(session.cards)}/{len(session.cards)}\n"
+                "100% completed in this set.\n"
+                "This is recognition practice, not long-term or exam mastery.\n\n"
+                "Choose another subsection below."
+            )
+            if chapter_number is not None:
+                await select_topic(message, context, chapter_number)
+            return
+        context.user_data["question"] = Question(
+            card.id, "concept", card.front, f"{card.definition}\n\n{card.key_rule}"
+        )
+        distractors = list(dict.fromkeys(
+            other.definition for chapter in chapters for other in chapter.concepts
+            if other.definition != card.definition
+        ))
+        choices = random.sample(distractors, min(3, len(distractors))) + [card.definition]
+        random.shuffle(choices)
+        context.user_data["concept_choices"] = {
+            f"{index + 1}️⃣ {definition}": definition == card.definition
+            for index, definition in enumerate(choices)
+        }
+        context.user_data["mode"] = "concept_choice"
+        context.user_data["presented_at"] = time.monotonic()
+        await message.reply_text(
+            f"📖 {session.position}/{len(session.cards)} · {session.percentage}% completed in this set\n\n"
+            f"🧠 {card.front}\n\n❓ Which definition matches?",
+            reply_markup=ReplyKeyboardMarkup(
+                [[KeyboardButton(label)] for label in context.user_data["concept_choices"]]
+                + [[KeyboardButton(DONT_KNOW)], [KeyboardButton(TOPICS), KeyboardButton(HOME)]],
+                resize_keyboard=True, is_persistent=True,
+            ),
+        )
 
     async def show_review(message: Message, user: User) -> None:
         await message.reply_text(
@@ -212,7 +330,8 @@ def build_handlers(
 
     async def topics(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         if not await reject_if_unauthorized(update):
-            await show_topics(message_and_user(update)[0])
+            message, user = message_and_user(update)
+            await show_topics(message, user.id)
 
     async def learn(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         if not await reject_if_unauthorized(update):
@@ -241,6 +360,17 @@ def build_handlers(
             return
         message, user = message_and_user(update)
         text = message.text or ""
+        if context.user_data is not None:
+            context.user_data["viewer_id"] = user.id
+        # Old keyboard percentages may be stale after another answer; route by stable label.
+        if " · " in text:
+            base = text.rsplit(" · ", 1)[0]
+            if base in topic_labels or base in section_labels:
+                text = base
+        if text in {HOME, TOPICS, LEARN, LAWS, FORMULAS} and context.user_data is not None:
+            context.user_data.pop("study_set", None)
+            context.user_data.pop("question", None)
+            context.user_data.pop("mode", None)
 
         if text in {HOME, "/start"}:
             if context.user_data is not None:
@@ -248,6 +378,46 @@ def build_handlers(
             await send_menu(message)
         elif text in topic_labels:
             await select_topic(message, context, topic_labels[text])
+        elif text in section_labels:
+            chapter_number, section = section_labels[text]
+            if context.user_data is not None:
+                context.user_data["selected_chapter"] = chapter_number
+                context.user_data["selected_section"] = section.id
+            chapter = curriculum.chapter(chapter_number)
+            cards = [
+                card for card in chapter.concepts
+                if card.section_id == section.id or card.section_id.startswith(section.id + ".")
+            ] if chapter else []
+            if cards and context.user_data is not None:
+                context.user_data["study_set"] = StudySet(tuple(cards))
+                context.user_data.pop("exercise", None)
+                await present_set_card(message, context)
+            else:
+                await message.reply_text(
+                    f"📖 {section.id} {section.title}\np. {section.page}\n\n"
+                    "Section-specific lessons are not available yet.\n"
+                    "The learning buttons below practice the whole chapter.",
+                    reply_markup=topic_actions_keyboard,
+                )
+        elif text in concept_labels:
+            chapter_number, card = concept_labels[text]
+            if context.user_data is None:
+                return
+            context.user_data["selected_chapter"] = chapter_number
+            context.user_data["selected_section"] = card.section_id
+            context.user_data["question"] = Question(
+                card.id, "concept", card.front,
+                f"{card.definition}\n\n{card.key_rule}",
+            )
+            context.user_data["mode"] = "concept"
+            context.user_data["presented_at"] = time.monotonic()
+            await message.reply_text(
+                f"🧠 {card.front}\n\n❓ Explain the concept and its key rule.",
+                reply_markup=ReplyKeyboardMarkup(
+                    [[KeyboardButton(REVEAL)], [KeyboardButton(TOPICS), KeyboardButton(HOME)]],
+                    resize_keyboard=True, is_persistent=True,
+                ),
+            )
         elif text == LEARN:
             await send_exercise(message, context, reset=True)
         elif text == NEXT:
@@ -258,16 +428,39 @@ def build_handlers(
         elif text == FORMULAS:
             await ask_flashcard(message, context, "formula", reset=True)
         elif text == TOPICS:
-            await show_topics(message)
+            await show_topics(message, user.id)
         elif text == REVIEW:
             await show_review(message, user)
         elif text == PROGRESS:
             await show_progress(message, user)
+        elif context.user_data is not None and context.user_data.get("mode") == "concept_choice":
+            choices = context.user_data.get("concept_choices", {})
+            if text != DONT_KNOW and text not in choices:
+                await message.reply_text("Choose an answer below, or tap Don't know.")
+                return
+            question = context.user_data.get("question")
+            session = context.user_data.get("study_set")
+            if question is None or session is None:
+                await send_menu(message, "This set expired. Choose a subsection again.")
+                return
+            correct = text != DONT_KNOW and choices[text]
+            rating: ReviewRating = "okay" if correct else "repeat"
+            started = context.user_data.get("presented_at", time.monotonic())
+            study.record(
+                user.id, question, correct, rating=rating,
+                response_ms=max(0, round((time.monotonic() - started) * 1000)),
+            )
+            session.grade(rating)
+            context.user_data.pop("question", None)
+            context.user_data.pop("concept_choices", None)
+            result = "✅ Correct" if correct else "❌ Review this card again later"
+            await message.reply_text(f"{result}\n\n{question.answer}")
+            await present_set_card(message, context)
         elif text == REVEAL:
             await reveal_flashcard(message, context)
-        elif text in {REPEAT, HARD, OKAY, EASY}:
+        elif text in {KNOW, DONT_KNOW}:
             ratings: dict[str, ReviewRating] = {
-                REPEAT: "repeat", HARD: "hard", OKAY: "okay", EASY: "easy"
+                DONT_KNOW: "repeat", KNOW: "okay"
             }
             await grade_flashcard(message, context, user, ratings[text])
         elif context.user_data is not None and context.user_data.get("mode") == "exercise":
@@ -282,11 +475,13 @@ def build_handlers(
         if question is None:
             await send_menu(message, "⌛ This card expired. Choose another activity.")
             return
+
         context.user_data["mode"] = "grading"
         keyboard = ReplyKeyboardMarkup(
-            [KeyboardButton(REPEAT), KeyboardButton(HARD)],
-            [KeyboardButton(OKAY), KeyboardButton(EASY)],
-            [KeyboardButton(HOME)],
+            [
+                [KeyboardButton(KNOW), KeyboardButton(DONT_KNOW)],
+                [KeyboardButton(HOME)],
+            ],
             resize_keyboard=True,
             is_persistent=True,
         )
@@ -301,6 +496,9 @@ def build_handlers(
         rating: ReviewRating,
     ) -> None:
         if context.user_data is None:
+            return
+        if context.user_data.get("mode") != "grading":
+            await message.reply_text("Reveal the answer before rating your recall.")
             return
         question: Question | None = context.user_data.pop("question", None)
         category = str(context.user_data.get("session_category", "formula"))
@@ -318,8 +516,23 @@ def build_handlers(
             "okay": "🔵 Good recall — advanced one review stage.",
             "easy": "🟢 Strong recall — advanced two review stages.",
         }
+        if question.item_type == "concept" and context.user_data.get("study_set") is not None:
+            session: StudySet = context.user_data["study_set"]
+            session.grade(rating)
+            status = (
+                "🔁 This card will return after the remaining cards."
+                if rating in {"repeat", "hard"} and len(session.pending) > 1
+                else "🔁 Try this card again." if rating in {"repeat", "hard"}
+                else "✅ Card completed."
+            )
+            await message.reply_text(status)
+            await present_set_card(message, context)
+            return
         status = status_by_rating[rating]
         await message.reply_text(status)
+        if question.item_type == "concept":
+            await send_menu(message, "Choose another concept through Topics.")
+            return
         chapter_number = selected_chapter(context)
         total = max(study.item_count(category, chapter_number), 1)
         current = int(context.user_data.get("session_index", 1))

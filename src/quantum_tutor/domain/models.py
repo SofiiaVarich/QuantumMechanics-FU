@@ -26,6 +26,25 @@ class Formula:
 
 
 @dataclass(frozen=True)
+class ConceptCard:
+    id: str
+    section_id: str
+    front: str
+    definition: str
+    key_rule: str
+    source_status: str
+    source_file: str
+
+
+@dataclass(frozen=True)
+class Section:
+    id: str
+    page: int
+    title: str
+    title_de: str
+
+
+@dataclass(frozen=True)
 class Chapter:
     number: int
     title: str
@@ -35,6 +54,9 @@ class Chapter:
     source_url: str = ""
     terms: tuple[Term, ...] = ()
     formulas: tuple[Formula, ...] = ()
+    script_file: str = ""
+    sections: tuple[Section, ...] = ()
+    concepts: tuple[ConceptCard, ...] = ()
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> "Chapter":
@@ -47,6 +69,9 @@ class Chapter:
             source_url=data.get("source_url", ""),
             terms=tuple(Term(**item) for item in data.get("terms", [])),
             formulas=tuple(Formula(**item) for item in data.get("formulas", [])),
+            script_file=data.get("script_file", ""),
+            sections=tuple(Section(**item) for item in data.get("sections", [])),
+            concepts=tuple(ConceptCard(**item) for item in data.get("concepts", [])),
         )
 
 

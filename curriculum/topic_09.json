@@ -1,0 +1,63 @@
+{
+  "number": 9,
+  "title": "Bell's theorem",
+  "title_de": "Bellsches Theorem",
+  "professor": "Eisert",
+  "date": null,
+  "source_url": "",
+  "source_status": "User-provided topic sequence and dates; not independently verified",
+  "terms": [],
+  "formulas": [],
+  "script_file": "QMChapter9.pdf",
+  "outline_source": "User-supplied contents; German translations authored for the bot; not independently verified",
+  "sections": [
+    {
+      "id": "9.1",
+      "page": 3,
+      "title": "Introduction",
+      "title_de": "Einführung"
+    },
+    {
+      "id": "9.2",
+      "page": 3,
+      "title": "The historical setting",
+      "title_de": "Historischer Hintergrund"
+    },
+    {
+      "id": "9.3",
+      "page": 5,
+      "title": "Preliminaries",
+      "title_de": "Vorbereitungen"
+    },
+    {
+      "id": "9.3.1",
+      "page": 5,
+      "title": "Correlation tables",
+      "title_de": "Korrelationstabellen"
+    },
+    {
+      "id": "9.3.2",
+      "page": 5,
+      "title": "Properties of correlation tables",
+      "title_de": "Eigenschaften von Korrelationstabellen"
+    },
+    {
+      "id": "9.3.3",
+      "page": 6,
+      "title": "Local hidden variables",
+      "title_de": "Lokale verborgene Variablen"
+    },
+    {
+      "id": "9.4",
+      "page": 7,
+      "title": "Deriving the Bell inequality",
+      "title_de": "Herleitung der Bellschen Ungleichung"
+    },
+    {
+      "id": "9.5",
+      "page": 8,
+      "title": "Violation of the Bell inequalities",
+      "title_de": "Verletzung der Bellschen Ungleichungen"
+    }
+  ]
+}

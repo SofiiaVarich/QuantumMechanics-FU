@@ -1,0 +1,31 @@
+{
+  "number": 13,
+  "title": "Photoelectric effect",
+  "title_de": "Photoeffekt",
+  "professor": "Franke",
+  "date": "10.11.2026",
+  "source_url": "",
+  "source_status": "User-provided topic sequence and dates; not independently verified",
+  "terms": [],
+  "formulas": [
+    {
+      "id": "c1-photoelectric",
+      "name": "Einstein photoelectric equation",
+      "name_de": "Einsteinsche Gleichung des Photoeffekts",
+      "equation": "Kₘₐₓ = hν − Φ",
+      "symbols": {
+        "Kₘₐₓ": "maximum electron kinetic energy",
+        "Φ": "work function",
+        "ν": "light frequency"
+      },
+      "when_to_use": "To determine the maximum kinetic energy of electrons released by incident light.",
+      "assumptions": [
+        "Single-photon absorption",
+        "Frequency above the threshold frequency"
+      ],
+      "common_mistakes": [
+        "Using light intensity instead of frequency to set electron energy"
+      ]
+    }
+  ]
+}

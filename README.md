@@ -133,12 +133,39 @@ Combined study sequence (20 topics)
 Official FU source pages:
 - Eisert (theory, WS 2026/27): https://www.physik.fu-berlin.de/en/einrichtungen/ag/ag-eisert/teaching/ws26-27/index.html
 - Franke (experimental lecture dates, WS 2026/27): https://www.physik.fu-berlin.de/en/einrichtungen/ag/ag-franke/courses/26-WS-Quantenmechanik/index.html
+### Chapter 2 concept cards
+
+The 29 cards from `QM_Chapter2_Concept_Cards_Updated.xlsx` are available as automatic subsection study sets. Selecting a subsection starts all its cards (a parent section includes descendant subsections). No individual question selection is needed.
+
+1. Choose the definition matching the concept from the answer buttons, or tap **Don't know**. There is no reveal-and-self-rating step in subsection sets.
+2. Wrong answers and **Don't know** show the definition/key rule, then send the card to the back of the queue. If it is the only remaining card, it is presented again immediately.
+3. A correct answer completes that unique card for the set and automatically presents the next card.
+4. Prompts show `1/5 · 0% completed in this set`. The numerator is completed unique cards plus the current card; retries do not increase the denominator or completion percentage.
+5. Once all cards are completed, the bot shows `100%` and returns to the subsection buttons for the same chapter.
+
+Set completion means successful multiple-choice recognition during this session—not durable mastery or exam readiness. Correct choices are automatically graded as Okay internally; wrong choices and Don't know are Repeat. Other flashcard modes use only Know / Don't know controls; the four-level scheduler is retained internally for historical compatibility. Every rating still updates persistent spaced-review history independently. The active queue is in memory and resets after a bot restart or when starting another set; users can exit through Main menu or Topics at any time. Original workbook wording and formulas are preserved without translation. Spreadsheet status is source metadata only. These are physics concept cards, not translation exercises. The separate 72-image formula workbook remains staged.
+
+### Saved topic and subsection progress
+
+Topic buttons, chapter details, subsection buttons, and contents lines show account-specific percentages, refreshed whenever that view is opened and after a set completes. The percentage is the number of available cards with a currently successful saved review state divided by the number of available cards. Topic totals include concept cards and formulas; subsection totals include concept cards assigned to that section or its descendants. A subsequent wrong answer reduces progress. Duplicate attempts do not inflate it. Empty sections show `— no cards` rather than claiming coverage or mastery. Percentages indicate learned/recognition progress, **not** durable understanding or exam readiness. Saved progress survives restarts; active set queues remain temporary. Old keyboard labels still route correctly after percentages change.
+
+### Experimental dates in the topic selector
+
+Experimental topic buttons show the supplied teaching date before the topic name, for example `🔬 03.11.2026 · Schwarzkörperstrahlung`. Undated experimental topics show `Termin offen`; no dates are guessed. These dates remain user-supplied rather than independently verified announcements. Photoeffekt and Compton-Effekt share 10.11.2026.
+
+### Detailed script contents
+
+All 109 sections and subsections supplied for `QMChapter1.pdf` through `QMChapter10.pdf` are recorded in `curriculum/script_contents.tsv` and the active theory topic records, including page references. Selecting a theory chapter shows its original English section headings, with page references and a bottom-keyboard button for every section. PDF filenames and translation notices are not displayed. Opening a section shows its reference; practice remains chapter-wide until section-specific lessons are available. Original English titles are retained in the data; German translations are authored for the interface. Supplied spellings such as “Glebsch-Gordan” and “Aharanov Bohm” remain in the original-title fields, while display titles use Clebsch–Gordan and Aharonov–Bohm.
+
+These are user-supplied contents, not independently checked PDF extracts or claims of examination coverage. Indexing every section does **not** mean every section already has lessons or exercises. The 10 experimental topic buttons remain available alongside the 10 theory chapters. The workbook’s 72 image-based records remain staged separately.
+
 Implementation guidance for /topics:
 - Preserve the existing ten German chapter buttons and chapter IDs 1–10; do not silently renumber them to the 20-item combined study sequence or break existing progress.
-- Add a separate experimental track or view for Franke's seven published lecture entries; multiple concepts in a single entry may have their own study cards while sharing the same lecture date.
+- The bottom topic selector now includes ten numbered theory chapters and ten 🔬 experimental topic buttons. Shared lecture entries may have separate topic buttons while retaining the same date. Theory IDs 1–10 are unchanged; experimental topics use internal IDs 11–20.
+- `curriculum/topic_*.json` is the active catalog; legacy `chapter_*.json` files are retained as a fallback and are not loaded alongside it. Existing formula IDs are preserved. Supplied dates are labeled as user-provided in the bot until independently verified.
 - If adding a unified /syllabus view, use the combined sequence above with explicit lecturer, date, track, and source-status fields.
 - Link experimental topics to theory chapters using optional cross-references, not by claiming those mappings are official FU chapter assignments.
-- Chapters 1–3 currently have initial study records. Chapters 4–10 remain content skeletons. curriculum/experiments.json is an index of planned experimental content; listed topics do not imply fully populated, reviewed flashcards or exercises.
+- Theory chapters 1–4 have initial authored study records. Some experimental topics also have formula cards; other listed topics remain unpopulated and are clearly marked in the bot. The workbook import remains staged, not enabled as exercises. Topic visibility does not imply complete learning or exam coverage.
 - Never claim an item is assessed in the examination without explicit instructor confirmation. Maintain a source-verified course coverage map separately from original practice questions.
 Recommended question record (planned schema)
 {

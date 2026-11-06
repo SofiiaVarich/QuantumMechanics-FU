@@ -1,0 +1,110 @@
+section	page	title	title_de
+1.1	3	What is quantum mechanics?	Was ist Quantenmechanik?
+1.1.1	3	Boxes and Stern-Gerlach devices	Boxen und Stern-Gerlach-Apparaturen
+1.1.2	6	More boxes and Stern-Gerlach devices	Weitere Boxen und Stern-Gerlach-Apparaturen
+1.1.3	8	Randomness in quantum physics	Zufall in der Quantenphysik
+1.2	9	Historical overview	Historischer Überblick
+1.2.1	9	Spectrum of black-body radiation	Spektrum der Schwarzkörperstrahlung
+1.2.2	10	Photoelectric effect	Photoeffekt
+1.2.3	11	Double-slit experiments	Doppelspaltexperimente
+1.2.4	12	An explosion of ideas	Eine Vielzahl neuer Ideen
+1.2.5	14	A word on quantum mechanics in the modern world	Quantenmechanik in der modernen Welt
+2.1	3	Quantum states of spin-1/2 particles	Quantenzustände von Spin-½-Teilchen
+2.1.1	3	State vectors of spin degrees of freedom	Zustandsvektoren der Spin-Freiheitsgrade
+2.1.2	6	Pauli operators	Pauli-Operatoren
+2.1.3	6	A preliminary interpretation of the boxes	Vorläufige Interpretation der Boxen
+2.2	7	States and observables	Zustände und Observablen
+2.2.1	7	Bras and kets	Bras und Kets
+2.2.2	10	Observables	Observablen
+2.2.3	12	Eigenvectors and eigenvalues	Eigenvektoren und Eigenwerte
+2.2.4	13	Position representation and wave functions	Ortsdarstellung und Wellenfunktionen
+2.2.5	15	Momentum representation and Fourier transforms	Impulsdarstellung und Fouriertransformationen
+2.2.6	16	Combining quantum systems	Zusammensetzen von Quantensystemen
+2.3	17	Measurement	Messung
+2.3.1	18	Measurement postulate	Messpostulat
+2.3.2	19	Expectation values	Erwartungswerte
+2.3.3	19	A proper explanation of the boxes	Vollständige Erklärung der Boxen
+2.3.4	20	Three readings of the Heisenberg uncertainty relation	Drei Lesarten der Heisenbergschen Unschärferelation
+3.1	3	Basic quantum dynamics	Grundlagen der Quantendynamik
+3.1.1	3	Time evolution	Zeitentwicklung
+3.1.2	5	Schrödinger versus Heisenberg pictures	Schrödinger- und Heisenberg-Bild
+3.1.3	6	Stationary states	Stationäre Zustände
+3.1.4	7	Wave mechanics	Wellenmechanik
+3.2	8	Applications	Anwendungen
+3.2.1	8	Wave packets	Wellenpakete
+3.2.2	10	Algebraic solution of the quantum harmonic oscillator	Algebraische Lösung des quantenmechanischen harmonischen Oszillators
+3.2.3	13	Wave functions of the quantum harmonic oscillator	Wellenfunktionen des quantenmechanischen harmonischen Oszillators
+3.2.4	15	Coherent states	Kohärente Zustände
+3.2.5	16	Ehrenfest’s theorem	Ehrenfestsches Theorem
+3.2.6	16	Potential wells	Potentialtöpfe
+4.1	3	Motivation	Motivation
+4.2	4	Definition of a density operator	Definition eines Dichteoperators
+4.2.1	4	Traces	Spuren
+4.2.2	5	Density operators of pure states	Dichteoperatoren reiner Zustände
+4.2.3	6	General density operators	Allgemeine Dichteoperatoren
+4.2.4	8	Examples	Beispiele
+4.2.5	9	Non-uniqueness of ensemble representations	Nicht-Eindeutigkeit von Ensembledarstellungen
+4.3	9	Von-Neumann equation	Von-Neumann-Gleichung
+4.4	10	Measurement for density operators	Messung bei Dichteoperatoren
+4.5	11	Mixing and states of composite systems	Mischungen und Zustände zusammengesetzter Systeme
+4.5.1	11	Mixing quantum states	Mischen von Quantenzuständen
+4.5.2	12	Partial traces	Partielle Spuren
+4.5.3	13	Entangled states	Verschränkte Zustände
+5.1	3	Angular momentum	Drehimpuls
+5.1.1	3	Definition	Definition
+5.1.2	4	Angular momentum operator as generator of rotations	Drehimpulsoperator als Generator von Drehungen
+5.1.3	5	Spectrum of the angular momentum operator	Spektrum des Drehimpulsoperators
+5.1.4	7	Angular momentum operator in the position representation	Drehimpulsoperator in der Ortsdarstellung
+5.2	10	Rotationally invariant problems	Rotationsinvariante Probleme
+5.2.1	10	General considerations	Allgemeine Überlegungen
+5.2.2	12	Spectrum of the hydrogen atom	Spektrum des Wasserstoffatoms
+5.2.3	14	Orbitals of the hydrogen atom	Orbitale des Wasserstoffatoms
+6.1	3	Time independent perturbation theory	Zeitunabhängige Störungstheorie
+6.1.1	4	Non-degenerate situation	Nichtentarteter Fall
+6.1.2	7	An example: The anharmonic oscillator	Beispiel: der anharmonische Oszillator
+6.1.3	8	Degenerate situation	Entarteter Fall
+6.2	8	Time-dependent perturbation theory	Zeitabhängige Störungstheorie
+6.2.1	8	Interaction picture	Wechselwirkungsbild
+6.2.2	10	Applications: Transitions of first order	Anwendungen: Übergänge erster Ordnung
+6.3	11	Some words on more general concepts of perturbation	Allgemeinere Störungskonzepte
+7.1	3	Spin and the problem of adding angular momenta	Spin und Addition von Drehimpulsen
+7.1.1	3	Spin operators	Spinoperatoren
+7.1.2	4	Stating the general problem	Formulierung des allgemeinen Problems
+7.1.3	5	Coupling of two spins	Kopplung zweier Spins
+7.2	6	The general problem for two systems	Das allgemeine Problem für zwei Systeme
+7.2.1	6	Possible values	Mögliche Werte
+7.2.2	8	Glebsch-Gordan coefficients	Clebsch–Gordan-Koeffizienten
+7.2.3	9	An optional remark on group theory	Optionaler Hinweis zur Gruppentheorie
+7.2.4	9	Adding orbital angular momentum and a spin	Addition von Bahndrehimpuls und Spin
+8.1	3	Hamilton operator of spinless particles	Hamiltonoperator spinloser Teilchen
+8.2	4	Constant magnetic field	Konstantes Magnetfeld
+8.2.1	4	Hamiltonian of a particle in a constant magnetic field	Hamiltonoperator eines Teilchens im konstanten Magnetfeld
+8.2.2	4	Normal Zeeman effect	Normaler Zeeman-Effekt
+8.2.3	5	Anomalous Zeeman effect	Anomaler Zeeman-Effekt
+8.3	5	Concluding remarks	Abschließende Bemerkungen
+8.3.1	6	Aharanov Bohm effect	Aharonov–Bohm-Effekt
+8.3.2	6	Flux quantization in superconductors	Flussquantisierung in Supraleitern
+8.3.3	6	Landau levels	Landau-Niveaus
+9.1	3	Introduction	Einführung
+9.2	3	The historical setting	Historischer Hintergrund
+9.3	5	Preliminaries	Vorbereitungen
+9.3.1	5	Correlation tables	Korrelationstabellen
+9.3.2	5	Properties of correlation tables	Eigenschaften von Korrelationstabellen
+9.3.3	6	Local hidden variables	Lokale verborgene Variablen
+9.4	7	Deriving the Bell inequality	Herleitung der Bellschen Ungleichung
+9.5	8	Violation of the Bell inequalities	Verletzung der Bellschen Ungleichungen
+10.1	3	Open quantum systems	Offene Quantensysteme
+10.1.1	3	Reduced system dynamics	Reduzierte Systemdynamik
+10.1.2	5	Decoherence	Dekohärenz
+10.1.3	7	Quantum channels	Quantenkanäle
+10.1.4	8	Markovian evolution and exponential decay	Markowsche Entwicklung und exponentieller Zerfall
+10.2	10	Atoms and molecules	Atome und Moleküle
+10.2.1	10	Alkali atoms	Alkaliatome
+10.2.2	11	Helium atom	Heliumatom
+10.3	11	Complex quantum systems	Komplexe Quantensysteme
+10.3.1	11	Quantum many-body systems and condensed matter	Quanten-Vielteilchensysteme und kondensierte Materie
+10.3.2	12	Bose-Hubbard model	Bose-Hubbard-Modell
+10.3.3	14	Mean field theory	Mittlere-Feld-Theorie
+10.4	16	Quantum information theory	Quanteninformationstheorie
+10.4.1	16	Quantum key distribution and the BB84 scheme	Quantenschlüsselverteilung und BB84-Protokoll
+10.4.2	17	Quantum computing	Quantencomputing

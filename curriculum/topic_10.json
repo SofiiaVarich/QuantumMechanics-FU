@@ -1,0 +1,105 @@
+{
+  "number": 10,
+  "title": "Atoms, molecules, open and complex quantum systems, and quantum computers",
+  "title_de": "Atome, Moleküle, offene und komplexe Quantensysteme und Quantencomputer",
+  "professor": "Eisert",
+  "date": null,
+  "source_url": "",
+  "source_status": "User-provided topic sequence and dates; not independently verified",
+  "terms": [],
+  "formulas": [],
+  "script_file": "QMChapter10.pdf",
+  "outline_source": "User-supplied contents; German translations authored for the bot; not independently verified",
+  "sections": [
+    {
+      "id": "10.1",
+      "page": 3,
+      "title": "Open quantum systems",
+      "title_de": "Offene Quantensysteme"
+    },
+    {
+      "id": "10.1.1",
+      "page": 3,
+      "title": "Reduced system dynamics",
+      "title_de": "Reduzierte Systemdynamik"
+    },
+    {
+      "id": "10.1.2",
+      "page": 5,
+      "title": "Decoherence",
+      "title_de": "Dekohärenz"
+    },
+    {
+      "id": "10.1.3",
+      "page": 7,
+      "title": "Quantum channels",
+      "title_de": "Quantenkanäle"
+    },
+    {
+      "id": "10.1.4",
+      "page": 8,
+      "title": "Markovian evolution and exponential decay",
+      "title_de": "Markowsche Entwicklung und exponentieller Zerfall"
+    },
+    {
+      "id": "10.2",
+      "page": 10,
+      "title": "Atoms and molecules",
+      "title_de": "Atome und Moleküle"
+    },
+    {
+      "id": "10.2.1",
+      "page": 10,
+      "title": "Alkali atoms",
+      "title_de": "Alkaliatome"
+    },
+    {
+      "id": "10.2.2",
+      "page": 11,
+      "title": "Helium atom",
+      "title_de": "Heliumatom"
+    },
+    {
+      "id": "10.3",
+      "page": 11,
+      "title": "Complex quantum systems",
+      "title_de": "Komplexe Quantensysteme"
+    },
+    {
+      "id": "10.3.1",
+      "page": 11,
+      "title": "Quantum many-body systems and condensed matter",
+      "title_de": "Quanten-Vielteilchensysteme und kondensierte Materie"
+    },
+    {
+      "id": "10.3.2",
+      "page": 12,
+      "title": "Bose-Hubbard model",
+      "title_de": "Bose-Hubbard-Modell"
+    },
+    {
+      "id": "10.3.3",
+      "page": 14,
+      "title": "Mean field theory",
+      "title_de": "Mittlere-Feld-Theorie"
+    },
+    {
+      "id": "10.4",
+      "page": 16,
+      "title": "Quantum information theory",
+      "title_de": "Quanteninformationstheorie"
+    },
+    {
+      "id": "10.4.1",
+      "page": 16,
+      "title": "Quantum key distribution and the BB84 scheme",
+      "title_de": "Quantenschlüsselverteilung und BB84-Protokoll"
+    },
+    {
+      "id": "10.4.2",
+      "page": 17,
+      "title": "Quantum computing",
+      "title_de": "Quantencomputing"
+    }
+  ]
+}

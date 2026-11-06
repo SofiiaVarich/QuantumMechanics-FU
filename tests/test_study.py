@@ -16,9 +16,9 @@ def test_adaptive_exercise_contains_one_correct_choice(tmp_path: Path) -> None:
     assert 3 <= len(exercise.choices) <= 4
     assert exercise.choices[exercise.correct_index] in exercise.question.answer
     assert service.item_count("term") == 0
-    assert service.item_count("formula") == 9
-    assert service.item_count("all") == 9
-    assert service.item_count("law") == 9
+    assert service.item_count("formula") == 12
+    assert service.item_count("all") == 12
+    assert service.item_count("law") == 12
 
     law = service.random_law()
     assert law is not None
@@ -29,4 +29,4 @@ def test_adaptive_exercise_contains_one_correct_choice(tmp_path: Path) -> None:
     assert chapter_three is not None
     assert chapter_three.question.item_id == "c3-schrodinger"
     assert service.item_count("formula", chapter_number=3) == 1
-    assert service.adaptive_exercise(chapter_number=4) is None
+    assert service.adaptive_exercise(chapter_number=5) is None

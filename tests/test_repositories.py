@@ -9,8 +9,13 @@ from quantum_tutor.infrastructure.database import ProgressRepository
 def test_curriculum_loads_chapters() -> None:
     repository = CurriculumRepository(Path("curriculum"))
     chapters = repository.chapters()
-    assert [chapter.number for chapter in chapters] == list(range(1, 11))
+    assert [chapter.number for chapter in chapters] == list(range(1, 21))
     assert chapters[1].formulas[0].id == "c2-born-rule"
+    assert chapters[10].title_de == "Schwarzkörperstrahlung"
+    assert chapters[10].date == "03.11.2026"
+    assert sum(chapter.professor == "Franke" for chapter in chapters) == 10
+    ids = [formula.id for chapter in chapters for formula in chapter.formulas]
+    assert len(ids) == len(set(ids))
 
 
 def test_formula_notation_contains_no_placeholder_stars() -> None:

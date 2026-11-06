@@ -1,20 +1,105 @@
 {
   "number": 3,
-  "title": "Stefan–Boltzmann law",
-  "title_de": "Stefan–Boltzmann-Gesetz",
-  "professor": "Franke",
-  "date": "05.11.2026",
+  "title": "Quantum dynamics",
+  "title_de": "Quantendynamik",
+  "professor": "Eisert",
+  "date": null,
+  "source_url": "",
+  "source_status": "User-provided topic sequence and dates; not independently verified",
   "terms": [],
   "formulas": [
     {
-      "id": "c3-stefan-boltzmann",
-      "name": "Stefan–Boltzmann law",
-      "name_de": "Stefan–Boltzmann-Gesetz",
-      "equation": "M = σT⁴",
-      "symbols": {"M": "radiant exitance (emitted power per unit area)", "σ": "Stefan–Boltzmann constant", "T": "absolute temperature"},
-      "when_to_use": "To find the total thermal power emitted per unit area by an ideal blackbody.",
-      "assumptions": ["Ideal blackbody", "Absolute temperature in kelvin"],
-      "common_mistakes": ["Using Celsius instead of kelvin", "Forgetting the fourth power"]
+      "id": "c3-schrodinger",
+      "name": "Time-dependent Schrödinger equation",
+      "name_de": "Zeitabhängige Schrödingergleichung",
+      "equation": "iℏ ∂|ψ⟩/∂t = H|ψ⟩",
+      "symbols": {
+        "ℏ": "reduced Planck constant",
+        "H": "Hamiltonian"
+      },
+      "when_to_use": "To determine the time evolution of a closed quantum state.",
+      "assumptions": [
+        "Non-relativistic quantum mechanics."
+      ],
+      "common_mistakes": [
+        "Dropping the factor i."
+      ]
+    }
+  ],
+  "script_file": "QMChapter3.pdf",
+  "outline_source": "User-supplied contents; German translations authored for the bot; not independently verified",
+  "sections": [
+    {
+      "id": "3.1",
+      "page": 3,
+      "title": "Basic quantum dynamics",
+      "title_de": "Grundlagen der Quantendynamik"
+    },
+    {
+      "id": "3.1.1",
+      "page": 3,
+      "title": "Time evolution",
+      "title_de": "Zeitentwicklung"
+    },
+    {
+      "id": "3.1.2",
+      "page": 5,
+      "title": "Schrödinger versus Heisenberg pictures",
+      "title_de": "Schrödinger- und Heisenberg-Bild"
+    },
+    {
+      "id": "3.1.3",
+      "page": 6,
+      "title": "Stationary states",
+      "title_de": "Stationäre Zustände"
+    },
+    {
+      "id": "3.1.4",
+      "page": 7,
+      "title": "Wave mechanics",
+      "title_de": "Wellenmechanik"
+    },
+    {
+      "id": "3.2",
+      "page": 8,
+      "title": "Applications",
+      "title_de": "Anwendungen"
+    },
+    {
+      "id": "3.2.1",
+      "page": 8,
+      "title": "Wave packets",
+      "title_de": "Wellenpakete"
+    },
+    {
+      "id": "3.2.2",
+      "page": 10,
+      "title": "Algebraic solution of the quantum harmonic oscillator",
+      "title_de": "Algebraische Lösung des quantenmechanischen harmonischen Oszillators"
+    },
+    {
+      "id": "3.2.3",
+      "page": 13,
+      "title": "Wave functions of the quantum harmonic oscillator",
+      "title_de": "Wellenfunktionen des quantenmechanischen harmonischen Oszillators"
+    },
+    {
+      "id": "3.2.4",
+      "page": 15,
+      "title": "Coherent states",
+      "title_de": "Kohärente Zustände"
+    },
+    {
+      "id": "3.2.5",
+      "page": 16,
+      "title": "Ehrenfest’s theorem",
+      "title_de": "Ehrenfestsches Theorem"
+    },
+    {
+      "id": "3.2.6",
+      "page": 16,
+      "title": "Potential wells",
+      "title_de": "Potentialtöpfe"
     }
   ]
 }
