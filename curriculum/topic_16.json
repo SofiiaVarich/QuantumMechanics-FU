@@ -7,5 +7,128 @@
   "source_url": "",
   "source_status": "User-provided topic sequence and dates; not independently verified",
   "terms": [],
-  "formulas": []
+  "formulas": [],
+  "concepts": [
+    {
+      "id": "EXP-023",
+      "section_id": "16",
+      "front": "Born rule density",
+      "definition": "Position probability density",
+      "key_rule": "ρ(x,t) = |ψ(x,t)|²",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-024",
+      "section_id": "16",
+      "front": "Probability interval",
+      "definition": "Probability in interval",
+      "key_rule": "P(a ≤ x ≤ b) = ∫ₐᵇ |ψ(x,t)|² dx",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-025",
+      "section_id": "16",
+      "front": "Normalization",
+      "definition": "Normalized wavefunction in one dimension",
+      "key_rule": "∫₋∞⁺∞ |ψ(x,t)|² dx = 1",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-026",
+      "section_id": "16",
+      "front": "Expectation of position",
+      "definition": "Mean position",
+      "key_rule": "⟨x⟩ = ∫ x|ψ(x,t)|² dx",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-027",
+      "section_id": "16",
+      "front": "Heisenberg uncertainty",
+      "definition": "Standard-deviation uncertainty",
+      "key_rule": "Δx Δp ≥ ℏ/2",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-044",
+      "section_id": "16",
+      "front": "Born interpretation",
+      "definition": "The squared modulus of the wavefunction is a position probability density.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-045",
+      "section_id": "16",
+      "front": "Wavefunction normalization",
+      "definition": "The integral of probability density over all space equals one.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    }
+  ],
+  "concept_metadata": {
+    "EXP-023": {
+      "original_topic": "Statistische Deutung der Wellenfunktion",
+      "original_formula": "\\rho(x,t)=|\\psi(x,t)|^2",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-024": {
+      "original_topic": "Statistische Deutung der Wellenfunktion",
+      "original_formula": "P(a\\le x\\le b)=\\int_a^b|\\psi(x,t)|^2dx",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-025": {
+      "original_topic": "Statistische Deutung der Wellenfunktion",
+      "original_formula": "\\int_{-\\infty}^{\\infty}|\\psi(x,t)|^2dx=1",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-026": {
+      "original_topic": "Statistische Deutung der Wellenfunktion",
+      "original_formula": "\\langle x\\rangle=\\int x|\\psi(x,t)|^2dx",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-027": {
+      "original_topic": "Statistische Deutung der Wellenfunktion",
+      "original_formula": "Δ xΔ p\\geℏ/2",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-044": {
+      "original_topic": "Statistische Deutung der Wellenfunktion",
+      "original_formula": "—",
+      "reference": "Concept",
+      "source_status": "Standard conceptual explanation; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-045": {
+      "original_topic": "Statistische Deutung der Wellenfunktion",
+      "original_formula": "—",
+      "reference": "Concept",
+      "source_status": "Standard conceptual explanation; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    }
+  }
 }

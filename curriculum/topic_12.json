@@ -28,5 +28,94 @@
         "Forgetting the fourth power"
       ]
     }
-  ]
+  ],
+  "concepts": [
+    {
+      "id": "EXP-009",
+      "section_id": "12",
+      "front": "Stefan–Boltzmann radiant exitance",
+      "definition": "Ideal blackbody total radiant power per area",
+      "key_rule": "M=σ T^4",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-010",
+      "section_id": "12",
+      "front": "Total emitted power",
+      "definition": "Greybody emissivity approximation",
+      "key_rule": "P = εσAT⁴",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-011",
+      "section_id": "12",
+      "front": "Net radiative exchange",
+      "definition": "Simple radiative exchange approximation",
+      "key_rule": "P_net = εσA(T⁴ − T_env⁴)",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-012",
+      "section_id": "12",
+      "front": "Stefan–Boltzmann constant",
+      "definition": "Fundamental-constant expression",
+      "key_rule": "σ = 2π⁵k_B⁴ / (15h³c²)",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-040",
+      "section_id": "12",
+      "front": "Fourth-power temperature dependence",
+      "definition": "Radiant power per unit area of a blackbody scales as the fourth power of absolute temperature.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    }
+  ],
+  "concept_metadata": {
+    "EXP-009": {
+      "original_topic": "Stefan-Boltzmann-Gesetz",
+      "original_formula": "M=σ T^4",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-010": {
+      "original_topic": "Stefan-Boltzmann-Gesetz",
+      "original_formula": "P=\\varepsilonσ AT^4",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-011": {
+      "original_topic": "Stefan-Boltzmann-Gesetz",
+      "original_formula": "P_{\\mathrm{net}}=\\varepsilonσ A(T^4-T_{\\mathrm{env}}^4)",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-012": {
+      "original_topic": "Stefan-Boltzmann-Gesetz",
+      "original_formula": "σ=\\frac{2\\pi^5k_B^4}{15h^3c^2}",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-040": {
+      "original_topic": "Stefan-Boltzmann-Gesetz",
+      "original_formula": "—",
+      "reference": "Concept",
+      "source_status": "Standard conceptual explanation; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    }
+  }
 }

@@ -27,5 +27,77 @@
         "Using light intensity instead of frequency to set electron energy"
       ]
     }
-  ]
+  ],
+  "concepts": [
+    {
+      "id": "EXP-013",
+      "section_id": "13",
+      "front": "Einstein photoelectric equation",
+      "definition": "Maximum photoelectron kinetic energy",
+      "key_rule": "K_max = hν − W_A",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-014",
+      "section_id": "13",
+      "front": "Stopping potential",
+      "definition": "Magnitude of electron charge",
+      "key_rule": "eU_s = K_max",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-015",
+      "section_id": "13",
+      "front": "Threshold frequency",
+      "definition": "Photoemission threshold",
+      "key_rule": "ν₀ = W_A/h",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-041",
+      "section_id": "13",
+      "front": "Photoelectric threshold frequency",
+      "definition": "Below the material-dependent threshold frequency, no photoelectrons are emitted regardless of intensity.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    }
+  ],
+  "concept_metadata": {
+    "EXP-013": {
+      "original_topic": "Photoeffekt, Compton-Effekt",
+      "original_formula": "K_{\\max}=hν-W_A",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-014": {
+      "original_topic": "Photoeffekt, Compton-Effekt",
+      "original_formula": "eU_s=K_{\\max}",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-015": {
+      "original_topic": "Photoeffekt, Compton-Effekt",
+      "original_formula": "ν_0=W_A/h",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-041": {
+      "original_topic": "Photoeffekt, Compton-Effekt",
+      "original_formula": "—",
+      "reference": "Concept",
+      "source_status": "Standard conceptual explanation; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    }
+  }
 }

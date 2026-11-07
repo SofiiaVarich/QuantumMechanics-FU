@@ -94,6 +94,15 @@ class ProgressRepository:
             ).fetchall()
         return [str(row["item_id"]) for row in rows]
 
+    def review_item_ids(self, user_id: int, now: datetime) -> list[str]:
+        with self._connect() as connection:
+            rows = connection.execute(
+                """SELECT item_id FROM reviews WHERE user_id=?
+                AND (repetitions=0 OR due_at<=?) ORDER BY due_at, item_id""",
+                (user_id, now.isoformat()),
+            ).fetchall()
+        return [str(row["item_id"]) for row in rows]
+
     def known_item_ids(self, user_id: int) -> set[str]:
         """Latest correct recognition/recall, not a claim of durable mastery."""
         with self._connect() as connection:

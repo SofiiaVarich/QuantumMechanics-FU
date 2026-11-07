@@ -27,5 +27,77 @@
         "Using the electron scattering angle instead of the photon angle"
       ]
     }
-  ]
+  ],
+  "concepts": [
+    {
+      "id": "EXP-016",
+      "section_id": "14",
+      "front": "Compton shift",
+      "definition": "Photon wavelength shift",
+      "key_rule": "Δλ = h/(mₑc) · (1 − cos θ)",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-017",
+      "section_id": "14",
+      "front": "Compton wavelength",
+      "definition": "Electron Compton wavelength",
+      "key_rule": "λ_C = h/(mₑc)",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-018",
+      "section_id": "14",
+      "front": "Photon momentum",
+      "definition": "Photon momentum magnitude",
+      "key_rule": "p_γ = h/λ",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-042",
+      "section_id": "14",
+      "front": "Compton scattering",
+      "definition": "Photon scattering on an electron changes photon wavelength; evidence for photon momentum.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    }
+  ],
+  "concept_metadata": {
+    "EXP-016": {
+      "original_topic": "Photoeffekt, Compton-Effekt",
+      "original_formula": "Δλ=\\frac{h}{m_ec}(1-\\cos\\theta)",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-017": {
+      "original_topic": "Photoeffekt, Compton-Effekt",
+      "original_formula": "λ_C=\\frac{h}{m_ec}",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-018": {
+      "original_topic": "Photoeffekt, Compton-Effekt",
+      "original_formula": "p_\\gamma=h/λ",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-042": {
+      "original_topic": "Photoeffekt, Compton-Effekt",
+      "original_formula": "—",
+      "reference": "Concept",
+      "source_status": "Standard conceptual explanation; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    }
+  }
 }

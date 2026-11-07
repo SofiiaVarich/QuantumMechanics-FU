@@ -1,5 +1,4 @@
-Quantum Tutor
-Quantum Tutor
+# Quantum Tutor
 A private, bilingual (German–English) Telegram study bot for Quantum Mechanics, combining Quizlet-inspired flashcards, active recall, adaptive practice, spaced repetition, formula selection, derivations, exam simulations, reminders, and progress tracking.
 Independent learning project. Quantum Tutor is not an official Freie Universität Berlin service or affiliated with Quizlet. Confirm examination rules, dates, rooms, permitted aids, and assessed material using official FU sources. Features marked Planned below are design goals, not claims about the current codebase.
 Features and implementation status
@@ -7,18 +6,22 @@ Mode	Purpose	Status
 🎯 Learn	Continuous adaptive multiple-choice questions with immediate explanations	Existing
 ⚖️ Laws & Rules	Self-graded physical laws, meanings, assumptions, and applications	Existing
 🧮 Formulas	Self-graded equations with symbols, assumptions, and usage conditions	Existing
-🗂 Topics	Select one of ten German chapter buttons and scope learning to it	Existing
-🔁 Review	View due items under the current spaced-review schedule	Existing
+🗂 Topics	One menu for theory and experiments; select a topic to study all its cards together	Existing
+🔁 Review	Practice missed and due cards from all topics in one automatic set	Existing
 📈 Progress	Track accuracy and mastery	Existing
 🔔 Reminders	Personal study prompts at configured Berlin times	Existing
-🃏 Flashcard ratings	Reveal an answer, then choose Repeat / Hard / Okay / Easy	Existing
+🃏 Flashcards	Reveal an answer, then choose Know / Don't know	Existing
 ✍️ Write	Type terms, formulas, and explanations without answer choices	Planned
 🧠 Apply	Choose the correct formula for an unfamiliar physics problem	Planned
 📐 Derive	Practice mathematical derivations and assumptions	Planned
 📝 Test / Exam	Timed, mixed-topic practice with restricted hints	Planned
 📊 Skill mastery	Track recall, understanding, application, derivation, and problem-solving separately	Planned
 
-The Telegram interface uses a persistent bottom keyboard. /topics opens ten German-only chapter buttons. Selecting one makes it the active chapter; Learn, Laws & Rules, and Formulas then stay within that chapter. Chapters without reviewed records are clearly marked instead of receiving invented material. Answer and grading controls temporarily replace the keyboard; 🏠 Main menu clears the active chapter and exits the session. Commands remain available:
+The Telegram interface uses a persistent bottom keyboard. `/topics` opens a single menu with ten theory chapters and ten experimental topics—no duplicate chapter/subsection selection step. Selecting a topic immediately starts one automatic multiple-choice set containing all its concept cards and standalone formula cards. Original IDs are deduplicated; existing history is preserved. Empty topics are clearly marked. Finishing returns to the topic menu with refreshed percentages. Older subsection button messages still work for compatibility, but subsections are no longer required in normal navigation.
+
+`/review` starts a separate cross-topic set: currently missed cards are available immediately (even before their scheduled ten-minute retry), alongside all due cards. Correctly answered cards remain saved with a future due date and return to Review when due. Formula cards are included as well as concept cards. Unknown/retired IDs are skipped without deleting their history. Reviews and queues are private to each account; active sessions are in memory, while review schedules survive restarts. Counters measure completion of the current set, not exam readiness.
+
+Answer controls temporarily replace the keyboard; 🏠 Main menu exits a session. Commands remain available:
 /start       Main menu
 /learn       Adaptive multiple-choice practice
 /laws        Physical laws and application rules
@@ -135,13 +138,13 @@ Official FU source pages:
 - Franke (experimental lecture dates, WS 2026/27): https://www.physik.fu-berlin.de/en/einrichtungen/ag/ag-franke/courses/26-WS-Quantenmechanik/index.html
 ### Chapter 2 concept cards
 
-The 29 cards from `QM_Chapter2_Concept_Cards_Updated.xlsx` are available as automatic subsection study sets. Selecting a subsection starts all its cards (a parent section includes descendant subsections). No individual question selection is needed.
+The 29 cards from `QM_Chapter2_Concept_Cards_Updated.xlsx` are included in the whole-topic set when Chapter 2 is selected, together with its standalone formula cards. Subsection assignments are retained for organization and compatibility with older buttons; no subsection selection is required.
 
 1. Choose the definition matching the concept from the answer buttons, or tap **Don't know**. There is no reveal-and-self-rating step in subsection sets.
 2. Wrong answers and **Don't know** show the definition/key rule, then send the card to the back of the queue. If it is the only remaining card, it is presented again immediately.
 3. A correct answer completes that unique card for the set and automatically presents the next card.
 4. Prompts show `1/5 · 0% completed in this set`. The numerator is completed unique cards plus the current card; retries do not increase the denominator or completion percentage.
-5. Once all cards are completed, the bot shows `100%` and returns to the subsection buttons for the same chapter.
+5. Once all cards are completed, the bot shows `100%` and returns to the single topic menu.
 
 Set completion means successful multiple-choice recognition during this session—not durable mastery or exam readiness. Correct choices are automatically graded as Okay internally; wrong choices and Don't know are Repeat. Other flashcard modes use only Know / Don't know controls; the four-level scheduler is retained internally for historical compatibility. Every rating still updates persistent spaced-review history independently. The active queue is in memory and resets after a bot restart or when starting another set; users can exit through Main menu or Topics at any time. Original workbook wording and formulas are preserved without translation. Spreadsheet status is source metadata only. These are physics concept cards, not translation exercises. The separate 72-image formula workbook remains staged.
 
@@ -213,9 +216,82 @@ The 47 cards from `QM_Chapter7_Concept_Learning_Cards.xlsx` are available in Cha
 
 Selecting 7.1 starts a 25-card set; selecting 7.2 starts a 22-card set. Individual subsections start their own automatic multiple-choice sets. Wrong answers and Don't know requeue cards; feedback includes both meaning and formula. Workbook references have not been independently verified against the lecture PDF.
 
+### Chapter 9 concept cards
+
+The 33 cards from `QM_Chapter9_Concept_Learning_Cards.xlsx` are available in Chapter 9. Original IDs, concept names, formula/definition fields, and meanings are preserved without translation. Equation and supplied source references are stored in `concept_metadata`. Spreadsheet progress does not reset user history.
+
+| Section | Cards |
+|---|---:|
+| 9.1 Introduction | 2 |
+| 9.2 The historical setting | 4 |
+| 9.3.1 Correlation tables | 4 |
+| 9.3.2 Properties of correlation tables | 5 |
+| 9.3.3 Local hidden variables | 5 |
+| 9.4 Deriving the Bell inequality | 11 |
+| 9.5 Violation of the Bell inequalities | 2 |
+
+Selecting 9.3 starts its 14 descendant cards. Individual sections start their own automatic multiple-choice sets. Wrong answers and Don't know return later; feedback includes both the meaning and formula/definition. Workbook references have not been independently verified against the lecture PDF.
+
+### Chapter 8 concept cards
+
+The 31 cards from `QM_Chapter8_Concept_Learning_Cards.xlsx` are available in Chapter 8. Original concepts, formulas, meanings, and IDs are preserved without translation. The workbook's coupling expressions, including their `1/c` factors, are retained rather than converted to another unit convention. Equation and supplied source references are stored in `concept_metadata`; spreadsheet progress does not reset user history.
+
+| Section | Cards |
+|---|---:|
+| 8.1 Hamilton operator of spinless particles | 6 |
+| 8.2.1 Hamiltonian of a particle in a constant magnetic field | 5 |
+| 8.2.2 Normal Zeeman effect | 5 |
+| 8.2.3 Anomalous Zeeman effect | 5 |
+| 8.3.1 Aharanov Bohm effect (original heading) | 3 |
+| 8.3.2 Flux quantization in superconductors | 4 |
+| 8.3.3 Landau levels | 3 |
+
+Selecting 8.2 starts a 15-card set; selecting 8.3 starts a 10-card set. Individual subsections start their own automatic multiple-choice sets. Wrong answers and Don't know return later; feedback includes meaning and formula. Workbook references have not been independently verified against the lecture PDF.
+
+### Chapter 10 concept cards
+
+The 71 cards from `QM_Chapter10_Concept_Learning_Cards.xlsx` are available in Chapter 10, covering all 11 named subsections. Original concept names, formulas/key ideas, meanings, and IDs are preserved without translation. Equation references, priorities, and supplied source references are stored in `concept_metadata`; spreadsheet progress does not reset user history.
+
+| Subsection | Cards |
+|---|---:|
+| 10.1.1 Reduced system dynamics | 8 |
+| 10.1.2 Decoherence | 10 |
+| 10.1.3 Quantum channels | 8 |
+| 10.1.4 Markovian evolution and exponential decay | 9 |
+| 10.2.1 Alkali atoms | 3 |
+| 10.2.2 Helium atom | 1 |
+| 10.3.1 Quantum many-body systems and condensed matter | 4 |
+| 10.3.2 Bose-Hubbard model | 9 |
+| 10.3.3 Mean field theory | 16 |
+| 10.4.1 Quantum key distribution and the BB84 scheme | 2 |
+| 10.4.2 Quantum computing | 1 |
+
+Parent sections start combined sets: 10.1 has 35 cards, 10.2 has 4, 10.3 has 29, and 10.4 has 3. Individual subsections start their own automatic multiple-choice sets. Single-card sets use distractors from the wider concept collection and repeat immediately after Don't know until answered correctly. Feedback includes meaning and formula/key idea. Workbook references have not been independently verified against the lecture PDF.
+
+### Experimental concept cards
+
+The 48 cards from `QM_Experimental_Topics_Concept_Learning_Cards.xlsx` are included in the existing experimental topics. Original IDs (`EXP-001`–`EXP-048`), concept names, and meanings are preserved. Raw workbook formulas are stored in `concept_metadata.original_formula`; display formulas use equivalent plain-text notation rather than unsupported raw LaTeX. Source references and the workbook's explicit **not verified against Franke slides** status are retained. These are standard-reference practice materials, not verified official course cards.
+
+| Topic | Supplied date | Imported concept cards |
+|---|---|---:|
+| Schwarzkörperstrahlung | 03.11.2026 | 10 |
+| Stefan–Boltzmann-Gesetz | 05.11.2026 | 5 |
+| Photoeffekt | 10.11.2026 | 4 |
+| Compton-Effekt | 10.11.2026 | 4 |
+| Elektronenbeugung | 12.11.2026 | 5 |
+| Statistische Deutung der Wellenfunktion | 17.11.2026 | 7 |
+| Atommodelle | Termin offen | 3 |
+| Balmer-Serie | Termin offen | 3 |
+| Franck-Hertz-Versuch | Termin offen | 2 |
+| Spin-Bahn-Kopplung | Termin offen | 5 |
+
+The workbook groups some topics into shared lecture entries. Splitting those cards between the existing topic buttons is an authored organizational mapping, not an official FU chapter assignment. Each imported ID occurs once. Topic sets also include existing standalone formula cards, so their total can exceed the imported concept count. Missed experimental cards enter the shared Review section immediately; due cards return according to their saved schedules. Workbook progress never resets either account's history.
+
+The reattached Chapter 8 (31 cards) and Chapter 10 (71 cards) workbooks were checked against existing card IDs, sections, names, meanings, and formulas and matched; no duplicate imports were needed.
+
 ### Saved topic and subsection progress
 
-Topic buttons, chapter details, subsection buttons, and contents lines show account-specific percentages, refreshed whenever that view is opened and after a set completes. The percentage is the number of available cards with a currently successful saved review state divided by the number of available cards. Topic totals include concept cards and formulas; subsection totals include concept cards assigned to that section or its descendants. A subsequent wrong answer reduces progress. Duplicate attempts do not inflate it. Empty sections show `— no cards` rather than claiming coverage or mastery. Percentages indicate learned/recognition progress, **not** durable understanding or exam readiness. Saved progress survives restarts; active set queues remain temporary. Old keyboard labels still route correctly after percentages change.
+Topic buttons show account-specific percentages, refreshed whenever the topic menu opens and after a set completes. Subsection metadata is retained but a separate contents-selection step is no longer displayed. The percentage is the number of available cards with a currently successful saved review state divided by the number of available cards. Topic totals include concept cards and formulas; subsection totals include concept cards assigned to that section or its descendants. A subsequent wrong answer reduces progress. Duplicate attempts do not inflate it. Empty sections show `— no cards` rather than claiming coverage or mastery. Percentages indicate learned/recognition progress, **not** durable understanding or exam readiness. Saved progress survives restarts; active set queues remain temporary. Old keyboard labels still route correctly after percentages change.
 
 ### Experimental dates in the topic selector
 
@@ -223,7 +299,7 @@ Experimental topic buttons show the supplied teaching date before the topic name
 
 ### Detailed script contents
 
-All 109 sections and subsections supplied for `QMChapter1.pdf` through `QMChapter10.pdf` are recorded in `curriculum/script_contents.tsv` and the active theory topic records, including page references. Selecting a theory chapter shows its original English section headings, with page references and a bottom-keyboard button for every section. PDF filenames and translation notices are not displayed. Opening a section shows its reference; practice remains chapter-wide until section-specific lessons are available. Original English titles are retained in the data; German translations are authored for the interface. Supplied spellings such as “Glebsch-Gordan” and “Aharanov Bohm” remain in the original-title fields, while display titles use Clebsch–Gordan and Aharonov–Bohm.
+All 109 sections and subsections supplied for `QMChapter1.pdf` through `QMChapter10.pdf` are recorded in `curriculum/script_contents.tsv` and the active theory topic records, including page references. Selecting a theory chapter now starts all its cards together, rather than displaying another subsection-selection menu. Section headings and page references remain in the curriculum data. PDF filenames and translation notices are not displayed. Original English titles are retained in the data; German translations are authored for the interface. Supplied spellings such as “Glebsch-Gordan” and “Aharanov Bohm” remain in the original-title fields, while display titles use Clebsch–Gordan and Aharonov–Bohm.
 
 These are user-supplied contents, not independently checked PDF extracts or claims of examination coverage. Indexing every section does **not** mean every section already has lessons or exercises. The 10 experimental topic buttons remain available alongside the 10 theory chapters. The workbook’s 72 image-based records remain staged separately.
 

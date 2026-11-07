@@ -101,5 +101,1074 @@
       "title": "Quantum computing",
       "title_de": "Quantencomputing"
     }
-  ]
+  ],
+  "concepts": [
+    {
+      "id": "C10-001",
+      "section_id": "10.1.1",
+      "front": "Open quantum system",
+      "definition": "The subsystem is described by its reduced density operator.",
+      "key_rule": "System S interacts with environment E",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-002",
+      "section_id": "10.1.1",
+      "front": "System and environment Hilbert spaces",
+      "definition": "Joint Hilbert space is a tensor product.",
+      "key_rule": "ℋ = ℋS ⊗ ℋE",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-003",
+      "section_id": "10.1.1",
+      "front": "Total Hamiltonian",
+      "definition": "Free system, free environment, and interaction terms.",
+      "key_rule": "H = HS ⊗ I + I ⊗ HE + HI",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-004",
+      "section_id": "10.1.1",
+      "front": "Joint density-operator evolution",
+      "definition": "Joint system evolves unitarily.",
+      "key_rule": "ρ(t) = U(t,t₀)ρ(t₀)U(t,t₀)†",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-005",
+      "section_id": "10.1.1",
+      "front": "Unitary time evolution",
+      "definition": "Time-independent total Hamiltonian.",
+      "key_rule": "U(t,t₀) = exp[−i(t−t₀)H/ℏ]",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-006",
+      "section_id": "10.1.1",
+      "front": "Initially uncorrelated state",
+      "definition": "Product initial state is an assumption, not always physically justified.",
+      "key_rule": "ρ(t₀) = ρS(t₀) ⊗ ρE(t₀)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-007",
+      "section_id": "10.1.1",
+      "front": "Reduced system state",
+      "definition": "Trace out environmental degrees of freedom.",
+      "key_rule": "ρS(t) = trE[ρ(t)]",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-008",
+      "section_id": "10.1.1",
+      "front": "Reduced system dynamics",
+      "definition": "Open dynamics can be nonunitary even though the joint evolution is unitary.",
+      "key_rule": "ρS(t) = trE[U(ρS(t₀)⊗ρE(t₀))U†]",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-009",
+      "section_id": "10.1.2",
+      "front": "Decoherence",
+      "definition": "Coupling and entanglement with the environment suppress coherent quantum features.",
+      "key_rule": "Pure subsystem → mixed reduced state",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-010",
+      "section_id": "10.1.2",
+      "front": "Example free Hamiltonians",
+      "definition": "The example retains only the interaction.",
+      "key_rule": "HS = 0; HE = 0",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-011",
+      "section_id": "10.1.2",
+      "front": "Example interaction Hamiltonian",
+      "definition": "Two-qubit system–environment interaction.",
+      "key_rule": "HI = σx ⊗ σx",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-012",
+      "section_id": "10.1.2",
+      "front": "Initial environment state",
+      "definition": "Environment starts in a pure computational-basis state.",
+      "key_rule": "ρE(t₀) = |0⟩⟨0|",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-013",
+      "section_id": "10.1.2",
+      "front": "Initial plus state",
+      "definition": "First scenario in the lecture.",
+      "key_rule": "ρS(t₀) = |+⟩⟨+|",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-014",
+      "section_id": "10.1.2",
+      "front": "Initial computational state",
+      "definition": "Second scenario in the lecture.",
+      "key_rule": "ρS(t₀) = |0⟩⟨0|",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-015",
+      "section_id": "10.1.2",
+      "front": "Example evolution time",
+      "definition": "Chosen time for the lecture example.",
+      "key_rule": "t−t₀ = πℏ/4",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-016",
+      "section_id": "10.1.2",
+      "front": "Maximally mixed qubit",
+      "definition": "Reduced state claimed in the example; see source caution in Study Guide.",
+      "key_rule": "ρS = ½(|0⟩⟨0| + |1⟩⟨1|) = I/2",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-017",
+      "section_id": "10.1.2",
+      "front": "Loss of coherence",
+      "definition": "Off-diagonal coherences disappear in the chosen basis.",
+      "key_rule": "α|0⟩+β|1⟩ → |α|²|0⟩⟨0|+|β|²|1⟩⟨1|",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-018",
+      "section_id": "10.1.2",
+      "front": "Decoherence without dissipation",
+      "definition": "The lecture distinguishes coherence loss from energy dissipation.",
+      "key_rule": "Loss of interference need not imply large energy transfer",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-019",
+      "section_id": "10.1.3",
+      "front": "Quantum state transformation",
+      "definition": "Abstract operation mapping density operators to density operators.",
+      "key_rule": "ρ ↦ T(ρ)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-020",
+      "section_id": "10.1.3",
+      "front": "Positive map",
+      "definition": "Positivity alone is insufficient for arbitrary entangled extensions.",
+      "key_rule": "T maps positive operators to positive operators",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-021",
+      "section_id": "10.1.3",
+      "front": "Complete positivity",
+      "definition": "Physical channels remain positive on entangled extensions.",
+      "key_rule": "T ⊗ I is positive for arbitrary ancillas",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-022",
+      "section_id": "10.1.3",
+      "front": "Quantum channel",
+      "definition": "Lecture presents channels as completely positive maps; see normalization note.",
+      "key_rule": "ρ ↦ T(ρ)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-023",
+      "section_id": "10.1.3",
+      "front": "Operator-sum representation",
+      "definition": "Kraus representation of a channel.",
+      "key_rule": "T(ρ) = Σⱼ AⱼρAⱼ†",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-024",
+      "section_id": "10.1.3",
+      "front": "Unitary channel",
+      "definition": "A unitary operation is a single-term operator-sum map.",
+      "key_rule": "A₁ = U(t,t₀)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-025",
+      "section_id": "10.1.3",
+      "front": "Measurement operators",
+      "definition": "Projectors give an example of the operator-sum form for nonselective measurement.",
+      "key_rule": "Aⱼ = πⱼ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-026",
+      "section_id": "10.1.3",
+      "front": "Channel construction",
+      "definition": "Operational picture described in the lecture.",
+      "key_rule": "Append environment → unitary evolution → partial trace",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-027",
+      "section_id": "10.1.4",
+      "front": "Markovian evolution",
+      "definition": "The lecture calls this forgetful noise.",
+      "key_rule": "Dynamics depends on present state, not full history",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-028",
+      "section_id": "10.1.4",
+      "front": "Master equation",
+      "definition": "Lecture equation (10.21) has sign and ℏ-convention concerns; see Study Guide.",
+      "key_rule": "∂tρS = −i[HS,ρS] + dissipative term (as printed)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-029",
+      "section_id": "10.1.4",
+      "front": "Lindblad operators",
+      "definition": "Operators encoding coupling to the environment.",
+      "key_rule": "{Lⱼ}",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-030",
+      "section_id": "10.1.4",
+      "front": "Closed-system commutator term",
+      "definition": "Printed in the lecture with ℏ suppressed.",
+      "key_rule": "∂tρS = −i[HS,ρS]",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-031",
+      "section_id": "10.1.4",
+      "front": "Harmonic-oscillator Hamiltonian",
+      "definition": "Reference oscillator for damping example.",
+      "key_rule": "HS = ℏω(a†a + ½)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-032",
+      "section_id": "10.1.4",
+      "front": "Damping operator",
+      "definition": "Single Lindblad operator proportional to annihilation operator.",
+      "key_rule": "L = √c a, c>0",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-033",
+      "section_id": "10.1.4",
+      "front": "Excited initial state",
+      "definition": "One excitation initially.",
+      "key_rule": "ρS(t₀) = |1⟩⟨1|",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-034",
+      "section_id": "10.1.4",
+      "front": "Exponential relaxation",
+      "definition": "Excitation decays into the ground state at rate c.",
+      "key_rule": "ρS(t) = e^(−cΔt)|1⟩⟨1| + (1−e^(−cΔt))|0⟩⟨0|",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-035",
+      "section_id": "10.1.4",
+      "front": "Long-time stationary state",
+      "definition": "Ground state remains after relaxation.",
+      "key_rule": "lim(t→∞) ρS(t) = |0⟩⟨0|",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-036",
+      "section_id": "10.2.1",
+      "front": "Nuclear Coulomb potential",
+      "definition": "Lecture extends hydrogen-like Coulomb model to nuclear charge Z.",
+      "key_rule": "V(r) = −e₀ Z/r",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-037",
+      "section_id": "10.2.1",
+      "front": "Hydrogen-like energy scaling",
+      "definition": "Energy scales as −Z²/n² in this idealized model.",
+      "key_rule": "Eₙ = −mZ²e₀⁴/(2ℏ²n²)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-038",
+      "section_id": "10.2.1",
+      "front": "Alkali atom approximation",
+      "definition": "The lecture uses this simplified description; real alkali atoms have core-electron effects.",
+      "key_rule": "Single-electron hydrogen-like discussion",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-039",
+      "section_id": "10.2.2",
+      "front": "Helium atom",
+      "definition": "Lecture states that a full treatment is beyond this course.",
+      "key_rule": "Two-electron atomic problem",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-040",
+      "section_id": "10.3.1",
+      "front": "Quantum many-body system",
+      "definition": "Interactions make independent-subsystem descriptions insufficient.",
+      "key_rule": "Many interacting degrees of freedom",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-041",
+      "section_id": "10.3.1",
+      "front": "Lattice model",
+      "definition": "Examples include spins and oscillator modes.",
+      "key_rule": "Degrees of freedom at lattice vertices",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-042",
+      "section_id": "10.3.1",
+      "front": "k-local Hamiltonian",
+      "definition": "Each Hⱼ acts on at most k sites, often neighboring pairs.",
+      "key_rule": "H = Σⱼ Hⱼ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-043",
+      "section_id": "10.3.1",
+      "front": "Ground-state variational principle",
+      "definition": "Ground state minimizes expected energy.",
+      "key_rule": "min_{⟨ψ|ψ⟩=1} ⟨ψ|H|ψ⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-044",
+      "section_id": "10.3.2",
+      "front": "Optical lattice",
+      "definition": "Cold atoms can be confined near lattice minima.",
+      "key_rule": "Standing laser-wave potential",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-045",
+      "section_id": "10.3.2",
+      "front": "On-site Fock states",
+      "definition": "Occupancy of zero, one, or k bosons at a site.",
+      "key_rule": "|0⟩, |1⟩, |k⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-046",
+      "section_id": "10.3.2",
+      "front": "Bose–Hubbard Hamiltonian",
+      "definition": "Hopping, on-site interaction, and chemical-potential terms.",
+      "key_rule": "H = −JΣⱼ(bⱼ†bⱼ₊₁+bⱼ₊₁†bⱼ) + (U/2)Σⱼ nⱼ(nⱼ−1) − μΣⱼ nⱼ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-047",
+      "section_id": "10.3.2",
+      "front": "Boson number operator",
+      "definition": "Counts particles at lattice site j.",
+      "key_rule": "nⱼ = bⱼ†bⱼ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-048",
+      "section_id": "10.3.2",
+      "front": "Hopping operator",
+      "definition": "Moves a boson from site j+1 to j.",
+      "key_rule": "bⱼ†bⱼ₊₁",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-049",
+      "section_id": "10.3.2",
+      "front": "On-site interaction",
+      "definition": "Interaction contribution for multiple bosons on a site.",
+      "key_rule": "nⱼ(nⱼ−1)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-050",
+      "section_id": "10.3.2",
+      "front": "Quantum phase transition",
+      "definition": "Zero-temperature change in the ground-state phase.",
+      "key_rule": "H(g)=H₀+gV; nonanalytic ground-state energy at g₀",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-051",
+      "section_id": "10.3.2",
+      "front": "Superfluid phase",
+      "definition": "One of the two phases described in the lecture.",
+      "key_rule": "Delocalized, strongly correlated ground state",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-052",
+      "section_id": "10.3.2",
+      "front": "Mott-insulator phase",
+      "definition": "Deep Mott phase has fixed integer filling and product-state form.",
+      "key_rule": "|ψ⟩ = |k,k,…,k⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-053",
+      "section_id": "10.3.3",
+      "front": "Mean-field approximation",
+      "definition": "Reduces interacting lattice problem to effective single-site problems.",
+      "key_rule": "Neighbor interactions replaced by average influence",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-054",
+      "section_id": "10.3.3",
+      "front": "Superfluid order parameter",
+      "definition": "Translation-invariant mean-field parameter; assumes real ψ.",
+      "key_rule": "ψ = ⟨bⱼ†⟩ = ⟨bⱼ⟩ (as printed)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-055",
+      "section_id": "10.3.3",
+      "front": "Mean-field decoupling",
+      "definition": "Neglects quadratic fluctuations around mean fields.",
+      "key_rule": "bᵢ†bⱼ ≈ ⟨bᵢ†⟩bⱼ + bᵢ†⟨bⱼ⟩ − ⟨bᵢ†⟩⟨bⱼ⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-056",
+      "section_id": "10.3.3",
+      "front": "Mean-field Bose–Hubbard Hamiltonian",
+      "definition": "Lecture expression for effective mean-field dynamics.",
+      "key_rule": "HMF ≈ −2JψΣⱼ(bⱼ+bⱼ†) + 2Jψ²N + (U/2)Σⱼnⱼ(nⱼ−1) − μΣⱼnⱼ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-057",
+      "section_id": "10.3.3",
+      "front": "Dimensionless interaction and chemical potential",
+      "definition": "Rescaled parameters for the mean-field calculation.",
+      "key_rule": "Ū = U/(2J); μ̄ = μ/(2J)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-058",
+      "section_id": "10.3.3",
+      "front": "Single-site mean-field Hamiltonian",
+      "definition": "Single-site reduction; see printed index inconsistency.",
+      "key_rule": "HMF,j = −ψ(bⱼ+bⱼ†)+ψ²+(Ū/2)nⱼ(nⱼ−1)−μ̄nⱼ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-059",
+      "section_id": "10.3.3",
+      "front": "Mean-field perturbation split",
+      "definition": "Order parameter used as perturbation parameter.",
+      "key_rule": "HMF = HMF⁽⁰⁾ + ψV",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-060",
+      "section_id": "10.3.3",
+      "front": "Mean-field reference Hamiltonian",
+      "definition": "Unperturbed on-site model in the lecture.",
+      "key_rule": "HMF⁽⁰⁾ = (Ū/2)n(n−1) − μ̄n + ψ²",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-061",
+      "section_id": "10.3.3",
+      "front": "Mean-field perturbation operator",
+      "definition": "Couples adjacent occupation-number sectors.",
+      "key_rule": "V = −(b+b†)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-062",
+      "section_id": "10.3.3",
+      "front": "Unperturbed ground-state energy",
+      "definition": "Choose occupation number minimizing energy.",
+      "key_rule": "E⁽⁰⁾ = minₖ Eₖ⁽⁰⁾",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-063",
+      "section_id": "10.3.3",
+      "front": "Second-order energy correction",
+      "definition": "Perturbative expression; lecture has notation inconsistencies nearby.",
+      "key_rule": "Eₖ⁽²⁾ = ψ² Σₙ≠ₖ |⟨ψₖ|V|ψₙ⟩|²/(Eₖ⁽⁰⁾−Eₙ⁽⁰⁾)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-064",
+      "section_id": "10.3.3",
+      "front": "Occupation-sector correction",
+      "definition": "Expression printed for coefficient of the second-order correction.",
+      "key_rule": "k/[Ū(k−1)−μ̄] + (k+1)/[μ̄−Ūk]",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-065",
+      "section_id": "10.3.3",
+      "front": "Landau energy expansion",
+      "definition": "Expansion around vanishing superfluid order parameter.",
+      "key_rule": "Eₖ(ψ) = a₀ + a₂ψ² + O(ψ⁴)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-066",
+      "section_id": "10.3.3",
+      "front": "Landau phase criterion",
+      "definition": "Sign of quadratic coefficient determines stability.",
+      "key_rule": "a₂>0 → ψ=0; a₂<0 → ψ≠0; boundary a₂=0",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-067",
+      "section_id": "10.3.3",
+      "front": "Mean-field phase-boundary equation",
+      "definition": "Approximate Mott-lobe boundary.",
+      "key_rule": "a₂ = k/[Ū(k−1)−μ̄] + (k+1)/[μ̄−Ūk] + 1 = 0",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-068",
+      "section_id": "10.3.3",
+      "front": "Mott-lobe branches",
+      "definition": "Upper and lower mean-field boundaries.",
+      "key_rule": "μ̄± = ½[Ū(2k−1)−1] ± ½√[Ū²−2Ū(2k+1)+1]",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-069",
+      "section_id": "10.4.1",
+      "front": "Quantum key distribution",
+      "definition": "The lecture introduces the motivation for quantum key distribution.",
+      "key_rule": "Shared secret binary string",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-070",
+      "section_id": "10.4.1",
+      "front": "BB84 scheme",
+      "definition": "No detailed BB84 protocol or formulas appear in the source.",
+      "key_rule": "Named but not developed in the uploaded chapter",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C10-071",
+      "section_id": "10.4.2",
+      "front": "Quantum computing",
+      "definition": "Named as a subsection heading; the uploaded script gives no further explanation.",
+      "key_rule": "Quantum information processing",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
+    }
+  ],
+  "concept_metadata": {
+    "C10-001": {
+      "original_section_title": "10.1.1 Reduced system dynamics",
+      "equation_reference": "p. 3",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-002": {
+      "original_section_title": "10.1.1 Reduced system dynamics",
+      "equation_reference": "10.4",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-003": {
+      "original_section_title": "10.1.1 Reduced system dynamics",
+      "equation_reference": "10.1",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-004": {
+      "original_section_title": "10.1.1 Reduced system dynamics",
+      "equation_reference": "10.2",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-005": {
+      "original_section_title": "10.1.1 Reduced system dynamics",
+      "equation_reference": "10.3",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-006": {
+      "original_section_title": "10.1.1 Reduced system dynamics",
+      "equation_reference": "10.5",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-007": {
+      "original_section_title": "10.1.1 Reduced system dynamics",
+      "equation_reference": "10.6",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-008": {
+      "original_section_title": "10.1.1 Reduced system dynamics",
+      "equation_reference": "10.6",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-009": {
+      "original_section_title": "10.1.2 Decoherence",
+      "equation_reference": "pp. 5–6",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-010": {
+      "original_section_title": "10.1.2 Decoherence",
+      "equation_reference": "10.7",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-011": {
+      "original_section_title": "10.1.2 Decoherence",
+      "equation_reference": "10.8",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-012": {
+      "original_section_title": "10.1.2 Decoherence",
+      "equation_reference": "10.9",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-013": {
+      "original_section_title": "10.1.2 Decoherence",
+      "equation_reference": "10.10",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-014": {
+      "original_section_title": "10.1.2 Decoherence",
+      "equation_reference": "10.12",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-015": {
+      "original_section_title": "10.1.2 Decoherence",
+      "equation_reference": "10.13",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-016": {
+      "original_section_title": "10.1.2 Decoherence",
+      "equation_reference": "10.14",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-017": {
+      "original_section_title": "10.1.2 Decoherence",
+      "equation_reference": "10.15",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-018": {
+      "original_section_title": "10.1.2 Decoherence",
+      "equation_reference": "p. 6",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-019": {
+      "original_section_title": "10.1.3 Quantum channels",
+      "equation_reference": "10.16",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-020": {
+      "original_section_title": "10.1.3 Quantum channels",
+      "equation_reference": "p. 7",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-021": {
+      "original_section_title": "10.1.3 Quantum channels",
+      "equation_reference": "10.17",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-022": {
+      "original_section_title": "10.1.3 Quantum channels",
+      "equation_reference": "10.18",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-023": {
+      "original_section_title": "10.1.3 Quantum channels",
+      "equation_reference": "10.19",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-024": {
+      "original_section_title": "10.1.3 Quantum channels",
+      "equation_reference": "10.20",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-025": {
+      "original_section_title": "10.1.3 Quantum channels",
+      "equation_reference": "p. 8",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-026": {
+      "original_section_title": "10.1.3 Quantum channels",
+      "equation_reference": "pp. 7–8",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-027": {
+      "original_section_title": "10.1.4 Markovian evolution and exponential decay",
+      "equation_reference": "p. 8",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-028": {
+      "original_section_title": "10.1.4 Markovian evolution and exponential decay",
+      "equation_reference": "10.21",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-029": {
+      "original_section_title": "10.1.4 Markovian evolution and exponential decay",
+      "equation_reference": "10.21",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-030": {
+      "original_section_title": "10.1.4 Markovian evolution and exponential decay",
+      "equation_reference": "10.22",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-031": {
+      "original_section_title": "10.1.4 Markovian evolution and exponential decay",
+      "equation_reference": "10.23",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-032": {
+      "original_section_title": "10.1.4 Markovian evolution and exponential decay",
+      "equation_reference": "10.24",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-033": {
+      "original_section_title": "10.1.4 Markovian evolution and exponential decay",
+      "equation_reference": "10.25",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-034": {
+      "original_section_title": "10.1.4 Markovian evolution and exponential decay",
+      "equation_reference": "10.26",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-035": {
+      "original_section_title": "10.1.4 Markovian evolution and exponential decay",
+      "equation_reference": "10.27",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-036": {
+      "original_section_title": "10.2.1 Alkali atoms",
+      "equation_reference": "10.28",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-037": {
+      "original_section_title": "10.2.1 Alkali atoms",
+      "equation_reference": "10.29",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-038": {
+      "original_section_title": "10.2.1 Alkali atoms",
+      "equation_reference": "p. 10",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-039": {
+      "original_section_title": "10.2.2 Helium atom",
+      "equation_reference": "p. 11",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-040": {
+      "original_section_title": "10.3.1 Quantum many-body systems and condensed matter",
+      "equation_reference": "p. 11",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-041": {
+      "original_section_title": "10.3.1 Quantum many-body systems and condensed matter",
+      "equation_reference": "p. 11",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-042": {
+      "original_section_title": "10.3.1 Quantum many-body systems and condensed matter",
+      "equation_reference": "10.30",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-043": {
+      "original_section_title": "10.3.1 Quantum many-body systems and condensed matter",
+      "equation_reference": "10.31",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-044": {
+      "original_section_title": "10.3.2 Bose-Hubbard model",
+      "equation_reference": "p. 12",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-045": {
+      "original_section_title": "10.3.2 Bose-Hubbard model",
+      "equation_reference": "p. 12",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-046": {
+      "original_section_title": "10.3.2 Bose-Hubbard model",
+      "equation_reference": "10.32",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-047": {
+      "original_section_title": "10.3.2 Bose-Hubbard model",
+      "equation_reference": "10.33",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-048": {
+      "original_section_title": "10.3.2 Bose-Hubbard model",
+      "equation_reference": "10.34",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-049": {
+      "original_section_title": "10.3.2 Bose-Hubbard model",
+      "equation_reference": "10.35",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-050": {
+      "original_section_title": "10.3.2 Bose-Hubbard model",
+      "equation_reference": "10.36–10.37",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-051": {
+      "original_section_title": "10.3.2 Bose-Hubbard model",
+      "equation_reference": "p. 14",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-052": {
+      "original_section_title": "10.3.2 Bose-Hubbard model",
+      "equation_reference": "10.38",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-053": {
+      "original_section_title": "10.3.3 Mean field theory",
+      "equation_reference": "p. 14",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-054": {
+      "original_section_title": "10.3.3 Mean field theory",
+      "equation_reference": "10.39",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-055": {
+      "original_section_title": "10.3.3 Mean field theory",
+      "equation_reference": "10.40",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-056": {
+      "original_section_title": "10.3.3 Mean field theory",
+      "equation_reference": "10.41",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-057": {
+      "original_section_title": "10.3.3 Mean field theory",
+      "equation_reference": "10.42",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-058": {
+      "original_section_title": "10.3.3 Mean field theory",
+      "equation_reference": "10.43",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-059": {
+      "original_section_title": "10.3.3 Mean field theory",
+      "equation_reference": "10.44",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-060": {
+      "original_section_title": "10.3.3 Mean field theory",
+      "equation_reference": "10.45",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-061": {
+      "original_section_title": "10.3.3 Mean field theory",
+      "equation_reference": "10.46",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-062": {
+      "original_section_title": "10.3.3 Mean field theory",
+      "equation_reference": "10.47",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-063": {
+      "original_section_title": "10.3.3 Mean field theory",
+      "equation_reference": "10.49",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-064": {
+      "original_section_title": "10.3.3 Mean field theory",
+      "equation_reference": "10.50",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-065": {
+      "original_section_title": "10.3.3 Mean field theory",
+      "equation_reference": "10.51",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-066": {
+      "original_section_title": "10.3.3 Mean field theory",
+      "equation_reference": "10.51–10.52",
+      "priority": "High",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-067": {
+      "original_section_title": "10.3.3 Mean field theory",
+      "equation_reference": "10.52",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-068": {
+      "original_section_title": "10.3.3 Mean field theory",
+      "equation_reference": "10.53",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-069": {
+      "original_section_title": "10.4.1 Quantum key distribution and the BB84 scheme",
+      "equation_reference": "p. 16",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-070": {
+      "original_section_title": "10.4.1 Quantum key distribution and the BB84 scheme",
+      "equation_reference": "p. 16",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    },
+    "C10-071": {
+      "original_section_title": "10.4.2 Quantum computing",
+      "equation_reference": "p. 17",
+      "priority": "Medium",
+      "source_reference": "QMChapter10(1).pdf"
+    }
+  }
 }

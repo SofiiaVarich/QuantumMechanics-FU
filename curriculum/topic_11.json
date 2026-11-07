@@ -45,5 +45,179 @@
         "Confusing the spectral peak with total emitted power"
       ]
     }
-  ]
+  ],
+  "concepts": [
+    {
+      "id": "EXP-001",
+      "section_id": "11",
+      "front": "Photon energy",
+      "definition": "Photon energy",
+      "key_rule": "E=hν=ℏω",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-002",
+      "section_id": "11",
+      "front": "Quantized oscillator",
+      "definition": "Oscillator energy including zero-point energy",
+      "key_rule": "Eₙ = (n + ½)hν",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-003",
+      "section_id": "11",
+      "front": "Thermal occupation",
+      "definition": "Mean thermal occupation",
+      "key_rule": "n̄ = 1 / (exp(hν/(k_B T)) − 1)",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-004",
+      "section_id": "11",
+      "front": "Mean thermal energy",
+      "definition": "Thermal part, excludes zero-point energy",
+      "key_rule": "Ē_th = hν / (exp(hν/(k_B T)) − 1)",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-005",
+      "section_id": "11",
+      "front": "Planck law frequency",
+      "definition": "Spectral energy density per frequency",
+      "key_rule": "u_ν(T) = (8πhν³/c³) / (exp(hν/(k_B T)) − 1)",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-006",
+      "section_id": "11",
+      "front": "Planck law wavelength",
+      "definition": "Spectral energy density per wavelength",
+      "key_rule": "u_λ(T) = (8πhc/λ⁵) / (exp(hc/(λk_B T)) − 1)",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-007",
+      "section_id": "11",
+      "front": "Rayleigh–Jeans law",
+      "definition": "Low-frequency approximation",
+      "key_rule": "u_ν(T) ≈ 8πν²k_B T / c³",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-008",
+      "section_id": "11",
+      "front": "Wien displacement",
+      "definition": "Peak wavelength times temperature",
+      "key_rule": "λ_max T = b",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-038",
+      "section_id": "11",
+      "front": "Blackbody radiation",
+      "definition": "Ideal absorber and emitter of electromagnetic radiation; spectral distribution depends on temperature.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-039",
+      "section_id": "11",
+      "front": "Ultraviolet catastrophe",
+      "definition": "Classical Rayleigh–Jeans theory predicts unphysical divergence of radiation energy at high frequencies.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    }
+  ],
+  "concept_metadata": {
+    "EXP-001": {
+      "original_topic": "Schwarzkörperstrahlung",
+      "original_formula": "E=hν=ℏω",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-002": {
+      "original_topic": "Schwarzkörperstrahlung",
+      "original_formula": "E_n=(n+\\tfrac12)hν",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-003": {
+      "original_topic": "Schwarzkörperstrahlung",
+      "original_formula": "\\bar n=\\frac1{e^{hν/(k_BT)}-1}",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-004": {
+      "original_topic": "Schwarzkörperstrahlung",
+      "original_formula": "\\bar E_{\\mathrm{th}}=\\frac{hν}{e^{hν/(k_BT)}-1}",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-005": {
+      "original_topic": "Schwarzkörperstrahlung",
+      "original_formula": "u_ν(T)=\\frac{8\\pi hν^3}{c^3}\\frac1{e^{hν/(k_BT)}-1}",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-006": {
+      "original_topic": "Schwarzkörperstrahlung",
+      "original_formula": "u_λ(T)=\\frac{8\\pi hc}{λ^5}\\frac1{e^{hc/(λ k_BT)}-1}",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-007": {
+      "original_topic": "Schwarzkörperstrahlung",
+      "original_formula": "u_ν(T)\\approx\\frac{8\\piν^2k_BT}{c^3}",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-008": {
+      "original_topic": "Schwarzkörperstrahlung",
+      "original_formula": "λ_{\\max}T=b",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-038": {
+      "original_topic": "Schwarzkörperstrahlung",
+      "original_formula": "—",
+      "reference": "Concept",
+      "source_status": "Standard conceptual explanation; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-039": {
+      "original_topic": "Schwarzkörperstrahlung",
+      "original_formula": "—",
+      "reference": "Concept",
+      "source_status": "Standard conceptual explanation; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    }
+  }
 }

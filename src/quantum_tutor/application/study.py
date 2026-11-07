@@ -5,7 +5,7 @@ import textwrap
 from dataclasses import dataclass
 from datetime import datetime, timezone
 
-from quantum_tutor.domain.models import Formula
+from quantum_tutor.domain.models import ConceptCard, Formula
 from quantum_tutor.domain.spaced_repetition import ReviewRating, schedule_review
 from quantum_tutor.infrastructure.curriculum import CurriculumRepository
 from quantum_tutor.infrastructure.database import ProgressRepository
@@ -37,6 +37,24 @@ class StudyService:
             return chapters
         return [chapter for chapter in chapters if chapter.number == chapter_number]
 
+
+    def cards(self, chapter_number: int | None = None) -> tuple[ConceptCard, ...]:
+        cards = []
+        for chapter in self._chapters(chapter_number):
+            cards.extend(chapter.concepts)
+            for formula in chapter.formulas:
+                cards.append(ConceptCard(
+                    id=formula.id, section_id=str(chapter.number), front=formula.name,
+                    definition=formula.when_to_use,
+                    key_rule=f"{formula.equation}\nAssumptions: {'; '.join(formula.assumptions)}",
+                    source_status="original_practice", source_file="",
+                ))
+        return tuple({card.id: card for card in cards}.values())
+
+    def review_cards(self, user_id: int) -> tuple[ConceptCard, ...]:
+        catalog = {card.id: card for card in self.cards()}
+        ids = self.progress.review_item_ids(user_id, datetime.now(timezone.utc))
+        return tuple(catalog[item_id] for item_id in ids if item_id in catalog)
 
     def random_law(self, chapter_number: int | None = None) -> Question | None:
         formulas = [formula for chapter in self._chapters(chapter_number) for formula in chapter.formulas]
@@ -176,7 +194,7 @@ class StudyService:
         self.progress.save_answer(state, correct, rating, response_ms)
 
     def due_count(self, user_id: int) -> int:
-        return len(self.progress.due_item_ids(user_id, datetime.now(timezone.utc)))
+        return len(self.review_cards(user_id))
 
     def progress_text(self, user_id: int) -> str:
         total, correct = self.progress.statistics(user_id)

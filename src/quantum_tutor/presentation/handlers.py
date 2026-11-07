@@ -142,56 +142,16 @@ def build_handlers(
         if chapter is None:
             await show_topics(message, int(context.user_data.get("viewer_id", 0)))
             return
-        laws = study.item_count("law", chapter_number)
-        known = study.progress.known_item_ids(int(context.user_data.get("viewer_id", 0)))
-        ids = {card.id for card in chapter.concepts} | {formula.id for formula in chapter.formulas}
-        details = f"{chapter.professor} · {progress_label(ids, known)} learned"
-        if chapter.date:
-            details += f" · {chapter.date} (von dir angegeben)"
-        elif chapter.professor == "Franke":
-            details += " · Termin offen"
-        if laws == 0:
-            text = (
-                f"{number_emojis[chapter_number - 1]} {chapter.title_de}\n{details}\n\n"
-                "⚠️ Für dieses Kapitel gibt es noch keine geprüften Lernkarten.\n"
-                "Du kannst ein anderes Thema auswählen."
-            )
-        else:
-            text = (
-                f"{number_emojis[chapter_number - 1]} {chapter.title_de}\n{details}\n\n"
-                f"⚖️ Gesetze und Formeln: {laws}\n\n"
-                "Wähle jetzt einen Lernmodus. Alle Fragen bleiben in diesem Kapitel."
-            )
-        await message.reply_text(text, reply_markup=topic_actions_keyboard)
-        if chapter.sections:
-            known = study.progress.known_item_ids(int(context.user_data.get("viewer_id", 0)))
-            def section_label(section):
-                ids = {
-                    card.id for card in chapter.concepts
-                    if card.section_id == section.id or card.section_id.startswith(section.id + ".")
-                }
-                return f"{section.id} {section.title} · {progress_label(ids, known)}"
-            section_keyboard = ReplyKeyboardMarkup(
-                [[KeyboardButton(section_label(section))] for section in chapter.sections]
-                + [[KeyboardButton(TOPICS), KeyboardButton(HOME)]],
-                resize_keyboard=True,
-                is_persistent=True,
-            )
-            lines = ["📖 Contents", ""]
-            for section in chapter.sections:
-                indent = "  • " if section.id.count(".") > 1 else ""
-                lines.append(
-                    f"{indent}p. {section.page} · {section_label(section)}"
-                )
-            # Keep messages below Telegram's 4096-character limit without splitting sections.
-            chunk = ""
-            for line in lines:
-                if len(chunk) + len(line) + 1 > 3800:
-                    await message.reply_text(chunk)
-                    chunk = ""
-                chunk += line + "\n"
-            if chunk:
-                await message.reply_text(chunk, reply_markup=section_keyboard)
+        cards = study.cards(chapter_number)
+        if not cards:
+            await message.reply_text("No learning cards are available for this topic yet.")
+            await show_topics(message, int(context.user_data.get("viewer_id", 0)))
+            return
+        context.user_data["set_kind"] = "topic"
+        context.user_data["study_set"] = StudySet(cards)
+        context.user_data.pop("exercise", None)
+        await message.reply_text(f"📖 {chapter.title_de} · {len(cards)} cards")
+        await present_set_card(message, context)
 
     async def present_set_card(message: Message, context: ContextTypes.DEFAULT_TYPE) -> None:
         if context.user_data is None:
@@ -206,16 +166,18 @@ def build_handlers(
                 f"✅ Set complete · {len(session.cards)}/{len(session.cards)}\n"
                 "100% completed in this set.\n"
                 "This is recognition practice, not long-term or exam mastery.\n\n"
-                "Choose another subsection below."
+                "Choose another topic below."
             )
-            if chapter_number is not None:
-                await select_topic(message, context, chapter_number)
+            context.user_data.pop("study_set", None)
+            context.user_data.pop("question", None)
+            context.user_data.pop("mode", None)
+            await show_topics(message, int(context.user_data.get("viewer_id", 0)))
             return
         context.user_data["question"] = Question(
             card.id, "concept", card.front, f"{card.definition}\n\n{card.key_rule}"
         )
         distractors = list(dict.fromkeys(
-            other.definition for chapter in chapters for other in chapter.concepts
+            other.definition for other in study.cards()
             if other.definition != card.definition
         ))
         choices = random.sample(distractors, min(3, len(distractors))) + [card.definition]
@@ -236,11 +198,20 @@ def build_handlers(
             ),
         )
 
-    async def show_review(message: Message, user: User) -> None:
-        await message.reply_text(
-            f"🔁 Review queue\n\nYou have {study.due_count(user.id)} item(s) due.",
-            reply_markup=MAIN_MENU,
-        )
+    async def show_review(message: Message, user: User, context: ContextTypes.DEFAULT_TYPE) -> None:
+        if context.user_data is None:
+            return
+        cards = study.review_cards(user.id)
+        if not cards:
+            await send_menu(message, "✅ No missed or due cards to review right now.")
+            return
+        context.user_data["viewer_id"] = user.id
+        context.user_data.pop("selected_chapter", None)
+        context.user_data.pop("exercise", None)
+        context.user_data["set_kind"] = "review"
+        context.user_data["study_set"] = StudySet(cards)
+        await message.reply_text(f"🔁 Review · {len(cards)} cards from all topics")
+        await present_set_card(message, context)
 
     async def show_progress(message: Message, user: User) -> None:
         await message.reply_text(
@@ -348,7 +319,7 @@ def build_handlers(
     async def review(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         if not await reject_if_unauthorized(update):
             message, user = message_and_user(update)
-            await show_review(message, user)
+            await show_review(message, user, context)
 
     async def progress(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         if not await reject_if_unauthorized(update):
@@ -430,7 +401,7 @@ def build_handlers(
         elif text == TOPICS:
             await show_topics(message, user.id)
         elif text == REVIEW:
-            await show_review(message, user)
+            await show_review(message, user, context)
         elif text == PROGRESS:
             await show_progress(message, user)
         elif context.user_data is not None and context.user_data.get("mode") == "concept_choice":

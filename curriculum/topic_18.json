@@ -7,5 +7,60 @@
   "source_url": "",
   "source_status": "User-provided topic sequence and dates; not independently verified",
   "terms": [],
-  "formulas": []
+  "formulas": [],
+  "concepts": [
+    {
+      "id": "EXP-028",
+      "section_id": "18",
+      "front": "Rydberg formula",
+      "definition": "Hydrogen emission n2>n1",
+      "key_rule": "1/λ = R_H (1/n₁² − 1/n₂²)",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-029",
+      "section_id": "18",
+      "front": "Balmer series",
+      "definition": "Visible hydrogen series",
+      "key_rule": "1/λ = R_H (1/2² − 1/n²), n ≥ 3",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-046",
+      "section_id": "18",
+      "front": "Balmer series",
+      "definition": "Hydrogen spectral lines corresponding to transitions from higher principal quantum numbers to n=2.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    }
+  ],
+  "concept_metadata": {
+    "EXP-028": {
+      "original_topic": "Atommodelle, Balmer Serie, Franck-Hertz Versuch",
+      "original_formula": "\\frac1λ=R_H\\left(\\frac1{n_1^2}-\\frac1{n_2^2}\\right)",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-029": {
+      "original_topic": "Atommodelle, Balmer Serie, Franck-Hertz Versuch",
+      "original_formula": "\\frac1λ=R_H\\left(\\frac1{2^2}-\\frac1{n^2}\\right),\\ n\\ge3",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-046": {
+      "original_topic": "Atommodelle, Balmer Serie, Franck-Hertz Versuch",
+      "original_formula": "—",
+      "reference": "Concept",
+      "source_status": "Standard conceptual explanation; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    }
+  }
 }

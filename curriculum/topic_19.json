@@ -7,5 +7,43 @@
   "source_url": "",
   "source_status": "User-provided topic sequence and dates; not independently verified",
   "terms": [],
-  "formulas": []
+  "formulas": [],
+  "concepts": [
+    {
+      "id": "EXP-033",
+      "section_id": "19",
+      "front": "Franck–Hertz excitation",
+      "definition": "Voltage spacing and excitation energy, idealized",
+      "key_rule": "eΔU ≈ ΔE",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-047",
+      "section_id": "19",
+      "front": "Franck–Hertz experiment",
+      "definition": "Discrete energy transfer in electron–atom collisions demonstrates quantized atomic excitation energies.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    }
+  ],
+  "concept_metadata": {
+    "EXP-033": {
+      "original_topic": "Atommodelle, Balmer Serie, Franck-Hertz Versuch",
+      "original_formula": "eΔ U\\approxΔ E",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-047": {
+      "original_topic": "Atommodelle, Balmer Serie, Franck-Hertz Versuch",
+      "original_formula": "—",
+      "reference": "Concept",
+      "source_status": "Standard conceptual explanation; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    }
+  }
 }

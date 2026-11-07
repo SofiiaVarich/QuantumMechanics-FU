@@ -7,5 +7,94 @@
   "source_url": "",
   "source_status": "User-provided topic sequence and dates; not independently verified",
   "terms": [],
-  "formulas": []
+  "formulas": [],
+  "concepts": [
+    {
+      "id": "EXP-034",
+      "section_id": "20",
+      "front": "Spin–orbit Hamiltonian",
+      "definition": "Central potential, with Thomas factor",
+      "key_rule": "H_SO = [1/(2mₑ²c²r)] (dV/dr) L · S",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-035",
+      "section_id": "20",
+      "front": "Total angular momentum",
+      "definition": "Orbital plus spin",
+      "key_rule": "J = L + S (vectors)",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-036",
+      "section_id": "20",
+      "front": "Spin–orbit scalar product",
+      "definition": "Useful angular momentum identity",
+      "key_rule": "L · S = ½(J² − L² − S²)",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-037",
+      "section_id": "20",
+      "front": "Eigenvalue of L dot S",
+      "definition": "In coupled angular-momentum eigenstate",
+      "key_rule": "⟨L · S⟩ = (ℏ²/2)[j(j+1) − l(l+1) − s(s+1)]",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "EXP-048",
+      "section_id": "20",
+      "front": "Spin–orbit interaction",
+      "definition": "Coupling between orbital angular momentum and intrinsic spin; contributes to atomic fine structure.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    }
+  ],
+  "concept_metadata": {
+    "EXP-034": {
+      "original_topic": "Spin-Bahn Kopplung",
+      "original_formula": "H_{SO}=\\frac{1}{2m_e^2c^2r}\\frac{dV}{dr}\\,\\mathbf L\\cdot\\mathbf S",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-035": {
+      "original_topic": "Spin-Bahn Kopplung",
+      "original_formula": "\\mathbf J=\\mathbf L+\\mathbf S",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-036": {
+      "original_topic": "Spin-Bahn Kopplung",
+      "original_formula": "\\mathbf L\\cdot\\mathbf S=\\tfrac12(\\mathbf J^2-\\mathbf L^2-\\mathbf S^2)",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-037": {
+      "original_topic": "Spin-Bahn Kopplung",
+      "original_formula": "\\langle\\mathbf L\\cdot\\mathbf S\\rangle=\\frac{ℏ^2}{2}[j(j+1)-l(l+1)-s(s+1)]",
+      "reference": "Experimental formula reference",
+      "source_status": "Standard reference formula; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    },
+    "EXP-048": {
+      "original_topic": "Spin-Bahn Kopplung",
+      "original_formula": "—",
+      "reference": "Concept",
+      "source_status": "Standard conceptual explanation; not verified against Franke slides",
+      "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
+      "display_notation": "Plain-text equivalent; original formula retained"
+    }
+  }
 }

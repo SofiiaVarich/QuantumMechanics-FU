@@ -65,5 +65,443 @@
       "title": "Landau levels",
       "title_de": "Landau-Niveaus"
     }
-  ]
+  ],
+  "concepts": [
+    {
+      "id": "C8-001",
+      "section_id": "8.1",
+      "front": "Charged-particle Hamiltonian",
+      "definition": "Minimal coupling of a spinless charged particle to vector and scalar potentials.",
+      "key_rule": "H = (P − eA/c)²/(2m) + eΦ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-002",
+      "section_id": "8.1",
+      "front": "Position-space Schrödinger equation",
+      "definition": "Time evolution of the charged particle in electromagnetic potentials.",
+      "key_rule": "iℏ ∂ψ/∂t = [(−iℏ∇ − eA/c)²/(2m) + eΦ]ψ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-003",
+      "section_id": "8.1",
+      "front": "Coulomb gauge",
+      "definition": "Gauge condition used to simplify the kinetic cross term.",
+      "key_rule": "∇·A = 0",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-004",
+      "section_id": "8.1",
+      "front": "Expanded Hamiltonian in Coulomb gauge",
+      "definition": "Separates free motion, magnetic cross term, quadratic magnetic term, and electric potential.",
+      "key_rule": "iℏ∂ₜψ = −ℏ²∇²ψ/(2m) + (iℏe/mc) A·∇ψ + e²A²ψ/(2mc²) + eΦψ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-005",
+      "section_id": "8.1",
+      "front": "Vector potential",
+      "definition": "Magnetic field is represented by the curl of the vector potential.",
+      "key_rule": "B = ∇×A",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-006",
+      "section_id": "8.1",
+      "front": "Scalar potential",
+      "definition": "Electric potential energy term for charge e.",
+      "key_rule": "eΦ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-007",
+      "section_id": "8.2.1",
+      "front": "Uniform-field vector potential",
+      "definition": "A vector potential producing a constant magnetic field.",
+      "key_rule": "A = −½(x×B)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-008",
+      "section_id": "8.2.1",
+      "front": "Orbital magnetic coupling",
+      "definition": "Term linear in B associated with orbital paramagnetism.",
+      "key_rule": "−(e/2mc)L·B",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-009",
+      "section_id": "8.2.1",
+      "front": "Diamagnetic contribution",
+      "definition": "Term quadratic in B; often small in the atomic setting described.",
+      "key_rule": "e²/(8mc²)[x²B² − (x·B)²]",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-010",
+      "section_id": "8.2.1",
+      "front": "Paramagnetic term",
+      "definition": "Contribution associated with the orbital angular momentum.",
+      "key_rule": "∝ L·B",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-011",
+      "section_id": "8.2.1",
+      "front": "Diamagnetic term",
+      "definition": "Contribution quadratic in the magnetic field.",
+      "key_rule": "∝ B²",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-012",
+      "section_id": "8.2.2",
+      "front": "Normal Zeeman Hamiltonian",
+      "definition": "Hydrogen Hamiltonian in a z-directed field with quadratic term neglected; sign conventions follow the lecture.",
+      "key_rule": "H = H⁽⁰⁾ + (eB/2mc)L₃",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-013",
+      "section_id": "8.2.2",
+      "front": "Normal Zeeman energy levels",
+      "definition": "Magnetic quantum number determines the splitting.",
+      "key_rule": "Eₙₗₘ = −me₀⁴/(2ℏ²n²) + ℏωL m",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-014",
+      "section_id": "8.2.2",
+      "front": "Larmor frequency",
+      "definition": "Larmor frequency as written in the lecture; e is the signed electron charge.",
+      "key_rule": "ωL = −eB/(2mc) = e₀B/(2mc)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-015",
+      "section_id": "8.2.2",
+      "front": "Zeeman splitting multiplicity",
+      "definition": "Magnetic field lifts the m-degeneracy in the normal Zeeman effect.",
+      "key_rule": "2l + 1 equally spaced levels",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-016",
+      "section_id": "8.2.2",
+      "front": "Magnetic quantum number",
+      "definition": "Allowed z-projection quantum numbers.",
+      "key_rule": "m = −l, −l+1, …, l",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-017",
+      "section_id": "8.2.3",
+      "front": "Total angular momentum",
+      "definition": "Spin–orbit coupling combines orbital and spin angular momenta.",
+      "key_rule": "J = L + S",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-018",
+      "section_id": "8.2.3",
+      "front": "Spin-inclusive magnetic Hamiltonian",
+      "definition": "Magnetic coupling includes orbital and spin contributions.",
+      "key_rule": "H = H⁽⁰⁾ − [e/(2mc)](L+gS)·B",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-019",
+      "section_id": "8.2.3",
+      "front": "Electron g factor",
+      "definition": "Numerical value quoted in the lecture.",
+      "key_rule": "g ≈ 2.002319304718",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-020",
+      "section_id": "8.2.3",
+      "front": "Anomalous Zeeman effect",
+      "definition": "The lecture attributes anomalous splitting to the electron spin contribution.",
+      "key_rule": "Spin-dependent splitting of atomic energy levels",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-021",
+      "section_id": "8.2.3",
+      "front": "Spin–orbit interaction",
+      "definition": "Interaction makes total angular momentum important for magnetic response.",
+      "key_rule": "L and S couple; J = L+S",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-022",
+      "section_id": "8.3.1",
+      "front": "Aharonov–Bohm effect",
+      "definition": "Interference depends on electromagnetic potential even in a field-free region.",
+      "key_rule": "B(x) = 0 along the particle paths, but A can affect interference",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-023",
+      "section_id": "8.3.1",
+      "front": "Gauge invariance",
+      "definition": "Different vector potentials with the same magnetic field yield gauge-equivalent predictions.",
+      "key_rule": "Physical predictions are unchanged by gauge transformations",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-024",
+      "section_id": "8.3.1",
+      "front": "Field-free interference region",
+      "definition": "Condition highlighted in the lecture’s Aharonov–Bohm discussion.",
+      "key_rule": "B(x) = 0",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-025",
+      "section_id": "8.3.2",
+      "front": "Superconducting flux quantization",
+      "definition": "Magnetic flux in a superconducting loop occurs in integer multiples of the flux quantum.",
+      "key_rule": "Φ = nΦ₀",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-026",
+      "section_id": "8.3.2",
+      "front": "Single-valued superconducting phase",
+      "definition": "Wave function returns to the same value after one closed loop.",
+      "key_rule": "Δphase = 2πn",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-027",
+      "section_id": "8.3.2",
+      "front": "Cooper pairs",
+      "definition": "Pairs behave collectively as a macroscopic quantum state.",
+      "key_rule": "Paired electrons in a superconducting condensate",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-028",
+      "section_id": "8.3.2",
+      "front": "Flux quantum",
+      "definition": "Fundamental flux unit; the chapter does not specify its numerical expression.",
+      "key_rule": "Φ₀",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-029",
+      "section_id": "8.3.3",
+      "front": "Cyclotron frequency",
+      "definition": "Frequency formula as written in the lecture; unit/sign convention should be checked.",
+      "key_rule": "ωc = eB/m",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-030",
+      "section_id": "8.3.3",
+      "front": "Landau levels",
+      "definition": "Quantized energies of transverse motion in a uniform magnetic field; lecture uses ω here.",
+      "key_rule": "Eₙ = ℏω(n+½), n = 0,1,2,…",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C8-031",
+      "section_id": "8.3.3",
+      "front": "Magnetic circular motion",
+      "definition": "Classical motion underlying Landau quantization.",
+      "key_rule": "Lorentz force causes circular motion perpendicular to B",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
+    }
+  ],
+  "concept_metadata": {
+    "C8-001": {
+      "original_section_title": "8.1 Hamilton operator of spinless particles",
+      "equation_reference": "8.1",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-002": {
+      "original_section_title": "8.1 Hamilton operator of spinless particles",
+      "equation_reference": "8.2",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-003": {
+      "original_section_title": "8.1 Hamilton operator of spinless particles",
+      "equation_reference": "8.3 (discussion)",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-004": {
+      "original_section_title": "8.1 Hamilton operator of spinless particles",
+      "equation_reference": "8.4",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-005": {
+      "original_section_title": "8.1 Hamilton operator of spinless particles",
+      "equation_reference": "8.1–8.2 (text)",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-006": {
+      "original_section_title": "8.1 Hamilton operator of spinless particles",
+      "equation_reference": "8.1",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-007": {
+      "original_section_title": "8.2.1 Hamiltonian of a particle in a constant magnetic field",
+      "equation_reference": "8.5",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-008": {
+      "original_section_title": "8.2.1 Hamiltonian of a particle in a constant magnetic field",
+      "equation_reference": "8.6",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-009": {
+      "original_section_title": "8.2.1 Hamiltonian of a particle in a constant magnetic field",
+      "equation_reference": "8.7",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-010": {
+      "original_section_title": "8.2.1 Hamiltonian of a particle in a constant magnetic field",
+      "equation_reference": "8.6 (text)",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-011": {
+      "original_section_title": "8.2.1 Hamiltonian of a particle in a constant magnetic field",
+      "equation_reference": "8.7 (text)",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-012": {
+      "original_section_title": "8.2.2 Normal Zeeman effect",
+      "equation_reference": "8.8",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-013": {
+      "original_section_title": "8.2.2 Normal Zeeman effect",
+      "equation_reference": "8.9",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-014": {
+      "original_section_title": "8.2.2 Normal Zeeman effect",
+      "equation_reference": "8.10",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-015": {
+      "original_section_title": "8.2.2 Normal Zeeman effect",
+      "equation_reference": "8.9 (text)",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-016": {
+      "original_section_title": "8.2.2 Normal Zeeman effect",
+      "equation_reference": "8.9 (text)",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-017": {
+      "original_section_title": "8.2.3 Anomalous Zeeman effect",
+      "equation_reference": "8.11",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-018": {
+      "original_section_title": "8.2.3 Anomalous Zeeman effect",
+      "equation_reference": "8.12",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-019": {
+      "original_section_title": "8.2.3 Anomalous Zeeman effect",
+      "equation_reference": "8.13",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-020": {
+      "original_section_title": "8.2.3 Anomalous Zeeman effect",
+      "equation_reference": "8.11–8.13",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-021": {
+      "original_section_title": "8.2.3 Anomalous Zeeman effect",
+      "equation_reference": "8.11 (text)",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-022": {
+      "original_section_title": "8.3.1 Aharanov Bohm effect",
+      "equation_reference": "8.14",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-023": {
+      "original_section_title": "8.3.1 Aharanov Bohm effect",
+      "equation_reference": "8.14 (discussion)",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-024": {
+      "original_section_title": "8.3.1 Aharanov Bohm effect",
+      "equation_reference": "8.14",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-025": {
+      "original_section_title": "8.3.2 Flux quantization in superconductors",
+      "equation_reference": "8.15",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-026": {
+      "original_section_title": "8.3.2 Flux quantization in superconductors",
+      "equation_reference": "8.15 (discussion)",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-027": {
+      "original_section_title": "8.3.2 Flux quantization in superconductors",
+      "equation_reference": "8.15 (discussion)",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-028": {
+      "original_section_title": "8.3.2 Flux quantization in superconductors",
+      "equation_reference": "8.15",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-029": {
+      "original_section_title": "8.3.3 Landau levels",
+      "equation_reference": "8.16",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-030": {
+      "original_section_title": "8.3.3 Landau levels",
+      "equation_reference": "8.16 (discussion)",
+      "source_reference": "QMChapter8(1).pdf"
+    },
+    "C8-031": {
+      "original_section_title": "8.3.3 Landau levels",
+      "equation_reference": "8.16 (discussion)",
+      "source_reference": "QMChapter8(1).pdf"
+    }
+  }
 }
