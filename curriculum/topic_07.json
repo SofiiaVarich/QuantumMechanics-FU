@@ -65,5 +65,667 @@
       "title": "Adding orbital angular momentum and a spin",
       "title_de": "Addition von Bahndrehimpuls und Spin"
     }
-  ]
+  ],
+  "concepts": [
+    {
+      "id": "C7-001",
+      "section_id": "7.1.1",
+      "front": "Spin–spatial Hilbert space",
+      "definition": "Tensor-product structure shown in the script.",
+      "key_rule": "H = L²(ℝ) ⊗ ℂ²",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-002",
+      "section_id": "7.1.1",
+      "front": "Spin operator",
+      "definition": "Spin-½ operator built from the vector of Pauli matrices.",
+      "key_rule": "S = (ℏ/2)σ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-003",
+      "section_id": "7.1.1",
+      "front": "Spin–position commutator",
+      "definition": "Spin and position act on different tensor factors.",
+      "key_rule": "[S,X] = 0",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-004",
+      "section_id": "7.1.1",
+      "front": "Spin–momentum commutator",
+      "definition": "Spin and momentum commute.",
+      "key_rule": "[S,P] = 0",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-005",
+      "section_id": "7.1.1",
+      "front": "Spin–orbital commutator",
+      "definition": "Spin and orbital angular momentum commute.",
+      "key_rule": "[S,L] = 0",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-006",
+      "section_id": "7.1.1",
+      "front": "Spin commutation relations",
+      "definition": "Spin satisfies angular momentum commutation relations.",
+      "key_rule": "[Sᵢ,Sⱼ] = iℏ Σₖ εᵢⱼₖSₖ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-007",
+      "section_id": "7.1.2",
+      "front": "Total orbital and spin angular momentum",
+      "definition": "Total angular momentum for orbital and spin degrees of freedom.",
+      "key_rule": "J = L + S",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-008",
+      "section_id": "7.1.2",
+      "front": "Total angular momentum of two spins",
+      "definition": "Addition of two particles’ spins.",
+      "key_rule": "J = S⁽¹⁾ + S⁽²⁾",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-009",
+      "section_id": "7.1.2",
+      "front": "General angular momentum sum",
+      "definition": "Sum of angular momenta of two subsystems.",
+      "key_rule": "J = J⁽¹⁾ + J⁽²⁾",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-010",
+      "section_id": "7.1.2",
+      "front": "Independent-subsystem commutator",
+      "definition": "Different subsystem operators commute.",
+      "key_rule": "[J⁽¹⁾,J⁽²⁾] = 0",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-011",
+      "section_id": "7.1.2",
+      "front": "Total angular momentum commutator",
+      "definition": "The sum also obeys angular momentum algebra.",
+      "key_rule": "[Jᵢ,Jⱼ] = iℏ Σₖ εᵢⱼₖJₖ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-012",
+      "section_id": "7.1.2",
+      "front": "Uncoupled product basis",
+      "definition": "Basis of simultaneous eigenvectors for the individual angular momenta.",
+      "key_rule": "|j₁,m₁;j₂,m₂⟩ = |j₁,m₁⟩⊗|j₂,m₂⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-013",
+      "section_id": "7.1.2",
+      "front": "Uncoupled basis eigenvalues",
+      "definition": "Eigenvalues of J₁², J₁₃, J₂², J₂₃.",
+      "key_rule": "ℏ²j₁(j₁+1), ℏm₁, ℏ²j₂(j₂+1), ℏm₂",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-014",
+      "section_id": "7.1.2",
+      "front": "Coupled observables",
+      "definition": "Set of commuting operators whose common eigenvectors are sought.",
+      "key_rule": "J², J₃, (J⁽¹⁾)², (J⁽²⁾)²",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-015",
+      "section_id": "7.1.3",
+      "front": "Two-spin total angular momentum",
+      "definition": "Total angular momentum of two spin-½ systems.",
+      "key_rule": "J = S⁽¹⁾ + S⁽²⁾",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-016",
+      "section_id": "7.1.3",
+      "front": "Two-spin computational basis",
+      "definition": "Four product states of two qubits.",
+      "key_rule": "{|0,0⟩, |0,1⟩, |1,0⟩, |1,1⟩}",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-017",
+      "section_id": "7.1.3",
+      "front": "Total z-spin of |1,1⟩",
+      "definition": "Both individual spins point up.",
+      "key_rule": "J₃|1,1⟩ = ℏ|1,1⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-018",
+      "section_id": "7.1.3",
+      "front": "Total z-spin of |0,0⟩",
+      "definition": "Both individual spins point down.",
+      "key_rule": "J₃|0,0⟩ = −ℏ|0,0⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-019",
+      "section_id": "7.1.3",
+      "front": "Total spin squared identity",
+      "definition": "Relates total angular momentum to individual spins.",
+      "key_rule": "J² = (S⁽¹⁾)² + (S⁽²⁾)² + 2S⁽¹⁾·S⁽²⁾",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-020",
+      "section_id": "7.1.3",
+      "front": "Triplet highest-weight state",
+      "definition": "Total spin j=1, m=+1.",
+      "key_rule": "|1,1⟩ⱼ = |1,1⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-021",
+      "section_id": "7.1.3",
+      "front": "Triplet zero-m state",
+      "definition": "Symmetric superposition with j=1, m=0.",
+      "key_rule": "|1,0⟩ⱼ = (|1,0⟩+|0,1⟩)/√2",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-022",
+      "section_id": "7.1.3",
+      "front": "Triplet lowest-weight state",
+      "definition": "Total spin j=1, m=−1.",
+      "key_rule": "|1,−1⟩ⱼ = |0,0⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-023",
+      "section_id": "7.1.3",
+      "front": "Singlet state",
+      "definition": "Antisymmetric state with j=0, m=0.",
+      "key_rule": "|0,0⟩ⱼ = (|1,0⟩−|0,1⟩)/√2",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-024",
+      "section_id": "7.1.3",
+      "front": "Singlet eigenvalues",
+      "definition": "Zero total angular momentum.",
+      "key_rule": "J₃|0,0⟩ⱼ = 0; J²|0,0⟩ⱼ = 0",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-025",
+      "section_id": "7.1.3",
+      "front": "Triplet–singlet decomposition",
+      "definition": "Three triplet states and one singlet state; shorthand derived from the listed states.",
+      "key_rule": "2 ⊗ 2 = 3 ⊕ 1",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-026",
+      "section_id": "7.2.1",
+      "front": "Combined angular momentum space",
+      "definition": "Dimension of the product space for fixed j₁ and j₂.",
+      "key_rule": "dim H(j₁,j₂) = (2j₁+1)(2j₂+1)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-027",
+      "section_id": "7.2.1",
+      "front": "Coupled basis notation",
+      "definition": "Simultaneous eigenvectors of individual squared and total angular momenta.",
+      "key_rule": "|j₁,j₂;j,m⟩ⱼ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-028",
+      "section_id": "7.2.1",
+      "front": "Total squared angular momentum eigenvalue",
+      "definition": "Defines the combined quantum number j.",
+      "key_rule": "J²|j₁,j₂;j,m⟩ⱼ = ℏ²j(j+1)|j₁,j₂;j,m⟩ⱼ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-029",
+      "section_id": "7.2.1",
+      "front": "Total z-component eigenvalue",
+      "definition": "Defines the combined magnetic quantum number m.",
+      "key_rule": "J₃|j₁,j₂;j,m⟩ⱼ = ℏm|j₁,j₂;j,m⟩ⱼ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-030",
+      "section_id": "7.2.1",
+      "front": "Magnetic quantum number addition",
+      "definition": "Total z-component is the sum of individual z-components.",
+      "key_rule": "m = m₁ + m₂",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-031",
+      "section_id": "7.2.1",
+      "front": "Number of product states at fixed m",
+      "definition": "Counting multiplicity in the uncoupled basis.",
+      "key_rule": "n(m) = number of (m₁,m₂) with m₁+m₂=m",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-032",
+      "section_id": "7.2.1",
+      "front": "Magnetic quantum number range",
+      "definition": "Allowed magnetic quantum numbers for total j.",
+      "key_rule": "m = −j,−j+1,…,j",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-033",
+      "section_id": "7.2.1",
+      "front": "Multiplicity counting identity",
+      "definition": "Counting method used to obtain allowed total j values; see source notation.",
+      "key_rule": "N(j) = n(j)−n(j+1)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-034",
+      "section_id": "7.2.1",
+      "front": "Angular momentum triangle rule",
+      "definition": "All allowed values of total angular momentum.",
+      "key_rule": "j = |j₁−j₂|, |j₁−j₂|+1, …, j₁+j₂",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-035",
+      "section_id": "7.2.1",
+      "front": "Coupled multiplet",
+      "definition": "A multiplet contains 2j+1 magnetic substates.",
+      "key_rule": "{|j₁,j₂;j,m⟩ⱼ : m=−j,…,j}",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-036",
+      "section_id": "7.2.2",
+      "front": "Clebsch–Gordan coefficients",
+      "definition": "Expansion coefficients connecting coupled and uncoupled bases; script spells Glebsch-Gordan.",
+      "key_rule": "|j₁,j₂;j,m⟩ⱼ = Σₘ₁₊ₘ₂₌ₘ C(j₁,j₂,j,m₁,m₂,m)|j₁,m₁;j₂,m₂⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-037",
+      "section_id": "7.2.2",
+      "front": "Clebsch–Gordan selection rule",
+      "definition": "Only terms satisfying this condition appear in the expansion.",
+      "key_rule": "m = m₁ + m₂",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-038",
+      "section_id": "7.2.3",
+      "front": "Tensor-product representation",
+      "definition": "Decomposition into irreducible angular momentum representations.",
+      "key_rule": "D⁽ʲ¹⁾ ⊗ D⁽ʲ²⁾ = ⊕ⱼ D⁽ʲ⁾",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-039",
+      "section_id": "7.2.3",
+      "front": "Group closure",
+      "definition": "Combining two group elements stays in the group.",
+      "key_rule": "a,b∈G ⇒ a·b∈G",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-040",
+      "section_id": "7.2.3",
+      "front": "Group associativity",
+      "definition": "The group operation is associative.",
+      "key_rule": "(a·b)·c = a·(b·c)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-041",
+      "section_id": "7.2.3",
+      "front": "Group identity",
+      "definition": "Identity element leaves other elements unchanged.",
+      "key_rule": "a·e = e·a = a",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-042",
+      "section_id": "7.2.3",
+      "front": "Group inverse",
+      "definition": "Every group element has an inverse.",
+      "key_rule": "a·b = b·a = e",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-043",
+      "section_id": "7.2.3",
+      "front": "Group representation",
+      "definition": "Homomorphism into invertible matrices in the script.",
+      "key_rule": "V : G → GL(n,ℝ)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-044",
+      "section_id": "7.2.3",
+      "front": "Irreducible representation",
+      "definition": "Basic building block of group representations.",
+      "key_rule": "Representation not decomposable into smaller invariant blocks",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-045",
+      "section_id": "7.2.4",
+      "front": "Spin–orbit total angular momentum",
+      "definition": "Addition of orbital angular momentum and spin.",
+      "key_rule": "J = L + S",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-046",
+      "section_id": "7.2.4",
+      "front": "Spin–orbit uncoupled basis",
+      "definition": "Product basis for orbital angular momentum and spin-½.",
+      "key_rule": "{|l,mₗ⟩|0⟩, |l,mₗ⟩|1⟩}",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C7-047",
+      "section_id": "7.2.4",
+      "front": "Spin–orbit total j values",
+      "definition": "Allowed total j values for spin-½ coupling; only j=l+½ when l=0.",
+      "key_rule": "j = l+½, l−½",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter7_Concept_Learning_Cards.xlsx"
+    }
+  ],
+  "concept_metadata": {
+    "C7-001": {
+      "original_section_title": "7.1.1 Spin operators",
+      "equation_reference": "7.1",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-002": {
+      "original_section_title": "7.1.1 Spin operators",
+      "equation_reference": "7.2",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-003": {
+      "original_section_title": "7.1.1 Spin operators",
+      "equation_reference": "7.3",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-004": {
+      "original_section_title": "7.1.1 Spin operators",
+      "equation_reference": "7.4",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-005": {
+      "original_section_title": "7.1.1 Spin operators",
+      "equation_reference": "7.5",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-006": {
+      "original_section_title": "7.1.1 Spin operators",
+      "equation_reference": "7.6",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-007": {
+      "original_section_title": "7.1.2 Stating the general problem",
+      "equation_reference": "7.7",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-008": {
+      "original_section_title": "7.1.2 Stating the general problem",
+      "equation_reference": "7.8",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-009": {
+      "original_section_title": "7.1.2 Stating the general problem",
+      "equation_reference": "7.9",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-010": {
+      "original_section_title": "7.1.2 Stating the general problem",
+      "equation_reference": "7.10",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-011": {
+      "original_section_title": "7.1.2 Stating the general problem",
+      "equation_reference": "7.11",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-012": {
+      "original_section_title": "7.1.2 Stating the general problem",
+      "equation_reference": "7.14",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-013": {
+      "original_section_title": "7.1.2 Stating the general problem",
+      "equation_reference": "7.15–7.16",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-014": {
+      "original_section_title": "7.1.2 Stating the general problem",
+      "equation_reference": "7.18",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-015": {
+      "original_section_title": "7.1.3 Coupling of two spins",
+      "equation_reference": "7.19",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-016": {
+      "original_section_title": "7.1.3 Coupling of two spins",
+      "equation_reference": "7.20",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-017": {
+      "original_section_title": "7.1.3 Coupling of two spins",
+      "equation_reference": "7.21",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-018": {
+      "original_section_title": "7.1.3 Coupling of two spins",
+      "equation_reference": "7.23",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-019": {
+      "original_section_title": "7.1.3 Coupling of two spins",
+      "equation_reference": "7.25",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-020": {
+      "original_section_title": "7.1.3 Coupling of two spins",
+      "equation_reference": "7.31",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-021": {
+      "original_section_title": "7.1.3 Coupling of two spins",
+      "equation_reference": "7.32",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-022": {
+      "original_section_title": "7.1.3 Coupling of two spins",
+      "equation_reference": "7.33",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-023": {
+      "original_section_title": "7.1.3 Coupling of two spins",
+      "equation_reference": "7.34",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-024": {
+      "original_section_title": "7.1.3 Coupling of two spins",
+      "equation_reference": "7.30",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-025": {
+      "original_section_title": "7.1.3 Coupling of two spins",
+      "equation_reference": "7.31–7.34",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-026": {
+      "original_section_title": "7.2.1 Possible values",
+      "equation_reference": "7.36–7.38",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-027": {
+      "original_section_title": "7.2.1 Possible values",
+      "equation_reference": "7.39",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-028": {
+      "original_section_title": "7.2.1 Possible values",
+      "equation_reference": "7.41",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-029": {
+      "original_section_title": "7.2.1 Possible values",
+      "equation_reference": "7.42",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-030": {
+      "original_section_title": "7.2.1 Possible values",
+      "equation_reference": "7.43–7.44",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-031": {
+      "original_section_title": "7.2.1 Possible values",
+      "equation_reference": "7.45",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-032": {
+      "original_section_title": "7.2.1 Possible values",
+      "equation_reference": "7.48",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-033": {
+      "original_section_title": "7.2.1 Possible values",
+      "equation_reference": "7.50",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-034": {
+      "original_section_title": "7.2.1 Possible values",
+      "equation_reference": "7.52",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-035": {
+      "original_section_title": "7.2.1 Possible values",
+      "equation_reference": "7.53",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-036": {
+      "original_section_title": "7.2.2 Glebsch-Gordan coefficients",
+      "equation_reference": "7.54",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-037": {
+      "original_section_title": "7.2.2 Glebsch-Gordan coefficients",
+      "equation_reference": "7.54",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-038": {
+      "original_section_title": "7.2.3 An optional remark on group theory",
+      "equation_reference": "7.56",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-039": {
+      "original_section_title": "7.2.3 An optional remark on group theory",
+      "equation_reference": "7.2.3",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-040": {
+      "original_section_title": "7.2.3 An optional remark on group theory",
+      "equation_reference": "7.2.3",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-041": {
+      "original_section_title": "7.2.3 An optional remark on group theory",
+      "equation_reference": "7.57",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-042": {
+      "original_section_title": "7.2.3 An optional remark on group theory",
+      "equation_reference": "7.58",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-043": {
+      "original_section_title": "7.2.3 An optional remark on group theory",
+      "equation_reference": "7.59",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-044": {
+      "original_section_title": "7.2.3 An optional remark on group theory",
+      "equation_reference": "7.2.3",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-045": {
+      "original_section_title": "7.2.4 Adding orbital angular momentum and a spin",
+      "equation_reference": "7.60",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-046": {
+      "original_section_title": "7.2.4 Adding orbital angular momentum and a spin",
+      "equation_reference": "7.61",
+      "source_reference": "QMChapter7(1).pdf"
+    },
+    "C7-047": {
+      "original_section_title": "7.2.4 Adding orbital angular momentum and a spin",
+      "equation_reference": "7.62",
+      "source_reference": "QMChapter7(1).pdf"
+    }
+  }
 }

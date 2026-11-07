@@ -34,6 +34,9 @@ class ConceptCard:
     key_rule: str
     source_status: str
     source_file: str
+    page: int | None = None
+    equation_reference: str = ""
+    original_section_title: str = ""
 
 
 @dataclass(frozen=True)

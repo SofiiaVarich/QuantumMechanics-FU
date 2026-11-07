@@ -145,6 +145,74 @@ The 29 cards from `QM_Chapter2_Concept_Cards_Updated.xlsx` are available as auto
 
 Set completion means successful multiple-choice recognition during this session—not durable mastery or exam readiness. Correct choices are automatically graded as Okay internally; wrong choices and Don't know are Repeat. Other flashcard modes use only Know / Don't know controls; the four-level scheduler is retained internally for historical compatibility. Every rating still updates persistent spaced-review history independently. The active queue is in memory and resets after a bot restart or when starting another set; users can exit through Main menu or Topics at any time. Original workbook wording and formulas are preserved without translation. Spreadsheet status is source metadata only. These are physics concept cards, not translation exercises. The separate 72-image formula workbook remains staged.
 
+### Chapter 4 concept cards
+
+The 50 cards from `QM_Chapter4_Concept_Learning_Cards.xlsx` are active under Chapter 4. They retain the original definitions and formulas without translation. Workbook numeric IDs are prefixed as `C4-001` through `C4-050` to avoid collisions with other chapters. Equation references, priorities, original section titles, and supplied source references are retained in `concept_metadata`. Spreadsheet progress does not reset account history.
+
+| Section | Cards |
+|---|---:|
+| 4.1 Motivation | 3 |
+| 4.2.1 Traces | 7 |
+| 4.2.2 Density operators of pure states | 6 |
+| 4.2.3 General density operators | 6 |
+| 4.2.4 Examples | 5 |
+| 4.2.5 Non-uniqueness of ensemble representations | 3 |
+| 4.3 Von-Neumann equation | 3 |
+| 4.4 Measurement for density operators | 4 |
+| 4.5.1 Mixing quantum states | 3 |
+| 4.5.2 Partial traces | 5 |
+| 4.5.3 Entangled states | 5 |
+
+Selecting a subsection automatically starts its multiple-choice set. Incorrect answers and Don't know return later; correct answers advance. Parent sections include their descendant cards. Source references are supplied by the workbook, not independently verified against the original lecture PDF.
+
+### Chapter 5 concept cards
+
+The 59 cards from `QM_Chapter5_Concept_Learning_Cards.xlsx` are active in Chapter 5. Original card IDs, concept names, formulas, and meanings are preserved without translation. Formula fields become key rules; meaning fields become definitions. Equation and supplied source references are retained in `concept_metadata`. Spreadsheet progress does not reset account history. The reattached Chapter 4 workbook was checked against the existing 50 cards and matched, so no duplicate import was needed.
+
+| Subsection | Cards |
+|---|---:|
+| 5.1.1 Definition | 6 |
+| 5.1.2 Angular momentum operator as generator of rotations | 3 |
+| 5.1.3 Spectrum of the angular momentum operator | 12 |
+| 5.1.4 Angular momentum operator in the position representation | 14 |
+| 5.2.1 General considerations | 7 |
+| 5.2.2 Spectrum of the hydrogen atom | 10 |
+| 5.2.3 Orbitals of the hydrogen atom | 7 |
+
+Subsections start automatic multiple-choice sets with saved progress; incorrect answers and Don't know requeue cards. Feedback includes both the meaning and formula. Workbook references are user-supplied, not independently verified against the lecture PDF.
+
+### Chapter 6 concept cards
+
+The 47 cards from `QM_Chapter6_Concept_Learning_Cards.xlsx` are available in Chapter 6. Original card IDs, concept names, formulas, and meanings are preserved without translation. Equation and supplied source references are stored in `concept_metadata`; spreadsheet progress does not reset user history.
+
+| Section | Directly assigned cards |
+|---|---:|
+| 6.1 Time independent perturbation theory | 3 |
+| 6.1.1 Non-degenerate situation | 16 |
+| 6.1.2 An example: The anharmonic oscillator | 6 |
+| 6.1.3 Degenerate situation | 5 |
+| 6.2.1 Interaction picture | 8 |
+| 6.2.2 Applications: Transitions of first order | 4 |
+| 6.3 Some words on more general concepts of perturbation | 5 |
+
+Selecting 6.1 starts a 30-card set including descendant subsections; selecting 6.2 starts its 12 descendant cards. Individual subsections start their own sets. Multiple-choice answers advance automatically; wrong answers and Don't know return later. Feedback includes both meaning and formula. Workbook source references have not been independently verified against the lecture PDF.
+
+### Chapter 7 concept cards
+
+The 47 cards from `QM_Chapter7_Concept_Learning_Cards.xlsx` are available in Chapter 7. Original concept names, formulas, meanings, and card IDs are preserved without translation. Equation and supplied source references are stored in `concept_metadata`; spreadsheet progress does not reset user history.
+
+| Subsection | Cards |
+|---|---:|
+| 7.1.1 Spin operators | 6 |
+| 7.1.2 Stating the general problem | 8 |
+| 7.1.3 Coupling of two spins | 11 |
+| 7.2.1 Possible values | 10 |
+| 7.2.2 Glebsch-Gordan coefficients (original heading) | 2 |
+| 7.2.3 An optional remark on group theory | 7 |
+| 7.2.4 Adding orbital angular momentum and a spin | 3 |
+
+Selecting 7.1 starts a 25-card set; selecting 7.2 starts a 22-card set. Individual subsections start their own automatic multiple-choice sets. Wrong answers and Don't know requeue cards; feedback includes both meaning and formula. Workbook references have not been independently verified against the lecture PDF.
+
 ### Saved topic and subsection progress
 
 Topic buttons, chapter details, subsection buttons, and contents lines show account-specific percentages, refreshed whenever that view is opened and after a set completes. The percentage is the number of available cards with a currently successful saved review state divided by the number of available cards. Topic totals include concept cards and formulas; subsection totals include concept cards assigned to that section or its descendants. A subsequent wrong answer reduces progress. Duplicate attempts do not inflate it. Empty sections show `— no cards` rather than claiming coverage or mastery. Percentages indicate learned/recognition progress, **not** durable understanding or exam readiness. Saved progress survives restarts; active set queues remain temporary. Old keyboard labels still route correctly after percentages change.

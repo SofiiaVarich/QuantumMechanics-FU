@@ -141,5 +141,809 @@
       "title": "Entangled states",
       "title_de": "Verschränkte Zustände"
     }
-  ]
+  ],
+  "concepts": [
+    {
+      "id": "C4-001",
+      "section_id": "4.1",
+      "front": "Classical mixture",
+      "definition": "Preparation of |0⟩ or |1⟩ with probability 1/2 each; not equivalent to coherent superposition |+⟩.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-002",
+      "section_id": "4.1",
+      "front": "Ensemble probabilities",
+      "definition": "p_j ≥ 0 and Σ(j=1…n) p_j = 1.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-003",
+      "section_id": "4.1",
+      "front": "Mixed ensemble",
+      "definition": "Classical random preparation of normalized pure states |ψ_j⟩ with probabilities p_j.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-004",
+      "section_id": "4.2.1",
+      "front": "Trace of an operator",
+      "definition": "tr(A) = Σ(j=0…d−1) ⟨j|A|j⟩.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-005",
+      "section_id": "4.2.1",
+      "front": "Unitary invariance of trace",
+      "definition": "tr(UAU†) = tr(A). The trace is basis-independent.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-006",
+      "section_id": "4.2.1",
+      "front": "Cyclic property of trace",
+      "definition": "tr(AB) = tr(BA). Note: the PDF appears to repeat AB on both sides in Eq. (4.8).",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-007",
+      "section_id": "4.2.1",
+      "front": "Additivity of trace",
+      "definition": "tr(A+B) = tr(A) + tr(B).",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-008",
+      "section_id": "4.2.1",
+      "front": "Complex conjugation of trace",
+      "definition": "tr(A*) = tr(A)*.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-009",
+      "section_id": "4.2.1",
+      "front": "Transpose invariance of trace",
+      "definition": "tr(Aᵀ) = tr(A).",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-010",
+      "section_id": "4.2.1",
+      "front": "Scalar linearity of trace",
+      "definition": "tr(αA) = α tr(A), α ∈ ℂ.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-011",
+      "section_id": "4.2.2",
+      "front": "Pure-state density operator",
+      "definition": "ρ = |ψ⟩⟨ψ| for normalized |ψ⟩.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-012",
+      "section_id": "4.2.2",
+      "front": "Hermiticity of a pure-state density operator",
+      "definition": "ρ = ρ†.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-013",
+      "section_id": "4.2.2",
+      "front": "Normalization of density operator",
+      "definition": "tr(ρ) = 1.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-014",
+      "section_id": "4.2.2",
+      "front": "Positivity of density operator",
+      "definition": "ρ ≥ 0; all eigenvalues are nonnegative.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-015",
+      "section_id": "4.2.2",
+      "front": "Purity of a pure state",
+      "definition": "tr(ρ²) = 1.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-016",
+      "section_id": "4.2.2",
+      "front": "Expectation value via trace",
+      "definition": "⟨A⟩ = ⟨ψ|A|ψ⟩ = tr(Aρ).",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-017",
+      "section_id": "4.2.3",
+      "front": "Density operator of a mixed ensemble",
+      "definition": "ρ = Σ(j=1…n) p_j |ψ_j⟩⟨ψ_j|.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-018",
+      "section_id": "4.2.3",
+      "front": "Ensemble-averaged expectation value",
+      "definition": "⟨A⟩ = Σ_j p_j ⟨ψ_j|A|ψ_j⟩ = tr(Aρ).",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-019",
+      "section_id": "4.2.3",
+      "front": "General density-operator conditions",
+      "definition": "ρ = ρ†, ρ ≥ 0, tr(ρ) = 1.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-020",
+      "section_id": "4.2.3",
+      "front": "Purity criterion",
+      "definition": "Pure iff tr(ρ²) = 1; mixed if tr(ρ²) < 1. The script’s Eq. (4.31) prints tr(ρ)=1, apparently a typo.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-021",
+      "section_id": "4.2.3",
+      "front": "Mixed-state purity bound",
+      "definition": "tr(ρ²) ≤ 1.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-022",
+      "section_id": "4.2.3",
+      "front": "Observable expectation for general states",
+      "definition": "⟨A⟩ = tr(Aρ).",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-023",
+      "section_id": "4.2.4",
+      "front": "Equal mixture of computational basis states",
+      "definition": "ρ = (|0⟩⟨0| + |1⟩⟨1|)/2 = I/2.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-024",
+      "section_id": "4.2.4",
+      "front": "Purity of maximally mixed qubit",
+      "definition": "For ρ = I/2, tr(ρ²) = 1/2.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-025",
+      "section_id": "4.2.4",
+      "front": "Pure |0⟩ density matrix",
+      "definition": "ρ = |0⟩⟨0| = [[1,0],[0,0]].",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-026",
+      "section_id": "4.2.4",
+      "front": "Diagonal qubit mixture",
+      "definition": "ρ = [[p₀,0],[0,p₁]] with p₀+p₁=1.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-027",
+      "section_id": "4.2.4",
+      "front": "Equal mixture in X basis",
+      "definition": "(|+⟩⟨+| + |−⟩⟨−|)/2 = I/2.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-028",
+      "section_id": "4.2.5",
+      "front": "Non-unique ensemble decomposition",
+      "definition": "Different ensembles Σ_j p_j|ψ_j⟩⟨ψ_j| and Σ_k q_k|φ_k⟩⟨φ_k| can define the same ρ.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-029",
+      "section_id": "4.2.5",
+      "front": "Operational equivalence of ensembles",
+      "definition": "Equal density operators give equal observable expectations: ⟨A⟩ = tr(Aρ).",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-030",
+      "section_id": "4.2.5",
+      "front": "Preferred ensemble fallacy",
+      "definition": "A density operator generally does not single out one privileged underlying pure-state ensemble.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-031",
+      "section_id": "4.3",
+      "front": "Von Neumann equation",
+      "definition": "iℏ dρ(t)/dt = [H,ρ(t)].",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-032",
+      "section_id": "4.3",
+      "front": "Hamiltonian commutator",
+      "definition": "[H,ρ] = Hρ − ρH.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-033",
+      "section_id": "4.3",
+      "front": "Unitary evolution of density operator",
+      "definition": "ρ(t) = U(t,t₀) ρ(t₀) U(t,t₀)†.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-034",
+      "section_id": "4.4",
+      "front": "Spectral decomposition of observable",
+      "definition": "A = Σ(k=0…D−1) λ_k π_k.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-035",
+      "section_id": "4.4",
+      "front": "Orthogonal projectors",
+      "definition": "π_l π_k = δ_{k,l} π_k.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-036",
+      "section_id": "4.4",
+      "front": "Born rule for density operators",
+      "definition": "p_k = tr(π_k ρ).",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-037",
+      "section_id": "4.4",
+      "front": "Post-measurement density operator",
+      "definition": "ρ_k = π_k ρ π_k / p_k, for p_k > 0.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-038",
+      "section_id": "4.5.1",
+      "front": "Convex mixing of states",
+      "definition": "ρ = pρ₁ + (1−p)ρ₂, with 0 ≤ p ≤ 1.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-039",
+      "section_id": "4.5.1",
+      "front": "Mixing orthogonal pure states",
+      "definition": "ρ = p|0⟩⟨0| + (1−p)|1⟩⟨1|; mixed for 0 < p < 1.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-040",
+      "section_id": "4.5.1",
+      "front": "Maximally mixed qubit",
+      "definition": "ρ = (|0⟩⟨0| + |1⟩⟨1|)/2 = I/2.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-041",
+      "section_id": "4.5.2",
+      "front": "Composite Hilbert space",
+      "definition": "ℋ = ℋ_A ⊗ ℋ_B.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-042",
+      "section_id": "4.5.2",
+      "front": "Partial trace",
+      "definition": "ρ_A = tr_B(ρ) = Σ_j (I_A⊗⟨j|)ρ(I_A⊗|j⟩).",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-043",
+      "section_id": "4.5.2",
+      "front": "Reduced state",
+      "definition": "ρ_A = tr_B(ρ) is the state of subsystem A after disregarding B.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-044",
+      "section_id": "4.5.2",
+      "front": "Local observable",
+      "definition": "A⊗I acts on subsystem A and leaves B unchanged.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-045",
+      "section_id": "4.5.2",
+      "front": "Local expectation via reduced state",
+      "definition": "tr((A⊗I)ρ) = tr(Aρ_A).",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-046",
+      "section_id": "4.5.3",
+      "front": "Product density operator",
+      "definition": "ρ = ρ_A ⊗ ρ_B.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-047",
+      "section_id": "4.5.3",
+      "front": "Partial trace of product state",
+      "definition": "tr_B(ρ_A⊗ρ_B) = ρ_A.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-048",
+      "section_id": "4.5.3",
+      "front": "Entangled Bell-like state",
+      "definition": "|ψ⟩ = (|0,0⟩ + |1,1⟩)/√2.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-049",
+      "section_id": "4.5.3",
+      "front": "Reduced state of Bell-like state",
+      "definition": "ρ_A = (|0⟩⟨0| + |1⟩⟨1|)/2 = I/2.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C4-050",
+      "section_id": "4.5.3",
+      "front": "Entangled pure state",
+      "definition": "A pure composite state that is not a product state; its reduced states are mixed.",
+      "key_rule": "",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+    }
+  ],
+  "concept_metadata": {
+    "C4-001": {
+      "original_id": "1",
+      "original_section_title": "Motivation",
+      "equation_reference": "4.1–4.3",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-002": {
+      "original_id": "2",
+      "original_section_title": "Motivation",
+      "equation_reference": "4.3",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-003": {
+      "original_id": "3",
+      "original_section_title": "Motivation",
+      "equation_reference": "4.3",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-004": {
+      "original_id": "4",
+      "original_section_title": "Traces",
+      "equation_reference": "4.6",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-005": {
+      "original_id": "5",
+      "original_section_title": "Traces",
+      "equation_reference": "4.7",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-006": {
+      "original_id": "6",
+      "original_section_title": "Traces",
+      "equation_reference": "4.8",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-007": {
+      "original_id": "7",
+      "original_section_title": "Traces",
+      "equation_reference": "4.9",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-008": {
+      "original_id": "8",
+      "original_section_title": "Traces",
+      "equation_reference": "4.10",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-009": {
+      "original_id": "9",
+      "original_section_title": "Traces",
+      "equation_reference": "4.11",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-010": {
+      "original_id": "10",
+      "original_section_title": "Traces",
+      "equation_reference": "4.12",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-011": {
+      "original_id": "11",
+      "original_section_title": "Density operators of pure states",
+      "equation_reference": "4.13",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-012": {
+      "original_id": "12",
+      "original_section_title": "Density operators of pure states",
+      "equation_reference": "4.14",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-013": {
+      "original_id": "13",
+      "original_section_title": "Density operators of pure states",
+      "equation_reference": "4.15",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-014": {
+      "original_id": "14",
+      "original_section_title": "Density operators of pure states",
+      "equation_reference": "4.16",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-015": {
+      "original_id": "15",
+      "original_section_title": "Density operators of pure states",
+      "equation_reference": "4.17",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-016": {
+      "original_id": "16",
+      "original_section_title": "Density operators of pure states",
+      "equation_reference": "4.18–4.19",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-017": {
+      "original_id": "17",
+      "original_section_title": "General density operators",
+      "equation_reference": "4.20",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-018": {
+      "original_id": "18",
+      "original_section_title": "General density operators",
+      "equation_reference": "4.21–4.22",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-019": {
+      "original_id": "19",
+      "original_section_title": "General density operators",
+      "equation_reference": "4.28–4.30",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-020": {
+      "original_id": "20",
+      "original_section_title": "General density operators",
+      "equation_reference": "4.27, 4.31–4.32",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-021": {
+      "original_id": "21",
+      "original_section_title": "General density operators",
+      "equation_reference": "4.27",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-022": {
+      "original_id": "22",
+      "original_section_title": "General density operators",
+      "equation_reference": "4.33",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-023": {
+      "original_id": "23",
+      "original_section_title": "Examples",
+      "equation_reference": "4.34–4.35",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-024": {
+      "original_id": "24",
+      "original_section_title": "Examples",
+      "equation_reference": "4.36",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-025": {
+      "original_id": "25",
+      "original_section_title": "Examples",
+      "equation_reference": "4.37",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-026": {
+      "original_id": "26",
+      "original_section_title": "Examples",
+      "equation_reference": "4.38",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-027": {
+      "original_id": "27",
+      "original_section_title": "Examples",
+      "equation_reference": "4.39–4.41",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-028": {
+      "original_id": "28",
+      "original_section_title": "Non-uniqueness of ensemble representations",
+      "equation_reference": "4.43",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-029": {
+      "original_id": "29",
+      "original_section_title": "Non-uniqueness of ensemble representations",
+      "equation_reference": "4.42–4.43",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-030": {
+      "original_id": "30",
+      "original_section_title": "Non-uniqueness of ensemble representations",
+      "equation_reference": "4.43 (discussion)",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-031": {
+      "original_id": "31",
+      "original_section_title": "Von-Neumann equation",
+      "equation_reference": "4.44",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-032": {
+      "original_id": "32",
+      "original_section_title": "Von-Neumann equation",
+      "equation_reference": "4.44–4.46",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-033": {
+      "original_id": "33",
+      "original_section_title": "Von-Neumann equation",
+      "equation_reference": "4.47",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-034": {
+      "original_id": "34",
+      "original_section_title": "Measurement for density operators",
+      "equation_reference": "4.48",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-035": {
+      "original_id": "35",
+      "original_section_title": "Measurement for density operators",
+      "equation_reference": "4.49",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-036": {
+      "original_id": "36",
+      "original_section_title": "Measurement for density operators",
+      "equation_reference": "4.50",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-037": {
+      "original_id": "37",
+      "original_section_title": "Measurement for density operators",
+      "equation_reference": "4.51",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-038": {
+      "original_id": "38",
+      "original_section_title": "Mixing quantum states",
+      "equation_reference": "4.52",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-039": {
+      "original_id": "39",
+      "original_section_title": "Mixing quantum states",
+      "equation_reference": "4.53",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-040": {
+      "original_id": "40",
+      "original_section_title": "Mixing quantum states",
+      "equation_reference": "4.54",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-041": {
+      "original_id": "41",
+      "original_section_title": "Partial traces",
+      "equation_reference": "4.55",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-042": {
+      "original_id": "42",
+      "original_section_title": "Partial traces",
+      "equation_reference": "4.56",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-043": {
+      "original_id": "43",
+      "original_section_title": "Partial traces",
+      "equation_reference": "4.56",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-044": {
+      "original_id": "44",
+      "original_section_title": "Partial traces",
+      "equation_reference": "4.57",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-045": {
+      "original_id": "45",
+      "original_section_title": "Partial traces",
+      "equation_reference": "4.58–4.59",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-046": {
+      "original_id": "46",
+      "original_section_title": "Entangled states",
+      "equation_reference": "4.60",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-047": {
+      "original_id": "47",
+      "original_section_title": "Entangled states",
+      "equation_reference": "4.61",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-048": {
+      "original_id": "48",
+      "original_section_title": "Entangled states",
+      "equation_reference": "4.62",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-049": {
+      "original_id": "49",
+      "original_section_title": "Entangled states",
+      "equation_reference": "4.63",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    },
+    "C4-050": {
+      "original_id": "50",
+      "original_section_title": "Entangled states",
+      "equation_reference": "4.62–4.63 (discussion)",
+      "priority": "High",
+      "source_reference": "FU Eisert QM Chapter 4"
+    }
+  }
 }

@@ -1,0 +1,45 @@
+import asyncio
+import json
+from collections import Counter
+from pathlib import Path
+from types import SimpleNamespace
+from unittest.mock import AsyncMock
+
+from quantum_tutor.application.study import StudyService
+from quantum_tutor.infrastructure.curriculum import CurriculumRepository
+from quantum_tutor.infrastructure.database import ProgressRepository
+from quantum_tutor.presentation.handlers import build_handlers, DONT_KNOW
+
+
+def test_chapter6_import_and_parent_set(tmp_path: Path) -> None:
+    repository = CurriculumRepository(Path("curriculum"))
+    chapter = repository.chapter(6)
+    assert chapter is not None
+    assert len(chapter.concepts) == 47
+    assert Counter(card.section_id for card in chapter.concepts) == {
+        "6.1": 3, "6.1.1": 16, "6.1.2": 6, "6.1.3": 5,
+        "6.2.1": 8, "6.2.2": 4, "6.3": 5,
+    }
+    assert all(card.section_id in {section.id for section in chapter.sections} for card in chapter.concepts)
+    ids = [card.id for item in repository.chapters() for card in item.concepts]
+    assert len(ids) == len(set(ids))
+    first = chapter.concepts[0]
+    assert first.id == "C6-001"
+    assert first.key_rule == "H⁽⁰⁾ = Σⱼ Eⱼ⁽⁰⁾ |ψⱼ⁽⁰⁾⟩⟨ψⱼ⁽⁰⁾|"
+    assert first.definition == "Known eigenvalues and eigenvectors form the starting point."
+    metadata = json.loads(Path("curriculum/topic_06.json").read_text())["concept_metadata"]
+    assert metadata[first.id]["equation_reference"] == "6.1"
+    handler = build_handlers(
+        StudyService(repository, ProgressRepository(tmp_path / "progress.db")), repository, (123,)
+    )[-1]
+    message = SimpleNamespace(text="6.1 Time independent perturbation theory · 0%", reply_text=AsyncMock())
+    update = SimpleNamespace(effective_message=message, effective_user=SimpleNamespace(id=123))
+    context = SimpleNamespace(user_data={})
+    asyncio.run(handler(update, context))
+    assert "1/30" in message.reply_text.call_args.args[0]
+    assert sum(context.user_data["concept_choices"].values()) == 1
+    message.text = DONT_KNOW
+    asyncio.run(handler(update, context))
+    assert context.user_data["study_set"].pending[-1].id == first.id
+    assert context.user_data["question"].item_id != first.id
+    assert any(first.key_rule in call.args[0] for call in message.reply_text.call_args_list)

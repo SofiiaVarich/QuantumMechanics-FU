@@ -59,5 +59,667 @@
       "title": "Some words on more general concepts of perturbation",
       "title_de": "Allgemeinere Störungskonzepte"
     }
-  ]
+  ],
+  "concepts": [
+    {
+      "id": "C6-001",
+      "section_id": "6.1",
+      "front": "Unperturbed Hamiltonian",
+      "definition": "Known eigenvalues and eigenvectors form the starting point.",
+      "key_rule": "H⁽⁰⁾ = Σⱼ Eⱼ⁽⁰⁾ |ψⱼ⁽⁰⁾⟩⟨ψⱼ⁽⁰⁾|",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-002",
+      "section_id": "6.1",
+      "front": "Perturbed Hamiltonian",
+      "definition": "V is the perturbing Hamiltonian; λ controls its strength.",
+      "key_rule": "H(λ) = H⁽⁰⁾ + λV",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-003",
+      "section_id": "6.1",
+      "front": "Perturbed spectral decomposition",
+      "definition": "Target eigenvalues and eigenvectors of the perturbed problem.",
+      "key_rule": "H(λ) = Σⱼ Eⱼ(λ)|ψⱼ(λ)⟩⟨ψⱼ(λ)|",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-004",
+      "section_id": "6.1.1",
+      "front": "Perturbed eigenvalue equation",
+      "definition": "Eigenvalue problem for the perturbed Hamiltonian.",
+      "key_rule": "H(λ)|ψⱼ(λ)⟩ = Eⱼ(λ)|ψⱼ(λ)⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-005",
+      "section_id": "6.1.1",
+      "front": "Rayleigh–Schrödinger energy series",
+      "definition": "Energy expanded in powers of perturbation strength.",
+      "key_rule": "Eⱼ(λ) = Σₙ₌₀∞ λⁿ Eⱼ⁽ⁿ⁾",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-006",
+      "section_id": "6.1.1",
+      "front": "Perturbed state expansion",
+      "definition": "Eigenvector expanded in powers of λ.",
+      "key_rule": "|ψⱼ(λ)⟩ = Σₙ₌₀∞ λⁿ|ψⱼ⁽ⁿ⁾⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-007",
+      "section_id": "6.1.1",
+      "front": "Zeroth-order equation",
+      "definition": "The original eigenvalue equation.",
+      "key_rule": "(H⁽⁰⁾−Eⱼ⁽⁰⁾)|ψⱼ⁽⁰⁾⟩ = 0",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-008",
+      "section_id": "6.1.1",
+      "front": "First-order eigenvector equation",
+      "definition": "Determines the leading correction to the state.",
+      "key_rule": "(H⁽⁰⁾−Eⱼ⁽⁰⁾)|ψⱼ⁽¹⁾⟩ = (Eⱼ⁽¹⁾−V)|ψⱼ⁽⁰⁾⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-009",
+      "section_id": "6.1.1",
+      "front": "Intermediate normalization",
+      "definition": "Convenient choice of normalization in the derivation.",
+      "key_rule": "⟨ψⱼ⁽⁰⁾|ψⱼ(λ)⟩ = 1",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-010",
+      "section_id": "6.1.1",
+      "front": "Higher-order orthogonality",
+      "definition": "Perturbative state corrections are orthogonal to the zeroth-order state.",
+      "key_rule": "⟨ψⱼ⁽⁰⁾|ψⱼ⁽ⁿ⁾⟩ = 0, n≥1",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-011",
+      "section_id": "6.1.1",
+      "front": "First-order energy correction",
+      "definition": "Expectation value of the perturbation in the original state.",
+      "key_rule": "Eⱼ⁽¹⁾ = ⟨ψⱼ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-012",
+      "section_id": "6.1.1",
+      "front": "General energy correction",
+      "definition": "Recursive expression for energy corrections.",
+      "key_rule": "Eⱼ⁽ⁿ⁾ = ⟨ψⱼ⁽⁰⁾|V|ψⱼ⁽ⁿ⁻¹⁾⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-013",
+      "section_id": "6.1.1",
+      "front": "First-order state coefficients",
+      "definition": "Mixing coefficients for distinct unperturbed states.",
+      "key_rule": "⟨ψₗ⁽⁰⁾|ψⱼ⁽¹⁾⟩ = ⟨ψₗ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩/(Eⱼ⁽⁰⁾−Eₗ⁽⁰⁾), l≠j",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-014",
+      "section_id": "6.1.1",
+      "front": "Reduced resolvent operator",
+      "definition": "Operator used to compute perturbative state corrections.",
+      "key_rule": "Sⱼ = Σₖ≠ⱼ |ψₖ⁽⁰⁾⟩⟨ψₖ⁽⁰⁾|/(Eⱼ⁽⁰⁾−Eₖ⁽⁰⁾)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-015",
+      "section_id": "6.1.1",
+      "front": "First-order state correction",
+      "definition": "Linear combination of other unperturbed eigenstates.",
+      "key_rule": "|ψⱼ⁽¹⁾⟩ = Σₗ≠ⱼ [⟨ψₗ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩/(Eⱼ⁽⁰⁾−Eₗ⁽⁰⁾)]|ψₗ⁽⁰⁾⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-016",
+      "section_id": "6.1.1",
+      "front": "Second-order energy correction",
+      "definition": "Second-order shift from couplings to other states.",
+      "key_rule": "Eⱼ⁽²⁾ = Σₗ≠ⱼ |⟨ψₗ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩|²/(Eⱼ⁽⁰⁾−Eₗ⁽⁰⁾)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-017",
+      "section_id": "6.1.1",
+      "front": "Perturbation matrix elements",
+      "definition": "Quantities needed to evaluate first-order corrections.",
+      "key_rule": "Vₗⱼ = ⟨ψₗ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-018",
+      "section_id": "6.1.1",
+      "front": "Ground-state second-order shift",
+      "definition": "Second-order correction to a nondegenerate ground-state energy is non-positive.",
+      "key_rule": "E₀⁽²⁾ ≤ 0",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-019",
+      "section_id": "6.1.1",
+      "front": "Perturbative asymptotic expansion",
+      "definition": "Higher-order terms need not improve an asymptotic approximation.",
+      "key_rule": "Low orders may approximate well even when the full series does not converge",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-020",
+      "section_id": "6.1.2",
+      "front": "Anharmonic oscillator Hamiltonian",
+      "definition": "Harmonic oscillator with quartic perturbation.",
+      "key_rule": "H(λ) = H⁽⁰⁾ + λX⁴",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-021",
+      "section_id": "6.1.2",
+      "front": "Harmonic oscillator reference Hamiltonian",
+      "definition": "Exactly solvable unperturbed system.",
+      "key_rule": "H⁽⁰⁾ = P²/(2m) + kX²/2",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-022",
+      "section_id": "6.1.2",
+      "front": "Quartic perturbation",
+      "definition": "Anharmonic correction to the potential.",
+      "key_rule": "V = X⁴",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-023",
+      "section_id": "6.1.2",
+      "front": "Anharmonic ground-state expansion",
+      "definition": "Example expansion in the lecture's chosen units.",
+      "key_rule": "E₀(λ) = 1 + 3λ/4 − 21λ²/16 + O(λ³)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-024",
+      "section_id": "6.1.2",
+      "front": "Truncated perturbation series",
+      "definition": "Approximation including terms up to order m.",
+      "key_rule": "E₀(m) = Σₙ₌₀ᵐ λⁿ E₀⁽ⁿ⁾",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-025",
+      "section_id": "6.1.2",
+      "front": "Asymptotic high-order failure",
+      "definition": "Lecture example showing that very high order can give a poor result.",
+      "key_rule": "E₀(20) = −9.919902 at λ=0.1",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-026",
+      "section_id": "6.1.3",
+      "front": "Degenerate unperturbed eigenspace",
+      "definition": "Several eigenstates share the same unperturbed energy.",
+      "key_rule": "H⁽⁰⁾|ψⱼ⁽⁰⁾⟩ = E|ψⱼ⁽⁰⁾⟩, j=1,…,s",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-027",
+      "section_id": "6.1.3",
+      "front": "Degenerate perturbation matrix",
+      "definition": "Perturbation restricted to the degenerate subspace.",
+      "key_rule": "Mₗⱼ = ⟨ψₗ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-028",
+      "section_id": "6.1.3",
+      "front": "Unitary diagonalization",
+      "definition": "Diagonalize the perturbation within the degenerate subspace.",
+      "key_rule": "U†MU = D",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-029",
+      "section_id": "6.1.3",
+      "front": "Unitary matrix condition",
+      "definition": "The basis change preserves orthonormality.",
+      "key_rule": "UU† = U†U = 1",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-030",
+      "section_id": "6.1.3",
+      "front": "Degenerate basis selection",
+      "definition": "Avoids zero denominators in naive nondegenerate formulas.",
+      "key_rule": "Choose a basis that diagonalizes M",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-031",
+      "section_id": "6.2.1",
+      "front": "Time-dependent perturbed Hamiltonian",
+      "definition": "Known reference Hamiltonian plus time-dependent perturbation.",
+      "key_rule": "H(t) = H⁽⁰⁾ + λV(t)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-032",
+      "section_id": "6.2.1",
+      "front": "Perturbation switch-on condition",
+      "definition": "The perturbation begins after the initial time.",
+      "key_rule": "V(t) = 0 for t≤t₀",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-033",
+      "section_id": "6.2.1",
+      "front": "Time-dependent Schrödinger equation",
+      "definition": "Full time evolution under the perturbed Hamiltonian.",
+      "key_rule": "iℏ∂ₜ|ψ(t)⟩ = [H⁽⁰⁾+λV(t)]|ψ(t)⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-034",
+      "section_id": "6.2.1",
+      "front": "Interaction-picture state",
+      "definition": "Removes the free evolution generated by H⁽⁰⁾.",
+      "key_rule": "|ψ(t)⟩ᵢ = exp(iH⁽⁰⁾t/ℏ)|ψ(t)⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-035",
+      "section_id": "6.2.1",
+      "front": "Interaction-picture Schrödinger equation",
+      "definition": "Evolution equation driven by the interaction operator.",
+      "key_rule": "iℏ∂ₜ|ψ(t)⟩ᵢ = λVᵢ(t)|ψ(t)⟩ᵢ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-036",
+      "section_id": "6.2.1",
+      "front": "Interaction-picture perturbation",
+      "definition": "Perturbation transformed to the interaction picture.",
+      "key_rule": "Vᵢ(t) = exp(iH⁽⁰⁾t/ℏ)V(t)exp(−iH⁽⁰⁾t/ℏ)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-037",
+      "section_id": "6.2.1",
+      "front": "Interaction-picture integral equation",
+      "definition": "Integral form of the interaction-picture dynamics.",
+      "key_rule": "|ψ(t)⟩ᵢ = |ψ(t₀)⟩ᵢ + [λ/(iℏ)]∫ₜ₀ᵗ ds Vᵢ(s)|ψ(s)⟩ᵢ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-038",
+      "section_id": "6.2.1",
+      "front": "Von Neumann series",
+      "definition": "Iterative expansion of the interaction-picture integral equation.",
+      "key_rule": "|ψ(t)⟩ᵢ = |ψ(t₀)⟩ᵢ + O(λ) + O(λ²) + …",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-039",
+      "section_id": "6.2.2",
+      "front": "Free evolution of final eigenstate",
+      "definition": "Time evolution of an unperturbed energy eigenstate.",
+      "key_rule": "|ψₖ⁽⁰⁾(t)⟩ = exp(−iEₖ⁽⁰⁾t/ℏ)|ψₖ⁽⁰⁾⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-040",
+      "section_id": "6.2.2",
+      "front": "First-order transition amplitude",
+      "definition": "Amplitude for a transition between unperturbed eigenstates.",
+      "key_rule": "Aₖⱼ(t) = δₖⱼ + [λ/(iℏ)]∫ₜ₀ᵗ ds exp[i(Eₖ⁽⁰⁾−Eⱼ⁽⁰⁾)s/ℏ]⟨ψₖ⁽⁰⁾|V(s)|ψⱼ⁽⁰⁾⟩ + O(λ²)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-041",
+      "section_id": "6.2.2",
+      "front": "Transition probability",
+      "definition": "Squared magnitude of the transition amplitude.",
+      "key_rule": "Pⱼₖ(t) = |⟨ψₖ⁽⁰⁾(t)|ψ(t)⟩|²",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-042",
+      "section_id": "6.2.2",
+      "front": "Golden rule context",
+      "definition": "The lecture refers to this continuum application as the golden rule.",
+      "key_rule": "Transition formula for scattering into a continuum of modes",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-043",
+      "section_id": "6.3",
+      "front": "Hamiltonian resolvent",
+      "definition": "Resolvent used in Kato's perturbation theory.",
+      "key_rule": "G(z) = (z1−H)⁻¹",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-044",
+      "section_id": "6.3",
+      "front": "Relative boundedness condition",
+      "definition": "Operator inequality used to describe a small perturbation.",
+      "key_rule": "(H⁽⁰⁾)² ≥ λ²V²",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-045",
+      "section_id": "6.3",
+      "front": "Eigenvalue versus eigenvector stability",
+      "definition": "Degeneracies can make eigenvectors sensitive to perturbations.",
+      "key_rule": "Nearby matrices can share eigenvalues yet have very different eigenvectors",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-046",
+      "section_id": "6.3",
+      "front": "Example matrix A",
+      "definition": "Diagonal example with eigenvalues 1±ε.",
+      "key_rule": "A = [[1+ε,0],[0,1−ε]]",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C6-047",
+      "section_id": "6.3",
+      "front": "Example matrix B",
+      "definition": "Same eigenvalues as A, but different eigenvectors.",
+      "key_rule": "B = [[1,ε],[ε,1]]",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+    }
+  ],
+  "concept_metadata": {
+    "C6-001": {
+      "original_section_title": "6.1 Time independent perturbation theory",
+      "equation_reference": "6.1",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-002": {
+      "original_section_title": "6.1 Time independent perturbation theory",
+      "equation_reference": "6.2",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-003": {
+      "original_section_title": "6.1 Time independent perturbation theory",
+      "equation_reference": "6.3",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-004": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.4",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-005": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.5",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-006": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.6",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-007": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.9",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-008": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.10",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-009": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.12",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-010": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.13",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-011": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.15 / 6.23",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-012": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.16",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-013": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.18",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-014": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.21",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-015": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.24",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-016": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.25",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-017": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.26",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-018": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.25 (discussion)",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-019": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.1.1 (discussion)",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-020": {
+      "original_section_title": "6.1.2 An example: The anharmonic oscillator",
+      "equation_reference": "6.27–6.29",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-021": {
+      "original_section_title": "6.1.2 An example: The anharmonic oscillator",
+      "equation_reference": "6.28",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-022": {
+      "original_section_title": "6.1.2 An example: The anharmonic oscillator",
+      "equation_reference": "6.29",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-023": {
+      "original_section_title": "6.1.2 An example: The anharmonic oscillator",
+      "equation_reference": "6.30",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-024": {
+      "original_section_title": "6.1.2 An example: The anharmonic oscillator",
+      "equation_reference": "6.31",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-025": {
+      "original_section_title": "6.1.2 An example: The anharmonic oscillator",
+      "equation_reference": "6.32",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-026": {
+      "original_section_title": "6.1.3 Degenerate situation",
+      "equation_reference": "6.33",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-027": {
+      "original_section_title": "6.1.3 Degenerate situation",
+      "equation_reference": "6.35",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-028": {
+      "original_section_title": "6.1.3 Degenerate situation",
+      "equation_reference": "6.36",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-029": {
+      "original_section_title": "6.1.3 Degenerate situation",
+      "equation_reference": "6.37",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-030": {
+      "original_section_title": "6.1.3 Degenerate situation",
+      "equation_reference": "6.35–6.38",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-031": {
+      "original_section_title": "6.2.1 Interaction picture",
+      "equation_reference": "6.39",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-032": {
+      "original_section_title": "6.2.1 Interaction picture",
+      "equation_reference": "6.40",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-033": {
+      "original_section_title": "6.2.1 Interaction picture",
+      "equation_reference": "6.42",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-034": {
+      "original_section_title": "6.2.1 Interaction picture",
+      "equation_reference": "6.44",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-035": {
+      "original_section_title": "6.2.1 Interaction picture",
+      "equation_reference": "6.46",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-036": {
+      "original_section_title": "6.2.1 Interaction picture",
+      "equation_reference": "6.47",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-037": {
+      "original_section_title": "6.2.1 Interaction picture",
+      "equation_reference": "6.48",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-038": {
+      "original_section_title": "6.2.1 Interaction picture",
+      "equation_reference": "6.49",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-039": {
+      "original_section_title": "6.2.2 Applications: Transitions of first order",
+      "equation_reference": "6.50",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-040": {
+      "original_section_title": "6.2.2 Applications: Transitions of first order",
+      "equation_reference": "6.53",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-041": {
+      "original_section_title": "6.2.2 Applications: Transitions of first order",
+      "equation_reference": "6.54",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-042": {
+      "original_section_title": "6.2.2 Applications: Transitions of first order",
+      "equation_reference": "6.54 (discussion)",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-043": {
+      "original_section_title": "6.3 Some words on more general concepts of perturbation",
+      "equation_reference": "6.55",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-044": {
+      "original_section_title": "6.3 Some words on more general concepts of perturbation",
+      "equation_reference": "6.56",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-045": {
+      "original_section_title": "6.3 Some words on more general concepts of perturbation",
+      "equation_reference": "6.57–6.58",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-046": {
+      "original_section_title": "6.3 Some words on more general concepts of perturbation",
+      "equation_reference": "6.57",
+      "source_reference": "QMChapter6(1).pdf"
+    },
+    "C6-047": {
+      "original_section_title": "6.3 Some words on more general concepts of perturbation",
+      "equation_reference": "6.58",
+      "source_reference": "QMChapter6(1).pdf"
+    }
+  }
 }

@@ -65,5 +65,835 @@
       "title": "Orbitals of the hydrogen atom",
       "title_de": "Orbitale des Wasserstoffatoms"
     }
-  ]
+  ],
+  "concepts": [
+    {
+      "id": "C5-001",
+      "section_id": "5.1.1",
+      "front": "Orbital angular momentum",
+      "definition": "Angular momentum is the cross product of position and momentum operators.",
+      "key_rule": "L = X × P",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-002",
+      "section_id": "5.1.1",
+      "front": "Angular momentum components",
+      "definition": "Component form using the antisymmetric Levi-Civita tensor.",
+      "key_rule": "Lᵢ = Σⱼₖ εᵢⱼₖ XⱼPₖ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-003",
+      "section_id": "5.1.1",
+      "front": "Levi-Civita tensor",
+      "definition": "Encodes the orientation of a permutation.",
+      "key_rule": "εᵢⱼₖ = +1 (even), −1 (odd), 0 (repeated indices)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-004",
+      "section_id": "5.1.1",
+      "front": "Angular momentum commutator",
+      "definition": "Different angular momentum components generally do not commute.",
+      "key_rule": "[Lᵢ,Lⱼ] = iℏ Σₖ εᵢⱼₖ Lₖ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-005",
+      "section_id": "5.1.1",
+      "front": "Position rotation commutator",
+      "definition": "Angular momentum acts as the generator of rotations of position.",
+      "key_rule": "[Lᵢ,Xⱼ] = iℏ Σₖ εᵢⱼₖ Xₖ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-006",
+      "section_id": "5.1.1",
+      "front": "Momentum rotation commutator",
+      "definition": "Angular momentum acts as the generator of rotations of momentum.",
+      "key_rule": "[Lᵢ,Pⱼ] = iℏ Σₖ εᵢⱼₖ Pₖ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-007",
+      "section_id": "5.1.2",
+      "front": "Rotation of quantum states",
+      "definition": "The rotation operator acts on a state vector.",
+      "key_rule": "|ψ⟩ ↦ R(n,θ)|ψ⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-008",
+      "section_id": "5.1.2",
+      "front": "Rotation of wave functions",
+      "definition": "The rotated wave function is evaluated at inverse-rotated coordinates.",
+      "key_rule": "(R(n,θ)ψ)(x) = ψ(R(n,θ)⁻¹x)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-009",
+      "section_id": "5.1.2",
+      "front": "Rotation generator",
+      "definition": "Angular momentum generates spatial rotations.",
+      "key_rule": "R(n,θ) = exp(−iθ n·L/ℏ)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-010",
+      "section_id": "5.1.3",
+      "front": "Total angular momentum squared",
+      "definition": "L² is compatible with every component of angular momentum.",
+      "key_rule": "[L²,Lⱼ] = 0",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-011",
+      "section_id": "5.1.3",
+      "front": "Angular momentum ladder operators",
+      "definition": "Operators that raise or lower the magnetic quantum number.",
+      "key_rule": "L± = L₁ ± iL₂",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-012",
+      "section_id": "5.1.3",
+      "front": "Ladder operator adjoints",
+      "definition": "The raising and lowering operators are adjoints.",
+      "key_rule": "(L±)† = L∓",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-013",
+      "section_id": "5.1.3",
+      "front": "Ladder commutators",
+      "definition": "Commutation relations underlying the angular momentum spectrum.",
+      "key_rule": "[L₃,L±] = ±ℏL±; [L₊,L₋] = 2ℏL₃",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-014",
+      "section_id": "5.1.3",
+      "front": "Angular momentum decomposition",
+      "definition": "Relates total angular momentum to ladder operators.",
+      "key_rule": "L² = ½(L₊L₋ + L₋L₊) + L₃²",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-015",
+      "section_id": "5.1.3",
+      "front": "Total angular momentum eigenvalue",
+      "definition": "Defines the total angular momentum quantum number l.",
+      "key_rule": "L²|l,m⟩ = ℏ²l(l+1)|l,m⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-016",
+      "section_id": "5.1.3",
+      "front": "Magnetic quantum number",
+      "definition": "Defines the z-component quantum number m.",
+      "key_rule": "L₃|l,m⟩ = ℏm|l,m⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-017",
+      "section_id": "5.1.3",
+      "front": "Ladder operator action",
+      "definition": "Changes m by one without changing l.",
+      "key_rule": "L±|l,m⟩ = ℏ√[l(l+1)−m(m±1)] |l,m±1⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-018",
+      "section_id": "5.1.3",
+      "front": "Magnetic quantum number bounds",
+      "definition": "Allowed magnetic quantum numbers lie between −l and l.",
+      "key_rule": "−l ≤ m ≤ l",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-019",
+      "section_id": "5.1.3",
+      "front": "Highest-weight state",
+      "definition": "The raising operator annihilates the state with maximal m.",
+      "key_rule": "L₊|l,l⟩ = 0",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-020",
+      "section_id": "5.1.3",
+      "front": "Lowest-weight state",
+      "definition": "The lowering operator annihilates the state with minimal m.",
+      "key_rule": "L₋|l,−l⟩ = 0",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-021",
+      "section_id": "5.1.3",
+      "front": "Angular momentum quantum numbers",
+      "definition": "General angular momentum algebra permits integer and half-integer l.",
+      "key_rule": "l = 0, ½, 1, 3/2, …; m = −l, −l+1, …, l",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-022",
+      "section_id": "5.1.4",
+      "front": "Position-space angular momentum",
+      "definition": "Differential-operator representation of orbital angular momentum.",
+      "key_rule": "L = (ℏ/i) X × ∇",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-023",
+      "section_id": "5.1.4",
+      "front": "Gradient in spherical coordinates",
+      "definition": "Spherical-coordinate gradient.",
+      "key_rule": "∇ = eᵣ∂ᵣ + eθ(1/r)∂θ + eφ[1/(r sinθ)]∂φ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-024",
+      "section_id": "5.1.4",
+      "front": "Azimuthal angular momentum operator",
+      "definition": "z-component of angular momentum in the position representation.",
+      "key_rule": "L₃ = (ℏ/i)∂/∂φ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-025",
+      "section_id": "5.1.4",
+      "front": "Angular wave-function separation",
+      "definition": "Separates azimuthal and polar dependence.",
+      "key_rule": "ψₗₘ(θ,φ) = Φₘ(φ) Θₗₘ(θ)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-026",
+      "section_id": "5.1.4",
+      "front": "Azimuthal eigenfunction",
+      "definition": "Angular dependence associated with magnetic quantum number m.",
+      "key_rule": "Φₘ(φ) = exp(imφ)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-027",
+      "section_id": "5.1.4",
+      "front": "Single-valued angular wave functions",
+      "definition": "For orbital wave functions, periodicity forces integer m and l.",
+      "key_rule": "Φₘ(φ+2π) = Φₘ(φ)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-028",
+      "section_id": "5.1.4",
+      "front": "Spherical harmonics",
+      "definition": "Angular eigenfunctions of L² and L₃; expressed using associated Legendre functions.",
+      "key_rule": "Yₗₘ(θ,φ) = ψₗₘ(θ,φ)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-029",
+      "section_id": "5.1.4",
+      "front": "Associated Legendre functions",
+      "definition": "Functions used to construct spherical harmonics; source convention.",
+      "key_rule": "Pₗₘ(x) = (1−x²)^(m/2) (dᵐ/dxᵐ)Pₗ(x)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-030",
+      "section_id": "5.1.4",
+      "front": "Legendre polynomials",
+      "definition": "Rodrigues formula.",
+      "key_rule": "Pₗ(x) = [1/(2ˡl!)] (dˡ/dxˡ)(x²−1)ˡ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-031",
+      "section_id": "5.1.4",
+      "front": "Legendre recurrence",
+      "definition": "Recursion between adjacent polynomial degrees.",
+      "key_rule": "(l+1)Pₗ₊₁ = (2l+1)xPₗ − lPₗ₋₁",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-032",
+      "section_id": "5.1.4",
+      "front": "First Legendre polynomials",
+      "definition": "Low-degree Legendre polynomials.",
+      "key_rule": "P₀=1; P₁=x; P₂=(3x²−1)/2; P₃=(5x³−3x)/2",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-033",
+      "section_id": "5.1.4",
+      "front": "Spherical harmonic orthogonality",
+      "definition": "Different angular momentum eigenfunctions are orthonormal.",
+      "key_rule": "∫₀^π sinθ dθ ∫₀^{2π} dφ Yₗₘ*Yₐᵦ = δₗₐδₘᵦ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-034",
+      "section_id": "5.1.4",
+      "front": "Spherical harmonic conjugation",
+      "definition": "Relation between positive and negative m.",
+      "key_rule": "Yₗ,₋ₘ = (−1)ᵐ Yₗₘ*",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-035",
+      "section_id": "5.1.4",
+      "front": "Orbital labels",
+      "definition": "Spectroscopic labels of orbital angular momentum.",
+      "key_rule": "l=0: s; l=1: p; l=2: d; l=3: f",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-036",
+      "section_id": "5.2.1",
+      "front": "Central-potential Hamiltonian",
+      "definition": "Rotationally invariant Hamiltonian with R=|X|.",
+      "key_rule": "H = P²/(2m) + V(R)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-037",
+      "section_id": "5.2.1",
+      "front": "Radial momentum operator",
+      "definition": "Radial momentum in the position representation.",
+      "key_rule": "Pᵣ = (ℏ/i)(∂/∂r + 1/r)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-038",
+      "section_id": "5.2.1",
+      "front": "Separation of radial and angular parts",
+      "definition": "Separates radial wave function and spherical harmonic.",
+      "key_rule": "ψ(r,θ,φ) = R(r)Yₗₘ(θ,φ)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-039",
+      "section_id": "5.2.1",
+      "front": "Rotational invariance commutators",
+      "definition": "Angular momentum is conserved for a central potential.",
+      "key_rule": "[H,L] = [H,L²] = 0",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-040",
+      "section_id": "5.2.1",
+      "front": "Reduced radial wave function",
+      "definition": "Substitution simplifying the radial Schrödinger equation.",
+      "key_rule": "R(r) = u(r)/r",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-041",
+      "section_id": "5.2.1",
+      "front": "Reduced radial Schrödinger equation",
+      "definition": "One-dimensional radial eigenvalue equation.",
+      "key_rule": "[−ℏ²/(2m) d²/dr² + ℏ²l(l+1)/(2mr²) + V(r)]u = Eu",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-042",
+      "section_id": "5.2.1",
+      "front": "Effective radial potential",
+      "definition": "Central potential plus centrifugal term.",
+      "key_rule": "V_eff(r) = V(r) + ℏ²l(l+1)/(2mr²)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-043",
+      "section_id": "5.2.2",
+      "front": "Dimensionless radial coordinate",
+      "definition": "Scaled coordinate for bound-state solutions.",
+      "key_rule": "ξ = κr; κ = √(−2mE)/ℏ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-044",
+      "section_id": "5.2.2",
+      "front": "Coulomb potential in the script",
+      "definition": "Attractive Coulomb potential in the lecture's unit convention.",
+      "key_rule": "V(r) = −e₀²/r",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-045",
+      "section_id": "5.2.2",
+      "front": "Hydrogen radial ansatz",
+      "definition": "Factors out asymptotic behavior of the radial solution.",
+      "key_rule": "u(ξ) = ξ^(l+1)e^(−ξ) w(ξ)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-046",
+      "section_id": "5.2.2",
+      "front": "Hydrogen series expansion",
+      "definition": "Power-series ansatz for the remaining radial function.",
+      "key_rule": "w(ξ) = Σⱼ₌₀^∞ aⱼ ξʲ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-047",
+      "section_id": "5.2.2",
+      "front": "Hydrogen coefficient recursion",
+      "definition": "Recurrence relation obtained from the radial differential equation.",
+      "key_rule": "aⱼ₊₁ = [2(j+l+1)−ξ₀]/[(j+1)(j+2l+2)] · aⱼ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-048",
+      "section_id": "5.2.2",
+      "front": "Polynomial termination condition",
+      "definition": "Condition ensuring the radial series terminates.",
+      "key_rule": "ξ₀ = 2(N+l+1)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-049",
+      "section_id": "5.2.2",
+      "front": "Principal quantum number",
+      "definition": "Relates principal, radial and orbital quantum numbers.",
+      "key_rule": "n = N+l+1",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-050",
+      "section_id": "5.2.2",
+      "front": "Hydrogen energy spectrum",
+      "definition": "Bound-state energies depend only on n in the model.",
+      "key_rule": "Eₙ = −me₀⁴/(2ℏ²n²), n=1,2,…",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-051",
+      "section_id": "5.2.2",
+      "front": "Allowed hydrogen orbital quantum numbers",
+      "definition": "Allowed angular momentum values for each principal quantum number.",
+      "key_rule": "l = 0,1,…,n−1; m = −l,…,l",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-052",
+      "section_id": "5.2.2",
+      "front": "Hydrogen energy-level degeneracy",
+      "definition": "Orbital degeneracy of each n level, without spin.",
+      "key_rule": "Σₗ₌₀ⁿ⁻¹(2l+1) = n²",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-053",
+      "section_id": "5.2.3",
+      "front": "Associated Laguerre polynomial solution",
+      "definition": "Radial polynomial solution; associated Laguerre convention in the script.",
+      "key_rule": "w(ξ) = A Lₙ₋ₗ₋₁^(2l+1)(ξ)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-054",
+      "section_id": "5.2.3",
+      "front": "Hydrogen orbital factorization",
+      "definition": "Hydrogen eigenfunction separates into radial and angular parts.",
+      "key_rule": "ψₙₗₘ(r,θ,φ) = Rₙₗ(r)Yₗₘ(θ,φ)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-055",
+      "section_id": "5.2.3",
+      "front": "Hydrogen radial function",
+      "definition": "Normalized radial expression is given in equation (5.104).",
+      "key_rule": "Rₙₗ(r) ∝ (2κr)ˡ exp(−κr) Lₙ₋ₗ₋₁^(2l+1)(2κr)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-056",
+      "section_id": "5.2.3",
+      "front": "Hydrogen inverse length scale",
+      "definition": "Inverse characteristic radius of the nth hydrogen level.",
+      "key_rule": "κ = 1/(na)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-057",
+      "section_id": "5.2.3",
+      "front": "Bohr radius (script convention)",
+      "definition": "Characteristic atomic length in the lecture's Coulomb convention.",
+      "key_rule": "a = ℏ²/(me₀²)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-058",
+      "section_id": "5.2.3",
+      "front": "Radial nodes",
+      "definition": "Number of positive zeros in the radial part.",
+      "key_rule": "N = n−l−1",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "C5-059",
+      "section_id": "5.2.3",
+      "front": "Spectral series",
+      "definition": "Hydrogen spectral lines arise from differences between energy levels.",
+      "key_rule": "Lyman, Balmer, Paschen",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+    }
+  ],
+  "concept_metadata": {
+    "C5-001": {
+      "original_section_title": "5.1.1 Definition",
+      "equation_reference": "5.1",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-002": {
+      "original_section_title": "5.1.1 Definition",
+      "equation_reference": "5.2",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-003": {
+      "original_section_title": "5.1.1 Definition",
+      "equation_reference": "5.3",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-004": {
+      "original_section_title": "5.1.1 Definition",
+      "equation_reference": "5.4",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-005": {
+      "original_section_title": "5.1.1 Definition",
+      "equation_reference": "5.5",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-006": {
+      "original_section_title": "5.1.1 Definition",
+      "equation_reference": "5.6",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-007": {
+      "original_section_title": "5.1.2 Angular momentum operator as generator of rotations",
+      "equation_reference": "5.7",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-008": {
+      "original_section_title": "5.1.2 Angular momentum operator as generator of rotations",
+      "equation_reference": "5.8",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-009": {
+      "original_section_title": "5.1.2 Angular momentum operator as generator of rotations",
+      "equation_reference": "5.9",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-010": {
+      "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
+      "equation_reference": "5.10",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-011": {
+      "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
+      "equation_reference": "5.12",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-012": {
+      "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
+      "equation_reference": "5.13",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-013": {
+      "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
+      "equation_reference": "5.14–5.15",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-014": {
+      "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
+      "equation_reference": "5.17",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-015": {
+      "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
+      "equation_reference": "5.18",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-016": {
+      "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
+      "equation_reference": "5.19",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-017": {
+      "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
+      "equation_reference": "5.24",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-018": {
+      "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
+      "equation_reference": "5.26",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-019": {
+      "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
+      "equation_reference": "5.27",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-020": {
+      "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
+      "equation_reference": "5.28",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-021": {
+      "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
+      "equation_reference": "5.31–5.33",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-022": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "5.34",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-023": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "5.35",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-024": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "5.38",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-025": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "5.43",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-026": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "5.44",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-027": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "5.45–5.46",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-028": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "5.48",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-029": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "5.49",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-030": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "5.50",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-031": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "5.51",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-032": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "5.53–5.56",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-033": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "5.58",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-034": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "5.65",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-035": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "5.65 (text)",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-036": {
+      "original_section_title": "5.2.1 General considerations",
+      "equation_reference": "5.66",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-037": {
+      "original_section_title": "5.2.1 General considerations",
+      "equation_reference": "5.69",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-038": {
+      "original_section_title": "5.2.1 General considerations",
+      "equation_reference": "5.71",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-039": {
+      "original_section_title": "5.2.1 General considerations",
+      "equation_reference": "5.73",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-040": {
+      "original_section_title": "5.2.1 General considerations",
+      "equation_reference": "5.74",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-041": {
+      "original_section_title": "5.2.1 General considerations",
+      "equation_reference": "5.76",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-042": {
+      "original_section_title": "5.2.1 General considerations",
+      "equation_reference": "5.77",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-043": {
+      "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
+      "equation_reference": "5.79–5.80",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-044": {
+      "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
+      "equation_reference": "5.82",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-045": {
+      "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
+      "equation_reference": "5.85",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-046": {
+      "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
+      "equation_reference": "5.87",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-047": {
+      "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
+      "equation_reference": "5.90",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-048": {
+      "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
+      "equation_reference": "5.94",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-049": {
+      "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
+      "equation_reference": "5.96",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-050": {
+      "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
+      "equation_reference": "5.97",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-051": {
+      "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
+      "equation_reference": "5.98–5.99",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-052": {
+      "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
+      "equation_reference": "5.100",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-053": {
+      "original_section_title": "5.2.3 Orbitals of the hydrogen atom",
+      "equation_reference": "5.102",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-054": {
+      "original_section_title": "5.2.3 Orbitals of the hydrogen atom",
+      "equation_reference": "5.103",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-055": {
+      "original_section_title": "5.2.3 Orbitals of the hydrogen atom",
+      "equation_reference": "5.104",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-056": {
+      "original_section_title": "5.2.3 Orbitals of the hydrogen atom",
+      "equation_reference": "5.106",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-057": {
+      "original_section_title": "5.2.3 Orbitals of the hydrogen atom",
+      "equation_reference": "5.107",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-058": {
+      "original_section_title": "5.2.3 Orbitals of the hydrogen atom",
+      "equation_reference": "5.102 (text)",
+      "source_reference": "QMChapter5(1).pdf"
+    },
+    "C5-059": {
+      "original_section_title": "5.2.3 Orbitals of the hydrogen atom",
+      "equation_reference": "5.107 (text)",
+      "source_reference": "QMChapter5(1).pdf"
+    }
+  }
 }
