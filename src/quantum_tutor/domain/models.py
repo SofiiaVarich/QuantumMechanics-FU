@@ -60,6 +60,7 @@ class Chapter:
     script_file: str = ""
     sections: tuple[Section, ...] = ()
     concepts: tuple[ConceptCard, ...] = ()
+    content_review_required: dict[str, str] = field(default_factory=dict)
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> "Chapter":
@@ -75,6 +76,7 @@ class Chapter:
             script_file=data.get("script_file", ""),
             sections=tuple(Section(**item) for item in data.get("sections", [])),
             concepts=tuple(ConceptCard(**item) for item in data.get("concepts", [])),
+            content_review_required=data.get("content_review_required", {}),
         )
 
 

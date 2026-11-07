@@ -15,10 +15,10 @@ def test_chapter6_import_and_parent_set(tmp_path: Path) -> None:
     repository = CurriculumRepository(Path("curriculum"))
     chapter = repository.chapter(6)
     assert chapter is not None
-    assert len(chapter.concepts) == 47
+    assert len(chapter.concepts) == 85
     assert Counter(card.section_id for card in chapter.concepts) == {
-        "6.1": 3, "6.1.1": 16, "6.1.2": 6, "6.1.3": 5,
-        "6.2.1": 8, "6.2.2": 4, "6.3": 5,
+        "6.1": 3, "6.1.1": 30, "6.1.2": 8, "6.1.3": 10,
+        "6.2": 7, "6.2.1": 10, "6.2.2": 6, "6.3": 11,
     }
     assert all(card.section_id in {section.id for section in chapter.sections} for card in chapter.concepts)
     ids = [card.id for item in repository.chapters() for card in item.concepts]
@@ -29,6 +29,8 @@ def test_chapter6_import_and_parent_set(tmp_path: Path) -> None:
     assert first.definition == "Known eigenvalues and eigenvectors form the starting point."
     metadata = json.loads(Path("curriculum/topic_06.json").read_text())["concept_metadata"]
     assert metadata[first.id]["equation_reference"] == "6.1"
+    assert {f"C6-{i:03}" for i in range(1, 48)}.issubset({card.id for card in chapter.concepts})
+    assert metadata[first.id]["formula_latex"].startswith(r"H^{(0)}=\sum_j")
     handler = build_handlers(
         StudyService(repository, ProgressRepository(tmp_path / "progress.db")), repository, (123,)
     )[-1]
@@ -36,7 +38,7 @@ def test_chapter6_import_and_parent_set(tmp_path: Path) -> None:
     update = SimpleNamespace(effective_message=message, effective_user=SimpleNamespace(id=123))
     context = SimpleNamespace(user_data={})
     asyncio.run(handler(update, context))
-    assert "1/30" in message.reply_text.call_args.args[0]
+    assert "1/51" in message.reply_text.call_args.args[0]
     assert sum(context.user_data["concept_choices"].values()) == 1
     message.text = DONT_KNOW
     asyncio.run(handler(update, context))

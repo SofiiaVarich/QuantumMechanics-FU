@@ -13,8 +13,8 @@ def test_concept_set_answers_retries_and_completion(tmp_path: Path) -> None:
     repository = CurriculumRepository(Path("curriculum"))
     chapter = repository.chapter(2)
     assert chapter is not None
-    assert len(chapter.concepts) == 29
-    assert len({card.id for card in chapter.concepts}) == 29
+    assert len(chapter.concepts) == 34
+    assert len({card.id for card in chapter.concepts}) == 34
     service = StudyService(repository, ProgressRepository(tmp_path / "progress.db"))
     handler = build_handlers(service, repository, (123,))[-1]
     message = SimpleNamespace(text="2.1.1 State vectors of spin degrees of freedom", reply_text=AsyncMock())
@@ -45,5 +45,4 @@ def test_concept_set_answers_retries_and_completion(tmp_path: Path) -> None:
     calls = message.reply_text.call_args_list
     assert any("100% completed in this set" in call.args[0] for call in calls)
     labels = [button.text for row in calls[-1].kwargs["reply_markup"].keyboard for button in row]
-    assert any(label.startswith("2️⃣ Quantenzustände und Observablen · ") for label in labels)
-    assert not any(label.startswith("2.1.2") for label in labels)
+    assert labels == ["🏠 Main menu"]

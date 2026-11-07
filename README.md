@@ -1,4 +1,17 @@
 # Quantum Tutor
+
+## Current mode navigation and correctness audit
+
+- **Learn**, **Formulas**, and **Laws & Rules** each open the same topic picker, then start a whole-topic multiple-choice set in that mode.
+- **Learn:** formula recognition whenever a card has an equation; otherwise concept/statement recognition across the full imported catalog.
+- **Formulas:** equation/key-rule recognition, including imported chapter and experimental formulas—not just the 12 standalone formula records. Cards without an equation are omitted from this mode.
+- **Laws & Rules:** formula/key-rule choices for mathematical cards and meaning/application choices for verbal cards. Full meanings and assumptions remain in answer feedback.
+- Equation-bearing cards show the actual readable formula in answer buttons in every mode, including Learn and Review. Formula choices omit appended assumptions; feedback retains them. Telegram buttons use Unicode/plain text, not rendered LaTeX.
+- Question keyboards contain answer choices, Don't know, and Main menu only—no mode, Topics, or Review shortcuts. Completed sets display only a Main menu button; tapping it opens the full navigation menu. Reminder messages reuse the full main menu.
+- The saved card IDs and per-account review history are retained across modes. They currently measure shared recognition progress, not separate skill-specific mastery.
+
+See [`CONTENT_AUDIT.md`](CONTENT_AUDIT.md) for the 21 corrected/clarified records, twelve source-dependent cards, and multiple-choice safeguards. Original corrected text is retained in JSON metadata. Source-dependent answer feedback displays a warning. All imported material has been checked for software consistency and reviewed for mathematical concerns, but has **not** been fully verified against the original PDFs. Earlier import notes describing exact preservation refer to the initial import; documented audit corrections now take precedence.
+
 A private, bilingual (German–English) Telegram study bot for Quantum Mechanics, combining Quizlet-inspired flashcards, active recall, adaptive practice, spaced repetition, formula selection, derivations, exam simulations, reminders, and progress tracking.
 Independent learning project. Quantum Tutor is not an official Freie Universität Berlin service or affiliated with Quizlet. Confirm examination rules, dates, rooms, permitted aids, and assessed material using official FU sources. Features marked Planned below are design goals, not claims about the current codebase.
 Features and implementation status
@@ -17,7 +30,7 @@ Mode	Purpose	Status
 📝 Test / Exam	Timed, mixed-topic practice with restricted hints	Planned
 📊 Skill mastery	Track recall, understanding, application, derivation, and problem-solving separately	Planned
 
-The Telegram interface uses a persistent bottom keyboard. `/topics` opens a single menu with ten theory chapters and ten experimental topics—no duplicate chapter/subsection selection step. Selecting a topic immediately starts one automatic multiple-choice set containing all its concept cards and standalone formula cards. Original IDs are deduplicated; existing history is preserved. Empty topics are clearly marked. Finishing returns to the topic menu with refreshed percentages. Older subsection button messages still work for compatibility, but subsections are no longer required in normal navigation.
+The Telegram interface uses a persistent bottom keyboard. `/topics` opens a single menu with ten theory chapters and ten experimental topics—no duplicate chapter/subsection selection step. Selecting a topic immediately starts one automatic multiple-choice set containing all its concept cards and standalone formula cards. Original IDs are deduplicated; existing history is preserved. Empty topics are clearly marked. Finishing displays a single Main menu button. Topic percentages refresh the next time the topic menu is opened. Older subsection button messages still work for compatibility, but subsections are no longer required in normal navigation.
 
 `/review` starts a separate cross-topic set: currently missed cards are available immediately (even before their scheduled ten-minute retry), alongside all due cards. Correctly answered cards remain saved with a future due date and return to Review when due. Formula cards are included as well as concept cards. Unknown/retired IDs are skipped without deleting their history. Reviews and queues are private to each account; active sessions are in memory, while review schedules survive restarts. Counters measure completion of the current set, not exam readiness.
 
@@ -138,19 +151,23 @@ Official FU source pages:
 - Franke (experimental lecture dates, WS 2026/27): https://www.physik.fu-berlin.de/en/einrichtungen/ag/ag-franke/courses/26-WS-Quantenmechanik/index.html
 ### Chapter 2 concept cards
 
-The 29 cards from `QM_Chapter2_Concept_Cards_Updated.xlsx` are included in the whole-topic set when Chapter 2 is selected, together with its standalone formula cards. Subsection assignments are retained for organization and compatibility with older buttons; no subsection selection is required.
+Chapter 2 uses the 34 unique cards from `QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx` and `QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx`. Both supplied files have the same SHA-256 hash and identical content, so their cards are imported once, not twice; both filenames and hashes are retained in `workbook_sources`. The five added cards expand the three readings of uncertainty and the derivation. All 29 previous IDs are retained, including the renamed Robertson/Heisenberg first-reading card, so history remains associated with the same concept. The workbook's k-space Fourier convention and script-only Bloch-sphere description replace the earlier versions, retained in metadata.
+
+Thirty-one cards retain raw LaTeX alongside readable text. Twenty BOX rules, nineteen named-concept references, and source caveats are metadata rather than duplicate quiz cards. Source claims remain workbook-supplied, not independently checked against the original PDF. The whole-topic set contains 34 concept cards plus two standalone formula cards (36 total). Subsection assignments are retained for organization and compatibility; no subsection selection is required.
 
 1. Choose the definition matching the concept from the answer buttons, or tap **Don't know**. There is no reveal-and-self-rating step in subsection sets.
 2. Wrong answers and **Don't know** show the definition/key rule, then send the card to the back of the queue. If it is the only remaining card, it is presented again immediately.
 3. A correct answer completes that unique card for the set and automatically presents the next card.
 4. Prompts show `1/5 · 0% completed in this set`. The numerator is completed unique cards plus the current card; retries do not increase the denominator or completion percentage.
-5. Once all cards are completed, the bot shows `100%` and returns to the single topic menu.
+5. Once all cards are completed, the bot shows `100%` and a single Main menu button.
 
 Set completion means successful multiple-choice recognition during this session—not durable mastery or exam readiness. Correct choices are automatically graded as Okay internally; wrong choices and Don't know are Repeat. Other flashcard modes use only Know / Don't know controls; the four-level scheduler is retained internally for historical compatibility. Every rating still updates persistent spaced-review history independently. The active queue is in memory and resets after a bot restart or when starting another set; users can exit through Main menu or Topics at any time. Original workbook wording and formulas are preserved without translation. Spreadsheet status is source metadata only. These are physics concept cards, not translation exercises. The separate 72-image formula workbook remains staged.
 
 ### Chapter 4 concept cards
 
-The 50 cards from `QM_Chapter4_Concept_Learning_Cards.xlsx` are active under Chapter 4. They retain the original definitions and formulas without translation. Workbook numeric IDs are prefixed as `C4-001` through `C4-050` to avoid collisions with other chapters. Equation references, priorities, original section titles, and supplied source references are retained in `concept_metadata`. Spreadsheet progress does not reset account history.
+The 50 cards from `QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx` are active under Chapter 4. Original definitions, readable formulas, and IDs `C4-001` through `C4-050` are unchanged. Raw LaTeX is retained for 46 cards, with four verbal cards left blank. Equation references, priorities, original section titles, renderer wrappers, and supplied source references are retained in `concept_metadata`. Nineteen named-concept references, 24 BOX formulas, and source caveats are stored separately, without duplicating quiz questions. Spreadsheet progress does not reset account history.
+
+**Formula display:** Telegram reply and inline buttons support plain text only—not LaTeX, HTML, or embedded equation images. Current buttons use readable Unicode/plain-text notation. Raw LaTeX and `<code>` or `\\(…\\)` wrappers remain metadata and are not sent as typeset button labels. Properly rendered equations would require images in chat paired with answer buttons, or a separately hosted Mini App; neither image rendering nor a Mini App is implemented by this import.
 
 | Section | Cards |
 |---|---:|
@@ -170,35 +187,38 @@ Selecting a subsection automatically starts its multiple-choice set. Incorrect a
 
 ### Chapter 5 concept cards
 
-The 59 cards from `QM_Chapter5_Concept_Learning_Cards.xlsx` are active in Chapter 5. Original card IDs, concept names, formulas, and meanings are preserved without translation. Formula fields become key rules; meaning fields become definitions. Equation and supplied source references are retained in `concept_metadata`. Spreadsheet progress does not reset account history. The reattached Chapter 4 workbook was checked against the existing 50 cards and matched, so no duplicate import was needed.
+Chapter 5 uses the 83 actual learning rows from `QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx`: the original 59 IDs remain, with 24 new cards and clarifications to C5-021, C5-029, and C5-053. The workbook's Study Guide still reports 59; the import uses the actual 83 rows. Its 29 BOX entries are linked as priority metadata, not duplicated as extra questions. All 83 cards and the BOX entries retain their supplied raw LaTeX separately from Telegram display text. Formula fields become key rules and meaning fields become definitions, without translation. Equation references, prior versions of changed cards, BOX formulas, and workbook verification notes are retained. The workbook's verification claims are not independent PDF verification; the Laguerre scaling source-check warning remains. Spreadsheet progress does not reset account history.
 
 | Subsection | Cards |
 |---|---:|
-| 5.1.1 Definition | 6 |
-| 5.1.2 Angular momentum operator as generator of rotations | 3 |
-| 5.1.3 Spectrum of the angular momentum operator | 12 |
-| 5.1.4 Angular momentum operator in the position representation | 14 |
-| 5.2.1 General considerations | 7 |
-| 5.2.2 Spectrum of the hydrogen atom | 10 |
-| 5.2.3 Orbitals of the hydrogen atom | 7 |
+| 5.1.1 Definition | 7 |
+| 5.1.2 Angular momentum operator as generator of rotations | 4 |
+| 5.1.3 Spectrum of the angular momentum operator | 15 |
+| 5.1.4 Angular momentum operator in the position representation | 22 |
+| 5.2.1 General considerations | 10 |
+| 5.2.2 Spectrum of the hydrogen atom | 14 |
+| 5.2.3 Orbitals of the hydrogen atom | 11 |
 
 Subsections start automatic multiple-choice sets with saved progress; incorrect answers and Don't know requeue cards. Feedback includes both the meaning and formula. Workbook references are user-supplied, not independently verified against the lecture PDF.
 
 ### Chapter 6 concept cards
 
-The 47 cards from `QM_Chapter6_Concept_Learning_Cards.xlsx` are available in Chapter 6. Original card IDs, concept names, formulas, and meanings are preserved without translation. Equation and supplied source references are stored in `concept_metadata`; spreadsheet progress does not reset user history.
+Chapter 6 uses the 85 nonempty learning rows from `QM_Chapter6_Script_Only_With_LaTeX.xlsx`. All 47 existing IDs remain; 38 cards are added. Fourteen blank formatted rows are skipped. Original concept text and formulas are preserved without translation. Raw LaTeX is retained for 64 cards; blank LaTeX on verbal cards stays blank. Equation references, renderer input, and supplied source references are stored in `concept_metadata`. Fifteen BOX script rules, eighteen terminology-reference entries, and source caveats are retained separately, not duplicated as additional quiz cards. No bilingual vocabulary mode is introduced. Spreadsheet progress does not reset user history; script-only/source-verification claims remain workbook-supplied.
 
 | Section | Directly assigned cards |
 |---|---:|
 | 6.1 Time independent perturbation theory | 3 |
-| 6.1.1 Non-degenerate situation | 16 |
-| 6.1.2 An example: The anharmonic oscillator | 6 |
-| 6.1.3 Degenerate situation | 5 |
-| 6.2.1 Interaction picture | 8 |
-| 6.2.2 Applications: Transitions of first order | 4 |
-| 6.3 Some words on more general concepts of perturbation | 5 |
+| 6.1.1 Non-degenerate situation | 30 |
+| 6.1.2 An example: The anharmonic oscillator | 8 |
+| 6.1.3 Degenerate situation | 10 |
+| 6.2 Time-dependent perturbation theory | 7 |
+| 6.2.1 Interaction picture | 10 |
+| 6.2.2 Applications: Transitions of first order | 6 |
+| 6.3 Some words on more general concepts of perturbation | 11 |
 
-Selecting 6.1 starts a 30-card set including descendant subsections; selecting 6.2 starts its 12 descendant cards. Individual subsections start their own sets. Multiple-choice answers advance automatically; wrong answers and Don't know return later. Feedback includes both meaning and formula. Workbook source references have not been independently verified against the lecture PDF.
+The Chapter 6 topic starts all 85 cards together. Legacy subsection selection remains compatible: 6.1 has 51 cards including descendants, 6.2 has 23, and 6.3 has 11. Multiple-choice answers advance automatically; wrong answers and Don't know return later. Feedback includes meaning and readable formulas. Questions and completion screens retain the Main-menu-only navigation exit.
+
+Telegram does not natively render LaTeX, including `\\(…\\)` delimiters, even with HTML parse mode. LaTeX and HTML/renderer fields are saved for a future image or Mini App renderer; current messages and answer buttons use the readable formula field. Workbook source and correction claims have not been independently verified against the lecture PDF; existing source-check warnings remain.
 
 ### Chapter 7 concept cards
 

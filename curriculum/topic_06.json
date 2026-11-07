@@ -68,7 +68,7 @@
       "definition": "Known eigenvalues and eigenvectors form the starting point.",
       "key_rule": "H⁽⁰⁾ = Σⱼ Eⱼ⁽⁰⁾ |ψⱼ⁽⁰⁾⟩⟨ψⱼ⁽⁰⁾|",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-002",
@@ -77,7 +77,7 @@
       "definition": "V is the perturbing Hamiltonian; λ controls its strength.",
       "key_rule": "H(λ) = H⁽⁰⁾ + λV",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-003",
@@ -86,7 +86,7 @@
       "definition": "Target eigenvalues and eigenvectors of the perturbed problem.",
       "key_rule": "H(λ) = Σⱼ Eⱼ(λ)|ψⱼ(λ)⟩⟨ψⱼ(λ)|",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-004",
@@ -95,7 +95,7 @@
       "definition": "Eigenvalue problem for the perturbed Hamiltonian.",
       "key_rule": "H(λ)|ψⱼ(λ)⟩ = Eⱼ(λ)|ψⱼ(λ)⟩",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-005",
@@ -104,7 +104,7 @@
       "definition": "Energy expanded in powers of perturbation strength.",
       "key_rule": "Eⱼ(λ) = Σₙ₌₀∞ λⁿ Eⱼ⁽ⁿ⁾",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-006",
@@ -113,7 +113,7 @@
       "definition": "Eigenvector expanded in powers of λ.",
       "key_rule": "|ψⱼ(λ)⟩ = Σₙ₌₀∞ λⁿ|ψⱼ⁽ⁿ⁾⟩",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-007",
@@ -122,7 +122,7 @@
       "definition": "The original eigenvalue equation.",
       "key_rule": "(H⁽⁰⁾−Eⱼ⁽⁰⁾)|ψⱼ⁽⁰⁾⟩ = 0",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-008",
@@ -131,7 +131,7 @@
       "definition": "Determines the leading correction to the state.",
       "key_rule": "(H⁽⁰⁾−Eⱼ⁽⁰⁾)|ψⱼ⁽¹⁾⟩ = (Eⱼ⁽¹⁾−V)|ψⱼ⁽⁰⁾⟩",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-009",
@@ -140,7 +140,7 @@
       "definition": "Convenient choice of normalization in the derivation.",
       "key_rule": "⟨ψⱼ⁽⁰⁾|ψⱼ(λ)⟩ = 1",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-010",
@@ -149,7 +149,7 @@
       "definition": "Perturbative state corrections are orthogonal to the zeroth-order state.",
       "key_rule": "⟨ψⱼ⁽⁰⁾|ψⱼ⁽ⁿ⁾⟩ = 0, n≥1",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-011",
@@ -158,7 +158,7 @@
       "definition": "Expectation value of the perturbation in the original state.",
       "key_rule": "Eⱼ⁽¹⁾ = ⟨ψⱼ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-012",
@@ -167,7 +167,7 @@
       "definition": "Recursive expression for energy corrections.",
       "key_rule": "Eⱼ⁽ⁿ⁾ = ⟨ψⱼ⁽⁰⁾|V|ψⱼ⁽ⁿ⁻¹⁾⟩",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-013",
@@ -176,7 +176,7 @@
       "definition": "Mixing coefficients for distinct unperturbed states.",
       "key_rule": "⟨ψₗ⁽⁰⁾|ψⱼ⁽¹⁾⟩ = ⟨ψₗ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩/(Eⱼ⁽⁰⁾−Eₗ⁽⁰⁾), l≠j",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-014",
@@ -185,7 +185,7 @@
       "definition": "Operator used to compute perturbative state corrections.",
       "key_rule": "Sⱼ = Σₖ≠ⱼ |ψₖ⁽⁰⁾⟩⟨ψₖ⁽⁰⁾|/(Eⱼ⁽⁰⁾−Eₖ⁽⁰⁾)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-015",
@@ -194,7 +194,7 @@
       "definition": "Linear combination of other unperturbed eigenstates.",
       "key_rule": "|ψⱼ⁽¹⁾⟩ = Σₗ≠ⱼ [⟨ψₗ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩/(Eⱼ⁽⁰⁾−Eₗ⁽⁰⁾)]|ψₗ⁽⁰⁾⟩",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-016",
@@ -203,7 +203,7 @@
       "definition": "Second-order shift from couplings to other states.",
       "key_rule": "Eⱼ⁽²⁾ = Σₗ≠ⱼ |⟨ψₗ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩|²/(Eⱼ⁽⁰⁾−Eₗ⁽⁰⁾)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-017",
@@ -212,7 +212,7 @@
       "definition": "Quantities needed to evaluate first-order corrections.",
       "key_rule": "Vₗⱼ = ⟨ψₗ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-018",
@@ -221,7 +221,7 @@
       "definition": "Second-order correction to a nondegenerate ground-state energy is non-positive.",
       "key_rule": "E₀⁽²⁾ ≤ 0",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-019",
@@ -230,7 +230,7 @@
       "definition": "Higher-order terms need not improve an asymptotic approximation.",
       "key_rule": "Low orders may approximate well even when the full series does not converge",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-020",
@@ -239,7 +239,7 @@
       "definition": "Harmonic oscillator with quartic perturbation.",
       "key_rule": "H(λ) = H⁽⁰⁾ + λX⁴",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-021",
@@ -248,7 +248,7 @@
       "definition": "Exactly solvable unperturbed system.",
       "key_rule": "H⁽⁰⁾ = P²/(2m) + kX²/2",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-022",
@@ -257,7 +257,7 @@
       "definition": "Anharmonic correction to the potential.",
       "key_rule": "V = X⁴",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-023",
@@ -266,7 +266,7 @@
       "definition": "Example expansion in the lecture's chosen units.",
       "key_rule": "E₀(λ) = 1 + 3λ/4 − 21λ²/16 + O(λ³)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-024",
@@ -275,7 +275,7 @@
       "definition": "Approximation including terms up to order m.",
       "key_rule": "E₀(m) = Σₙ₌₀ᵐ λⁿ E₀⁽ⁿ⁾",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-025",
@@ -284,7 +284,7 @@
       "definition": "Lecture example showing that very high order can give a poor result.",
       "key_rule": "E₀(20) = −9.919902 at λ=0.1",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-026",
@@ -293,7 +293,7 @@
       "definition": "Several eigenstates share the same unperturbed energy.",
       "key_rule": "H⁽⁰⁾|ψⱼ⁽⁰⁾⟩ = E|ψⱼ⁽⁰⁾⟩, j=1,…,s",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-027",
@@ -302,7 +302,7 @@
       "definition": "Perturbation restricted to the degenerate subspace.",
       "key_rule": "Mₗⱼ = ⟨ψₗ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-028",
@@ -311,7 +311,7 @@
       "definition": "Diagonalize the perturbation within the degenerate subspace.",
       "key_rule": "U†MU = D",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-029",
@@ -320,7 +320,7 @@
       "definition": "The basis change preserves orthonormality.",
       "key_rule": "UU† = U†U = 1",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-030",
@@ -329,7 +329,7 @@
       "definition": "Avoids zero denominators in naive nondegenerate formulas.",
       "key_rule": "Choose a basis that diagonalizes M",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-031",
@@ -338,7 +338,7 @@
       "definition": "Known reference Hamiltonian plus time-dependent perturbation.",
       "key_rule": "H(t) = H⁽⁰⁾ + λV(t)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-032",
@@ -347,7 +347,7 @@
       "definition": "The perturbation begins after the initial time.",
       "key_rule": "V(t) = 0 for t≤t₀",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-033",
@@ -356,7 +356,7 @@
       "definition": "Full time evolution under the perturbed Hamiltonian.",
       "key_rule": "iℏ∂ₜ|ψ(t)⟩ = [H⁽⁰⁾+λV(t)]|ψ(t)⟩",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-034",
@@ -365,7 +365,7 @@
       "definition": "Removes the free evolution generated by H⁽⁰⁾.",
       "key_rule": "|ψ(t)⟩ᵢ = exp(iH⁽⁰⁾t/ℏ)|ψ(t)⟩",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-035",
@@ -374,7 +374,7 @@
       "definition": "Evolution equation driven by the interaction operator.",
       "key_rule": "iℏ∂ₜ|ψ(t)⟩ᵢ = λVᵢ(t)|ψ(t)⟩ᵢ",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-036",
@@ -383,7 +383,7 @@
       "definition": "Perturbation transformed to the interaction picture.",
       "key_rule": "Vᵢ(t) = exp(iH⁽⁰⁾t/ℏ)V(t)exp(−iH⁽⁰⁾t/ℏ)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-037",
@@ -392,7 +392,7 @@
       "definition": "Integral form of the interaction-picture dynamics.",
       "key_rule": "|ψ(t)⟩ᵢ = |ψ(t₀)⟩ᵢ + [λ/(iℏ)]∫ₜ₀ᵗ ds Vᵢ(s)|ψ(s)⟩ᵢ",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-038",
@@ -401,7 +401,7 @@
       "definition": "Iterative expansion of the interaction-picture integral equation.",
       "key_rule": "|ψ(t)⟩ᵢ = |ψ(t₀)⟩ᵢ + O(λ) + O(λ²) + …",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-039",
@@ -410,7 +410,7 @@
       "definition": "Time evolution of an unperturbed energy eigenstate.",
       "key_rule": "|ψₖ⁽⁰⁾(t)⟩ = exp(−iEₖ⁽⁰⁾t/ℏ)|ψₖ⁽⁰⁾⟩",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-040",
@@ -419,7 +419,7 @@
       "definition": "Amplitude for a transition between unperturbed eigenstates.",
       "key_rule": "Aₖⱼ(t) = δₖⱼ + [λ/(iℏ)]∫ₜ₀ᵗ ds exp[i(Eₖ⁽⁰⁾−Eⱼ⁽⁰⁾)s/ℏ]⟨ψₖ⁽⁰⁾|V(s)|ψⱼ⁽⁰⁾⟩ + O(λ²)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-041",
@@ -428,7 +428,7 @@
       "definition": "Squared magnitude of the transition amplitude.",
       "key_rule": "Pⱼₖ(t) = |⟨ψₖ⁽⁰⁾(t)|ψ(t)⟩|²",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-042",
@@ -437,7 +437,7 @@
       "definition": "The lecture refers to this continuum application as the golden rule.",
       "key_rule": "Transition formula for scattering into a continuum of modes",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-043",
@@ -446,7 +446,7 @@
       "definition": "Resolvent used in Kato's perturbation theory.",
       "key_rule": "G(z) = (z1−H)⁻¹",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-044",
@@ -455,7 +455,7 @@
       "definition": "Operator inequality used to describe a small perturbation.",
       "key_rule": "(H⁽⁰⁾)² ≥ λ²V²",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-045",
@@ -464,7 +464,7 @@
       "definition": "Degeneracies can make eigenvectors sensitive to perturbations.",
       "key_rule": "Nearby matrices can share eigenvalues yet have very different eigenvectors",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-046",
@@ -473,7 +473,7 @@
       "definition": "Diagonal example with eigenvalues 1±ε.",
       "key_rule": "A = [[1+ε,0],[0,1−ε]]",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     },
     {
       "id": "C6-047",
@@ -482,244 +482,1230 @@
       "definition": "Same eigenvalues as A, but different eigenvectors.",
       "key_rule": "B = [[1,ε],[ε,1]]",
       "source_status": "Not started",
-      "source_file": "QM_Chapter6_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-048",
+      "section_id": "6.1.1",
+      "front": "Small-perturbation condition",
+      "definition": "Useful practical criterion for non-degenerate perturbation theory; small λ alone is not sufficient.",
+      "key_rule": "|λ⟨k|V|j⟩| ≪ |Eⱼ⁽⁰⁾−Eₖ⁽⁰⁾| (k≠j)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-049",
+      "section_id": "6.1.1",
+      "front": "Energy expansion to second order",
+      "definition": "Distinguish coefficients E⁽ⁿ⁾ from physical corrections λⁿE⁽ⁿ⁾.",
+      "key_rule": "Eⱼ(λ)=Eⱼ⁽⁰⁾+λEⱼ⁽¹⁾+λ²Eⱼ⁽²⁾+O(λ³)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-050",
+      "section_id": "6.1.1",
+      "front": "State expansion to first order",
+      "definition": "Use unperturbed eigenbasis; intermediate-normalized eigenvector.",
+      "key_rule": "|ψⱼ(λ)⟩=|j⟩+λΣₖ≠ⱼ Vₖⱼ/(Eⱼ⁽⁰⁾−Eₖ⁽⁰⁾)|k⟩+O(λ²)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-051",
+      "section_id": "6.1.1",
+      "front": "Matrix elements of perturbation",
+      "definition": "For Hermitian V; diagonal entries are real.",
+      "key_rule": "Vₖⱼ=⟨k|V|j⟩; Vⱼₖ=Vₖⱼ*",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-052",
+      "section_id": "6.1.1",
+      "front": "Second-order energy shift",
+      "definition": "Non-degenerate formula; denominator must not vanish.",
+      "key_rule": "Eⱼ⁽²⁾=Σₖ≠ⱼ |Vₖⱼ|²/(Eⱼ⁽⁰⁾−Eₖ⁽⁰⁾)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-053",
+      "section_id": "6.1.1",
+      "front": "Ground-state second-order sign",
+      "definition": "All excited-state denominators are negative if ground state is non-degenerate and lowest.",
+      "key_rule": "E₀⁽²⁾≤0",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-054",
+      "section_id": "6.1.1",
+      "front": "Intermediate normalization",
+      "definition": "Convenient gauge, NOT generally unit norm at finite λ.",
+      "key_rule": "⟨j|ψⱼ(λ)⟩=1",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-056",
+      "section_id": "6.1.1",
+      "front": "Non-degenerate applicability",
+      "definition": "Avoid zero denominators in standard perturbation formulas.",
+      "key_rule": "Eⱼ⁽⁰⁾≠Eₖ⁽⁰⁾ for k≠j",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-057",
+      "section_id": "6.1.3",
+      "front": "Degenerate perturbation matrix",
+      "definition": "Diagonalize perturbation within the degenerate eigenspace.",
+      "key_rule": "Mₐᵦ=⟨a|V|b⟩ (a,b in degenerate subspace)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-058",
+      "section_id": "6.1.3",
+      "front": "First-order splitting of degeneracy",
+      "definition": "Eigenvalues μᵣ are first-order energy corrections.",
+      "key_rule": "M cᵣ = μᵣ cᵣ; Eᵣ=E⁽⁰⁾+λμᵣ+O(λ²)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-059",
+      "section_id": "6.1.3",
+      "front": "Degenerate basis rotation",
+      "definition": "Use eigenvectors of M as the correct zeroth-order basis.",
+      "key_rule": "U†MU=D; U†U=I",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-060",
+      "section_id": "6.2",
+      "front": "Interaction picture state",
+      "definition": "Moves free evolution into operators; lecture assumes constant H⁽⁰⁾.",
+      "key_rule": "|ψ(t)⟩ᵢ=e^(iH⁽⁰⁾t/ℏ)|ψ(t)⟩ₛ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-061",
+      "section_id": "6.2",
+      "front": "Interaction picture perturbation",
+      "definition": "Time dependence in interaction picture.",
+      "key_rule": "Vᵢ(t)=e^(iH⁽⁰⁾t/ℏ)V(t)e^(−iH⁽⁰⁾t/ℏ)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-062",
+      "section_id": "6.2",
+      "front": "Interaction picture Schrödinger equation",
+      "definition": "Only perturbation drives interaction-picture state.",
+      "key_rule": "iℏ∂ₜ|ψ(t)⟩ᵢ=λVᵢ(t)|ψ(t)⟩ᵢ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-064",
+      "section_id": "6.2",
+      "front": "Time ordering at second order",
+      "definition": "Later-time operator appears on the left.",
+      "key_rule": "Uᵢ⁽²⁾=(λ/iℏ)²∫ₜ₀ᵗ ds∫ₜ₀ˢ dr Vᵢ(s)Vᵢ(r)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-065",
+      "section_id": "6.2",
+      "front": "First-order transition amplitude",
+      "definition": "For k≠j, leading transition amplitude.",
+      "key_rule": "Aₖⱼ⁽¹⁾=(λ/iℏ)∫ₜ₀ᵗ ds e^[i(Eₖ⁽⁰⁾−Eⱼ⁽⁰⁾)s/ℏ]Vₖⱼ(s)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-066",
+      "section_id": "6.2",
+      "front": "Leading transition probability",
+      "definition": "Leading order for k≠j; generic remainder may start at O(λ³), not always O(λ⁴).",
+      "key_rule": "Pⱼ→ₖ≈(λ²/ℏ²)|∫ₜ₀ᵗ ds e^(iωₖⱼs)Vₖⱼ(s)|²; ωₖⱼ=(Eₖ⁽⁰⁾−Eⱼ⁽⁰⁾)/ℏ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-068",
+      "section_id": "6.3",
+      "front": "Perturbation series may be asymptotic",
+      "definition": "Higher order does not necessarily improve accuracy; series need not converge.",
+      "key_rule": "E(λ)~Σₙ λⁿE⁽ⁿ⁾",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-069",
+      "section_id": "6.3",
+      "front": "Anharmonic oscillator perturbation",
+      "definition": "Example of quartic perturbation; numerical energy series uses implicit units.",
+      "key_rule": "H= P²/(2m)+(k/2)X²+λX⁴",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-070",
+      "section_id": "6.3",
+      "front": "Resolvent",
+      "definition": "Defined when z is outside the spectrum of H.",
+      "key_rule": "G(z)=(zI−H)⁻¹",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-071",
+      "section_id": "6.3",
+      "front": "Relative operator bound example",
+      "definition": "An operator inequality discussed as an example, not a universal requirement for perturbation theory.",
+      "key_rule": "(H⁽⁰⁾)² ≥ λ²V²",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-072",
+      "section_id": "6.2",
+      "front": "Three quantum pictures",
+      "definition": "Equivalent descriptions of the same physics; interaction picture introduced here.",
+      "key_rule": "Schrödinger: evolving states; Heisenberg: evolving operators; interaction: both",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-S070",
+      "section_id": "6.1.1",
+      "front": "Non-degenerate situation",
+      "definition": "Eigenvalues Eⱼ(λ) are non-degenerate for sufficiently small perturbations.",
+      "key_rule": "Non-degenerate spectrum",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-S071",
+      "section_id": "6.1.1",
+      "front": "Analytic dependence on λ",
+      "definition": "Eⱼ(λ) and |ψⱼ(λ)⟩ are assumed analytic in λ on the specified interval.",
+      "key_rule": "Analytic dependence",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-S072",
+      "section_id": "6.1.1",
+      "front": "Rayleigh–Schrödinger series",
+      "definition": "The power series for the perturbed energies Eⱼ(λ).",
+      "key_rule": "Rayleigh–Schrödinger series",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-S073",
+      "section_id": "6.1.1",
+      "front": "Order of perturbation theory",
+      "definition": "The coefficient multiplying λⁿ in a perturbation expansion.",
+      "key_rule": "Order n",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-S074",
+      "section_id": "6.1.1",
+      "front": "Matrix elements",
+      "definition": "⟨ψₗ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩; the lecture says first-order corrections require these elements.",
+      "key_rule": "Perturbation matrix elements",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-S075",
+      "section_id": "6.1.1",
+      "front": "Operator norm",
+      "definition": "The lecture discusses λ∥V∥ as the relevant measure of perturbation strength.",
+      "key_rule": "Operator norm ∥V∥",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-S076",
+      "section_id": "6.1.2",
+      "front": "Anharmonic oscillator",
+      "definition": "Example H(λ)=H⁽⁰⁾+λX⁴.",
+      "key_rule": "Anharmonic oscillator",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-S077",
+      "section_id": "6.1.2",
+      "front": "Asymptotic expansion",
+      "definition": "The lecture explains that low-order terms can be useful even when the full series does not converge.",
+      "key_rule": "Asymptotic expansion",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-S078",
+      "section_id": "6.1.3",
+      "front": "Degeneracy",
+      "definition": "Several unperturbed eigenstates share the same energy E.",
+      "key_rule": "Degenerate eigenstates",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-S079",
+      "section_id": "6.1.3",
+      "front": "Perturbation matrix M",
+      "definition": "Mₗⱼ=⟨ψₗ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩; diagonalize within degenerate subspace.",
+      "key_rule": "Hermitian perturbation matrix",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-S080",
+      "section_id": "6.2.1",
+      "front": "Interaction picture",
+      "definition": "The picture introduced between the previously discussed Schrödinger and Heisenberg pictures.",
+      "key_rule": "Interaction picture",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-S081",
+      "section_id": "6.2.1",
+      "front": "Interaction operator",
+      "definition": "Vᵢ(t)=e^(iH⁽⁰⁾t/ℏ)V(t)e^(−iH⁽⁰⁾t/ℏ).",
+      "key_rule": "Interaction operator Vᵢ(t)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-S082",
+      "section_id": "6.2.2",
+      "front": "Transition amplitude",
+      "definition": "⟨ψₖ⁽⁰⁾(t)|ψ(t)⟩; its absolute square gives transition probability.",
+      "key_rule": "Transition amplitude",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-S083",
+      "section_id": "6.2.2",
+      "front": "Golden rule",
+      "definition": "The lecture names the transition formula the “golden rule” for scattering in a continuum of modes.",
+      "key_rule": "Golden rule",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-S084",
+      "section_id": "6.3",
+      "front": "Kato’s theory of perturbation",
+      "definition": "A general perturbation approach mentioned via the resolvent; detailed treatment is beyond the course.",
+      "key_rule": "Kato’s theory",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C6-S085",
+      "section_id": "6.3",
+      "front": "Relative boundedness",
+      "definition": "Lecture example: (H⁽⁰⁾)² ≥ λ²V².",
+      "key_rule": "Relative boundedness",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter6_Script_Only_With_LaTeX.xlsx"
     }
   ],
   "concept_metadata": {
     "C6-001": {
       "original_section_title": "6.1 Time independent perturbation theory",
       "equation_reference": "6.1",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "H^{(0)}=\\sum_j E_j^{(0)}\\lvert\\psi_j^{(0)}\\rangle\\langle\\psi_j^{(0)}\\rvert",
+      "telegram_rendering_input": "\\(H^{(0)}=\\sum_j E_j^{(0)}\\lvert\\psi_j^{(0)}\\rangle\\langle\\psi_j^{(0)}\\rvert\\)"
     },
     "C6-002": {
       "original_section_title": "6.1 Time independent perturbation theory",
       "equation_reference": "6.2",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "H(\\lambda)=H^{(0)}+\\lambda V",
+      "telegram_rendering_input": "\\(H(\\lambda)=H^{(0)}+\\lambda V\\)"
     },
     "C6-003": {
       "original_section_title": "6.1 Time independent perturbation theory",
       "equation_reference": "6.3",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "H(\\lambda)=\\sum_j E_j(\\lambda)\\lvert\\psi_j(\\lambda)\\rangle\\langle\\psi_j(\\lambda)\\rvert",
+      "telegram_rendering_input": "\\(H(\\lambda)=\\sum_j E_j(\\lambda)\\lvert\\psi_j(\\lambda)\\rangle\\langle\\psi_j(\\lambda)\\rvert\\)"
     },
     "C6-004": {
       "original_section_title": "6.1.1 Non-degenerate situation",
       "equation_reference": "6.4",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "H(\\lambda)\\lvert\\psi_j(\\lambda)\\rangle=E_j(\\lambda)\\lvert\\psi_j(\\lambda)\\rangle",
+      "telegram_rendering_input": "\\(H(\\lambda)\\lvert\\psi_j(\\lambda)\\rangle=E_j(\\lambda)\\lvert\\psi_j(\\lambda)\\rangle\\)"
     },
     "C6-005": {
       "original_section_title": "6.1.1 Non-degenerate situation",
       "equation_reference": "6.5",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "E_j(\\lambda)=\\sum_{n=0}^{\\infty}\\lambda^n E_j^{(n)}",
+      "telegram_rendering_input": "\\(E_j(\\lambda)=\\sum_{n=0}^{\\infty}\\lambda^n E_j^{(n)}\\)"
     },
     "C6-006": {
       "original_section_title": "6.1.1 Non-degenerate situation",
       "equation_reference": "6.6",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "\\lvert\\psi_j(\\lambda)\\rangle=\\sum_{n=0}^{\\infty}\\lambda^n\\lvert\\psi_j^{(n)}\\rangle",
+      "telegram_rendering_input": "\\(\\lvert\\psi_j(\\lambda)\\rangle=\\sum_{n=0}^{\\infty}\\lambda^n\\lvert\\psi_j^{(n)}\\rangle\\)"
     },
     "C6-007": {
       "original_section_title": "6.1.1 Non-degenerate situation",
       "equation_reference": "6.9",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "(H^{(0)}-E_j^{(0)})\\lvert\\psi_j^{(0)}\\rangle=0",
+      "telegram_rendering_input": "\\((H^{(0)}-E_j^{(0)})\\lvert\\psi_j^{(0)}\\rangle=0\\)"
     },
     "C6-008": {
       "original_section_title": "6.1.1 Non-degenerate situation",
       "equation_reference": "6.10",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "(H^{(0)}-E_j^{(0)})\\lvert\\psi_j^{(1)}\\rangle=(E_j^{(1)}-V)\\lvert\\psi_j^{(0)}\\rangle",
+      "telegram_rendering_input": "\\((H^{(0)}-E_j^{(0)})\\lvert\\psi_j^{(1)}\\rangle=(E_j^{(1)}-V)\\lvert\\psi_j^{(0)}\\rangle\\)"
     },
     "C6-009": {
       "original_section_title": "6.1.1 Non-degenerate situation",
       "equation_reference": "6.12",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "\\langle\\psi_j^{(0)}\\vert\\psi_j(\\lambda)\\rangle=1",
+      "telegram_rendering_input": "\\(\\langle\\psi_j^{(0)}\\vert\\psi_j(\\lambda)\\rangle=1\\)"
     },
     "C6-010": {
       "original_section_title": "6.1.1 Non-degenerate situation",
       "equation_reference": "6.13",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "\\langle\\psi_j^{(0)}\\vert\\psi_j^{(n)}\\rangle=0,\\quad n\\geq 1",
+      "telegram_rendering_input": "\\(\\langle\\psi_j^{(0)}\\vert\\psi_j^{(n)}\\rangle=0,\\quad n\\geq 1\\)"
     },
     "C6-011": {
       "original_section_title": "6.1.1 Non-degenerate situation",
       "equation_reference": "6.15 / 6.23",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "E_j^{(1)}=\\langle\\psi_j^{(0)}\\vert V\\vert\\psi_j^{(0)}\\rangle",
+      "telegram_rendering_input": "\\(E_j^{(1)}=\\langle\\psi_j^{(0)}\\vert V\\vert\\psi_j^{(0)}\\rangle\\)"
     },
     "C6-012": {
       "original_section_title": "6.1.1 Non-degenerate situation",
       "equation_reference": "6.16",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "E_j^{(n)}=\\langle\\psi_j^{(0)}\\vert V\\vert\\psi_j^{(n-1)}\\rangle",
+      "telegram_rendering_input": "\\(E_j^{(n)}=\\langle\\psi_j^{(0)}\\vert V\\vert\\psi_j^{(n-1)}\\rangle\\)"
     },
     "C6-013": {
       "original_section_title": "6.1.1 Non-degenerate situation",
       "equation_reference": "6.18",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "\\langle\\psi_l^{(0)}\\vert\\psi_j^{(1)}\\rangle=\\frac{\\langle\\psi_l^{(0)}\\vert V\\vert\\psi_j^{(0)}\\rangle}{E_j^{(0)}-E_l^{(0)}},\\quad l\\neq j",
+      "telegram_rendering_input": "\\(\\langle\\psi_l^{(0)}\\vert\\psi_j^{(1)}\\rangle=\\frac{\\langle\\psi_l^{(0)}\\vert V\\vert\\psi_j^{(0)}\\rangle}{E_j^{(0)}-E_l^{(0)}},\\quad l\\neq j\\)"
     },
     "C6-014": {
       "original_section_title": "6.1.1 Non-degenerate situation",
       "equation_reference": "6.21",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "S_j=\\sum_{k\\neq j}\\frac{\\lvert\\psi_k^{(0)}\\rangle\\langle\\psi_k^{(0)}\\rvert}{E_j^{(0)}-E_k^{(0)}}",
+      "telegram_rendering_input": "\\(S_j=\\sum_{k\\neq j}\\frac{\\lvert\\psi_k^{(0)}\\rangle\\langle\\psi_k^{(0)}\\rvert}{E_j^{(0)}-E_k^{(0)}}\\)"
     },
     "C6-015": {
       "original_section_title": "6.1.1 Non-degenerate situation",
       "equation_reference": "6.24",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "\\lvert\\psi_j^{(1)}\\rangle=\\sum_{l\\neq j}\\frac{\\langle\\psi_l^{(0)}\\vert V\\vert\\psi_j^{(0)}\\rangle}{E_j^{(0)}-E_l^{(0)}}\\lvert\\psi_l^{(0)}\\rangle",
+      "telegram_rendering_input": "\\(\\lvert\\psi_j^{(1)}\\rangle=\\sum_{l\\neq j}\\frac{\\langle\\psi_l^{(0)}\\vert V\\vert\\psi_j^{(0)}\\rangle}{E_j^{(0)}-E_l^{(0)}}\\lvert\\psi_l^{(0)}\\rangle\\)"
     },
     "C6-016": {
       "original_section_title": "6.1.1 Non-degenerate situation",
       "equation_reference": "6.25",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "E_j^{(2)}=\\sum_{l\\neq j}\\frac{\\left\\lvert\\langle\\psi_l^{(0)}\\vert V\\vert\\psi_j^{(0)}\\rangle\\right\\rvert^2}{E_j^{(0)}-E_l^{(0)}}",
+      "telegram_rendering_input": "\\(E_j^{(2)}=\\sum_{l\\neq j}\\frac{\\left\\lvert\\langle\\psi_l^{(0)}\\vert V\\vert\\psi_j^{(0)}\\rangle\\right\\rvert^2}{E_j^{(0)}-E_l^{(0)}}\\)"
     },
     "C6-017": {
       "original_section_title": "6.1.1 Non-degenerate situation",
       "equation_reference": "6.26",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "V_{lj}=\\langle\\psi_l^{(0)}\\vert V\\vert\\psi_j^{(0)}\\rangle",
+      "telegram_rendering_input": "\\(V_{lj}=\\langle\\psi_l^{(0)}\\vert V\\vert\\psi_j^{(0)}\\rangle\\)"
     },
     "C6-018": {
       "original_section_title": "6.1.1 Non-degenerate situation",
       "equation_reference": "6.25 (discussion)",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "E_0^{(2)}\\leq 0",
+      "telegram_rendering_input": "\\(E_0^{(2)}\\leq 0\\)"
     },
     "C6-019": {
       "original_section_title": "6.1.1 Non-degenerate situation",
       "equation_reference": "6.1.1 (discussion)",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
     },
     "C6-020": {
       "original_section_title": "6.1.2 An example: The anharmonic oscillator",
       "equation_reference": "6.27–6.29",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "H(\\lambda)=H^{(0)}+\\lambda X^4",
+      "telegram_rendering_input": "\\(H(\\lambda)=H^{(0)}+\\lambda X^4\\)"
     },
     "C6-021": {
       "original_section_title": "6.1.2 An example: The anharmonic oscillator",
       "equation_reference": "6.28",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "H^{(0)}=\\frac{P^2}{2m}+\\frac{kX^2}{2}",
+      "telegram_rendering_input": "\\(H^{(0)}=\\frac{P^2}{2m}+\\frac{kX^2}{2}\\)"
     },
     "C6-022": {
       "original_section_title": "6.1.2 An example: The anharmonic oscillator",
       "equation_reference": "6.29",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "V=X^4",
+      "telegram_rendering_input": "\\(V=X^4\\)"
     },
     "C6-023": {
       "original_section_title": "6.1.2 An example: The anharmonic oscillator",
       "equation_reference": "6.30",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "E_0(\\lambda)=1+\\frac{3\\lambda}{4}-\\frac{21\\lambda^2}{16}+O(\\lambda^3)",
+      "telegram_rendering_input": "\\(E_0(\\lambda)=1+\\frac{3\\lambda}{4}-\\frac{21\\lambda^2}{16}+O(\\lambda^3)\\)"
     },
     "C6-024": {
       "original_section_title": "6.1.2 An example: The anharmonic oscillator",
       "equation_reference": "6.31",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "E_0(m)=\\sum_{n=0}^{m}\\lambda^n E_0^{(n)}",
+      "telegram_rendering_input": "\\(E_0(m)=\\sum_{n=0}^{m}\\lambda^n E_0^{(n)}\\)"
     },
     "C6-025": {
       "original_section_title": "6.1.2 An example: The anharmonic oscillator",
       "equation_reference": "6.32",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "E_0(20)=-9.919902\\quad(\\lambda=0.1)",
+      "telegram_rendering_input": "\\(E_0(20)=-9.919902\\quad(\\lambda=0.1)\\)"
     },
     "C6-026": {
       "original_section_title": "6.1.3 Degenerate situation",
       "equation_reference": "6.33",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "H^{(0)}\\lvert\\psi_j^{(0)}\\rangle=E\\lvert\\psi_j^{(0)}\\rangle,\\quad j=1,\\ldots,s",
+      "telegram_rendering_input": "\\(H^{(0)}\\lvert\\psi_j^{(0)}\\rangle=E\\lvert\\psi_j^{(0)}\\rangle,\\quad j=1,\\ldots,s\\)"
     },
     "C6-027": {
       "original_section_title": "6.1.3 Degenerate situation",
       "equation_reference": "6.35",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "M_{lj}=\\langle\\psi_l^{(0)}\\vert V\\vert\\psi_j^{(0)}\\rangle",
+      "telegram_rendering_input": "\\(M_{lj}=\\langle\\psi_l^{(0)}\\vert V\\vert\\psi_j^{(0)}\\rangle\\)"
     },
     "C6-028": {
       "original_section_title": "6.1.3 Degenerate situation",
       "equation_reference": "6.36",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "U^{\\dagger}MU=D",
+      "telegram_rendering_input": "\\(U^{\\dagger}MU=D\\)"
     },
     "C6-029": {
       "original_section_title": "6.1.3 Degenerate situation",
       "equation_reference": "6.37",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "UU^{\\dagger}=U^{\\dagger}U=I",
+      "telegram_rendering_input": "\\(UU^{\\dagger}=U^{\\dagger}U=I\\)"
     },
     "C6-030": {
       "original_section_title": "6.1.3 Degenerate situation",
       "equation_reference": "6.35–6.38",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
     },
     "C6-031": {
       "original_section_title": "6.2.1 Interaction picture",
       "equation_reference": "6.39",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "H(t)=H^{(0)}+\\lambda V(t)",
+      "telegram_rendering_input": "\\(H(t)=H^{(0)}+\\lambda V(t)\\)"
     },
     "C6-032": {
       "original_section_title": "6.2.1 Interaction picture",
       "equation_reference": "6.40",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "V(t)=0\\quad\\text{for }t\\leq t_0",
+      "telegram_rendering_input": "\\(V(t)=0\\quad\\text{for }t\\leq t_0\\)"
     },
     "C6-033": {
       "original_section_title": "6.2.1 Interaction picture",
       "equation_reference": "6.42",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "i\\hbar\\partial_t\\lvert\\psi(t)\\rangle=[H^{(0)}+\\lambda V(t)]\\lvert\\psi(t)\\rangle",
+      "telegram_rendering_input": "\\(i\\hbar\\partial_t\\lvert\\psi(t)\\rangle=[H^{(0)}+\\lambda V(t)]\\lvert\\psi(t)\\rangle\\)"
     },
     "C6-034": {
       "original_section_title": "6.2.1 Interaction picture",
       "equation_reference": "6.44",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "\\lvert\\psi(t)\\rangle_I=e^{iH^{(0)}t/\\hbar}\\lvert\\psi(t)\\rangle",
+      "telegram_rendering_input": "\\(\\lvert\\psi(t)\\rangle_I=e^{iH^{(0)}t/\\hbar}\\lvert\\psi(t)\\rangle\\)"
     },
     "C6-035": {
       "original_section_title": "6.2.1 Interaction picture",
       "equation_reference": "6.46",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "i\\hbar\\partial_t\\lvert\\psi(t)\\rangle_I=\\lambda V_I(t)\\lvert\\psi(t)\\rangle_I",
+      "telegram_rendering_input": "\\(i\\hbar\\partial_t\\lvert\\psi(t)\\rangle_I=\\lambda V_I(t)\\lvert\\psi(t)\\rangle_I\\)"
     },
     "C6-036": {
       "original_section_title": "6.2.1 Interaction picture",
       "equation_reference": "6.47",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "V_I(t)=e^{iH^{(0)}t/\\hbar}V(t)e^{-iH^{(0)}t/\\hbar}",
+      "telegram_rendering_input": "\\(V_I(t)=e^{iH^{(0)}t/\\hbar}V(t)e^{-iH^{(0)}t/\\hbar}\\)"
     },
     "C6-037": {
       "original_section_title": "6.2.1 Interaction picture",
       "equation_reference": "6.48",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "\\lvert\\psi(t)\\rangle_I=\\lvert\\psi(t_0)\\rangle_I+\\frac{\\lambda}{i\\hbar}\\int_{t_0}^{t}ds\\,V_I(s)\\lvert\\psi(s)\\rangle_I",
+      "telegram_rendering_input": "\\(\\lvert\\psi(t)\\rangle_I=\\lvert\\psi(t_0)\\rangle_I+\\frac{\\lambda}{i\\hbar}\\int_{t_0}^{t}ds\\,V_I(s)\\lvert\\psi(s)\\rangle_I\\)"
     },
     "C6-038": {
       "original_section_title": "6.2.1 Interaction picture",
       "equation_reference": "6.49",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "\\lvert\\psi(t)\\rangle_I=\\lvert\\psi(t_0)\\rangle_I+O(\\lambda)+O(\\lambda^2)+\\cdots",
+      "telegram_rendering_input": "\\(\\lvert\\psi(t)\\rangle_I=\\lvert\\psi(t_0)\\rangle_I+O(\\lambda)+O(\\lambda^2)+\\cdots\\)"
     },
     "C6-039": {
       "original_section_title": "6.2.2 Applications: Transitions of first order",
       "equation_reference": "6.50",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "\\lvert\\psi_k^{(0)}(t)\\rangle=e^{-iE_k^{(0)}t/\\hbar}\\lvert\\psi_k^{(0)}\\rangle",
+      "telegram_rendering_input": "\\(\\lvert\\psi_k^{(0)}(t)\\rangle=e^{-iE_k^{(0)}t/\\hbar}\\lvert\\psi_k^{(0)}\\rangle\\)"
     },
     "C6-040": {
       "original_section_title": "6.2.2 Applications: Transitions of first order",
       "equation_reference": "6.53",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "A_{kj}(t)=\\delta_{kj}+\\frac{\\lambda}{i\\hbar}\\int_{t_0}^{t}ds\\,e^{i(E_k^{(0)}-E_j^{(0)})s/\\hbar}\\langle\\psi_k^{(0)}\\vert V(s)\\vert\\psi_j^{(0)}\\rangle+O(\\lambda^2)",
+      "telegram_rendering_input": "\\(A_{kj}(t)=\\delta_{kj}+\\frac{\\lambda}{i\\hbar}\\int_{t_0}^{t}ds\\,e^{i(E_k^{(0)}-E_j^{(0)})s/\\hbar}\\langle\\psi_k^{(0)}\\vert V(s)\\vert\\psi_j^{(0)}\\rangle+O(\\lambda^2)\\)"
     },
     "C6-041": {
       "original_section_title": "6.2.2 Applications: Transitions of first order",
       "equation_reference": "6.54",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "P_{jk}(t)=\\left\\lvert\\langle\\psi_k^{(0)}(t)\\vert\\psi(t)\\rangle\\right\\rvert^2",
+      "telegram_rendering_input": "\\(P_{jk}(t)=\\left\\lvert\\langle\\psi_k^{(0)}(t)\\vert\\psi(t)\\rangle\\right\\rvert^2\\)"
     },
     "C6-042": {
       "original_section_title": "6.2.2 Applications: Transitions of first order",
       "equation_reference": "6.54 (discussion)",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
     },
     "C6-043": {
       "original_section_title": "6.3 Some words on more general concepts of perturbation",
       "equation_reference": "6.55",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "G(z)=(zI-H)^{-1}",
+      "telegram_rendering_input": "\\(G(z)=(zI-H)^{-1}\\)"
     },
     "C6-044": {
       "original_section_title": "6.3 Some words on more general concepts of perturbation",
       "equation_reference": "6.56",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "(H^{(0)})^2\\geq\\lambda^2V^2",
+      "telegram_rendering_input": "\\((H^{(0)})^2\\geq\\lambda^2V^2\\)"
     },
     "C6-045": {
       "original_section_title": "6.3 Some words on more general concepts of perturbation",
       "equation_reference": "6.57–6.58",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
     },
     "C6-046": {
       "original_section_title": "6.3 Some words on more general concepts of perturbation",
       "equation_reference": "6.57",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "A=\\begin{pmatrix}1+\\varepsilon&0\\\\0&1-\\varepsilon\\end{pmatrix}",
+      "telegram_rendering_input": "\\(A=\\begin{pmatrix}1+\\varepsilon&0\\\\0&1-\\varepsilon\\end{pmatrix}\\)"
     },
     "C6-047": {
       "original_section_title": "6.3 Some words on more general concepts of perturbation",
       "equation_reference": "6.58",
-      "source_reference": "QMChapter6(1).pdf"
+      "source_reference": "QMChapter6(1).pdf",
+      "formula_latex": "B=\\begin{pmatrix}1&\\varepsilon\\\\\\varepsilon&1\\end{pmatrix}",
+      "telegram_rendering_input": "\\(B=\\begin{pmatrix}1&\\varepsilon\\\\\\varepsilon&1\\end{pmatrix}\\)"
+    },
+    "C6-048": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "Derived / 6.1",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "\\left\\lvert\\lambda\\langle k\\vert V\\vert j\\rangle\\right\\rvert\\ll\\left\\lvert E_j^{(0)}-E_k^{(0)}\\right\\rvert\\quad(k\\neq j)",
+      "telegram_rendering_input": "\\(\\left\\lvert\\lambda\\langle k\\vert V\\vert j\\rangle\\right\\rvert\\ll\\left\\lvert E_j^{(0)}-E_k^{(0)}\\right\\rvert\\quad(k\\neq j)\\)"
+    },
+    "C6-049": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.5",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "E_j(\\lambda)=E_j^{(0)}+\\lambda E_j^{(1)}+\\lambda^2E_j^{(2)}+O(\\lambda^3)",
+      "telegram_rendering_input": "\\(E_j(\\lambda)=E_j^{(0)}+\\lambda E_j^{(1)}+\\lambda^2E_j^{(2)}+O(\\lambda^3)\\)"
+    },
+    "C6-050": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.6, 6.24",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "\\lvert\\psi_j(\\lambda)\\rangle=\\lvert j\\rangle+\\lambda\\sum_{k\\neq j}\\frac{V_{kj}}{E_j^{(0)}-E_k^{(0)}}\\lvert k\\rangle+O(\\lambda^2)",
+      "telegram_rendering_input": "\\(\\lvert\\psi_j(\\lambda)\\rangle=\\lvert j\\rangle+\\lambda\\sum_{k\\neq j}\\frac{V_{kj}}{E_j^{(0)}-E_k^{(0)}}\\lvert k\\rangle+O(\\lambda^2)\\)"
+    },
+    "C6-051": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.26 / derived",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "V_{kj}=\\langle k\\vert V\\vert j\\rangle,\\quad V_{jk}=V_{kj}^{*}",
+      "telegram_rendering_input": "\\(V_{kj}=\\langle k\\vert V\\vert j\\rangle,\\quad V_{jk}=V_{kj}^{*}\\)"
+    },
+    "C6-052": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.25 corrected indices",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "E_j^{(2)}=\\sum_{k\\neq j}\\frac{\\lvert V_{kj}\\rvert^2}{E_j^{(0)}-E_k^{(0)}}",
+      "telegram_rendering_input": "\\(E_j^{(2)}=\\sum_{k\\neq j}\\frac{\\lvert V_{kj}\\rvert^2}{E_j^{(0)}-E_k^{(0)}}\\)"
+    },
+    "C6-053": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.1.1 remarks",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "E_0^{(2)}\\leq0",
+      "telegram_rendering_input": "\\(E_0^{(2)}\\leq0\\)"
+    },
+    "C6-054": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.12–6.13",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "\\langle j\\vert\\psi_j(\\lambda)\\rangle=1",
+      "telegram_rendering_input": "\\(\\langle j\\vert\\psi_j(\\lambda)\\rangle=1\\)"
+    },
+    "C6-056": {
+      "original_section_title": "6.1.1 Non-degenerate situation",
+      "equation_reference": "6.1.1",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "E_j^{(0)}\\neq E_k^{(0)}\\quad(k\\neq j)",
+      "telegram_rendering_input": "\\(E_j^{(0)}\\neq E_k^{(0)}\\quad(k\\neq j)\\)"
+    },
+    "C6-057": {
+      "original_section_title": "6.1.3 Degenerate situation",
+      "equation_reference": "6.35",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "M_{ab}=\\langle a\\vert V\\vert b\\rangle",
+      "telegram_rendering_input": "\\(M_{ab}=\\langle a\\vert V\\vert b\\rangle\\)"
+    },
+    "C6-058": {
+      "original_section_title": "6.1.3 Degenerate situation",
+      "equation_reference": "6.35–6.38 / derived",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "Mc_r=\\mu_r c_r,\\quad E_r=E^{(0)}+\\lambda\\mu_r+O(\\lambda^2)",
+      "telegram_rendering_input": "\\(Mc_r=\\mu_r c_r,\\quad E_r=E^{(0)}+\\lambda\\mu_r+O(\\lambda^2)\\)"
+    },
+    "C6-059": {
+      "original_section_title": "6.1.3 Degenerate situation",
+      "equation_reference": "6.36–6.37",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "U^{\\dagger}MU=D,\\quad U^{\\dagger}U=I",
+      "telegram_rendering_input": "\\(U^{\\dagger}MU=D,\\quad U^{\\dagger}U=I\\)"
+    },
+    "C6-060": {
+      "original_section_title": "6.2 Time-dependent perturbation theory",
+      "equation_reference": "6.44",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "\\lvert\\psi(t)\\rangle_I=e^{iH^{(0)}t/\\hbar}\\lvert\\psi(t)\\rangle_S",
+      "telegram_rendering_input": "\\(\\lvert\\psi(t)\\rangle_I=e^{iH^{(0)}t/\\hbar}\\lvert\\psi(t)\\rangle_S\\)"
+    },
+    "C6-061": {
+      "original_section_title": "6.2 Time-dependent perturbation theory",
+      "equation_reference": "6.47",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "V_I(t)=e^{iH^{(0)}t/\\hbar}V(t)e^{-iH^{(0)}t/\\hbar}",
+      "telegram_rendering_input": "\\(V_I(t)=e^{iH^{(0)}t/\\hbar}V(t)e^{-iH^{(0)}t/\\hbar}\\)"
+    },
+    "C6-062": {
+      "original_section_title": "6.2 Time-dependent perturbation theory",
+      "equation_reference": "6.46",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "i\\hbar\\partial_t\\lvert\\psi(t)\\rangle_I=\\lambda V_I(t)\\lvert\\psi(t)\\rangle_I",
+      "telegram_rendering_input": "\\(i\\hbar\\partial_t\\lvert\\psi(t)\\rangle_I=\\lambda V_I(t)\\lvert\\psi(t)\\rangle_I\\)"
+    },
+    "C6-064": {
+      "original_section_title": "6.2 Time-dependent perturbation theory",
+      "equation_reference": "6.49",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "U_I^{(2)}=\\left(\\frac{\\lambda}{i\\hbar}\\right)^2\\int_{t_0}^{t}ds\\int_{t_0}^{s}dr\\,V_I(s)V_I(r)",
+      "telegram_rendering_input": "\\(U_I^{(2)}=\\left(\\frac{\\lambda}{i\\hbar}\\right)^2\\int_{t_0}^{t}ds\\int_{t_0}^{s}dr\\,V_I(s)V_I(r)\\)"
+    },
+    "C6-065": {
+      "original_section_title": "6.2 Time-dependent perturbation theory",
+      "equation_reference": "6.53",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "A_{kj}^{(1)}=\\frac{\\lambda}{i\\hbar}\\int_{t_0}^{t}ds\\,e^{i(E_k^{(0)}-E_j^{(0)})s/\\hbar}V_{kj}(s)",
+      "telegram_rendering_input": "\\(A_{kj}^{(1)}=\\frac{\\lambda}{i\\hbar}\\int_{t_0}^{t}ds\\,e^{i(E_k^{(0)}-E_j^{(0)})s/\\hbar}V_{kj}(s)\\)"
+    },
+    "C6-066": {
+      "original_section_title": "6.2 Time-dependent perturbation theory",
+      "equation_reference": "6.54 corrected caveat",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "P_{j\\to k}\\approx\\frac{\\lambda^2}{\\hbar^2}\\left\\lvert\\int_{t_0}^{t}ds\\,e^{i\\omega_{kj}s}V_{kj}(s)\\right\\rvert^2,\\quad\\omega_{kj}=\\frac{E_k^{(0)}-E_j^{(0)}}{\\hbar}",
+      "telegram_rendering_input": "\\(P_{j\\to k}\\approx\\frac{\\lambda^2}{\\hbar^2}\\left\\lvert\\int_{t_0}^{t}ds\\,e^{i\\omega_{kj}s}V_{kj}(s)\\right\\rvert^2,\\quad\\omega_{kj}=\\frac{E_k^{(0)}-E_j^{(0)}}{\\hbar}\\)"
+    },
+    "C6-068": {
+      "original_section_title": "6.3 General concepts",
+      "equation_reference": "6.1.2, 6.3",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "E(\\lambda)\\sim\\sum_n\\lambda^n E^{(n)}",
+      "telegram_rendering_input": "\\(E(\\lambda)\\sim\\sum_n\\lambda^n E^{(n)}\\)"
+    },
+    "C6-069": {
+      "original_section_title": "6.3 General concepts",
+      "equation_reference": "6.27–6.30",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "H=\\frac{P^2}{2m}+\\frac{k}{2}X^2+\\lambda X^4",
+      "telegram_rendering_input": "\\(H=\\frac{P^2}{2m}+\\frac{k}{2}X^2+\\lambda X^4\\)"
+    },
+    "C6-070": {
+      "original_section_title": "6.3 General concepts",
+      "equation_reference": "6.55",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "G(z)=(zI-H)^{-1}",
+      "telegram_rendering_input": "\\(G(z)=(zI-H)^{-1}\\)"
+    },
+    "C6-071": {
+      "original_section_title": "6.3 General concepts",
+      "equation_reference": "6.56",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "(H^{(0)})^2\\geq\\lambda^2V^2",
+      "telegram_rendering_input": "\\((H^{(0)})^2\\geq\\lambda^2V^2\\)"
+    },
+    "C6-072": {
+      "original_section_title": "6.2 Time-dependent perturbation theory",
+      "equation_reference": "6.2.1 / background",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
+    },
+    "C6-S070": {
+      "original_section_title": "6.1.1",
+      "equation_reference": "6.1.1, p. 4",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
+    },
+    "C6-S071": {
+      "original_section_title": "6.1.1",
+      "equation_reference": "6.1.1, p. 4",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
+    },
+    "C6-S072": {
+      "original_section_title": "6.1.1",
+      "equation_reference": "6.5, p. 4",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
+    },
+    "C6-S073": {
+      "original_section_title": "6.1.1",
+      "equation_reference": "6.5–6.6, p. 4",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
+    },
+    "C6-S074": {
+      "original_section_title": "6.1.1",
+      "equation_reference": "6.26, p. 6",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
+    },
+    "C6-S075": {
+      "original_section_title": "6.1.1",
+      "equation_reference": "p. 6, remarks",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
+    },
+    "C6-S076": {
+      "original_section_title": "6.1.2",
+      "equation_reference": "6.27–6.29, p. 7",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
+    },
+    "C6-S077": {
+      "original_section_title": "6.1.2",
+      "equation_reference": "pp. 6–8",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
+    },
+    "C6-S078": {
+      "original_section_title": "6.1.3",
+      "equation_reference": "6.33, p. 8",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
+    },
+    "C6-S079": {
+      "original_section_title": "6.1.3",
+      "equation_reference": "6.35–6.36, p. 8",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
+    },
+    "C6-S080": {
+      "original_section_title": "6.2.1",
+      "equation_reference": "p. 9, 6.44",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
+    },
+    "C6-S081": {
+      "original_section_title": "6.2.1",
+      "equation_reference": "6.47, p. 9",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
+    },
+    "C6-S082": {
+      "original_section_title": "6.2.2",
+      "equation_reference": "6.51–6.54, pp. 10–11",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
+    },
+    "C6-S083": {
+      "original_section_title": "6.2.2",
+      "equation_reference": "p. 11",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
+    },
+    "C6-S084": {
+      "original_section_title": "6.3",
+      "equation_reference": "6.3, p. 11",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
+    },
+    "C6-S085": {
+      "original_section_title": "6.3",
+      "equation_reference": "6.56, p. 11",
+      "source_reference": "QMChapter6(2).pdf",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
     }
-  }
+  },
+  "content_review_required": {
+    "C6-023": "Anharmonic-oscillator energy coefficients depend on the Hamiltonian and units; verify Eq. 6.30 before applying this series.",
+    "C6-025": "The reported numerical approximation depends on the source Hamiltonian and units; verify the original example.",
+    "C6-044": "The displayed inequality is a special sufficient condition, not the general definition of relative boundedness; verify Eq. 6.56."
+  },
+  "box_script_rules": [
+    {
+      "script_reference": "6.2",
+      "name": "Perturbed Hamiltonian",
+      "formula": "H(λ)=H⁽⁰⁾+λV",
+      "meaning": "Known problem plus small perturbation",
+      "formula_latex": "H(\\lambda)=H^{(0)}+\\lambda V",
+      "renderer_input": "\\(H(\\lambda)=H^{(0)}+\\lambda V\\)"
+    },
+    {
+      "script_reference": "6.5–6.6",
+      "name": "Power-series expansions",
+      "formula": "Eⱼ(λ)=ΣₙλⁿEⱼ⁽ⁿ⁾; |ψⱼ(λ)⟩=Σₙλⁿ|ψⱼ⁽ⁿ⁾⟩",
+      "meaning": "Rayleigh–Schrödinger energy series and state expansion",
+      "formula_latex": "E_j(\\lambda)=\\sum_{n=0}^{\\infty}\\lambda^n E_j^{(n)}",
+      "renderer_input": "\\(E_j(\\lambda)=\\sum_{n=0}^{\\infty}\\lambda^n E_j^{(n)}\\)"
+    },
+    {
+      "script_reference": "6.12–6.13",
+      "name": "Normalization convention",
+      "formula": "⟨ψⱼ⁽⁰⁾|ψⱼ(λ)⟩=1; ⟨ψⱼ⁽⁰⁾|ψⱼ⁽ⁿ⁾⟩=0 (n≥1)",
+      "meaning": "Chosen convention in the lecture",
+      "formula_latex": "\\langle\\psi_j^{(0)}\\vert\\psi_j(\\lambda)\\rangle=1",
+      "renderer_input": "\\(\\langle\\psi_j^{(0)}\\vert\\psi_j(\\lambda)\\rangle=1\\)"
+    },
+    {
+      "script_reference": "6.15",
+      "name": "First-order energy",
+      "formula": "Eⱼ⁽¹⁾=⟨ψⱼ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩",
+      "meaning": "Expectation value of perturbation",
+      "formula_latex": "E_j^{(1)}=\\langle\\psi_j^{(0)}\\vert V\\vert\\psi_j^{(0)}\\rangle",
+      "renderer_input": "\\(E_j^{(1)}=\\langle\\psi_j^{(0)}\\vert V\\vert\\psi_j^{(0)}\\rangle\\)"
+    },
+    {
+      "script_reference": "6.18, 6.24",
+      "name": "First-order state",
+      "formula": "|ψⱼ⁽¹⁾⟩=Σₗ≠ⱼ [⟨ψₗ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩/(Eⱼ⁽⁰⁾−Eₗ⁽⁰⁾)]|ψₗ⁽⁰⁾⟩",
+      "meaning": "Non-degenerate case",
+      "formula_latex": "",
+      "renderer_input": ""
+    },
+    {
+      "script_reference": "6.25",
+      "name": "Second-order energy",
+      "formula": "Eⱼ⁽²⁾=Σₗ≠ⱼ |⟨ψₗ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩|²/(Eⱼ⁽⁰⁾−Eₗ⁽⁰⁾)",
+      "meaning": "Corrected index typo in printed equation",
+      "formula_latex": "E_j^{(2)}=\\sum_{l\\neq j}\\frac{\\left\\lvert\\langle\\psi_l^{(0)}\\vert V\\vert\\psi_j^{(0)}\\rangle\\right\\rvert^2}{E_j^{(0)}-E_l^{(0)}}",
+      "renderer_input": "\\(E_j^{(2)}=\\sum_{l\\neq j}\\frac{\\left\\lvert\\langle\\psi_l^{(0)}\\vert V\\vert\\psi_j^{(0)}\\rangle\\right\\rvert^2}{E_j^{(0)}-E_l^{(0)}}\\)"
+    },
+    {
+      "script_reference": "p. 6",
+      "name": "Ground-state rule",
+      "formula": "E₀⁽²⁾≤0",
+      "meaning": "Second-order ground-state correction is non-positive",
+      "formula_latex": "",
+      "renderer_input": ""
+    },
+    {
+      "script_reference": "6.35–6.36",
+      "name": "Degenerate case",
+      "formula": "Mₗⱼ=⟨ψₗ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩; U†MU=D",
+      "meaning": "Choose a basis diagonalizing perturbation",
+      "formula_latex": "",
+      "renderer_input": ""
+    },
+    {
+      "script_reference": "6.39",
+      "name": "Time-dependent Hamiltonian",
+      "formula": "H(t)=H⁽⁰⁾+λV(t)",
+      "meaning": "Time-dependent perturbation",
+      "formula_latex": "H(t)=H^{(0)}+\\lambda V(t)",
+      "renderer_input": "\\(H(t)=H^{(0)}+\\lambda V(t)\\)"
+    },
+    {
+      "script_reference": "6.44",
+      "name": "Interaction-picture state",
+      "formula": "|ψ(t)⟩ᵢ=e^(iH⁽⁰⁾t/ℏ)|ψ(t)⟩",
+      "meaning": "Interaction picture",
+      "formula_latex": "\\lvert\\psi(t)\\rangle_I=e^{iH^{(0)}t/\\hbar}\\lvert\\psi(t)\\rangle",
+      "renderer_input": "\\(\\lvert\\psi(t)\\rangle_I=e^{iH^{(0)}t/\\hbar}\\lvert\\psi(t)\\rangle\\)"
+    },
+    {
+      "script_reference": "6.46–6.47",
+      "name": "Interaction-picture dynamics",
+      "formula": "iℏ∂ₜ|ψ(t)⟩ᵢ=λVᵢ(t)|ψ(t)⟩ᵢ",
+      "meaning": "Perturbation governs interaction-picture evolution",
+      "formula_latex": "",
+      "renderer_input": ""
+    },
+    {
+      "script_reference": "6.49",
+      "name": "Von Neumann series",
+      "formula": "|ψ(t)⟩ᵢ=|ψ(t₀)⟩ᵢ + λ/(iℏ)∫ₜ₀ᵗds Vᵢ(s)|ψ(t₀)⟩ᵢ + …",
+      "meaning": "Iterated integral expansion",
+      "formula_latex": "\\lvert\\psi(t)\\rangle_I=\\lvert\\psi(t_0)\\rangle_I+O(\\lambda)+O(\\lambda^2)+\\cdots",
+      "renderer_input": "\\(\\lvert\\psi(t)\\rangle_I=\\lvert\\psi(t_0)\\rangle_I+O(\\lambda)+O(\\lambda^2)+\\cdots\\)"
+    },
+    {
+      "script_reference": "6.53–6.54",
+      "name": "Transition probability",
+      "formula": "Pⱼₖ(t)=|⟨ψₖ⁽⁰⁾(t)|ψ(t)⟩|²",
+      "meaning": "Lecture transition expression; remainder caveat in notes",
+      "formula_latex": "",
+      "renderer_input": ""
+    },
+    {
+      "script_reference": "6.55",
+      "name": "Resolvent",
+      "formula": "G(z)=(z1−H)⁻¹",
+      "meaning": "Kato theory mentioned in 6.3",
+      "formula_latex": "G(z)=(zI-H)^{-1}",
+      "renderer_input": "\\(G(z)=(zI-H)^{-1}\\)"
+    },
+    {
+      "script_reference": "6.56",
+      "name": "Relative boundedness",
+      "formula": "(H⁽⁰⁾)²≥λ²V²",
+      "meaning": "Condition stated in script",
+      "formula_latex": "(H^{(0)})^2\\geq\\lambda^2V^2",
+      "renderer_input": "\\((H^{(0)})^2\\geq\\lambda^2V^2\\)"
+    }
+  ],
+  "script_terminology_reference": [
+    {
+      "section": "6.1.1",
+      "name": "Non-degenerate situation",
+      "definition": "Non-degenerate spectrum",
+      "reference": "Eigenvalues Eⱼ(λ) are non-degenerate for sufficiently small perturbations."
+    },
+    {
+      "section": "6.1.1",
+      "name": "Analytic dependence on λ",
+      "definition": "Analytic dependence",
+      "reference": "Eⱼ(λ) and |ψⱼ(λ)⟩ are assumed analytic in λ on the specified interval."
+    },
+    {
+      "section": "6.1.1",
+      "name": "Rayleigh–Schrödinger series",
+      "definition": "Rayleigh–Schrödinger series",
+      "reference": "The power series for the perturbed energies Eⱼ(λ)."
+    },
+    {
+      "section": "6.1.1",
+      "name": "Order of perturbation theory",
+      "definition": "Order n",
+      "reference": "The coefficient multiplying λⁿ in a perturbation expansion."
+    },
+    {
+      "section": "6.1.1",
+      "name": "Matrix elements",
+      "definition": "Perturbation matrix elements",
+      "reference": "⟨ψₗ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩; the lecture says first-order corrections require these elements."
+    },
+    {
+      "section": "6.1.1",
+      "name": "Operator norm",
+      "definition": "Operator norm ∥V∥",
+      "reference": "The lecture discusses λ∥V∥ as the relevant measure of perturbation strength."
+    },
+    {
+      "section": "6.1.2",
+      "name": "Anharmonic oscillator",
+      "definition": "Anharmonic oscillator",
+      "reference": "Example H(λ)=H⁽⁰⁾+λX⁴."
+    },
+    {
+      "section": "6.1.2",
+      "name": "Asymptotic expansion",
+      "definition": "Asymptotic expansion",
+      "reference": "The lecture explains that low-order terms can be useful even when the full series does not converge."
+    },
+    {
+      "section": "6.1.3",
+      "name": "Degeneracy",
+      "definition": "Degenerate eigenstates",
+      "reference": "Several unperturbed eigenstates share the same energy E."
+    },
+    {
+      "section": "6.1.3",
+      "name": "Perturbation matrix M",
+      "definition": "Hermitian perturbation matrix",
+      "reference": "Mₗⱼ=⟨ψₗ⁽⁰⁾|V|ψⱼ⁽⁰⁾⟩; diagonalize within degenerate subspace."
+    },
+    {
+      "section": "6.2.1",
+      "name": "Interaction picture",
+      "definition": "Interaction picture",
+      "reference": "The picture introduced between the previously discussed Schrödinger and Heisenberg pictures."
+    },
+    {
+      "section": "6.2.1",
+      "name": "Interaction operator",
+      "definition": "Interaction operator Vᵢ(t)",
+      "reference": "Vᵢ(t)=e^(iH⁽⁰⁾t/ℏ)V(t)e^(−iH⁽⁰⁾t/ℏ)."
+    },
+    {
+      "section": "6.2.1",
+      "name": "Von Neumann series",
+      "definition": "Von Neumann series",
+      "reference": "The iterated integral expansion of the interaction-picture state."
+    },
+    {
+      "section": "6.2.2",
+      "name": "Transition amplitude",
+      "definition": "Transition amplitude",
+      "reference": "⟨ψₖ⁽⁰⁾(t)|ψ(t)⟩; its absolute square gives transition probability."
+    },
+    {
+      "section": "6.2.2",
+      "name": "Golden rule",
+      "definition": "Golden rule",
+      "reference": "The lecture names the transition formula the “golden rule” for scattering in a continuum of modes."
+    },
+    {
+      "section": "6.3",
+      "name": "Kato’s theory of perturbation",
+      "definition": "Kato’s theory",
+      "reference": "A general perturbation approach mentioned via the resolvent; detailed treatment is beyond the course."
+    },
+    {
+      "section": "6.3",
+      "name": "Resolvent",
+      "definition": "Resolvent G(z)",
+      "reference": "G(z)=(z1−H)⁻¹."
+    },
+    {
+      "section": "6.3",
+      "name": "Relative boundedness",
+      "definition": "Relative boundedness",
+      "reference": "Lecture example: (H⁽⁰⁾)² ≥ λ²V²."
+    }
+  ],
+  "workbook_source_caveats": [
+    {
+      "topic": "Scope",
+      "note": "Only Chapter 6 lecture PDF; no external concepts added."
+    },
+    {
+      "topic": "Source",
+      "note": "QMChapter6(2).pdf, 12 pages"
+    },
+    {
+      "topic": "Printed 6.25",
+      "note": "Index mismatch in lecture: second-order energy uses j on right; BOX presents consistent Eⱼ⁽²⁾."
+    },
+    {
+      "topic": "Printed 6.22",
+      "note": "Apparent omission of energy coefficients in recurrence; not copied into BOX."
+    },
+    {
+      "topic": "Printed 6.54",
+      "note": "Lecture gives O(λ⁴) remainder; this is not guaranteed generally. BOX avoids asserting remainder."
+    },
+    {
+      "topic": "Excluded from previous workbook",
+      "note": "Cards explicitly adding material beyond script (normalization extension, Dyson naming, golden-rule limit) were excluded."
+    },
+    {
+      "topic": "Names",
+      "note": "Terminology sheet uses names and descriptions explicitly found in the Chapter 6 script."
+    },
+    {
+      "topic": "Telegram rendering",
+      "note": "LaTeX is a typesetting language, not MATLAB. Telegram does not natively render LaTeX: use a renderer (e.g. KaTeX/MathJax to image) before sending."
+    },
+    {
+      "topic": "Code format",
+      "note": "LaTeX column contains raw LaTeX; Telegram HTML column wraps it in \\( ... \\) for a renderer, not native Telegram parse_mode HTML."
+    },
+    {
+      "topic": "No formula",
+      "note": "Blank LaTeX means the card contains a verbal concept, not an equation; keep the text as-is."
+    },
+    {
+      "topic": "Scope",
+      "note": "Only formulas already in the existing script-only workbook were converted; existing caveats and source references retained."
+    }
+  ],
+  "workbook_import_note": "85 nonempty learning cards; 14 blank formatted rows skipped. Script-only claims and correction notes are workbook-supplied, not independently PDF-verified. Terminology reference sheet is metadata, not a translation quiz."
 }

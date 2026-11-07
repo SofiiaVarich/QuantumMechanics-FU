@@ -150,7 +150,7 @@
       "definition": "Preparation of |0⟩ or |1⟩ with probability 1/2 each; not equivalent to coherent superposition |+⟩.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-002",
@@ -159,7 +159,7 @@
       "definition": "p_j ≥ 0 and Σ(j=1…n) p_j = 1.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-003",
@@ -168,7 +168,7 @@
       "definition": "Classical random preparation of normalized pure states |ψ_j⟩ with probabilities p_j.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-004",
@@ -177,7 +177,7 @@
       "definition": "tr(A) = Σ(j=0…d−1) ⟨j|A|j⟩.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-005",
@@ -186,7 +186,7 @@
       "definition": "tr(UAU†) = tr(A). The trace is basis-independent.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-006",
@@ -195,7 +195,7 @@
       "definition": "tr(AB) = tr(BA). Note: the PDF appears to repeat AB on both sides in Eq. (4.8).",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-007",
@@ -204,7 +204,7 @@
       "definition": "tr(A+B) = tr(A) + tr(B).",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-008",
@@ -213,7 +213,7 @@
       "definition": "tr(A*) = tr(A)*.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-009",
@@ -222,7 +222,7 @@
       "definition": "tr(Aᵀ) = tr(A).",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-010",
@@ -231,7 +231,7 @@
       "definition": "tr(αA) = α tr(A), α ∈ ℂ.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-011",
@@ -240,7 +240,7 @@
       "definition": "ρ = |ψ⟩⟨ψ| for normalized |ψ⟩.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-012",
@@ -249,7 +249,7 @@
       "definition": "ρ = ρ†.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-013",
@@ -258,7 +258,7 @@
       "definition": "tr(ρ) = 1.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-014",
@@ -267,7 +267,7 @@
       "definition": "ρ ≥ 0; all eigenvalues are nonnegative.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-015",
@@ -276,7 +276,7 @@
       "definition": "tr(ρ²) = 1.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-016",
@@ -285,7 +285,7 @@
       "definition": "⟨A⟩ = ⟨ψ|A|ψ⟩ = tr(Aρ).",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-017",
@@ -294,7 +294,7 @@
       "definition": "ρ = Σ(j=1…n) p_j |ψ_j⟩⟨ψ_j|.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-018",
@@ -303,7 +303,7 @@
       "definition": "⟨A⟩ = Σ_j p_j ⟨ψ_j|A|ψ_j⟩ = tr(Aρ).",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-019",
@@ -312,7 +312,7 @@
       "definition": "ρ = ρ†, ρ ≥ 0, tr(ρ) = 1.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-020",
@@ -321,7 +321,7 @@
       "definition": "Pure iff tr(ρ²) = 1; mixed if tr(ρ²) < 1. The script’s Eq. (4.31) prints tr(ρ)=1, apparently a typo.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-021",
@@ -330,7 +330,7 @@
       "definition": "tr(ρ²) ≤ 1.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-022",
@@ -339,7 +339,7 @@
       "definition": "⟨A⟩ = tr(Aρ).",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-023",
@@ -348,7 +348,7 @@
       "definition": "ρ = (|0⟩⟨0| + |1⟩⟨1|)/2 = I/2.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-024",
@@ -357,7 +357,7 @@
       "definition": "For ρ = I/2, tr(ρ²) = 1/2.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-025",
@@ -366,7 +366,7 @@
       "definition": "ρ = |0⟩⟨0| = [[1,0],[0,0]].",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-026",
@@ -375,7 +375,7 @@
       "definition": "ρ = [[p₀,0],[0,p₁]] with p₀+p₁=1.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-027",
@@ -384,7 +384,7 @@
       "definition": "(|+⟩⟨+| + |−⟩⟨−|)/2 = I/2.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-028",
@@ -393,7 +393,7 @@
       "definition": "Different ensembles Σ_j p_j|ψ_j⟩⟨ψ_j| and Σ_k q_k|φ_k⟩⟨φ_k| can define the same ρ.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-029",
@@ -402,7 +402,7 @@
       "definition": "Equal density operators give equal observable expectations: ⟨A⟩ = tr(Aρ).",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-030",
@@ -411,7 +411,7 @@
       "definition": "A density operator generally does not single out one privileged underlying pure-state ensemble.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-031",
@@ -420,7 +420,7 @@
       "definition": "iℏ dρ(t)/dt = [H,ρ(t)].",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-032",
@@ -429,7 +429,7 @@
       "definition": "[H,ρ] = Hρ − ρH.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-033",
@@ -438,7 +438,7 @@
       "definition": "ρ(t) = U(t,t₀) ρ(t₀) U(t,t₀)†.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-034",
@@ -447,7 +447,7 @@
       "definition": "A = Σ(k=0…D−1) λ_k π_k.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-035",
@@ -456,7 +456,7 @@
       "definition": "π_l π_k = δ_{k,l} π_k.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-036",
@@ -465,7 +465,7 @@
       "definition": "p_k = tr(π_k ρ).",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-037",
@@ -474,7 +474,7 @@
       "definition": "ρ_k = π_k ρ π_k / p_k, for p_k > 0.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-038",
@@ -483,7 +483,7 @@
       "definition": "ρ = pρ₁ + (1−p)ρ₂, with 0 ≤ p ≤ 1.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-039",
@@ -492,7 +492,7 @@
       "definition": "ρ = p|0⟩⟨0| + (1−p)|1⟩⟨1|; mixed for 0 < p < 1.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-040",
@@ -501,7 +501,7 @@
       "definition": "ρ = (|0⟩⟨0| + |1⟩⟨1|)/2 = I/2.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-041",
@@ -510,7 +510,7 @@
       "definition": "ℋ = ℋ_A ⊗ ℋ_B.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-042",
@@ -519,7 +519,7 @@
       "definition": "ρ_A = tr_B(ρ) = Σ_j (I_A⊗⟨j|)ρ(I_A⊗|j⟩).",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-043",
@@ -528,7 +528,7 @@
       "definition": "ρ_A = tr_B(ρ) is the state of subsystem A after disregarding B.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-044",
@@ -537,7 +537,7 @@
       "definition": "A⊗I acts on subsystem A and leaves B unchanged.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-045",
@@ -546,7 +546,7 @@
       "definition": "tr((A⊗I)ρ) = tr(Aρ_A).",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-046",
@@ -555,7 +555,7 @@
       "definition": "ρ = ρ_A ⊗ ρ_B.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-047",
@@ -564,7 +564,7 @@
       "definition": "tr_B(ρ_A⊗ρ_B) = ρ_A.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-048",
@@ -573,7 +573,7 @@
       "definition": "|ψ⟩ = (|0,0⟩ + |1,1⟩)/√2.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-049",
@@ -582,7 +582,7 @@
       "definition": "ρ_A = (|0⟩⟨0| + |1⟩⟨1|)/2 = I/2.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "C4-050",
@@ -591,7 +591,7 @@
       "definition": "A pure composite state that is not a product state; its reduced states are mixed.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Chapter4_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter4_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     }
   ],
   "concept_metadata": {
@@ -600,350 +600,883 @@
       "original_section_title": "Motivation",
       "equation_reference": "4.1–4.3",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "",
+      "telegram_rendering_input": "",
+      "latex_status": "Concept / no formula"
     },
     "C4-002": {
       "original_id": "2",
       "original_section_title": "Motivation",
       "equation_reference": "4.3",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "p_j\\ge 0,\\quad \\sum_{j=1}^{n}p_j=1",
+      "telegram_rendering_input": "<code>p_j\\ge 0,\\quad \\sum_{j=1}^{n}p_j=1</code>",
+      "latex_status": "Formula"
     },
     "C4-003": {
       "original_id": "3",
       "original_section_title": "Motivation",
       "equation_reference": "4.3",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "",
+      "telegram_rendering_input": "",
+      "latex_status": "Concept / no formula"
     },
     "C4-004": {
       "original_id": "4",
       "original_section_title": "Traces",
       "equation_reference": "4.6",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\operatorname{tr}(A)=\\sum_{j=0}^{d-1}\\langle j|A|j\\rangle",
+      "telegram_rendering_input": "<code>\\operatorname{tr}(A)=\\sum_{j=0}^{d-1}\\langle j|A|j\\rangle</code>",
+      "latex_status": "Formula"
     },
     "C4-005": {
       "original_id": "5",
       "original_section_title": "Traces",
       "equation_reference": "4.7",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\operatorname{tr}(UAU^{\\dagger})=\\operatorname{tr}(A)",
+      "telegram_rendering_input": "<code>\\operatorname{tr}(UAU^{\\dagger})=\\operatorname{tr}(A)</code>",
+      "latex_status": "Formula"
     },
     "C4-006": {
       "original_id": "6",
       "original_section_title": "Traces",
       "equation_reference": "4.8",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\operatorname{tr}(AB)=\\operatorname{tr}(BA)",
+      "telegram_rendering_input": "<code>\\operatorname{tr}(AB)=\\operatorname{tr}(BA)</code>",
+      "latex_status": "Formula"
     },
     "C4-007": {
       "original_id": "7",
       "original_section_title": "Traces",
       "equation_reference": "4.9",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\operatorname{tr}(A+B)=\\operatorname{tr}(A)+\\operatorname{tr}(B)",
+      "telegram_rendering_input": "<code>\\operatorname{tr}(A+B)=\\operatorname{tr}(A)+\\operatorname{tr}(B)</code>",
+      "latex_status": "Formula"
     },
     "C4-008": {
       "original_id": "8",
       "original_section_title": "Traces",
       "equation_reference": "4.10",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\operatorname{tr}(A^{*})=\\operatorname{tr}(A)^{*}",
+      "telegram_rendering_input": "<code>\\operatorname{tr}(A^{*})=\\operatorname{tr}(A)^{*}</code>",
+      "latex_status": "Formula"
     },
     "C4-009": {
       "original_id": "9",
       "original_section_title": "Traces",
       "equation_reference": "4.11",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\operatorname{tr}(A^{T})=\\operatorname{tr}(A)",
+      "telegram_rendering_input": "<code>\\operatorname{tr}(A^{T})=\\operatorname{tr}(A)</code>",
+      "latex_status": "Formula"
     },
     "C4-010": {
       "original_id": "10",
       "original_section_title": "Traces",
       "equation_reference": "4.12",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\operatorname{tr}(\\alpha A)=\\alpha\\operatorname{tr}(A)",
+      "telegram_rendering_input": "<code>\\operatorname{tr}(\\alpha A)=\\alpha\\operatorname{tr}(A)</code>",
+      "latex_status": "Formula"
     },
     "C4-011": {
       "original_id": "11",
       "original_section_title": "Density operators of pure states",
       "equation_reference": "4.13",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\rho=|\\psi\\rangle\\langle\\psi|",
+      "telegram_rendering_input": "<code>\\rho=|\\psi\\rangle\\langle\\psi|</code>",
+      "latex_status": "Formula"
     },
     "C4-012": {
       "original_id": "12",
       "original_section_title": "Density operators of pure states",
       "equation_reference": "4.14",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\rho=\\rho^{\\dagger}",
+      "telegram_rendering_input": "<code>\\rho=\\rho^{\\dagger}</code>",
+      "latex_status": "Formula"
     },
     "C4-013": {
       "original_id": "13",
       "original_section_title": "Density operators of pure states",
       "equation_reference": "4.15",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\operatorname{tr}(\\rho)=1",
+      "telegram_rendering_input": "<code>\\operatorname{tr}(\\rho)=1</code>",
+      "latex_status": "Formula"
     },
     "C4-014": {
       "original_id": "14",
       "original_section_title": "Density operators of pure states",
       "equation_reference": "4.16",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\rho\\ge 0",
+      "telegram_rendering_input": "<code>\\rho\\ge 0</code>",
+      "latex_status": "Formula"
     },
     "C4-015": {
       "original_id": "15",
       "original_section_title": "Density operators of pure states",
       "equation_reference": "4.17",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\operatorname{tr}(\\rho^{2})=1",
+      "telegram_rendering_input": "<code>\\operatorname{tr}(\\rho^{2})=1</code>",
+      "latex_status": "Formula"
     },
     "C4-016": {
       "original_id": "16",
       "original_section_title": "Density operators of pure states",
       "equation_reference": "4.18–4.19",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\langle A\\rangle=\\langle\\psi|A|\\psi\\rangle=\\operatorname{tr}(A\\rho)",
+      "telegram_rendering_input": "<code>\\langle A\\rangle=\\langle\\psi|A|\\psi\\rangle=\\operatorname{tr}(A\\rho)</code>",
+      "latex_status": "Formula"
     },
     "C4-017": {
       "original_id": "17",
       "original_section_title": "General density operators",
       "equation_reference": "4.20",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\rho=\\sum_{j=1}^{n}p_j|\\psi_j\\rangle\\langle\\psi_j|",
+      "telegram_rendering_input": "<code>\\rho=\\sum_{j=1}^{n}p_j|\\psi_j\\rangle\\langle\\psi_j|</code>",
+      "latex_status": "Formula"
     },
     "C4-018": {
       "original_id": "18",
       "original_section_title": "General density operators",
       "equation_reference": "4.21–4.22",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\langle A\\rangle=\\sum_j p_j\\langle\\psi_j|A|\\psi_j\\rangle=\\operatorname{tr}(A\\rho)",
+      "telegram_rendering_input": "<code>\\langle A\\rangle=\\sum_j p_j\\langle\\psi_j|A|\\psi_j\\rangle=\\operatorname{tr}(A\\rho)</code>",
+      "latex_status": "Formula"
     },
     "C4-019": {
       "original_id": "19",
       "original_section_title": "General density operators",
       "equation_reference": "4.28–4.30",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\rho=\\rho^{\\dagger},\\quad\\rho\\ge 0,\\quad\\operatorname{tr}(\\rho)=1",
+      "telegram_rendering_input": "<code>\\rho=\\rho^{\\dagger},\\quad\\rho\\ge 0,\\quad\\operatorname{tr}(\\rho)=1</code>",
+      "latex_status": "Formula"
     },
     "C4-020": {
       "original_id": "20",
       "original_section_title": "General density operators",
       "equation_reference": "4.27, 4.31–4.32",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\operatorname{tr}(\\rho^{2})=1\\ \\text{(pure)};\\quad\\operatorname{tr}(\\rho^{2})<1\\ \\text{(mixed)}",
+      "telegram_rendering_input": "<code>\\operatorname{tr}(\\rho^{2})=1\\ \\text{(pure)};\\quad\\operatorname{tr}(\\rho^{2})&lt;1\\ \\text{(mixed)}</code>",
+      "latex_status": "Formula"
     },
     "C4-021": {
       "original_id": "21",
       "original_section_title": "General density operators",
       "equation_reference": "4.27",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\operatorname{tr}(\\rho^{2})\\le 1",
+      "telegram_rendering_input": "<code>\\operatorname{tr}(\\rho^{2})\\le 1</code>",
+      "latex_status": "Formula"
     },
     "C4-022": {
       "original_id": "22",
       "original_section_title": "General density operators",
       "equation_reference": "4.33",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\langle A\\rangle=\\operatorname{tr}(A\\rho)",
+      "telegram_rendering_input": "<code>\\langle A\\rangle=\\operatorname{tr}(A\\rho)</code>",
+      "latex_status": "Formula"
     },
     "C4-023": {
       "original_id": "23",
       "original_section_title": "Examples",
       "equation_reference": "4.34–4.35",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\rho=\\frac12|0\\rangle\\langle0|+\\frac12|1\\rangle\\langle1|=\\frac{I}{2}",
+      "telegram_rendering_input": "<code>\\rho=\\frac12|0\\rangle\\langle0|+\\frac12|1\\rangle\\langle1|=\\frac{I}{2}</code>",
+      "latex_status": "Formula"
     },
     "C4-024": {
       "original_id": "24",
       "original_section_title": "Examples",
       "equation_reference": "4.36",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\operatorname{tr}(\\rho^{2})=\\frac12",
+      "telegram_rendering_input": "<code>\\operatorname{tr}(\\rho^{2})=\\frac12</code>",
+      "latex_status": "Formula"
     },
     "C4-025": {
       "original_id": "25",
       "original_section_title": "Examples",
       "equation_reference": "4.37",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\rho=\\begin{pmatrix}1&0\\\\0&0\\end{pmatrix}",
+      "telegram_rendering_input": "<code>\\rho=\\begin{pmatrix}1&amp;0\\\\0&amp;0\\end{pmatrix}</code>",
+      "latex_status": "Formula"
     },
     "C4-026": {
       "original_id": "26",
       "original_section_title": "Examples",
       "equation_reference": "4.38",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\rho=\\begin{pmatrix}p_0&0\\\\0&p_1\\end{pmatrix}",
+      "telegram_rendering_input": "<code>\\rho=\\begin{pmatrix}p_0&amp;0\\\\0&amp;p_1\\end{pmatrix}</code>",
+      "latex_status": "Formula"
     },
     "C4-027": {
       "original_id": "27",
       "original_section_title": "Examples",
       "equation_reference": "4.39–4.41",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\rho=\\frac12|+\\rangle\\langle+|+\\frac12|-\\rangle\\langle-|=\\frac I2",
+      "telegram_rendering_input": "<code>\\rho=\\frac12|+\\rangle\\langle+|+\\frac12|-\\rangle\\langle-|=\\frac I2</code>",
+      "latex_status": "Formula"
     },
     "C4-028": {
       "original_id": "28",
       "original_section_title": "Non-uniqueness of ensemble representations",
       "equation_reference": "4.43",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\rho=\\sum_j p_j|\\psi_j\\rangle\\langle\\psi_j|=\\sum_k q_k|\\phi_k\\rangle\\langle\\phi_k|",
+      "telegram_rendering_input": "<code>\\rho=\\sum_j p_j|\\psi_j\\rangle\\langle\\psi_j|=\\sum_k q_k|\\phi_k\\rangle\\langle\\phi_k|</code>",
+      "latex_status": "Formula"
     },
     "C4-029": {
       "original_id": "29",
       "original_section_title": "Non-uniqueness of ensemble representations",
       "equation_reference": "4.42–4.43",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\langle A\\rangle=\\operatorname{tr}(A\\rho)",
+      "telegram_rendering_input": "<code>\\langle A\\rangle=\\operatorname{tr}(A\\rho)</code>",
+      "latex_status": "Formula"
     },
     "C4-030": {
       "original_id": "30",
       "original_section_title": "Non-uniqueness of ensemble representations",
       "equation_reference": "4.43 (discussion)",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "",
+      "telegram_rendering_input": "",
+      "latex_status": "Concept / no formula"
     },
     "C4-031": {
       "original_id": "31",
       "original_section_title": "Von-Neumann equation",
       "equation_reference": "4.44",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "i\\hbar\\frac{d\\rho(t)}{dt}=[H,\\rho(t)]",
+      "telegram_rendering_input": "<code>i\\hbar\\frac{d\\rho(t)}{dt}=[H,\\rho(t)]</code>",
+      "latex_status": "Formula"
     },
     "C4-032": {
       "original_id": "32",
       "original_section_title": "Von-Neumann equation",
       "equation_reference": "4.44–4.46",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "[H,\\rho]=H\\rho-\\rho H",
+      "telegram_rendering_input": "<code>[H,\\rho]=H\\rho-\\rho H</code>",
+      "latex_status": "Formula"
     },
     "C4-033": {
       "original_id": "33",
       "original_section_title": "Von-Neumann equation",
       "equation_reference": "4.47",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\rho(t)=U(t,t_0)\\rho(t_0)U(t,t_0)^{\\dagger}",
+      "telegram_rendering_input": "<code>\\rho(t)=U(t,t_0)\\rho(t_0)U(t,t_0)^{\\dagger}</code>",
+      "latex_status": "Formula"
     },
     "C4-034": {
       "original_id": "34",
       "original_section_title": "Measurement for density operators",
       "equation_reference": "4.48",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "A=\\sum_{k=0}^{D-1}\\lambda_k\\pi_k",
+      "telegram_rendering_input": "<code>A=\\sum_{k=0}^{D-1}\\lambda_k\\pi_k</code>",
+      "latex_status": "Formula"
     },
     "C4-035": {
       "original_id": "35",
       "original_section_title": "Measurement for density operators",
       "equation_reference": "4.49",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\pi_l\\pi_k=\\delta_{k,l}\\pi_k",
+      "telegram_rendering_input": "<code>\\pi_l\\pi_k=\\delta_{k,l}\\pi_k</code>",
+      "latex_status": "Formula"
     },
     "C4-036": {
       "original_id": "36",
       "original_section_title": "Measurement for density operators",
       "equation_reference": "4.50",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "p_k=\\operatorname{tr}(\\pi_k\\rho)",
+      "telegram_rendering_input": "<code>p_k=\\operatorname{tr}(\\pi_k\\rho)</code>",
+      "latex_status": "Formula"
     },
     "C4-037": {
       "original_id": "37",
       "original_section_title": "Measurement for density operators",
       "equation_reference": "4.51",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\rho_k=\\frac{\\pi_k\\rho\\pi_k}{\\operatorname{tr}(\\pi_k\\rho\\pi_k)}=\\frac{\\pi_k\\rho\\pi_k}{p_k}",
+      "telegram_rendering_input": "<code>\\rho_k=\\frac{\\pi_k\\rho\\pi_k}{\\operatorname{tr}(\\pi_k\\rho\\pi_k)}=\\frac{\\pi_k\\rho\\pi_k}{p_k}</code>",
+      "latex_status": "Formula"
     },
     "C4-038": {
       "original_id": "38",
       "original_section_title": "Mixing quantum states",
       "equation_reference": "4.52",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\rho=p\\rho_1+(1-p)\\rho_2",
+      "telegram_rendering_input": "<code>\\rho=p\\rho_1+(1-p)\\rho_2</code>",
+      "latex_status": "Formula"
     },
     "C4-039": {
       "original_id": "39",
       "original_section_title": "Mixing quantum states",
       "equation_reference": "4.53",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\rho=p|0\\rangle\\langle0|+(1-p)|1\\rangle\\langle1|",
+      "telegram_rendering_input": "<code>\\rho=p|0\\rangle\\langle0|+(1-p)|1\\rangle\\langle1|</code>",
+      "latex_status": "Formula"
     },
     "C4-040": {
       "original_id": "40",
       "original_section_title": "Mixing quantum states",
       "equation_reference": "4.54",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\rho=\\frac12|0\\rangle\\langle0|+\\frac12|1\\rangle\\langle1|",
+      "telegram_rendering_input": "<code>\\rho=\\frac12|0\\rangle\\langle0|+\\frac12|1\\rangle\\langle1|</code>",
+      "latex_status": "Formula"
     },
     "C4-041": {
       "original_id": "41",
       "original_section_title": "Partial traces",
       "equation_reference": "4.55",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\mathcal H=\\mathcal H_A\\otimes\\mathcal H_B",
+      "telegram_rendering_input": "<code>\\mathcal H=\\mathcal H_A\\otimes\\mathcal H_B</code>",
+      "latex_status": "Formula"
     },
     "C4-042": {
       "original_id": "42",
       "original_section_title": "Partial traces",
       "equation_reference": "4.56",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\rho_A=\\operatorname{tr}_B(\\rho)=\\sum_{j=0}^{d-1}\\langle j|\\rho|j\\rangle",
+      "telegram_rendering_input": "<code>\\rho_A=\\operatorname{tr}_B(\\rho)=\\sum_{j=0}^{d-1}\\langle j|\\rho|j\\rangle</code>",
+      "latex_status": "Formula"
     },
     "C4-043": {
       "original_id": "43",
       "original_section_title": "Partial traces",
       "equation_reference": "4.56",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\rho_A=\\operatorname{tr}_B(\\rho)",
+      "telegram_rendering_input": "<code>\\rho_A=\\operatorname{tr}_B(\\rho)</code>",
+      "latex_status": "Formula"
     },
     "C4-044": {
       "original_id": "44",
       "original_section_title": "Partial traces",
       "equation_reference": "4.57",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "A\\otimes I",
+      "telegram_rendering_input": "<code>A\\otimes I</code>",
+      "latex_status": "Formula"
     },
     "C4-045": {
       "original_id": "45",
       "original_section_title": "Partial traces",
       "equation_reference": "4.58–4.59",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\operatorname{tr}((A\\otimes I)\\rho)=\\operatorname{tr}(A\\rho_A)",
+      "telegram_rendering_input": "<code>\\operatorname{tr}((A\\otimes I)\\rho)=\\operatorname{tr}(A\\rho_A)</code>",
+      "latex_status": "Formula"
     },
     "C4-046": {
       "original_id": "46",
       "original_section_title": "Entangled states",
       "equation_reference": "4.60",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\rho=\\rho_A\\otimes\\rho_B",
+      "telegram_rendering_input": "<code>\\rho=\\rho_A\\otimes\\rho_B</code>",
+      "latex_status": "Formula"
     },
     "C4-047": {
       "original_id": "47",
       "original_section_title": "Entangled states",
       "equation_reference": "4.61",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\operatorname{tr}_B(\\rho_A\\otimes\\rho_B)=\\rho_A",
+      "telegram_rendering_input": "<code>\\operatorname{tr}_B(\\rho_A\\otimes\\rho_B)=\\rho_A</code>",
+      "latex_status": "Formula"
     },
     "C4-048": {
       "original_id": "48",
       "original_section_title": "Entangled states",
       "equation_reference": "4.62",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "|\\psi\\rangle=\\frac{1}{\\sqrt2}(|0,0\\rangle+|1,1\\rangle)",
+      "telegram_rendering_input": "<code>|\\psi\\rangle=\\frac{1}{\\sqrt2}(|0,0\\rangle+|1,1\\rangle)</code>",
+      "latex_status": "Formula"
     },
     "C4-049": {
       "original_id": "49",
       "original_section_title": "Entangled states",
       "equation_reference": "4.63",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "\\rho_A=\\frac12(|0\\rangle\\langle0|+|1\\rangle\\langle1|)",
+      "telegram_rendering_input": "<code>\\rho_A=\\frac12(|0\\rangle\\langle0|+|1\\rangle\\langle1|)</code>",
+      "latex_status": "Formula"
     },
     "C4-050": {
       "original_id": "50",
       "original_section_title": "Entangled states",
       "equation_reference": "4.62–4.63 (discussion)",
       "priority": "High",
-      "source_reference": "FU Eisert QM Chapter 4"
+      "source_reference": "FU Eisert QM Chapter 4",
+      "formula_latex": "",
+      "telegram_rendering_input": "",
+      "latex_status": "Concept / no formula"
     }
-  }
+  },
+  "named_concepts_reference": [
+    {
+      "name": "Mixed ensemble",
+      "section": "4.1",
+      "definition": "Probabilistic preparation of state vectors with classical probabilities.",
+      "equation_reference": "4.3",
+      "formula_latex": "p_j\\ge 0,\\quad \\sum_{j=1}^{n}p_j=1",
+      "renderer_input": "<code>p_j\\ge 0,\\quad \\sum_{j=1}^{n}p_j=1</code>"
+    },
+    {
+      "name": "Trace",
+      "section": "4.2.1",
+      "definition": "Sum of diagonal matrix elements; basis-independent.",
+      "equation_reference": "4.6",
+      "formula_latex": "\\operatorname{tr}(A)=\\sum_{j=0}^{d-1}\\langle j|A|j\\rangle",
+      "renderer_input": "<code>\\operatorname{tr}(A)=\\sum_{j=0}^{d-1}\\langle j|A|j\\rangle</code>"
+    },
+    {
+      "name": "Cyclic interchange",
+      "section": "4.2.1",
+      "definition": "Trace property; source Eq. 4.8 has an apparent misprint.",
+      "equation_reference": "4.8",
+      "formula_latex": "\\operatorname{tr}(AB)=\\operatorname{tr}(BA)",
+      "renderer_input": "<code>\\operatorname{tr}(AB)=\\operatorname{tr}(BA)</code>"
+    },
+    {
+      "name": "Pure state",
+      "section": "4.2.2",
+      "definition": "Density operator represented by a state vector.",
+      "equation_reference": "4.13",
+      "formula_latex": "\\rho=|\\psi\\rangle\\langle\\psi|",
+      "renderer_input": "<code>\\rho=|\\psi\\rangle\\langle\\psi|</code>"
+    },
+    {
+      "name": "Hermicity",
+      "section": "4.2.3",
+      "definition": "Density operator equals its adjoint.",
+      "equation_reference": "4.28",
+      "formula_latex": "\\rho=\\rho^{\\dagger}",
+      "renderer_input": "<code>\\rho=\\rho^{\\dagger}</code>"
+    },
+    {
+      "name": "Positivity",
+      "section": "4.2.3",
+      "definition": "Density operator is positive semidefinite.",
+      "equation_reference": "4.29",
+      "formula_latex": "\\rho\\ge 0",
+      "renderer_input": "<code>\\rho\\ge 0</code>"
+    },
+    {
+      "name": "Normalization",
+      "section": "4.2.3",
+      "definition": "Trace of density operator equals one.",
+      "equation_reference": "4.30",
+      "formula_latex": "\\operatorname{tr}(\\rho)=1",
+      "renderer_input": "<code>\\operatorname{tr}(\\rho)=1</code>"
+    },
+    {
+      "name": "Mixed state",
+      "section": "4.2.3",
+      "definition": "State with tr(ρ²)<1.",
+      "equation_reference": "4.27, discussion",
+      "formula_latex": "\\operatorname{tr}(\\rho^{2})=1\\ \\text{(pure)};\\quad\\operatorname{tr}(\\rho^{2})<1\\ \\text{(mixed)}",
+      "renderer_input": "<code>\\operatorname{tr}(\\rho^{2})=1\\ \\text{(pure)};\\quad\\operatorname{tr}(\\rho^{2})<1\\ \\text{(mixed)}</code>"
+    },
+    {
+      "name": "Maximally mixed state",
+      "section": "4.5.1",
+      "definition": "Equal mixture of |0⟩ and |1⟩ for the qubit example.",
+      "equation_reference": "4.54",
+      "formula_latex": "\\rho=\\frac12|0\\rangle\\langle0|+\\frac12|1\\rangle\\langle1|",
+      "renderer_input": "<code>\\rho=\\frac12|0\\rangle\\langle0|+\\frac12|1\\rangle\\langle1|</code>"
+    },
+    {
+      "name": "Non-uniqueness of ensemble representations",
+      "section": "4.2.5",
+      "definition": "Distinct ensembles can give the same density operator.",
+      "equation_reference": "4.43",
+      "formula_latex": "\\rho=\\sum_j p_j|\\psi_j\\rangle\\langle\\psi_j|=\\sum_k q_k|\\phi_k\\rangle\\langle\\phi_k|",
+      "renderer_input": "<code>\\rho=\\sum_j p_j|\\psi_j\\rangle\\langle\\psi_j|=\\sum_k q_k|\\phi_k\\rangle\\langle\\phi_k|</code>"
+    },
+    {
+      "name": "Preferred ensemble fallacy",
+      "section": "4.2.5",
+      "definition": "Incorrectly treating one ensemble decomposition as uniquely underlying ρ.",
+      "equation_reference": "Discussion after 4.43",
+      "formula_latex": "",
+      "renderer_input": ""
+    },
+    {
+      "name": "Von-Neumann equation",
+      "section": "4.3",
+      "definition": "Time evolution of density operators.",
+      "equation_reference": "4.44",
+      "formula_latex": "i\\hbar\\frac{d\\rho(t)}{dt}=[H,\\rho(t)]",
+      "renderer_input": "<code>i\\hbar\\frac{d\\rho(t)}{dt}=[H,\\rho(t)]</code>"
+    },
+    {
+      "name": "Projection postulate",
+      "section": "4.4",
+      "definition": "Measurement probabilities and updated density operators.",
+      "equation_reference": "4.48–4.51",
+      "formula_latex": "\\rho_k=\\frac{\\pi_k\\rho\\pi_k}{\\operatorname{tr}(\\pi_k\\rho\\pi_k)}=\\frac{\\pi_k\\rho\\pi_k}{p_k}",
+      "renderer_input": "<code>\\rho_k=\\frac{\\pi_k\\rho\\pi_k}{\\operatorname{tr}(\\pi_k\\rho\\pi_k)}=\\frac{\\pi_k\\rho\\pi_k}{p_k}</code>"
+    },
+    {
+      "name": "Mixing",
+      "section": "4.5.1",
+      "definition": "Probabilistic combination of density operators.",
+      "equation_reference": "4.52",
+      "formula_latex": "\\rho=p\\rho_1+(1-p)\\rho_2",
+      "renderer_input": "<code>\\rho=p\\rho_1+(1-p)\\rho_2</code>"
+    },
+    {
+      "name": "Convex combination",
+      "section": "4.5.1",
+      "definition": "Mathematical name for mixing pρ₁+(1−p)ρ₂.",
+      "equation_reference": "4.52",
+      "formula_latex": "\\rho=p\\rho_1+(1-p)\\rho_2",
+      "renderer_input": "<code>\\rho=p\\rho_1+(1-p)\\rho_2</code>"
+    },
+    {
+      "name": "Partial trace",
+      "section": "4.5.2",
+      "definition": "Disregard one subsystem of a composite quantum system.",
+      "equation_reference": "4.56",
+      "formula_latex": "\\rho_A=\\operatorname{tr}_B(\\rho)=\\sum_{j=0}^{d-1}\\langle j|\\rho|j\\rangle",
+      "renderer_input": "<code>\\rho_A=\\operatorname{tr}_B(\\rho)=\\sum_{j=0}^{d-1}\\langle j|\\rho|j\\rangle</code>"
+    },
+    {
+      "name": "Reduced states",
+      "section": "4.5.2",
+      "definition": "Subsystem states after partial tracing.",
+      "equation_reference": "4.56",
+      "formula_latex": "\\rho_A=\\operatorname{tr}_B(\\rho)",
+      "renderer_input": "<code>\\rho_A=\\operatorname{tr}_B(\\rho)</code>"
+    },
+    {
+      "name": "Product state",
+      "section": "4.5.3",
+      "definition": "Joint density operator of tensor-product form.",
+      "equation_reference": "4.60",
+      "formula_latex": "\\rho=\\rho_A\\otimes\\rho_B",
+      "renderer_input": "<code>\\rho=\\rho_A\\otimes\\rho_B</code>"
+    },
+    {
+      "name": "Entangled states",
+      "section": "4.5.3",
+      "definition": "Pure composite states that are not product states.",
+      "equation_reference": "Discussion after 4.63",
+      "formula_latex": "|\\psi\\rangle=\\frac{1}{\\sqrt2}(|0,0\\rangle+|1,1\\rangle)",
+      "renderer_input": "<code>|\\psi\\rangle=\\frac{1}{\\sqrt2}(|0,0\\rangle+|1,1\\rangle)</code>"
+    }
+  ],
+  "box_script_rules": [
+    {
+      "name": "Trace definition",
+      "section": "4.2.1",
+      "equation_reference": "4.6",
+      "formula_latex": "\\operatorname{tr}(A)=\\sum_{j=0}^{d-1}\\langle j|A|j\\rangle",
+      "renderer_input": "<code>\\operatorname{tr}(A)=\\sum_{j=0}^{d-1}\\langle j|A|j\\rangle</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Unitary invariance",
+      "section": "4.2.1",
+      "equation_reference": "4.7",
+      "formula_latex": "\\operatorname{tr}(UAU^{\\dagger})=\\operatorname{tr}(A)",
+      "renderer_input": "<code>\\operatorname{tr}(UAU^{\\dagger})=\\operatorname{tr}(A)</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Cyclic trace rule — corrected reading",
+      "section": "4.2.1",
+      "equation_reference": "4.8",
+      "formula_latex": "\\operatorname{tr}(AB)=\\operatorname{tr}(BA)",
+      "renderer_input": "<code>\\operatorname{tr}(AB)=\\operatorname{tr}(BA)</code>",
+      "source_note": "Source typo flagged in Notes"
+    },
+    {
+      "name": "Pure-state density operator",
+      "section": "4.2.2",
+      "equation_reference": "4.13",
+      "formula_latex": "\\rho=|\\psi\\rangle\\langle\\psi|",
+      "renderer_input": "<code>\\rho=|\\psi\\rangle\\langle\\psi|</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Pure-state purity",
+      "section": "4.2.2",
+      "equation_reference": "4.17",
+      "formula_latex": "\\operatorname{tr}(\\rho^{2})=1",
+      "renderer_input": "<code>\\operatorname{tr}(\\rho^{2})=1</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Mixed-ensemble density operator",
+      "section": "4.2.3",
+      "equation_reference": "4.20",
+      "formula_latex": "\\rho=\\sum_{j=1}^{n}p_j|\\psi_j\\rangle\\langle\\psi_j|",
+      "renderer_input": "<code>\\rho=\\sum_{j=1}^{n}p_j|\\psi_j\\rangle\\langle\\psi_j|</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Density operator defining properties",
+      "section": "4.2.3",
+      "equation_reference": "4.28–4.30",
+      "formula_latex": "\\rho=\\rho^{\\dagger},\\quad\\rho\\ge 0,\\quad\\operatorname{tr}(\\rho)=1",
+      "renderer_input": "<code>\\rho=\\rho^{\\dagger},\\quad\\rho\\ge 0,\\quad\\operatorname{tr}(\\rho)=1</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Pure vs mixed criterion — corrected reading",
+      "section": "4.2.3",
+      "equation_reference": "4.27, 4.31–4.32",
+      "formula_latex": "\\operatorname{tr}(\\rho^{2})=1\\ \\text{(pure)};\\quad\\operatorname{tr}(\\rho^{2})<1\\ \\text{(mixed)}",
+      "renderer_input": "<code>\\operatorname{tr}(\\rho^{2})=1\\ \\text{(pure)};\\quad\\operatorname{tr}(\\rho^{2})<1\\ \\text{(mixed)}</code>",
+      "source_note": "Source typo flagged in Notes"
+    },
+    {
+      "name": "Expectation value",
+      "section": "4.2.3",
+      "equation_reference": "4.33",
+      "formula_latex": "\\langle A\\rangle=\\operatorname{tr}(A\\rho)",
+      "renderer_input": "<code>\\langle A\\rangle=\\operatorname{tr}(A\\rho)</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Equal mixture",
+      "section": "4.2.4",
+      "equation_reference": "4.34–4.35",
+      "formula_latex": "\\rho=\\frac12|0\\rangle\\langle0|+\\frac12|1\\rangle\\langle1|=\\frac{I}{2}",
+      "renderer_input": "<code>\\rho=\\frac12|0\\rangle\\langle0|+\\frac12|1\\rangle\\langle1|=\\frac{I}{2}</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Ensemble non-uniqueness",
+      "section": "4.2.5",
+      "equation_reference": "4.43",
+      "formula_latex": "\\rho=\\sum_j p_j|\\psi_j\\rangle\\langle\\psi_j|=\\sum_k q_k|\\phi_k\\rangle\\langle\\phi_k|",
+      "renderer_input": "<code>\\rho=\\sum_j p_j|\\psi_j\\rangle\\langle\\psi_j|=\\sum_k q_k|\\phi_k\\rangle\\langle\\phi_k|</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Von Neumann equation",
+      "section": "4.3",
+      "equation_reference": "4.44",
+      "formula_latex": "i\\hbar\\frac{d\\rho(t)}{dt}=[H,\\rho(t)]",
+      "renderer_input": "<code>i\\hbar\\frac{d\\rho(t)}{dt}=[H,\\rho(t)]</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Unitary evolution",
+      "section": "4.3",
+      "equation_reference": "4.47",
+      "formula_latex": "\\rho(t)=U(t,t_0)\\rho(t_0)U(t,t_0)^{\\dagger}",
+      "renderer_input": "<code>\\rho(t)=U(t,t_0)\\rho(t_0)U(t,t_0)^{\\dagger}</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Spectral decomposition",
+      "section": "4.4",
+      "equation_reference": "4.48",
+      "formula_latex": "A=\\sum_{k=0}^{D-1}\\lambda_k\\pi_k",
+      "renderer_input": "<code>A=\\sum_{k=0}^{D-1}\\lambda_k\\pi_k</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Projector orthogonality",
+      "section": "4.4",
+      "equation_reference": "4.49",
+      "formula_latex": "\\pi_l\\pi_k=\\delta_{k,l}\\pi_k",
+      "renderer_input": "<code>\\pi_l\\pi_k=\\delta_{k,l}\\pi_k</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Measurement probability",
+      "section": "4.4",
+      "equation_reference": "4.50",
+      "formula_latex": "p_k=\\operatorname{tr}(\\pi_k\\rho)",
+      "renderer_input": "<code>p_k=\\operatorname{tr}(\\pi_k\\rho)</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Post-measurement state",
+      "section": "4.4",
+      "equation_reference": "4.51",
+      "formula_latex": "\\rho_k=\\frac{\\pi_k\\rho\\pi_k}{\\operatorname{tr}(\\pi_k\\rho\\pi_k)}=\\frac{\\pi_k\\rho\\pi_k}{p_k}",
+      "renderer_input": "<code>\\rho_k=\\frac{\\pi_k\\rho\\pi_k}{\\operatorname{tr}(\\pi_k\\rho\\pi_k)}=\\frac{\\pi_k\\rho\\pi_k}{p_k}</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Mixing",
+      "section": "4.5.1",
+      "equation_reference": "4.52",
+      "formula_latex": "\\rho=p\\rho_1+(1-p)\\rho_2",
+      "renderer_input": "<code>\\rho=p\\rho_1+(1-p)\\rho_2</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Composite Hilbert space",
+      "section": "4.5.2",
+      "equation_reference": "4.55",
+      "formula_latex": "\\mathcal H=\\mathcal H_A\\otimes\\mathcal H_B",
+      "renderer_input": "<code>\\mathcal H=\\mathcal H_A\\otimes\\mathcal H_B</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Partial trace",
+      "section": "4.5.2",
+      "equation_reference": "4.56",
+      "formula_latex": "\\rho_A=\\operatorname{tr}_B(\\rho)=\\sum_{j=0}^{d-1}\\langle j|\\rho|j\\rangle",
+      "renderer_input": "<code>\\rho_A=\\operatorname{tr}_B(\\rho)=\\sum_{j=0}^{d-1}\\langle j|\\rho|j\\rangle</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Local observable expectation",
+      "section": "4.5.2",
+      "equation_reference": "4.58–4.59",
+      "formula_latex": "\\operatorname{tr}((A\\otimes I)\\rho)=\\operatorname{tr}(A\\rho_A)",
+      "renderer_input": "<code>\\operatorname{tr}((A\\otimes I)\\rho)=\\operatorname{tr}(A\\rho_A)</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Product state",
+      "section": "4.5.3",
+      "equation_reference": "4.60",
+      "formula_latex": "\\rho=\\rho_A\\otimes\\rho_B",
+      "renderer_input": "<code>\\rho=\\rho_A\\otimes\\rho_B</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Entangled state example",
+      "section": "4.5.3",
+      "equation_reference": "4.62",
+      "formula_latex": "|\\psi\\rangle=\\frac{1}{\\sqrt2}(|0,0\\rangle+|1,1\\rangle)",
+      "renderer_input": "<code>|\\psi\\rangle=\\frac{1}{\\sqrt2}(|0,0\\rangle+|1,1\\rangle)</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    },
+    {
+      "name": "Reduced entangled-state example",
+      "section": "4.5.3",
+      "equation_reference": "4.63",
+      "formula_latex": "\\rho_A=\\frac12(|0\\rangle\\langle0|+|1\\rangle\\langle1|)",
+      "renderer_input": "<code>\\rho_A=\\frac12(|0\\rangle\\langle0|+|1\\rangle\\langle1|)</code>",
+      "source_note": "Script formula / boxed rule or important derivation"
+    }
+  ],
+  "workbook_source_caveats": [
+    {
+      "topic": "Source",
+      "note": "Professor Jens Eisert, Chapter 4: Density operators, uploaded QMChapter4(2).pdf"
+    },
+    {
+      "topic": "Scope",
+      "note": "Only material in the uploaded Chapter 4 lecture script. Existing learning-card explanations preserved."
+    },
+    {
+      "topic": "Eq. 4.8",
+      "note": "PDF prints tr(AB)=tr(AB) while the surrounding text calls it cyclic interchange. LaTeX uses tr(AB)=tr(BA) and flags this as a correction."
+    },
+    {
+      "topic": "Eq. 4.31",
+      "note": "PDF prints tr(ρ)=1 for pure states, but surrounding text establishes tr(ρ²)=1. LaTeX uses tr(ρ²)=1 and flags the misprint."
+    },
+    {
+      "topic": "Eq. 4.56",
+      "note": "LaTeX uses the script’s abbreviated partial-trace notation Σ_j ⟨j|ρ|j⟩; bra/ket act on subsystem B."
+    },
+    {
+      "topic": "Telegram rendering",
+      "note": "Telegram Bot API does not natively typeset LaTeX. Render to image with KaTeX/MathJax or another TeX renderer. The HTML column is escaped code display, not a rendered formula."
+    },
+    {
+      "topic": "Card 37",
+      "note": "Post-measurement formula applies for outcomes with nonzero probability p_k."
+    },
+    {
+      "topic": "Source fidelity",
+      "note": "Named concepts and important formulas selected from lecture; not every selected formula is literally in a boxed callout in the PDF."
+    }
+  ],
+  "workbook_import_note": "50 original stable IDs retained. Named-concept and BOX reference sheets are metadata, not duplicate learning cards. Raw LaTeX and HTML wrappers are renderer input, not native Telegram typesetting. Source-verification and erratum notes remain workbook claims."
 }

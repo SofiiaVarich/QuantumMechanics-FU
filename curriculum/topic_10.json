@@ -197,8 +197,8 @@
       "id": "C10-011",
       "section_id": "10.1.2",
       "front": "Example interaction Hamiltonian",
-      "definition": "Two-qubit system–environment interaction.",
-      "key_rule": "HI = σx ⊗ σx",
+      "definition": "Two-qubit interaction with coupling energy g. The environment starts in |0⟩ for the examples below.",
+      "key_rule": "H_I = g σx ⊗ σx",
       "source_status": "Not started",
       "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
     },
@@ -215,8 +215,8 @@
       "id": "C10-013",
       "section_id": "10.1.2",
       "front": "Initial plus state",
-      "definition": "First scenario in the lecture.",
-      "key_rule": "ρS(t₀) = |+⟩⟨+|",
+      "definition": "For H_I = g σx ⊗ σx and environment initially |0⟩, the σx eigenstate |+⟩ remains pure.",
+      "key_rule": "ρS(t₀) = |+⟩⟨+| ⇒ ρS(t) = |+⟩⟨+|",
       "source_status": "Not started",
       "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
     },
@@ -224,8 +224,8 @@
       "id": "C10-014",
       "section_id": "10.1.2",
       "front": "Initial computational state",
-      "definition": "Second scenario in the lecture.",
-      "key_rule": "ρS(t₀) = |0⟩⟨0|",
+      "definition": "The initial computational state becomes maximally mixed under this interaction and initial environment state |0⟩.",
+      "key_rule": "ρS(t₀) = |0⟩⟨0| ⇒ ρS(t) = I/2 when g(t−t₀)/ℏ = π/4",
       "source_status": "Not started",
       "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
     },
@@ -233,8 +233,8 @@
       "id": "C10-015",
       "section_id": "10.1.2",
       "front": "Example evolution time",
-      "definition": "Chosen time for the lecture example.",
-      "key_rule": "t−t₀ = πℏ/4",
+      "definition": "Interaction time for H_I = g σx ⊗ σx; the dimensionful coupling is explicit.",
+      "key_rule": "t − t₀ = πℏ/(4g), g > 0",
       "source_status": "Not started",
       "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
     },
@@ -242,7 +242,7 @@
       "id": "C10-016",
       "section_id": "10.1.2",
       "front": "Maximally mixed qubit",
-      "definition": "Reduced state claimed in the example; see source caution in Study Guide.",
+      "definition": "For initial system |0⟩, environment |0⟩, and H_I = g σx ⊗ σx at g(t−t₀)/ℏ = π/4, the reduced system is I/2. This conclusion does not apply to initial |+⟩.",
       "key_rule": "ρS = ½(|0⟩⟨0| + |1⟩⟨1|) = I/2",
       "source_status": "Not started",
       "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
@@ -296,8 +296,8 @@
       "id": "C10-022",
       "section_id": "10.1.3",
       "front": "Quantum channel",
-      "definition": "Lecture presents channels as completely positive maps; see normalization note.",
-      "key_rule": "ρ ↦ T(ρ)",
+      "definition": "A quantum channel is a completely positive, trace-preserving linear map on density operators.",
+      "key_rule": "ρ ↦ T(ρ); T is completely positive and trace preserving (CPTP)",
       "source_status": "Not started",
       "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
     },
@@ -305,8 +305,8 @@
       "id": "C10-023",
       "section_id": "10.1.3",
       "front": "Operator-sum representation",
-      "definition": "Kraus representation of a channel.",
-      "key_rule": "T(ρ) = Σⱼ AⱼρAⱼ†",
+      "definition": "Kraus representation of a trace-preserving quantum channel; the normalization condition preserves total probability.",
+      "key_rule": "T(ρ) = Σⱼ AⱼρAⱼ†, with Σⱼ Aⱼ†Aⱼ = I",
       "source_status": "Not started",
       "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
     },
@@ -350,8 +350,8 @@
       "id": "C10-028",
       "section_id": "10.1.4",
       "front": "Master equation",
-      "definition": "Lecture equation (10.21) has sign and ℏ-convention concerns; see Study Guide.",
-      "key_rule": "∂tρS = −i[HS,ρS] + dissipative term (as printed)",
+      "definition": "Time-local Lindblad generator for Markovian CPTP evolution, with energy-valued Hamiltonian and Lindblad operators containing the square roots of rates.",
+      "key_rule": "ρ̇ = −(i/ℏ)[H_S,ρ] + Σⱼ(LⱼρLⱼ† − ½{Lⱼ†Lⱼ,ρ})",
       "source_status": "Not started",
       "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
     },
@@ -368,8 +368,8 @@
       "id": "C10-030",
       "section_id": "10.1.4",
       "front": "Closed-system commutator term",
-      "definition": "Printed in the lecture with ℏ suppressed.",
-      "key_rule": "∂tρS = −i[HS,ρS]",
+      "definition": "Unitary part of density-operator evolution when H_S is measured in energy units.",
+      "key_rule": "ρ̇S = −(i/ℏ)[H_S,ρS]",
       "source_status": "Not started",
       "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
     },
@@ -422,8 +422,8 @@
       "id": "C10-036",
       "section_id": "10.2.1",
       "front": "Nuclear Coulomb potential",
-      "definition": "Lecture extends hydrogen-like Coulomb model to nuclear charge Z.",
-      "key_rule": "V(r) = −e₀ Z/r",
+      "definition": "Nuclear Coulomb potential energy in Gaussian units, with positive elementary charge magnitude e₀ and nuclear charge Ze₀.",
+      "key_rule": "V(r) = −Ze₀²/r",
       "source_status": "Not started",
       "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
     },
@@ -566,7 +566,7 @@
       "id": "C10-052",
       "section_id": "10.3.2",
       "front": "Mott-insulator phase",
-      "definition": "Deep Mott phase has fixed integer filling and product-state form.",
+      "definition": "A product of local number states is exact at zero hopping. At finite hopping, it is an approximation deep in the Mott regime.",
       "key_rule": "|ψ⟩ = |k,k,…,k⟩",
       "source_status": "Not started",
       "source_file": "QM_Chapter10_Concept_Learning_Cards.xlsx"
@@ -1170,5 +1170,86 @@
       "priority": "Medium",
       "source_reference": "QMChapter10(1).pdf"
     }
+  },
+  "content_corrections": {
+    "C10-011": {
+      "original": {
+        "key_rule": "HI = σx ⊗ σx",
+        "definition": "Two-qubit system–environment interaction."
+      },
+      "reason": "Mathematical consistency audit: explicit units, assumptions, or correction; not a verified lecture erratum."
+    },
+    "C10-013": {
+      "original": {
+        "key_rule": "ρS(t₀) = |+⟩⟨+|",
+        "definition": "First scenario in the lecture."
+      },
+      "reason": "Mathematical consistency audit: explicit units, assumptions, or correction; not a verified lecture erratum."
+    },
+    "C10-014": {
+      "original": {
+        "key_rule": "ρS(t₀) = |0⟩⟨0|",
+        "definition": "Second scenario in the lecture."
+      },
+      "reason": "Mathematical consistency audit: explicit units, assumptions, or correction; not a verified lecture erratum."
+    },
+    "C10-015": {
+      "original": {
+        "key_rule": "t−t₀ = πℏ/4",
+        "definition": "Chosen time for the lecture example."
+      },
+      "reason": "Mathematical consistency audit: explicit units, assumptions, or correction; not a verified lecture erratum."
+    },
+    "C10-016": {
+      "original": {
+        "definition": "Reduced state claimed in the example; see source caution in Study Guide."
+      },
+      "reason": "Mathematical consistency audit: explicit units, assumptions, or correction; not a verified lecture erratum."
+    },
+    "C10-022": {
+      "original": {
+        "key_rule": "ρ ↦ T(ρ)",
+        "definition": "Lecture presents channels as completely positive maps; see normalization note."
+      },
+      "reason": "Mathematical consistency audit: explicit units, assumptions, or correction; not a verified lecture erratum."
+    },
+    "C10-023": {
+      "original": {
+        "key_rule": "T(ρ) = Σⱼ AⱼρAⱼ†",
+        "definition": "Kraus representation of a channel."
+      },
+      "reason": "Mathematical consistency audit: explicit units, assumptions, or correction; not a verified lecture erratum."
+    },
+    "C10-028": {
+      "original": {
+        "key_rule": "∂tρS = −i[HS,ρS] + dissipative term (as printed)",
+        "definition": "Lecture equation (10.21) has sign and ℏ-convention concerns; see Study Guide."
+      },
+      "reason": "Mathematical consistency audit: explicit units, assumptions, or correction; not a verified lecture erratum."
+    },
+    "C10-030": {
+      "original": {
+        "key_rule": "∂tρS = −i[HS,ρS]",
+        "definition": "Printed in the lecture with ℏ suppressed."
+      },
+      "reason": "Mathematical consistency audit: explicit units, assumptions, or correction; not a verified lecture erratum."
+    },
+    "C10-036": {
+      "original": {
+        "key_rule": "V(r) = −e₀ Z/r",
+        "definition": "Lecture extends hydrogen-like Coulomb model to nuclear charge Z."
+      },
+      "reason": "Mathematical consistency audit: explicit units, assumptions, or correction; not a verified lecture erratum."
+    },
+    "C10-052": {
+      "original": {
+        "definition": "Deep Mott phase has fixed integer filling and product-state form."
+      },
+      "reason": "Mathematical consistency audit: explicit units, assumptions, or correction; not a verified lecture erratum."
+    }
+  },
+  "content_review_required": {
+    "C10-063": "Check whether the source means the perturbative coefficient or the full order-ψ² contribution; the notation is source-dependent.",
+    "C10-068": "Mean-field lobe boundaries require occupation-sector restrictions; the vacuum k=0 case must be treated separately."
   }
 }

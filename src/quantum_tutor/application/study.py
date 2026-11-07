@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import random
+import re
 import textwrap
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -50,6 +51,94 @@ class StudyService:
                     source_status="original_practice", source_file="",
                 ))
         return tuple({card.id: card for card in cards}.values())
+
+    @staticmethod
+    def formula_text(card: ConceptCard) -> str:
+        symbols = ("=", "≥", "≤", "≈", "∝", "≠")
+        for value in (card.key_rule, card.definition):
+            if any(symbol in value for symbol in symbols):
+                return value.split("\nAssumptions:", 1)[0].strip()
+        return ""
+
+    @classmethod
+    def has_formula(cls, card: ConceptCard) -> bool:
+        return bool(cls.formula_text(card))
+
+    def mode_cards(self, chapter_number: int, mode: str = "learn") -> tuple[ConceptCard, ...]:
+        cards = self.cards(chapter_number)
+        if mode == "formula":
+            return tuple(card for card in cards if self.has_formula(card))
+        return cards
+
+    @staticmethod
+    def _normalized(value: str) -> str:
+        return " ".join(re.findall(r"\w+", value.casefold()))
+
+    def set_exercise(self, card: ConceptCard, mode: str = "learn") -> Exercise:
+        """Generate unique choices, excluding known overlapping concepts.
+
+        This is a conservative equivalence filter, not symbolic math validation.
+        """
+        overlap_groups = (
+            {"C4-016", "C4-018", "C4-022", "C3-011", "concept-c52dc23213cf6e50"},
+            {"C4-023", "C4-027", "C4-040", "C4-049", "C10-016"},
+            {"C7-008", "C7-015"},
+            {"C7-007", "C7-045", "C8-017", "EXP-035"},
+            {"C8-021", "EXP-048", "EXP-034"},
+            {"EXP-023", "EXP-044"},
+            {"EXP-025", "EXP-045"},
+            {"EXP-029", "EXP-046"},
+        )
+        blocked = {card.id}
+        for group in overlap_groups:
+            if card.id in group:
+                blocked.update(group)
+        formula_mode = self.has_formula(card)
+        correct = self.formula_text(card) if formula_mode else card.definition
+        prompt = (
+            f"🧠 {card.front}\n\n❓ Which formula or key rule matches?"
+            if formula_mode else
+            f"🧠 {card.front}\n\n❓ Which meaning or application matches?"
+            if mode == "law" else
+            f"🧠 {card.front}\n\n❓ Which statement matches?"
+        )
+        normalized = self._normalized(correct)
+        front = self._normalized(card.front)
+        # Prefer related material, but never use another card with the same name
+        # or a known synonymous meaning as a wrong alternative.
+        candidates = list(self.cards())
+        random.shuffle(candidates)
+        candidates.sort(key=lambda other: other.section_id.split(".")[0] != card.section_id.split(".")[0])
+        distractors = []
+        seen = {normalized}
+        for other in candidates:
+            if other.id in blocked or self._normalized(other.front) == front:
+                continue
+            if formula_mode and not self.has_formula(other):
+                continue
+            value = self.formula_text(other) if formula_mode else other.definition
+            key = self._normalized(value)
+            if not key or key in seen:
+                continue
+            # Avoid obvious near-identical paraphrases and contained answers.
+            words, other_words = set(normalized.split()), set(key.split())
+            if key in normalized or normalized in key:
+                continue
+            if words and other_words and len(words & other_words) / len(words | other_words) > 0.55:
+                continue
+            seen.add(key)
+            distractors.append(value)
+            if len(distractors) == 3:
+                break
+        choices = distractors + [correct]
+        random.shuffle(choices)
+        answer = f"{card.definition}\n\n{card.key_rule}".strip()
+        for chapter in self.curriculum.chapters():
+            note = chapter.content_review_required.get(card.id)
+            if note:
+                answer += f"\n\n🔴 Source check needed: {note}"
+                break
+        return Exercise(Question(card.id, "concept", prompt, answer), tuple(choices), choices.index(correct))
 
     def review_cards(self, user_id: int) -> tuple[ConceptCard, ...]:
         catalog = {card.id: card for card in self.cards()}

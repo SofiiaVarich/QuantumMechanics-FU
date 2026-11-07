@@ -22,9 +22,9 @@ def test_topic_starts_all_cards_without_subsection_selection(tmp_path: Path) -> 
     assert chapter is not None
     expected = {card.id for card in chapter.concepts} | {formula.id for formula in chapter.formulas}
     assert {card.id for card in session.cards} == expected
-    assert len(session.cards) == 31
+    assert len(session.cards) == 36
     content = "\n".join(call.args[0] for call in message.reply_text.call_args_list)
     assert ".pdf" not in content
     assert "Übersetzungen" not in content
     assert "Contents" not in content
-    assert "1/31" in content
+    assert "1/36" in content

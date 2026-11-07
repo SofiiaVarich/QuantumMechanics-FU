@@ -24,11 +24,11 @@ def create_application(settings: Settings) -> Application:
     async def configure_bot(application: Application) -> None:
         await application.bot.set_my_commands([
             BotCommand("start", "Open the clickable study menu"),
-            BotCommand("learn", "Start adaptive exercises"),
+            BotCommand("learn", "Choose a topic for learning"),
             BotCommand("topics", "Browse course chapters"),
-            BotCommand("laws", "Learn physical laws and their meaning"),
-            BotCommand("formulas", "Practice formula recall"),
-            BotCommand("review", "Show due reviews"),
+            BotCommand("laws", "Choose a topic for laws and applications"),
+            BotCommand("formulas", "Choose a topic for formula practice"),
+            BotCommand("review", "Practice missed and due cards"),
             BotCommand("progress", "Show learning statistics"),
         ])
 

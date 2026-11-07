@@ -153,7 +153,7 @@
       "definition": "|ψ⟩ = α|0⟩ + β|1⟩",
       "key_rule": "|α|² + |β|² = 1",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-77e0c1844522ceb0",
@@ -162,7 +162,7 @@
       "definition": "Linear combinations of states form states",
       "key_rule": "Normalize the resulting vector",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-1fb72642f574badd",
@@ -171,16 +171,16 @@
       "definition": "|ψ⟩ and e^(iφ)|ψ⟩ represent the same physical state",
       "key_rule": "Only relative phases affect interference",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-b4bc14e2e364ec7e",
       "section_id": "2.1.1",
       "front": "Bloch sphere",
       "definition": "Pure qubit states correspond to points on a unit sphere",
-      "key_rule": "|ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩",
+      "key_rule": "States of a spin-½ degree of freedom correspond to points on the unit sphere (script gives no angular parameterization).",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-b09be07e2db315da",
@@ -189,7 +189,7 @@
       "definition": "Three Hermitian 2×2 spin operators",
       "key_rule": "σx, σy, σz; eigenvalues ±1",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-36e0507fcc738744",
@@ -198,7 +198,7 @@
       "definition": "Ideal measurement selects an eigenstate",
       "key_rule": "Outcome probabilities follow the Born rule",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-92eed7bbc7e33b0b",
@@ -207,7 +207,7 @@
       "definition": "Kets denote vectors; bras denote dual vectors",
       "key_rule": "|ψ⟩, ⟨ψ|, ⟨ψ|φ⟩",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-22a34ea16a095580",
@@ -216,7 +216,7 @@
       "definition": "Complete complex inner-product space",
       "key_rule": "Quantum pure states are represented by rays",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-bf8de5ad1a6027ac",
@@ -225,7 +225,7 @@
       "definition": "Basis vectors have unit norm and are mutually orthogonal",
       "key_rule": "⟨j|k⟩ = δjk",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-886cf7d886161ff6",
@@ -234,7 +234,7 @@
       "definition": "An orthonormal basis resolves the identity",
       "key_rule": "Σj |j⟩⟨j| = I",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-8c11844c2bc44723",
@@ -243,7 +243,7 @@
       "definition": "Observables are represented by self-adjoint operators",
       "key_rule": "A = A†",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-cdc19d243f5759f8",
@@ -252,7 +252,7 @@
       "definition": "Measures noncommutativity of operators",
       "key_rule": "[A,B] = AB − BA",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-a93f573358198430",
@@ -261,7 +261,7 @@
       "definition": "Commuting observables admit a common eigenbasis in finite dimensions",
       "key_rule": "[A,B] = 0",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-bbf3c48cc71c54f5",
@@ -270,7 +270,7 @@
       "definition": "Hermitian matrices decompose into eigenvalues and orthogonal projectors",
       "key_rule": "A = Σj λj Pj",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-09a186cab399efc8",
@@ -279,7 +279,7 @@
       "definition": "Hermitian matrices are diagonalizable by a unitary matrix",
       "key_rule": "A = UDU†",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-542f4c8d6b6a2499",
@@ -288,7 +288,7 @@
       "definition": "Position-space amplitude of a state",
       "key_rule": "ψ(x) = ⟨x|ψ⟩",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-dba9c32b1c18c163",
@@ -297,7 +297,7 @@
       "definition": "Probability per unit position interval",
       "key_rule": "ρ(x) = |ψ(x)|²",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-39a94ace7414535f",
@@ -306,7 +306,7 @@
       "definition": "Superposed amplitudes yield cross terms in probabilities",
       "key_rule": "|ψ1+ψ2|² includes 2Re(ψ1*ψ2)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-8368a5a345ca44e5",
@@ -315,16 +315,16 @@
       "definition": "Position and momentum do not commute",
       "key_rule": "[X,P] = iℏI",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-9b780082d6105349",
       "section_id": "2.2.5",
       "front": "Fourier transformation",
       "definition": "Connects position and momentum wave functions",
-      "key_rule": "φ(p) = (1/√(2πℏ)) ∫ e^(−ipx/ℏ) ψ(x) dx",
+      "key_rule": "ψ(x) = (1/√(2π)) ∫ ψ̃(k)e^(ikx) dk (as written in script)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-1994d6055ad1f917",
@@ -333,7 +333,7 @@
       "definition": "Joint systems use a tensor-product Hilbert space",
       "key_rule": "H = H₁ ⊗ H₂",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-9bf0cc4d9c3313c6",
@@ -342,7 +342,7 @@
       "definition": "Measurement probabilities are squared projection amplitudes",
       "key_rule": "pj = |⟨φj|ψ⟩|² (nondegenerate)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-7bcd3378b1235038",
@@ -351,7 +351,7 @@
       "definition": "Ideal projective measurement updates to the observed eigenspace",
       "key_rule": "|ψ′⟩ = Pj|ψ⟩/√pj",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-c52dc23213cf6e50",
@@ -360,7 +360,7 @@
       "definition": "Statistical mean of repeated observable measurements",
       "key_rule": "⟨A⟩ = ⟨ψ|A|ψ⟩",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-ba954034e60f96df",
@@ -369,7 +369,7 @@
       "definition": "Noncommuting measurements can alter later outcome probabilities",
       "key_rule": "Order can matter",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-cc22acf489058ef1",
@@ -378,16 +378,16 @@
       "definition": "Squared uncertainty of an observable",
       "key_rule": "(ΔA)² = ⟨A²⟩ − ⟨A⟩²",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-6a256a8567d518a7",
       "section_id": "2.3.4",
-      "front": "Robertson uncertainty relation",
+      "front": "Heisenberg uncertainty relation (first reading)",
       "definition": "Lower bound on product of standard deviations",
       "key_rule": "ΔA ΔB ≥ ½|⟨[A,B]⟩|",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-ac00226484b01e5d",
@@ -396,7 +396,7 @@
       "definition": "Position and momentum uncertainties cannot both vanish",
       "key_rule": "ΔX ΔP ≥ ℏ/2",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     },
     {
       "id": "concept-edecf06d42dd8915",
@@ -405,7 +405,667 @@
       "definition": "Opposite eigenstates of σy",
       "key_rule": "|+y⟩ = (|0⟩+i|1⟩)/√2; |−y⟩ = (|0⟩−i|1⟩)/√2",
       "source_status": "Not started",
-      "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
+    },
+    {
+      "id": "concept-fdc6a036d350cf95",
+      "section_id": "2.3.4",
+      "front": "First reading — preparation uncertainty",
+      "definition": "Independently prepare identically distributed systems; estimate ΔA and ΔB from measurements on separately prepared systems. The script derives this reading.",
+      "key_rule": "ΔA ΔB ≥ ½|⟨ψ|[A,B]|ψ⟩|",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
+    },
+    {
+      "id": "concept-3b651a1aa70d533f",
+      "section_id": "2.3.4",
+      "front": "Second reading — measurement disturbance",
+      "definition": "Measure A and then B on the same system. The first measurement may disturb the later measurement. The script does not derive its bound.",
+      "key_rule": "Different prefactor possible; no formula derived here",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
+    },
+    {
+      "id": "concept-3d0f572c7d1209cd",
+      "section_id": "2.3.4",
+      "front": "Third reading — joint generalized measurement",
+      "definition": "Attempt to gain information about A and B in one generalized measurement, repeated many times. The script does not derive its bound.",
+      "key_rule": "Different prefactor possible; no formula derived here",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
+    },
+    {
+      "id": "concept-bafe49d2c0175ac7",
+      "section_id": "2.3.4",
+      "front": "Centered observables C and D",
+      "definition": "Subtract the expectation values to obtain centered observables.",
+      "key_rule": "C = A − ⟨A⟩; D = B − ⟨B⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
+    },
+    {
+      "id": "concept-045d0deda5e0acc3",
+      "section_id": "2.3.4",
+      "front": "Cauchy–Schwarz step",
+      "definition": "The derivation bounds the product expectation using Cauchy–Schwarz.",
+      "key_rule": "|⟨ψ|CD|ψ⟩|² ≤ ⟨C²⟩⟨D²⟩",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx"
     }
-  ]
+  ],
+  "concept_metadata": {
+    "concept-a873a0b7a61e40c1": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.14, 2.6",
+      "formula_latex": "|\\psi\\rangle=\\alpha|0\\rangle+\\beta|1\\rangle,\\quad |\\alpha|^2+|\\beta|^2=1",
+      "telegram_rendering_input": "\\(|\\psi\\rangle=\\alpha|0\\rangle+\\beta|1\\rangle,\\quad |\\alpha|^2+|\\beta|^2=1\\)"
+    },
+    "concept-77e0c1844522ceb0": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.28",
+      "formula_latex": "|\\psi\\rangle=\\sum_{j=0}^{d-1}\\alpha_j|j\\rangle",
+      "telegram_rendering_input": "\\(|\\psi\\rangle=\\sum_{j=0}^{d-1}\\alpha_j|j\\rangle\\)"
+    },
+    "concept-1fb72642f574badd": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.15",
+      "formula_latex": "|\\psi\\rangle\\sim e^{i\\phi}|\\psi\\rangle",
+      "telegram_rendering_input": "\\(|\\psi\\rangle\\sim e^{i\\phi}|\\psi\\rangle\\)"
+    },
+    "concept-b4bc14e2e364ec7e": {
+      "previous_import": {
+        "id": "concept-b4bc14e2e364ec7e",
+        "section_id": "2.1.1",
+        "front": "Bloch sphere",
+        "definition": "Pure qubit states correspond to points on a unit sphere",
+        "key_rule": "|ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩",
+        "source_status": "Not started",
+        "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      },
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "§2.1.1",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
+    },
+    "concept-b09be07e2db315da": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.48",
+      "formula_latex": "\\sigma_x=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix},\\quad\\sigma_y=\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix},\\quad\\sigma_z=\\begin{pmatrix}1&0\\\\0&-1\\end{pmatrix}",
+      "telegram_rendering_input": "\\(\\sigma_x=\\begin{pmatrix}0&amp;1\\\\1&amp;0\\end{pmatrix},\\quad\\sigma_y=\\begin{pmatrix}0&amp;-i\\\\i&amp;0\\end{pmatrix},\\quad\\sigma_z=\\begin{pmatrix}1&amp;0\\\\0&amp;-1\\end{pmatrix}\\)"
+    },
+    "concept-36e0507fcc738744": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.18–2.19",
+      "formula_latex": "\\sigma_z|0\\rangle=|0\\rangle,\\quad\\sigma_z|1\\rangle=-|1\\rangle",
+      "telegram_rendering_input": "\\(\\sigma_z|0\\rangle=|0\\rangle,\\quad\\sigma_z|1\\rangle=-|1\\rangle\\)"
+    },
+    "concept-92eed7bbc7e33b0b": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.32",
+      "formula_latex": "\\langle\\psi|\\phi\\rangle=\\sum_{j=0}^{d-1}\\alpha_j^*\\beta_j",
+      "telegram_rendering_input": "\\(\\langle\\psi|\\phi\\rangle=\\sum_{j=0}^{d-1}\\alpha_j^*\\beta_j\\)"
+    },
+    "concept-22a34ea16a095580": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "§2.2.1",
+      "formula_latex": "\\mathcal H\\simeq\\mathbb C^d",
+      "telegram_rendering_input": "\\(\\mathcal H\\simeq\\mathbb C^d\\)"
+    },
+    "concept-bf8de5ad1a6027ac": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.36",
+      "formula_latex": "\\langle j|k\\rangle=\\delta_{j,k}",
+      "telegram_rendering_input": "\\(\\langle j|k\\rangle=\\delta_{j,k}\\)"
+    },
+    "concept-886cf7d886161ff6": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.37",
+      "formula_latex": "\\sum_{j=0}^{d-1}|j\\rangle\\langle j|=\\mathbf 1",
+      "telegram_rendering_input": "\\(\\sum_{j=0}^{d-1}|j\\rangle\\langle j|=\\mathbf 1\\)"
+    },
+    "concept-8c11844c2bc44723": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.43",
+      "formula_latex": "A=A^\\dagger",
+      "telegram_rendering_input": "\\(A=A^\\dagger\\)"
+    },
+    "concept-cdc19d243f5759f8": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.53",
+      "formula_latex": "[A,B]=AB-BA",
+      "telegram_rendering_input": "\\([A,B]=AB-BA\\)"
+    },
+    "concept-a93f573358198430": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.54",
+      "formula_latex": "[A,B]=0",
+      "telegram_rendering_input": "\\([A,B]=0\\)"
+    },
+    "concept-bbf3c48cc71c54f5": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.55",
+      "formula_latex": "A=\\sum_{j=0}^{d-1}\\lambda_j|\\phi_j\\rangle\\langle\\phi_j|",
+      "telegram_rendering_input": "\\(A=\\sum_{j=0}^{d-1}\\lambda_j|\\phi_j\\rangle\\langle\\phi_j|\\)"
+    },
+    "concept-09a186cab399efc8": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.56–2.57",
+      "formula_latex": "A=UDU^\\dagger,\\quad UU^\\dagger=U^\\dagger U=\\mathbf 1",
+      "telegram_rendering_input": "\\(A=UDU^\\dagger,\\quad UU^\\dagger=U^\\dagger U=\\mathbf 1\\)"
+    },
+    "concept-542f4c8d6b6a2499": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.61",
+      "formula_latex": "\\psi(x)=\\langle x|\\psi\\rangle",
+      "telegram_rendering_input": "\\(\\psi(x)=\\langle x|\\psi\\rangle\\)"
+    },
+    "concept-dba9c32b1c18c163": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.64",
+      "formula_latex": "\\rho(x)=|\\psi(x)|^2",
+      "telegram_rendering_input": "\\(\\rho(x)=|\\psi(x)|^2\\)"
+    },
+    "concept-39a94ace7414535f": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.67",
+      "formula_latex": "|\\psi_1+\\psi_2|^2=|\\psi_1|^2+|\\psi_2|^2+\\psi_1^*\\psi_2+\\psi_1\\psi_2^*",
+      "telegram_rendering_input": "\\(|\\psi_1+\\psi_2|^2=|\\psi_1|^2+|\\psi_2|^2+\\psi_1^*\\psi_2+\\psi_1\\psi_2^*\\)"
+    },
+    "concept-8368a5a345ca44e5": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.70",
+      "formula_latex": "[X,P]=i\\hbar",
+      "telegram_rendering_input": "\\([X,P]=i\\hbar\\)"
+    },
+    "concept-9b780082d6105349": {
+      "previous_import": {
+        "id": "concept-9b780082d6105349",
+        "section_id": "2.2.5",
+        "front": "Fourier transformation",
+        "definition": "Connects position and momentum wave functions",
+        "key_rule": "φ(p) = (1/√(2πℏ)) ∫ e^(−ipx/ℏ) ψ(x) dx",
+        "source_status": "Not started",
+        "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      },
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.72",
+      "formula_latex": "\\psi(x)=\\frac{1}{\\sqrt{2\\pi}}\\int_{-\\infty}^{\\infty}\\tilde\\psi(k)e^{ikx}\\,dk",
+      "telegram_rendering_input": "\\(\\psi(x)=\\frac{1}{\\sqrt{2\\pi}}\\int_{-\\infty}^{\\infty}\\tilde\\psi(k)e^{ikx}\\,dk\\)"
+    },
+    "concept-1994d6055ad1f917": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.81",
+      "formula_latex": "\\mathcal H=\\mathcal H_1\\otimes\\mathcal H_2",
+      "telegram_rendering_input": "\\(\\mathcal H=\\mathcal H_1\\otimes\\mathcal H_2\\)"
+    },
+    "concept-9bf0cc4d9c3313c6": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.87",
+      "formula_latex": "p_j=|\\langle\\psi|\\phi_j\\rangle|^2",
+      "telegram_rendering_input": "\\(p_j=|\\langle\\psi|\\phi_j\\rangle|^2\\)"
+    },
+    "concept-7bcd3378b1235038": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.94",
+      "formula_latex": "|\\psi_k\\rangle=\\frac{\\pi_k|\\psi\\rangle}{\\sqrt{p_k}}",
+      "telegram_rendering_input": "\\(|\\psi_k\\rangle=\\frac{\\pi_k|\\psi\\rangle}{\\sqrt{p_k}}\\)"
+    },
+    "concept-c52dc23213cf6e50": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.95",
+      "formula_latex": "\\langle A\\rangle=\\langle\\psi|A|\\psi\\rangle",
+      "telegram_rendering_input": "\\(\\langle A\\rangle=\\langle\\psi|A|\\psi\\rangle\\)"
+    },
+    "concept-ba954034e60f96df": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.100",
+      "formula_latex": "|\\langle+|0\\rangle|^2=\\frac12",
+      "telegram_rendering_input": "\\(|\\langle+|0\\rangle|^2=\\frac12\\)"
+    },
+    "concept-cc22acf489058ef1": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.102",
+      "formula_latex": "(\\Delta A)^2=\\langle(A-\\langle A\\rangle)^2\\rangle=\\langle A^2\\rangle-\\langle A\\rangle^2",
+      "telegram_rendering_input": "\\((\\Delta A)^2=\\langle(A-\\langle A\\rangle)^2\\rangle=\\langle A^2\\rangle-\\langle A\\rangle^2\\)"
+    },
+    "concept-6a256a8567d518a7": {
+      "previous_import": {
+        "id": "concept-6a256a8567d518a7",
+        "section_id": "2.3.4",
+        "front": "Robertson uncertainty relation",
+        "definition": "Lower bound on product of standard deviations",
+        "key_rule": "ΔA ΔB ≥ ½|⟨[A,B]⟩|",
+        "source_status": "Not started",
+        "source_file": "QM_Chapter2_Concept_Cards_Updated.xlsx"
+      },
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.111",
+      "formula_latex": "\\Delta A\\,\\Delta B\\ge\\frac12\\left|\\langle\\psi|[A,B]|\\psi\\rangle\\right|",
+      "telegram_rendering_input": "\\(\\Delta A\\,\\Delta B\\ge\\frac12\\left|\\langle\\psi|[A,B]|\\psi\\rangle\\right|\\)"
+    },
+    "concept-ac00226484b01e5d": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.112",
+      "formula_latex": "\\Delta X\\,\\Delta P\\ge\\frac{\\hbar}{2}",
+      "telegram_rendering_input": "\\(\\Delta X\\,\\Delta P\\ge\\frac{\\hbar}{2}\\)"
+    },
+    "concept-edecf06d42dd8915": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.9–2.10",
+      "formula_latex": "|\\times\\rangle=\\frac{|0\\rangle+i|1\\rangle}{\\sqrt2},\\quad|\\odot\\rangle=\\frac{|0\\rangle-i|1\\rangle}{\\sqrt2}",
+      "telegram_rendering_input": "\\(|\\times\\rangle=\\frac{|0\\rangle+i|1\\rangle}{\\sqrt2},\\quad|\\odot\\rangle=\\frac{|0\\rangle-i|1\\rangle}{\\sqrt2}\\)"
+    },
+    "concept-fdc6a036d350cf95": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.111",
+      "formula_latex": "\\Delta A\\,\\Delta B\\ge\\frac12\\left|\\langle\\psi|[A,B]|\\psi\\rangle\\right|",
+      "telegram_rendering_input": "\\(\\Delta A\\,\\Delta B\\ge\\frac12\\left|\\langle\\psi|[A,B]|\\psi\\rangle\\right|\\)"
+    },
+    "concept-3b651a1aa70d533f": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "§2.3.4 p.22",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
+    },
+    "concept-3d0f572c7d1209cd": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "§2.3.4 p.22",
+      "formula_latex": "",
+      "telegram_rendering_input": ""
+    },
+    "concept-bafe49d2c0175ac7": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.103–2.104",
+      "formula_latex": "C=A-\\langle A\\rangle,\\quad D=B-\\langle B\\rangle",
+      "telegram_rendering_input": "\\(C=A-\\langle A\\rangle,\\quad D=B-\\langle B\\rangle\\)"
+    },
+    "concept-045d0deda5e0acc3": {
+      "source_files": [
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+        "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx"
+      ],
+      "equation_reference": "2.110",
+      "formula_latex": "|\\langle\\psi|CD|\\psi\\rangle|^2\\le\\langle\\psi|C^2|\\psi\\rangle\\langle\\psi|D^2|\\psi\\rangle",
+      "telegram_rendering_input": "\\(|\\langle\\psi|CD|\\psi\\rangle|^2\\le\\langle\\psi|C^2|\\psi\\rangle\\langle\\psi|D^2|\\psi\\rangle\\)"
+    }
+  },
+  "named_concepts_reference": [
+    {
+      "name": "Bloch sphere",
+      "script_reference": "§2.1.1",
+      "meaning": "Representation of pure spin-½ states as points on a unit sphere"
+    },
+    {
+      "name": "Dirac notation",
+      "script_reference": "§2.2.1",
+      "meaning": "Bra–ket notation"
+    },
+    {
+      "name": "Hilbert space",
+      "script_reference": "§2.2.1",
+      "meaning": "Space of state vectors"
+    },
+    {
+      "name": "Ray",
+      "script_reference": "2.38",
+      "meaning": "Physical state is unaffected by global phase"
+    },
+    {
+      "name": "Superposition principle",
+      "script_reference": "§2.2.1",
+      "meaning": "Normalized linear combinations of states"
+    },
+    {
+      "name": "Observable",
+      "script_reference": "2.43",
+      "meaning": "Hermitian operator"
+    },
+    {
+      "name": "Commutator",
+      "script_reference": "2.53",
+      "meaning": "AB − BA"
+    },
+    {
+      "name": "Compatible observables",
+      "script_reference": "2.54",
+      "meaning": "Commuting observables"
+    },
+    {
+      "name": "Degenerate eigenvalues",
+      "script_reference": "§2.2.3",
+      "meaning": "Repeated eigenvalues"
+    },
+    {
+      "name": "Wave function",
+      "script_reference": "2.61",
+      "meaning": "Position representation"
+    },
+    {
+      "name": "Fourier transform",
+      "script_reference": "2.72",
+      "meaning": "Connects representations"
+    },
+    {
+      "name": "Tensor product",
+      "script_reference": "2.81",
+      "meaning": "Composite quantum systems"
+    },
+    {
+      "name": "von-Neumann measurement",
+      "script_reference": "§2.3.1",
+      "meaning": "Projective measurement postulate"
+    },
+    {
+      "name": "Projection postulate",
+      "script_reference": "2.89–2.94",
+      "meaning": "Measurement state update"
+    },
+    {
+      "name": "Expectation value",
+      "script_reference": "2.95",
+      "meaning": "Mean measurement outcome"
+    },
+    {
+      "name": "Heisenberg uncertainty relation",
+      "script_reference": "2.111",
+      "meaning": "Uncertainty bound"
+    },
+    {
+      "name": "Preparation uncertainty — first reading",
+      "script_reference": "§2.3.4",
+      "meaning": "Derived using independently prepared systems"
+    },
+    {
+      "name": "Measurement disturbance — second reading",
+      "script_reference": "§2.3.4",
+      "meaning": "Discussed without derivation"
+    },
+    {
+      "name": "Joint generalized measurement — third reading",
+      "script_reference": "§2.3.4",
+      "meaning": "Discussed without derivation"
+    }
+  ],
+  "box_script_rules": [
+    {
+      "name": "Spin-½ state vector",
+      "formula_latex": "|\\psi\\rangle=\\alpha|0\\rangle+\\beta|1\\rangle,\\quad |\\alpha|^2+|\\beta|^2=1",
+      "equation_reference": "2.14, 2.6",
+      "priority": "BOX in script",
+      "renderer_input": "\\(|\\psi\\rangle=\\alpha|0\\rangle+\\beta|1\\rangle,\\quad |\\alpha|^2+|\\beta|^2=1\\)"
+    },
+    {
+      "name": "Superposition principle",
+      "formula_latex": "|\\psi\\rangle=\\sum_{j=0}^{d-1}\\alpha_j|j\\rangle",
+      "equation_reference": "2.28",
+      "priority": "BOX in script",
+      "renderer_input": "\\(|\\psi\\rangle=\\sum_{j=0}^{d-1}\\alpha_j|j\\rangle\\)"
+    },
+    {
+      "name": "Orthonormality",
+      "formula_latex": "\\langle j|k\\rangle=\\delta_{j,k}",
+      "equation_reference": "2.36",
+      "priority": "Important formula / rule",
+      "renderer_input": "\\(\\langle j|k\\rangle=\\delta_{j,k}\\)"
+    },
+    {
+      "name": "Completeness relation",
+      "formula_latex": "\\sum_{j=0}^{d-1}|j\\rangle\\langle j|=\\mathbf 1",
+      "equation_reference": "2.37",
+      "priority": "Important formula / rule",
+      "renderer_input": "\\(\\sum_{j=0}^{d-1}|j\\rangle\\langle j|=\\mathbf 1\\)"
+    },
+    {
+      "name": "Hermitian observables",
+      "formula_latex": "A=A^\\dagger",
+      "equation_reference": "2.43",
+      "priority": "BOX in script",
+      "renderer_input": "\\(A=A^\\dagger\\)"
+    },
+    {
+      "name": "Pauli operators",
+      "formula_latex": "\\sigma_x=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix},\\quad\\sigma_y=\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix},\\quad\\sigma_z=\\begin{pmatrix}1&0\\\\0&-1\\end{pmatrix}",
+      "equation_reference": "2.48",
+      "priority": "BOX in script",
+      "renderer_input": "\\(\\sigma_x=\\begin{pmatrix}0&amp;1\\\\1&amp;0\\end{pmatrix},\\quad\\sigma_y=\\begin{pmatrix}0&amp;-i\\\\i&amp;0\\end{pmatrix},\\quad\\sigma_z=\\begin{pmatrix}1&amp;0\\\\0&amp;-1\\end{pmatrix}\\)"
+    },
+    {
+      "name": "Commutator",
+      "formula_latex": "[A,B]=AB-BA",
+      "equation_reference": "2.53",
+      "priority": "BOX in script",
+      "renderer_input": "\\([A,B]=AB-BA\\)"
+    },
+    {
+      "name": "Compatible observables",
+      "formula_latex": "[A,B]=0",
+      "equation_reference": "2.54",
+      "priority": "BOX in script",
+      "renderer_input": "\\([A,B]=0\\)"
+    },
+    {
+      "name": "Spectral theorem",
+      "formula_latex": "A=\\sum_{j=0}^{d-1}\\lambda_j|\\phi_j\\rangle\\langle\\phi_j|",
+      "equation_reference": "2.55",
+      "priority": "BOX in script",
+      "renderer_input": "\\(A=\\sum_{j=0}^{d-1}\\lambda_j|\\phi_j\\rangle\\langle\\phi_j|\\)"
+    },
+    {
+      "name": "Unitary diagonalization",
+      "formula_latex": "A=UDU^\\dagger,\\quad UU^\\dagger=U^\\dagger U=\\mathbf 1",
+      "equation_reference": "2.56–2.57",
+      "priority": "BOX in script",
+      "renderer_input": "\\(A=UDU^\\dagger,\\quad UU^\\dagger=U^\\dagger U=\\mathbf 1\\)"
+    },
+    {
+      "name": "Wave function",
+      "formula_latex": "\\psi(x)=\\langle x|\\psi\\rangle",
+      "equation_reference": "2.61",
+      "priority": "BOX in script",
+      "renderer_input": "\\(\\psi(x)=\\langle x|\\psi\\rangle\\)"
+    },
+    {
+      "name": "Position probability density",
+      "formula_latex": "\\rho(x)=|\\psi(x)|^2",
+      "equation_reference": "2.64",
+      "priority": "BOX in script",
+      "renderer_input": "\\(\\rho(x)=|\\psi(x)|^2\\)"
+    },
+    {
+      "name": "Canonical commutation relation",
+      "formula_latex": "[X,P]=i\\hbar",
+      "equation_reference": "2.70",
+      "priority": "Important formula / rule",
+      "renderer_input": "\\([X,P]=i\\hbar\\)"
+    },
+    {
+      "name": "Tensor product",
+      "formula_latex": "\\mathcal H=\\mathcal H_1\\otimes\\mathcal H_2",
+      "equation_reference": "2.81",
+      "priority": "BOX in script",
+      "renderer_input": "\\(\\mathcal H=\\mathcal H_1\\otimes\\mathcal H_2\\)"
+    },
+    {
+      "name": "Born rule",
+      "formula_latex": "p_j=|\\langle\\psi|\\phi_j\\rangle|^2",
+      "equation_reference": "2.87",
+      "priority": "BOX in script",
+      "renderer_input": "\\(p_j=|\\langle\\psi|\\phi_j\\rangle|^2\\)"
+    },
+    {
+      "name": "Projection postulate",
+      "formula_latex": "|\\psi_k\\rangle=\\frac{\\pi_k|\\psi\\rangle}{\\sqrt{p_k}}",
+      "equation_reference": "2.94",
+      "priority": "BOX in script",
+      "renderer_input": "\\(|\\psi_k\\rangle=\\frac{\\pi_k|\\psi\\rangle}{\\sqrt{p_k}}\\)"
+    },
+    {
+      "name": "Expectation value",
+      "formula_latex": "\\langle A\\rangle=\\langle\\psi|A|\\psi\\rangle",
+      "equation_reference": "2.95",
+      "priority": "BOX in script",
+      "renderer_input": "\\(\\langle A\\rangle=\\langle\\psi|A|\\psi\\rangle\\)"
+    },
+    {
+      "name": "Variance",
+      "formula_latex": "(\\Delta A)^2=\\langle(A-\\langle A\\rangle)^2\\rangle=\\langle A^2\\rangle-\\langle A\\rangle^2",
+      "equation_reference": "2.102",
+      "priority": "Important formula / rule",
+      "renderer_input": "\\((\\Delta A)^2=\\langle(A-\\langle A\\rangle)^2\\rangle=\\langle A^2\\rangle-\\langle A\\rangle^2\\)"
+    },
+    {
+      "name": "Heisenberg uncertainty relation (first reading)",
+      "formula_latex": "\\Delta A\\,\\Delta B\\ge\\frac12\\left|\\langle\\psi|[A,B]|\\psi\\rangle\\right|",
+      "equation_reference": "2.111",
+      "priority": "BOX in script",
+      "renderer_input": "\\(\\Delta A\\,\\Delta B\\ge\\frac12\\left|\\langle\\psi|[A,B]|\\psi\\rangle\\right|\\)"
+    },
+    {
+      "name": "Position–momentum uncertainty",
+      "formula_latex": "\\Delta X\\,\\Delta P\\ge\\frac{\\hbar}{2}",
+      "equation_reference": "2.112",
+      "priority": "Important formula / rule",
+      "renderer_input": "\\(\\Delta X\\,\\Delta P\\ge\\frac{\\hbar}{2}\\)"
+    }
+  ],
+  "workbook_source_caveats": [
+    {
+      "topic": "Source",
+      "note": "Professor Jens Eisert, Quantum Mechanics, Chapter 2, Quantum states and observables, pp. 3–22."
+    },
+    {
+      "topic": "Scope",
+      "note": "Content grounded in the uploaded Chapter 2 script; no external uncertainty bounds added."
+    },
+    {
+      "topic": "Three readings",
+      "note": "First reading derived (2.102–2.112); second and third described only, with potentially different prefactors."
+    },
+    {
+      "topic": "LaTeX rendering",
+      "note": "Telegram does not natively typeset LaTeX; convert with a renderer to an image before sending. HTML code display is not mathematical rendering."
+    },
+    {
+      "topic": "Fourier convention",
+      "note": "Original card used momentum p and ℏ; replaced with the k-space inverse Fourier expression printed in the script (2.72)."
+    },
+    {
+      "topic": "Bloch sphere",
+      "note": "Original card gave a theta/phi parameterization not printed in script; removed it from the formula field."
+    },
+    {
+      "topic": "Source accuracy",
+      "note": "The script contains some typographical issues; equation references are preserved and should be checked against the PDF."
+    }
+  ],
+  "workbook_sources": [
+    {
+      "filename": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX.xlsx",
+      "sha256": "116921378cba09692c692163f395e40c2dc767785743b01a2f0f8669459a2a16"
+    },
+    {
+      "filename": "QM_Chapter2_Concepts_BOX_Rules_Telegram_LaTeX copy.xlsx",
+      "sha256": "116921378cba09692c692163f395e40c2dc767785743b01a2f0f8669459a2a16"
+    }
+  ],
+  "workbook_import_note": "Both supplied workbooks are byte-identical; 34 unique learning cards imported once. All previous IDs retained, including the renamed Robertson/Heisenberg first-reading card. Reference/BOX sheets are metadata, not duplicate questions. Script and correction claims remain workbook-supplied."
 }

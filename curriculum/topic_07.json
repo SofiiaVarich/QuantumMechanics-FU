@@ -727,5 +727,13 @@
       "equation_reference": "7.62",
       "source_reference": "QMChapter7(1).pdf"
     }
+  },
+  "content_review_required": {
+    "C7-017": "Computational basis spin-up/spin-down labels depend on the script Pauli-matrix convention; verify the stated basis ordering.",
+    "C7-018": "Computational basis spin-up/spin-down labels depend on the script Pauli-matrix convention; verify the stated basis ordering.",
+    "C7-019": "Computational basis spin-up/spin-down labels depend on the script Pauli-matrix convention; verify the stated basis ordering.",
+    "C7-020": "Computational basis spin-up/spin-down labels depend on the script Pauli-matrix convention; verify the stated basis ordering.",
+    "C7-021": "Computational basis spin-up/spin-down labels depend on the script Pauli-matrix convention; verify the stated basis ordering.",
+    "C7-022": "Computational basis spin-up/spin-down labels depend on the script Pauli-matrix convention; verify the stated basis ordering."
   }
 }

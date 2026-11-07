@@ -281,8 +281,8 @@
       "id": "C9-025",
       "section_id": "9.4",
       "front": "Extremal contradiction",
-      "definition": "Lecture’s illustration that the algebraic maximum cannot occur.",
-      "key_rule": "â₁=b̂₁=b̂₂=â₂=−b̂₂ is impossible",
+      "definition": "For deterministic ±1 assignments, the conditions needed to attain the algebraic CHSH maximum contradict each other. Zero-valued stochastic conditional means do not satisfy this deterministic premise.",
+      "key_rule": "a₁ = b₁ = b₂ = a₂ = −b₂ is impossible for aᵢ,bⱼ ∈ {−1,+1}",
       "source_status": "Not started",
       "source_file": "QM_Chapter9_Concept_Learning_Cards.xlsx"
     },
@@ -524,6 +524,15 @@
       "original_section_title": "9.5 Violation of the Bell inequalities",
       "equation_reference": "9.5 (interpretation)",
       "source_reference": "QMChapter9(1).pdf"
+    }
+  },
+  "content_corrections": {
+    "C9-025": {
+      "original": {
+        "key_rule": "â₁=b̂₁=b̂₂=â₂=−b̂₂ is impossible",
+        "definition": "Lecture’s illustration that the algebraic maximum cannot occur."
+      },
+      "reason": "Mathematical consistency audit: explicit units, assumptions, or correction; not a verified lecture erratum."
     }
   }
 }

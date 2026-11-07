@@ -114,7 +114,7 @@
       "id": "EXP-008",
       "section_id": "11",
       "front": "Wien displacement",
-      "definition": "Peak wavelength times temperature",
+      "definition": "Temperature times the peak wavelength of the per-wavelength blackbody spectrum; the per-frequency peak is different.",
       "key_rule": "λ_max T = b",
       "source_status": "Not started",
       "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
@@ -218,6 +218,14 @@
       "source_status": "Standard conceptual explanation; not verified against Franke slides",
       "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
       "display_notation": "Plain-text equivalent; original formula retained"
+    }
+  },
+  "content_corrections": {
+    "EXP-008": {
+      "original": {
+        "definition": "Peak wavelength times temperature"
+      },
+      "reason": "Mathematical consistency audit: explicit units, assumptions, or correction; not a verified lecture erratum."
     }
   }
 }

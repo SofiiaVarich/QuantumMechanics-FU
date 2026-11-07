@@ -74,7 +74,7 @@
       "definition": "Angular momentum is the cross product of position and momentum operators.",
       "key_rule": "L = X × P",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-002",
@@ -83,7 +83,7 @@
       "definition": "Component form using the antisymmetric Levi-Civita tensor.",
       "key_rule": "Lᵢ = Σⱼₖ εᵢⱼₖ XⱼPₖ",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-003",
@@ -92,7 +92,7 @@
       "definition": "Encodes the orientation of a permutation.",
       "key_rule": "εᵢⱼₖ = +1 (even), −1 (odd), 0 (repeated indices)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-004",
@@ -101,7 +101,7 @@
       "definition": "Different angular momentum components generally do not commute.",
       "key_rule": "[Lᵢ,Lⱼ] = iℏ Σₖ εᵢⱼₖ Lₖ",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-005",
@@ -110,7 +110,7 @@
       "definition": "Angular momentum acts as the generator of rotations of position.",
       "key_rule": "[Lᵢ,Xⱼ] = iℏ Σₖ εᵢⱼₖ Xₖ",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-006",
@@ -119,7 +119,7 @@
       "definition": "Angular momentum acts as the generator of rotations of momentum.",
       "key_rule": "[Lᵢ,Pⱼ] = iℏ Σₖ εᵢⱼₖ Pₖ",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-007",
@@ -128,7 +128,7 @@
       "definition": "The rotation operator acts on a state vector.",
       "key_rule": "|ψ⟩ ↦ R(n,θ)|ψ⟩",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-008",
@@ -137,7 +137,7 @@
       "definition": "The rotated wave function is evaluated at inverse-rotated coordinates.",
       "key_rule": "(R(n,θ)ψ)(x) = ψ(R(n,θ)⁻¹x)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-009",
@@ -146,7 +146,7 @@
       "definition": "Angular momentum generates spatial rotations.",
       "key_rule": "R(n,θ) = exp(−iθ n·L/ℏ)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-010",
@@ -155,7 +155,7 @@
       "definition": "L² is compatible with every component of angular momentum.",
       "key_rule": "[L²,Lⱼ] = 0",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-011",
@@ -164,7 +164,7 @@
       "definition": "Operators that raise or lower the magnetic quantum number.",
       "key_rule": "L± = L₁ ± iL₂",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-012",
@@ -173,7 +173,7 @@
       "definition": "The raising and lowering operators are adjoints.",
       "key_rule": "(L±)† = L∓",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-013",
@@ -182,7 +182,7 @@
       "definition": "Commutation relations underlying the angular momentum spectrum.",
       "key_rule": "[L₃,L±] = ±ℏL±; [L₊,L₋] = 2ℏL₃",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-014",
@@ -191,7 +191,7 @@
       "definition": "Relates total angular momentum to ladder operators.",
       "key_rule": "L² = ½(L₊L₋ + L₋L₊) + L₃²",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-015",
@@ -200,7 +200,7 @@
       "definition": "Defines the total angular momentum quantum number l.",
       "key_rule": "L²|l,m⟩ = ℏ²l(l+1)|l,m⟩",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-016",
@@ -209,7 +209,7 @@
       "definition": "Defines the z-component quantum number m.",
       "key_rule": "L₃|l,m⟩ = ℏm|l,m⟩",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-017",
@@ -218,7 +218,7 @@
       "definition": "Changes m by one without changing l.",
       "key_rule": "L±|l,m⟩ = ℏ√[l(l+1)−m(m±1)] |l,m±1⟩",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-018",
@@ -227,7 +227,7 @@
       "definition": "Allowed magnetic quantum numbers lie between −l and l.",
       "key_rule": "−l ≤ m ≤ l",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-019",
@@ -236,7 +236,7 @@
       "definition": "The raising operator annihilates the state with maximal m.",
       "key_rule": "L₊|l,l⟩ = 0",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-020",
@@ -245,16 +245,16 @@
       "definition": "The lowering operator annihilates the state with minimal m.",
       "key_rule": "L₋|l,−l⟩ = 0",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-021",
       "section_id": "5.1.3",
-      "front": "Angular momentum quantum numbers",
-      "definition": "General angular momentum algebra permits integer and half-integer l.",
-      "key_rule": "l = 0, ½, 1, 3/2, …; m = −l, −l+1, …, l",
+      "front": "General vs orbital angular momentum quantum numbers",
+      "definition": "The abstract angular-momentum algebra allows half-integer values, but single-valued scalar orbital wavefunctions only allow integer l. Spin can be half-integer.",
+      "key_rule": "General j = 0, ½, 1, 3/2, …; orbital l = 0, 1, 2, …; m = −j,…,j (or −l,…,l)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-022",
@@ -263,7 +263,7 @@
       "definition": "Differential-operator representation of orbital angular momentum.",
       "key_rule": "L = (ℏ/i) X × ∇",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-023",
@@ -272,7 +272,7 @@
       "definition": "Spherical-coordinate gradient.",
       "key_rule": "∇ = eᵣ∂ᵣ + eθ(1/r)∂θ + eφ[1/(r sinθ)]∂φ",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-024",
@@ -281,7 +281,7 @@
       "definition": "z-component of angular momentum in the position representation.",
       "key_rule": "L₃ = (ℏ/i)∂/∂φ",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-025",
@@ -290,7 +290,7 @@
       "definition": "Separates azimuthal and polar dependence.",
       "key_rule": "ψₗₘ(θ,φ) = Φₘ(φ) Θₗₘ(θ)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-026",
@@ -299,7 +299,7 @@
       "definition": "Angular dependence associated with magnetic quantum number m.",
       "key_rule": "Φₘ(φ) = exp(imφ)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-027",
@@ -308,7 +308,7 @@
       "definition": "For orbital wave functions, periodicity forces integer m and l.",
       "key_rule": "Φₘ(φ+2π) = Φₘ(φ)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-028",
@@ -317,16 +317,16 @@
       "definition": "Angular eigenfunctions of L² and L₃; expressed using associated Legendre functions.",
       "key_rule": "Yₗₘ(θ,φ) = ψₗₘ(θ,φ)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-029",
       "section_id": "5.1.4",
       "front": "Associated Legendre functions",
-      "definition": "Functions used to construct spherical harmonics; source convention.",
+      "definition": "Associated Legendre functions with the sign convention of the script; standard references may place a Condon–Shortley factor (−1)^m in their definition.",
       "key_rule": "Pₗₘ(x) = (1−x²)^(m/2) (dᵐ/dxᵐ)Pₗ(x)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-030",
@@ -335,7 +335,7 @@
       "definition": "Rodrigues formula.",
       "key_rule": "Pₗ(x) = [1/(2ˡl!)] (dˡ/dxˡ)(x²−1)ˡ",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-031",
@@ -344,7 +344,7 @@
       "definition": "Recursion between adjacent polynomial degrees.",
       "key_rule": "(l+1)Pₗ₊₁ = (2l+1)xPₗ − lPₗ₋₁",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-032",
@@ -353,7 +353,7 @@
       "definition": "Low-degree Legendre polynomials.",
       "key_rule": "P₀=1; P₁=x; P₂=(3x²−1)/2; P₃=(5x³−3x)/2",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-033",
@@ -362,7 +362,7 @@
       "definition": "Different angular momentum eigenfunctions are orthonormal.",
       "key_rule": "∫₀^π sinθ dθ ∫₀^{2π} dφ Yₗₘ*Yₐᵦ = δₗₐδₘᵦ",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-034",
@@ -371,7 +371,7 @@
       "definition": "Relation between positive and negative m.",
       "key_rule": "Yₗ,₋ₘ = (−1)ᵐ Yₗₘ*",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-035",
@@ -380,7 +380,7 @@
       "definition": "Spectroscopic labels of orbital angular momentum.",
       "key_rule": "l=0: s; l=1: p; l=2: d; l=3: f",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-036",
@@ -389,7 +389,7 @@
       "definition": "Rotationally invariant Hamiltonian with R=|X|.",
       "key_rule": "H = P²/(2m) + V(R)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-037",
@@ -398,7 +398,7 @@
       "definition": "Radial momentum in the position representation.",
       "key_rule": "Pᵣ = (ℏ/i)(∂/∂r + 1/r)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-038",
@@ -407,7 +407,7 @@
       "definition": "Separates radial wave function and spherical harmonic.",
       "key_rule": "ψ(r,θ,φ) = R(r)Yₗₘ(θ,φ)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-039",
@@ -416,7 +416,7 @@
       "definition": "Angular momentum is conserved for a central potential.",
       "key_rule": "[H,L] = [H,L²] = 0",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-040",
@@ -425,7 +425,7 @@
       "definition": "Substitution simplifying the radial Schrödinger equation.",
       "key_rule": "R(r) = u(r)/r",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-041",
@@ -434,7 +434,7 @@
       "definition": "One-dimensional radial eigenvalue equation.",
       "key_rule": "[−ℏ²/(2m) d²/dr² + ℏ²l(l+1)/(2mr²) + V(r)]u = Eu",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-042",
@@ -443,7 +443,7 @@
       "definition": "Central potential plus centrifugal term.",
       "key_rule": "V_eff(r) = V(r) + ℏ²l(l+1)/(2mr²)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-043",
@@ -452,7 +452,7 @@
       "definition": "Scaled coordinate for bound-state solutions.",
       "key_rule": "ξ = κr; κ = √(−2mE)/ℏ",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-044",
@@ -461,7 +461,7 @@
       "definition": "Attractive Coulomb potential in the lecture's unit convention.",
       "key_rule": "V(r) = −e₀²/r",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-045",
@@ -470,7 +470,7 @@
       "definition": "Factors out asymptotic behavior of the radial solution.",
       "key_rule": "u(ξ) = ξ^(l+1)e^(−ξ) w(ξ)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-046",
@@ -479,7 +479,7 @@
       "definition": "Power-series ansatz for the remaining radial function.",
       "key_rule": "w(ξ) = Σⱼ₌₀^∞ aⱼ ξʲ",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-047",
@@ -488,7 +488,7 @@
       "definition": "Recurrence relation obtained from the radial differential equation.",
       "key_rule": "aⱼ₊₁ = [2(j+l+1)−ξ₀]/[(j+1)(j+2l+2)] · aⱼ",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-048",
@@ -497,7 +497,7 @@
       "definition": "Condition ensuring the radial series terminates.",
       "key_rule": "ξ₀ = 2(N+l+1)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-049",
@@ -506,7 +506,7 @@
       "definition": "Relates principal, radial and orbital quantum numbers.",
       "key_rule": "n = N+l+1",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-050",
@@ -515,7 +515,7 @@
       "definition": "Bound-state energies depend only on n in the model.",
       "key_rule": "Eₙ = −me₀⁴/(2ℏ²n²), n=1,2,…",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-051",
@@ -524,7 +524,7 @@
       "definition": "Allowed angular momentum values for each principal quantum number.",
       "key_rule": "l = 0,1,…,n−1; m = −l,…,l",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-052",
@@ -533,16 +533,16 @@
       "definition": "Orbital degeneracy of each n level, without spin.",
       "key_rule": "Σₗ₌₀ⁿ⁻¹(2l+1) = n²",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-053",
       "section_id": "5.2.3",
       "front": "Associated Laguerre polynomial solution",
-      "definition": "Radial polynomial solution; associated Laguerre convention in the script.",
+      "definition": "Associated Laguerre polynomial appearing in the hydrogen radial solution; check argument/scaling conventions against the normalized radial formula (5.104).",
       "key_rule": "w(ξ) = A Lₙ₋ₗ₋₁^(2l+1)(ξ)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-054",
@@ -551,7 +551,7 @@
       "definition": "Hydrogen eigenfunction separates into radial and angular parts.",
       "key_rule": "ψₙₗₘ(r,θ,φ) = Rₙₗ(r)Yₗₘ(θ,φ)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-055",
@@ -560,7 +560,7 @@
       "definition": "Normalized radial expression is given in equation (5.104).",
       "key_rule": "Rₙₗ(r) ∝ (2κr)ˡ exp(−κr) Lₙ₋ₗ₋₁^(2l+1)(2κr)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-056",
@@ -569,7 +569,7 @@
       "definition": "Inverse characteristic radius of the nth hydrogen level.",
       "key_rule": "κ = 1/(na)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-057",
@@ -578,7 +578,7 @@
       "definition": "Characteristic atomic length in the lecture's Coulomb convention.",
       "key_rule": "a = ℏ²/(me₀²)",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-058",
@@ -587,7 +587,7 @@
       "definition": "Number of positive zeros in the radial part.",
       "key_rule": "N = n−l−1",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     },
     {
       "id": "C5-059",
@@ -596,304 +596,1074 @@
       "definition": "Hydrogen spectral lines arise from differences between energy levels.",
       "key_rule": "Lyman, Balmer, Paschen",
       "source_status": "Not started",
-      "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-060",
+      "section_id": "5.1.1",
+      "front": "Angular momentum algebra — key law",
+      "definition": "Components do not commute; cyclic permutations yield the remaining relations.",
+      "key_rule": "[Lₓ,Lᵧ]=iℏL_z (cyclic permutations)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-061",
+      "section_id": "5.1.2",
+      "front": "Infinitesimal rotation rule",
+      "definition": "First-order approximation to the unitary rotation operator.",
+      "key_rule": "R(n,δθ) ≈ I − i δθ (n·L)/ℏ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-062",
+      "section_id": "5.1.3",
+      "front": "Angular momentum magnitude",
+      "definition": "Magnitude corresponding to the eigenvalue of L².",
+      "key_rule": "|L| = ℏ√[l(l+1)]",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-063",
+      "section_id": "5.1.3",
+      "front": "Orbital magnetic quantum number rule",
+      "definition": "Each orbital l multiplet contains 2l+1 orientations.",
+      "key_rule": "m ∈ {−l,−l+1,…,l}; number of m states = 2l+1",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-064",
+      "section_id": "5.1.3",
+      "front": "Ladder operator identities",
+      "definition": "Useful for deriving normalized raising and lowering amplitudes.",
+      "key_rule": "L₋L₊ = L² − L_z² − ℏL_z; L₊L₋ = L² − L_z² + ℏL_z",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-065",
+      "section_id": "5.1.4",
+      "front": "Orbital z-component in spherical coordinates",
+      "definition": "Azimuthal generator of rotations.",
+      "key_rule": "L_z = −iℏ ∂/∂φ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-066",
+      "section_id": "5.1.4",
+      "front": "Orbital ladder operators in spherical coordinates",
+      "definition": "Standard angular differential representation; lecture (5.39) appears to have θ in the exponential instead of φ.",
+      "key_rule": "L± = ℏ e^(±iφ) (±∂/∂θ + i cotθ ∂/∂φ)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-067",
+      "section_id": "5.1.4",
+      "front": "Angular Laplacian and L²",
+      "definition": "Angular part of the Laplacian on a sphere.",
+      "key_rule": "L² = −ℏ²[(1/sinθ)∂θ(sinθ∂θ) + (1/sin²θ)∂²φ]",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-068",
+      "section_id": "5.1.4",
+      "front": "Spherical harmonic eigenvalue equations",
+      "definition": "Spherical harmonics diagonalize the two compatible angular momentum operators.",
+      "key_rule": "L²Y_lm = ℏ²l(l+1)Y_lm; L_zY_lm = ℏmY_lm",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-069",
+      "section_id": "5.1.4",
+      "front": "Spherical harmonics normalization",
+      "definition": "Normalization on the unit sphere.",
+      "key_rule": "∫|Y_lm(θ,φ)|² dΩ = 1; dΩ = sinθ dθ dφ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-070",
+      "section_id": "5.1.4",
+      "front": "Spherical harmonics completeness",
+      "definition": "Completeness of the angular basis; delta is with respect to dΩ.",
+      "key_rule": "Σ_l=0^∞ Σ_m=−l^l Y_lm(Ω)Y_lm*(Ω′) = δ(Ω−Ω′)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-071",
+      "section_id": "5.1.4",
+      "front": "First spherical harmonic",
+      "definition": "Constant angular wavefunction for s orbitals.",
+      "key_rule": "Y_00 = 1/√(4π)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-072",
+      "section_id": "5.1.4",
+      "front": "p-orbital angular harmonic",
+      "definition": "Example of a normalized p-orbital angular function.",
+      "key_rule": "Y_10 = √(3/4π) cosθ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-073",
+      "section_id": "5.2.1",
+      "front": "Central-force conservation law",
+      "definition": "Angular momentum is conserved for rotationally invariant scalar potentials.",
+      "key_rule": "[H,L_i]=0; d⟨L_i⟩/dt = 0 (time-independent H)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-074",
+      "section_id": "5.2.1",
+      "front": "Radial probability normalization",
+      "definition": "Radial wavefunction normalized when spherical harmonics are normalized.",
+      "key_rule": "∫₀^∞ |R_nl(r)|²r²dr = ∫₀^∞ |u_nl(r)|²dr = 1",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-075",
+      "section_id": "5.2.1",
+      "front": "Centrifugal barrier",
+      "definition": "Positive effective barrier for l>0; vanishes for s states.",
+      "key_rule": "V_cent(r)=ℏ²l(l+1)/(2mr²)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-076",
+      "section_id": "5.2.2",
+      "front": "Hydrogen bound-state energy scaling",
+      "definition": "Nonrelativistic hydrogen energy; standard SI numerical value.",
+      "key_rule": "E_n = E_1/n²; E_1 ≈ −13.6 eV",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-077",
+      "section_id": "5.2.2",
+      "front": "Hydrogen selection of quantum numbers",
+      "definition": "Allowed hydrogen orbital quantum numbers without spin.",
+      "key_rule": "n≥1; 0≤l≤n−1; −l≤m≤l; n,l,m integers",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-078",
+      "section_id": "5.2.2",
+      "front": "Hydrogen principal shell degeneracy",
+      "definition": "Spin doubles the degeneracy in the simplified spin-independent model.",
+      "key_rule": "g_n = n² (without spin); 2n² (including electron spin)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-079",
+      "section_id": "5.2.2",
+      "front": "Hydrogen photon transition energy",
+      "definition": "Energy conservation relates spectral lines to level differences.",
+      "key_rule": "hν = |E_n − E_n′| = hc/λ",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-080",
+      "section_id": "5.2.3",
+      "front": "Bohr radius in SI units",
+      "definition": "SI convention; lecture uses e₀² as its Coulomb coupling, so a=ℏ²/(m e₀²).",
+      "key_rule": "a₀ = 4πε₀ℏ²/(m_e e²) ≈ 5.29×10⁻¹¹ m",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-081",
+      "section_id": "5.2.3",
+      "front": "Hydrogen radial and angular nodes",
+      "definition": "Node counting for hydrogen orbitals (excluding accidental angular nodal geometry subtleties).",
+      "key_rule": "Radial nodes = n−l−1; angular nodes = l; total nodes = n−1",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-082",
+      "section_id": "5.2.3",
+      "front": "Hydrogen ground-state wavefunction",
+      "definition": "Normalized 1s orbital in the nonrelativistic Coulomb model.",
+      "key_rule": "ψ_100(r) = e^(−r/a₀)/√(πa₀³)",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
+    },
+    {
+      "id": "C5-083",
+      "section_id": "5.2.3",
+      "front": "Hydrogen ground-state radial probability",
+      "definition": "Probability of finding the electron in a spherical shell of radius r.",
+      "key_rule": "P(r)dr = 4r²/a₀³ · e^(−2r/a₀)dr",
+      "source_status": "Not started",
+      "source_file": "QM_Chapter5_Verified_Expanded_Box_Formulas_With_LaTeX.xlsx"
     }
   ],
   "concept_metadata": {
     "C5-001": {
       "original_section_title": "5.1.1 Definition",
       "equation_reference": "5.1",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "L = X × P",
+      "box_reference": "5.1",
+      "formula_latex": "\\mathbf L=\\mathbf X\\times\\mathbf P",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "\\mathbf L=\\mathbf X\\times\\mathbf P",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-002": {
       "original_section_title": "5.1.1 Definition",
       "equation_reference": "5.2",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "L_i=\\sum_{j,k}\\varepsilon_{ijk}X_jP_k",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-003": {
       "original_section_title": "5.1.1 Definition",
       "equation_reference": "5.3",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "\\varepsilon_{ijk}=\\begin{cases}+1&\\text{even permutation}\\\\-1&\\text{odd permutation}\\\\0&\\text{repeated indices}\\end{cases}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-004": {
       "original_section_title": "5.1.1 Definition",
       "equation_reference": "5.4",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "[Lᵢ,Lⱼ] = iℏ Σₖ εᵢⱼₖ Lₖ",
+      "box_reference": "5.4",
+      "formula_latex": "[L_i,L_j]=i\\hbar\\sum_k\\varepsilon_{ijk}L_k",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "[L_i,L_j]=i\\hbar\\sum_k\\varepsilon_{ijk}L_k",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-005": {
       "original_section_title": "5.1.1 Definition",
       "equation_reference": "5.5",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "[L_i,X_j]=i\\hbar\\sum_k\\varepsilon_{ijk}X_k",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-006": {
       "original_section_title": "5.1.1 Definition",
       "equation_reference": "5.6",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "[L_i,P_j]=i\\hbar\\sum_k\\varepsilon_{ijk}P_k",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-007": {
       "original_section_title": "5.1.2 Angular momentum operator as generator of rotations",
       "equation_reference": "5.7",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "|\\psi\\rangle\\mapsto R(\\mathbf n,\\theta)|\\psi\\rangle",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-008": {
       "original_section_title": "5.1.2 Angular momentum operator as generator of rotations",
       "equation_reference": "5.8",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "(R(\\mathbf n,\\theta)\\psi)(\\mathbf x)=\\psi(R(\\mathbf n,\\theta)^{-1}\\mathbf x)",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-009": {
       "original_section_title": "5.1.2 Angular momentum operator as generator of rotations",
       "equation_reference": "5.9",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "R(n,θ) = exp(−iθ n·L/ℏ)",
+      "box_reference": "5.9",
+      "formula_latex": "R(\\mathbf n,\\theta)=\\exp\\!\\left(-\\frac{i\\theta\\,\\mathbf n\\cdot\\mathbf L}{\\hbar}\\right)",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "R(\\mathbf n,\\theta)=\\exp\\!\\left(-\\frac{i\\theta\\,\\mathbf n\\cdot\\mathbf L}{\\hbar}\\right)",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-010": {
       "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
       "equation_reference": "5.10",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "[L²,Lⱼ] = 0",
+      "box_reference": "5.10",
+      "formula_latex": "[L^2,L_j]=0",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "[L^2,L_j]=0",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-011": {
       "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
       "equation_reference": "5.12",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "L± = L₁ ± iL₂",
+      "box_reference": "5.12",
+      "formula_latex": "L_{\\pm}=L_1\\pm iL_2",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "L_{\\pm}=L_1\\pm iL_2",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-012": {
       "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
       "equation_reference": "5.13",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "(L_{\\pm})^\\dagger=L_{\\mp}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-013": {
       "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
       "equation_reference": "5.14–5.15",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "[L₃,L±] = ±ℏL±; [L₊,L₋] = 2ℏL₃",
+      "box_reference": "5.14–5.15",
+      "formula_latex": "[L_3,L_{\\pm}]=\\pm\\hbar L_{\\pm};\\quad[L_+,L_-]=2\\hbar L_3",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "[L_3,L_{\\pm}]=\\pm\\hbar L_{\\pm};\\quad[L_+,L_-]=2\\hbar L_3",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-014": {
       "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
       "equation_reference": "5.17",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "L^2=\\frac12(L_+L_-+L_-L_+)+L_3^2",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-015": {
       "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
       "equation_reference": "5.18",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "L²|l,m⟩ = ℏ²l(l+1)|l,m⟩",
+      "box_reference": "5.18",
+      "formula_latex": "L^2|l,m\\rangle=\\hbar^2l(l+1)|l,m\\rangle",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "L^2|l,m\\rangle=\\hbar^2l(l+1)|l,m\\rangle",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-016": {
       "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
       "equation_reference": "5.19",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "L₃|l,m⟩ = ℏm|l,m⟩",
+      "box_reference": "5.19",
+      "formula_latex": "L_3|l,m\\rangle=\\hbar m|l,m\\rangle",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "L_3|l,m\\rangle=\\hbar m|l,m\\rangle",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-017": {
       "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
       "equation_reference": "5.24",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "L±|l,m⟩ = ℏ√[l(l+1)−m(m±1)] |l,m±1⟩",
+      "box_reference": "5.24",
+      "formula_latex": "L_{\\pm}|l,m\\rangle=\\hbar\\sqrt{l(l+1)-m(m\\pm1)}\\,|l,m\\pm1\\rangle",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "L_{\\pm}|l,m\\rangle=\\hbar\\sqrt{l(l+1)-m(m\\pm1)}\\,|l,m\\pm1\\rangle",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-018": {
       "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
       "equation_reference": "5.26",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "-l\\le m\\le l",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-019": {
       "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
       "equation_reference": "5.27",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "L_+|l,l\\rangle=0",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-020": {
       "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
       "equation_reference": "5.28",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "L_-|l,-l\\rangle=0",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-021": {
       "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
-      "equation_reference": "5.31–5.33",
-      "source_reference": "QMChapter5(1).pdf"
+      "equation_reference": "(5.31)–(5.33), (5.45)–(5.46)",
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "previous_import": {
+        "id": "C5-021",
+        "section_id": "5.1.3",
+        "front": "Angular momentum quantum numbers",
+        "definition": "General angular momentum algebra permits integer and half-integer l.",
+        "key_rule": "l = 0, ½, 1, 3/2, …; m = −l, −l+1, …, l",
+        "source_status": "Not started",
+        "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      },
+      "box_formula": "General j = 0, ½, 1, 3/2, …; orbital l = 0, 1, 2, …; m = −j,…,j (or −l,…,l)",
+      "box_reference": "(5.31)–(5.33), (5.45)–(5.46)",
+      "formula_latex": "j=0,\\tfrac12,1,\\tfrac32,\\ldots;\\quad l=0,1,2,\\ldots;\\quad m=-j,\\ldots,j",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "j=0,\\tfrac12,1,\\tfrac32,\\ldots;\\quad l=0,1,2,\\ldots;\\quad m=-j,\\ldots,j",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-022": {
       "original_section_title": "5.1.4 Angular momentum operator in the position representation",
       "equation_reference": "5.34",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "\\mathbf L=\\frac{\\hbar}{i}\\mathbf X\\times\\nabla",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-023": {
       "original_section_title": "5.1.4 Angular momentum operator in the position representation",
       "equation_reference": "5.35",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "\\nabla=\\mathbf e_r\\partial_r+\\mathbf e_\\theta\\frac1r\\partial_\\theta+\\mathbf e_\\phi\\frac1{r\\sin\\theta}\\partial_\\phi",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-024": {
       "original_section_title": "5.1.4 Angular momentum operator in the position representation",
       "equation_reference": "5.38",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "L₃ = (ℏ/i)∂/∂φ",
+      "box_reference": "5.38",
+      "formula_latex": "L_3=\\frac{\\hbar}{i}\\frac{\\partial}{\\partial\\phi}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "L_3=\\frac{\\hbar}{i}\\frac{\\partial}{\\partial\\phi}",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-025": {
       "original_section_title": "5.1.4 Angular momentum operator in the position representation",
       "equation_reference": "5.43",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "\\psi_{lm}(\\theta,\\phi)=\\Phi_m(\\phi)\\Theta_{lm}(\\theta)",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-026": {
       "original_section_title": "5.1.4 Angular momentum operator in the position representation",
       "equation_reference": "5.44",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "\\Phi_m(\\phi)=e^{im\\phi}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-027": {
       "original_section_title": "5.1.4 Angular momentum operator in the position representation",
       "equation_reference": "5.45–5.46",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "\\Phi_m(\\phi+2\\pi)=\\Phi_m(\\phi)",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-028": {
       "original_section_title": "5.1.4 Angular momentum operator in the position representation",
       "equation_reference": "5.48",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "Y_{lm}(\\theta,\\phi)=\\psi_{lm}(\\theta,\\phi)",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-029": {
       "original_section_title": "5.1.4 Angular momentum operator in the position representation",
       "equation_reference": "5.49",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "previous_import": {
+        "id": "C5-029",
+        "section_id": "5.1.4",
+        "front": "Associated Legendre functions",
+        "definition": "Functions used to construct spherical harmonics; source convention.",
+        "key_rule": "Pₗₘ(x) = (1−x²)^(m/2) (dᵐ/dxᵐ)Pₗ(x)",
+        "source_status": "Not started",
+        "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      },
+      "formula_latex": "P_l^m(x)=(1-x^2)^{m/2}\\frac{d^m}{dx^m}P_l(x)",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-030": {
       "original_section_title": "5.1.4 Angular momentum operator in the position representation",
       "equation_reference": "5.50",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "P_l(x)=\\frac1{2^ll!}\\frac{d^l}{dx^l}(x^2-1)^l",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-031": {
       "original_section_title": "5.1.4 Angular momentum operator in the position representation",
       "equation_reference": "5.51",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "(l+1)P_{l+1}=(2l+1)xP_l-lP_{l-1}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-032": {
       "original_section_title": "5.1.4 Angular momentum operator in the position representation",
       "equation_reference": "5.53–5.56",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "P_0=1;\\ P_1=x;\\ P_2=\\frac{3x^2-1}{2};\\ P_3=\\frac{5x^3-3x}{2}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-033": {
       "original_section_title": "5.1.4 Angular momentum operator in the position representation",
       "equation_reference": "5.58",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "∫₀^π sinθ dθ ∫₀^{2π} dφ Yₗₘ*Yₐᵦ = δₗₐδₘᵦ",
+      "box_reference": "5.58",
+      "formula_latex": "\\int_0^\\pi\\!\\sin\\theta\\,d\\theta\\int_0^{2\\pi}\\!d\\phi\\,Y_{lm}^*Y_{ab}=\\delta_{la}\\delta_{mb}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "\\int_0^\\pi\\!\\sin\\theta\\,d\\theta\\int_0^{2\\pi}\\!d\\phi\\,Y_{lm}^*Y_{ab}=\\delta_{la}\\delta_{mb}",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-034": {
       "original_section_title": "5.1.4 Angular momentum operator in the position representation",
       "equation_reference": "5.65",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "Y_{l,-m}=(-1)^mY_{lm}^*",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-035": {
       "original_section_title": "5.1.4 Angular momentum operator in the position representation",
       "equation_reference": "5.65 (text)",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "l=0:\\mathrm{s};\\ l=1:\\mathrm{p};\\ l=2:\\mathrm{d};\\ l=3:\\mathrm{f}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-036": {
       "original_section_title": "5.2.1 General considerations",
       "equation_reference": "5.66",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "H = P²/(2m) + V(R)",
+      "box_reference": "5.66",
+      "formula_latex": "H=\\frac{P^2}{2m}+V(R)",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "H=\\frac{P^2}{2m}+V(R)",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-037": {
       "original_section_title": "5.2.1 General considerations",
       "equation_reference": "5.69",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "P_r=\\frac{\\hbar}{i}\\left(\\frac{\\partial}{\\partial r}+\\frac1r\\right)",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-038": {
       "original_section_title": "5.2.1 General considerations",
       "equation_reference": "5.71",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "ψ(r,θ,φ) = R(r)Yₗₘ(θ,φ)",
+      "box_reference": "5.71",
+      "formula_latex": "\\psi(r,\\theta,\\phi)=R(r)Y_{lm}(\\theta,\\phi)",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "\\psi(r,\\theta,\\phi)=R(r)Y_{lm}(\\theta,\\phi)",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-039": {
       "original_section_title": "5.2.1 General considerations",
       "equation_reference": "5.73",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "[H,\\mathbf L]=0;\\quad[H,L^2]=0",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-040": {
       "original_section_title": "5.2.1 General considerations",
       "equation_reference": "5.74",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "R(r)=\\frac{u(r)}r",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-041": {
       "original_section_title": "5.2.1 General considerations",
       "equation_reference": "5.76",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "[−ℏ²/(2m) d²/dr² + ℏ²l(l+1)/(2mr²) + V(r)]u = Eu",
+      "box_reference": "5.76",
+      "formula_latex": "\\left[-\\frac{\\hbar^2}{2m}\\frac{d^2}{dr^2}+\\frac{\\hbar^2l(l+1)}{2mr^2}+V(r)\\right]u=Eu",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "\\left[-\\frac{\\hbar^2}{2m}\\frac{d^2}{dr^2}+\\frac{\\hbar^2l(l+1)}{2mr^2}+V(r)\\right]u=Eu",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-042": {
       "original_section_title": "5.2.1 General considerations",
       "equation_reference": "5.77",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "V_eff(r) = V(r) + ℏ²l(l+1)/(2mr²)",
+      "box_reference": "5.77",
+      "formula_latex": "V_{\\mathrm{eff}}(r)=V(r)+\\frac{\\hbar^2l(l+1)}{2mr^2}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "V_{\\mathrm{eff}}(r)=V(r)+\\frac{\\hbar^2l(l+1)}{2mr^2}",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-043": {
       "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
       "equation_reference": "5.79–5.80",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "\\xi=\\kappa r;\\quad\\kappa=\\frac{\\sqrt{-2mE}}\\hbar",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-044": {
       "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
       "equation_reference": "5.82",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "V(r)=-\\frac{e_0^2}r",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-045": {
       "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
       "equation_reference": "5.85",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "u(\\xi)=\\xi^{l+1}e^{-\\xi}w(\\xi)",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-046": {
       "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
       "equation_reference": "5.87",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "w(\\xi)=\\sum_{j=0}^\\infty a_j\\xi^j",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-047": {
       "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
       "equation_reference": "5.90",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "a_{j+1}=\\frac{2(j+l+1)-\\xi_0}{(j+1)(j+2l+2)}a_j",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-048": {
       "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
       "equation_reference": "5.94",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "\\xi_0=2(N+l+1)",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-049": {
       "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
       "equation_reference": "5.96",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "n = N+l+1",
+      "box_reference": "5.96",
+      "formula_latex": "n=N+l+1",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "n=N+l+1",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-050": {
       "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
       "equation_reference": "5.97",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "Eₙ = −me₀⁴/(2ℏ²n²), n=1,2,…",
+      "box_reference": "5.97",
+      "formula_latex": "E_n=-\\frac{me_0^4}{2\\hbar^2n^2},\\quad n=1,2,\\ldots",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "E_n=-\\frac{me_0^4}{2\\hbar^2n^2},\\quad n=1,2,\\ldots",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-051": {
       "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
       "equation_reference": "5.98–5.99",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "l = 0,1,…,n−1; m = −l,…,l",
+      "box_reference": "5.98–5.99",
+      "formula_latex": "l=0,1,\\ldots,n-1;\\quad m=-l,\\ldots,l",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "l=0,1,\\ldots,n-1;\\quad m=-l,\\ldots,l",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-052": {
       "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
       "equation_reference": "5.100",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "Σₗ₌₀ⁿ⁻¹(2l+1) = n²",
+      "box_reference": "5.100",
+      "formula_latex": "\\sum_{l=0}^{n-1}(2l+1)=n^2",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "\\sum_{l=0}^{n-1}(2l+1)=n^2",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-053": {
       "original_section_title": "5.2.3 Orbitals of the hydrogen atom",
       "equation_reference": "5.102",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "previous_import": {
+        "id": "C5-053",
+        "section_id": "5.2.3",
+        "front": "Associated Laguerre polynomial solution",
+        "definition": "Radial polynomial solution; associated Laguerre convention in the script.",
+        "key_rule": "w(ξ) = A Lₙ₋ₗ₋₁^(2l+1)(ξ)",
+        "source_status": "Not started",
+        "source_file": "QM_Chapter5_Concept_Learning_Cards.xlsx"
+      },
+      "formula_latex": "w(\\xi)=A\\,L_{n-l-1}^{(2l+1)}(\\xi)",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-054": {
       "original_section_title": "5.2.3 Orbitals of the hydrogen atom",
       "equation_reference": "5.103",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "ψₙₗₘ(r,θ,φ) = Rₙₗ(r)Yₗₘ(θ,φ)",
+      "box_reference": "5.103",
+      "formula_latex": "\\psi_{nlm}(r,\\theta,\\phi)=R_{nl}(r)Y_{lm}(\\theta,\\phi)",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "\\psi_{nlm}(r,\\theta,\\phi)=R_{nl}(r)Y_{lm}(\\theta,\\phi)",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-055": {
       "original_section_title": "5.2.3 Orbitals of the hydrogen atom",
       "equation_reference": "5.104",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "R_{nl}(r)\\propto(2\\kappa r)^l e^{-\\kappa r}L_{n-l-1}^{(2l+1)}(2\\kappa r)",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-056": {
       "original_section_title": "5.2.3 Orbitals of the hydrogen atom",
       "equation_reference": "5.106",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "κ = 1/(na)",
+      "box_reference": "5.106",
+      "formula_latex": "\\kappa=\\frac1{na}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "\\kappa=\\frac1{na}",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-057": {
       "original_section_title": "5.2.3 Orbitals of the hydrogen atom",
       "equation_reference": "5.107",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "BOX",
+      "box_formula": "a = ℏ²/(me₀²)",
+      "box_reference": "5.107",
+      "formula_latex": "a=\\frac{\\hbar^2}{me_0^2}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "a=\\frac{\\hbar^2}{me_0^2}",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-058": {
       "original_section_title": "5.2.3 Orbitals of the hydrogen atom",
       "equation_reference": "5.102 (text)",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "N=n-l-1",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     },
     "C5-059": {
       "original_section_title": "5.2.3 Orbitals of the hydrogen atom",
       "equation_reference": "5.107 (text)",
-      "source_reference": "QMChapter5(1).pdf"
+      "source_reference": "QMChapter5(1).pdf",
+      "priority": "NORMAL",
+      "formula_latex": "\\text{Lyman, Balmer, Paschen}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-060": {
+      "original_section_title": "5.1.1 Definition",
+      "equation_reference": "(5.4)",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "NORMAL",
+      "formula_latex": "[L_x,L_y]=i\\hbar L_z\\quad\\text{(cyclic)}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-061": {
+      "original_section_title": "5.1.2 Angular momentum operator as generator of rotations",
+      "equation_reference": "Derived from (5.9)",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "NORMAL",
+      "formula_latex": "R(\\mathbf n,\\delta\\theta)\\approx I-\\frac{i\\delta\\theta}{\\hbar}(\\mathbf n\\cdot\\mathbf L)",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-062": {
+      "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
+      "equation_reference": "(5.18), corrected ℏ²",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "NORMAL",
+      "formula_latex": "|\\mathbf L|=\\hbar\\sqrt{l(l+1)}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-063": {
+      "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
+      "equation_reference": "(5.33), (5.46)",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "BOX",
+      "box_formula": "m ∈ {−l,−l+1,…,l}; number of m states = 2l+1",
+      "box_reference": "(5.33), (5.46)",
+      "formula_latex": "m\\in\\{-l,-l+1,\\ldots,l\\};\\quad\\#m=2l+1",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "m\\in\\{-l,-l+1,\\ldots,l\\};\\quad\\#m=2l+1",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-064": {
+      "original_section_title": "5.1.3 Spectrum of the angular momentum operator",
+      "equation_reference": "(5.17), (5.23)",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "NORMAL",
+      "formula_latex": "L_-L_+=L^2-L_z^2-\\hbar L_z;\\quad L_+L_-=L^2-L_z^2+\\hbar L_z",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-065": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "(5.38)",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "NORMAL",
+      "formula_latex": "L_z=-i\\hbar\\frac{\\partial}{\\partial\\phi}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-066": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "(5.39), corrected",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "BOX",
+      "box_formula": "L± = ℏ e^(±iφ) (±∂/∂θ + i cotθ ∂/∂φ)",
+      "box_reference": "(5.39), corrected",
+      "formula_latex": "L_{\\pm}=\\hbar e^{\\pm i\\phi}\\left(\\pm\\frac{\\partial}{\\partial\\theta}+i\\cot\\theta\\frac{\\partial}{\\partial\\phi}\\right)",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "L_{\\pm}=\\hbar e^{\\pm i\\phi}\\left(\\pm\\frac{\\partial}{\\partial\\theta}+i\\cot\\theta\\frac{\\partial}{\\partial\\phi}\\right)",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-067": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "(5.40)",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "NORMAL",
+      "formula_latex": "L^2=-\\hbar^2\\left[\\frac1{\\sin\\theta}\\partial_\\theta(\\sin\\theta\\,\\partial_\\theta)+\\frac1{\\sin^2\\theta}\\partial_\\phi^2\\right]",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-068": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "(5.41)–(5.42)",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "BOX",
+      "box_formula": "L²Y_lm = ℏ²l(l+1)Y_lm; L_zY_lm = ℏmY_lm",
+      "box_reference": "(5.41)–(5.42)",
+      "formula_latex": "L^2Y_{lm}=\\hbar^2l(l+1)Y_{lm};\\quad L_zY_{lm}=\\hbar mY_{lm}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "L^2Y_{lm}=\\hbar^2l(l+1)Y_{lm};\\quad L_zY_{lm}=\\hbar mY_{lm}",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-069": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "(5.58)",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "NORMAL",
+      "formula_latex": "\\int|Y_{lm}(\\theta,\\phi)|^2d\\Omega=1;\\quad d\\Omega=\\sin\\theta\\,d\\theta\\,d\\phi",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-070": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "Standard extension; not explicit in PDF",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "NORMAL",
+      "formula_latex": "\\sum_{l=0}^\\infty\\sum_{m=-l}^lY_{lm}(\\Omega)Y_{lm}^*(\\Omega')=\\delta(\\Omega-\\Omega')",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-071": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "(5.59)",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "NORMAL",
+      "formula_latex": "Y_{00}=\\frac1{\\sqrt{4\\pi}}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-072": {
+      "original_section_title": "5.1.4 Angular momentum operator in the position representation",
+      "equation_reference": "(5.60)",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "NORMAL",
+      "formula_latex": "Y_{10}=\\sqrt{\\frac3{4\\pi}}\\cos\\theta",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-073": {
+      "original_section_title": "5.2.1 General considerations",
+      "equation_reference": "(5.73) + Ehrenfest/Heisenberg rule",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "NORMAL",
+      "formula_latex": "[H,L_i]=0;\\quad\\frac{d\\langle L_i\\rangle}{dt}=0",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-074": {
+      "original_section_title": "5.2.1 General considerations",
+      "equation_reference": "(5.71), (5.74); derived",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "NORMAL",
+      "formula_latex": "\\int_0^\\infty|R_{nl}(r)|^2r^2dr=\\int_0^\\infty|u_{nl}(r)|^2dr=1",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-075": {
+      "original_section_title": "5.2.1 General considerations",
+      "equation_reference": "(5.77)",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "NORMAL",
+      "formula_latex": "V_{\\mathrm{cent}}(r)=\\frac{\\hbar^2l(l+1)}{2mr^2}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-076": {
+      "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
+      "equation_reference": "(5.97); numerical value external",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "NORMAL",
+      "formula_latex": "E_n=\\frac{E_1}{n^2};\\quad E_1\\approx-13.6\\,\\mathrm{eV}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-077": {
+      "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
+      "equation_reference": "(5.96), (5.98)–(5.99)",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "NORMAL",
+      "formula_latex": "n\\ge1;\\quad0\\le l\\le n-1;\\quad-l\\le m\\le l",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-078": {
+      "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
+      "equation_reference": "(5.100); spin factor standard extension",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "NORMAL",
+      "formula_latex": " g_n=n^2\\ \\text{(without spin)};\\quad 2n^2\\ \\text{(with spin)}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-079": {
+      "original_section_title": "5.2.2 Spectrum of the hydrogen atom",
+      "equation_reference": "(5.97), spectral-series discussion; derived",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "BOX",
+      "box_formula": "hν = |E_n − E_n′| = hc/λ",
+      "box_reference": "(5.97), spectral-series discussion; derived",
+      "formula_latex": "h\\nu=|E_n-E_{n'}|=\\frac{hc}{\\lambda}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "h\\nu=|E_n-E_{n'}|=\\frac{hc}{\\lambda}",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-080": {
+      "original_section_title": "5.2.3 Orbitals of the hydrogen atom",
+      "equation_reference": "(5.107); SI conversion",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "BOX",
+      "box_formula": "a₀ = 4πε₀ℏ²/(m_e e²) ≈ 5.29×10⁻¹¹ m",
+      "box_reference": "(5.107); SI conversion",
+      "formula_latex": "a_0=\\frac{4\\pi\\varepsilon_0\\hbar^2}{m_e e^2}\\approx5.29\\times10^{-11}\\,\\mathrm m",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "a_0=\\frac{4\\pi\\varepsilon_0\\hbar^2}{m_e e^2}\\approx5.29\\times10^{-11}\\,\\mathrm m",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-081": {
+      "original_section_title": "5.2.3 Orbitals of the hydrogen atom",
+      "equation_reference": "(5.102) + standard extension",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "NORMAL",
+      "formula_latex": "N_{\\mathrm{radial}}=n-l-1;\\quad N_{\\mathrm{angular}}=l;\\quad N_{\\mathrm{total}}=n-1",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-082": {
+      "original_section_title": "5.2.3 Orbitals of the hydrogen atom",
+      "equation_reference": "Derived from (5.103)–(5.107)",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "BOX",
+      "box_formula": "ψ_100(r) = e^(−r/a₀)/√(πa₀³)",
+      "box_reference": "Derived from (5.103)–(5.107)",
+      "formula_latex": "\\psi_{100}(r)=\\frac{e^{-r/a_0}}{\\sqrt{\\pi a_0^3}}",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram",
+      "box_latex": "\\psi_{100}(r)=\\frac{e^{-r/a_0}}{\\sqrt{\\pi a_0^3}}",
+      "box_rendering_note": "Render LaTeX to PNG/SVG before sending via Telegram"
+    },
+    "C5-083": {
+      "original_section_title": "5.2.3 Orbitals of the hydrogen atom",
+      "equation_reference": "Derived from 1s orbital",
+      "source_reference": "QMChapter5(2).pdf / checked extension",
+      "priority": "NORMAL",
+      "formula_latex": "P(r)dr=\\frac{4r^2}{a_0^3}e^{-2r/a_0}dr",
+      "telegram_rendering_input": "Render LaTeX to PNG/SVG before sending via Telegram"
     }
-  }
+  },
+  "content_review_required": {
+    "C5-053": "The Laguerre-polynomial argument may use a source-specific scaling; verify Eq. 5.102 against the original PDF."
+  },
+  "workbook_verification_notes": [
+    {
+      "heading": "Basis",
+      "note": "Compared existing Chapter 5 deck with uploaded QMChapter5(2).pdf; added standard derived formulas explicitly labelled as such."
+    },
+    {
+      "heading": "Lecture (5.18)",
+      "note": "Printed L² eigenvalue appears as ℏ l(l+1); dimensional consistency requires ℏ² l(l+1). Existing card correctly uses ℏ²."
+    },
+    {
+      "heading": "Lecture (5.39)",
+      "note": "Printed exponential appears e^(±iθ); standard correct orbital ladder operator has e^(±iφ). Correct form added."
+    },
+    {
+      "heading": "General vs orbital l",
+      "note": "Abstract angular momentum permits half-integer j, but orbital angular momentum of scalar wavefunctions has integer l. Original card clarified."
+    },
+    {
+      "heading": "Lecture (5.78)",
+      "note": "Claim about V(r)=o(1/√r) as necessary for bound states is not a general criterion. Do not memorize as a law."
+    },
+    {
+      "heading": "Lecture (5.104)",
+      "note": "Hydrogen radial-function scaling and Laguerre conventions must be used consistently; workbook gives the reliable proportional form."
+    },
+    {
+      "heading": "SI vs script conventions",
+      "note": "The script defines e₀² as the Coulomb coupling. SI formulas explicitly use 4πε₀ and electron charge e."
+    },
+    {
+      "heading": "Scope",
+      "note": "The original 59 cards are retained (one clarified), with 24 new cards and a high-priority BOX sheet."
+    },
+    {
+      "heading": "Study priority",
+      "note": "Study BOX first, then the complete Learning Cards tab; check derivations and conventions before using any formula in an exam."
+    }
+  ],
+  "workbook_import_note": "83 actual learning cards; Study Guide still reports the old 59. Raw LaTeX and renderer instructions are metadata, not Telegram HTML."
 }

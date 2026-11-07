@@ -111,21 +111,32 @@ def build_handlers(
             return "— no cards"
         return f"{round(100 * len(ids & known) / len(ids))}%"
 
-    async def show_topics(message: Message, user_id: int) -> None:
+    async def show_topics(message: Message, user_id: int, study_mode: str = "learn") -> None:
         known = study.progress.known_item_ids(user_id)
         labels = []
         for label, number in topic_labels.items():
-            chapter = curriculum.chapter(number)
-            ids = {card.id for card in chapter.concepts} | {formula.id for formula in chapter.formulas} if chapter else set()
+            ids = {card.id for card in study.mode_cards(number, study_mode)}
             labels.append(f"{label} · {progress_label(ids, known)}")
         keyboard = ReplyKeyboardMarkup(
             [[KeyboardButton(label)] for label in labels] + [[KeyboardButton(HOME)]],
             resize_keyboard=True, is_persistent=True,
         )
         await message.reply_text(
-            "🗂 Themen auswählen\n\n1️⃣–🔟 Theorie · Eisert\n🔬 Experimentalphysik · Franke\n\nTippe unten auf ein Thema, um gezielt zu lernen.",
+            f"{ {'learn': LEARN, 'formula': FORMULAS, 'law': LAWS}.get(study_mode, TOPICS)} · Choose a topic\n\n"
+            "1️⃣–🔟 Theory · Eisert\n🔬 Experiments · Franke\n\nSelect one topic to start its full set.",
             reply_markup=keyboard,
         )
+
+    async def choose_mode(
+        message: Message, context: ContextTypes.DEFAULT_TYPE, user_id: int, study_mode: str
+    ) -> None:
+        if context.user_data is None:
+            return
+        for key in ("study_set", "question", "exercise", "concept_choices", "mode", "selected_chapter"):
+            context.user_data.pop(key, None)
+        context.user_data["viewer_id"] = user_id
+        context.user_data["requested_mode"] = study_mode
+        await show_topics(message, user_id, study_mode)
 
     async def select_topic(
         message: Message,
@@ -142,12 +153,14 @@ def build_handlers(
         if chapter is None:
             await show_topics(message, int(context.user_data.get("viewer_id", 0)))
             return
-        cards = study.cards(chapter_number)
+        study_mode = context.user_data.get("requested_mode", "learn")
+        cards = study.mode_cards(chapter_number, study_mode)
         if not cards:
-            await message.reply_text("No learning cards are available for this topic yet.")
-            await show_topics(message, int(context.user_data.get("viewer_id", 0)))
+            await message.reply_text("No cards are available for this topic in the selected mode yet.")
+            await show_topics(message, int(context.user_data.get("viewer_id", 0)), study_mode)
             return
         context.user_data["set_kind"] = "topic"
+        context.user_data["session_mode"] = study_mode
         context.user_data["study_set"] = StudySet(cards)
         context.user_data.pop("exercise", None)
         await message.reply_text(f"📖 {chapter.title_de} · {len(cards)} cards")
@@ -165,35 +178,35 @@ def build_handlers(
             await message.reply_text(
                 f"✅ Set complete · {len(session.cards)}/{len(session.cards)}\n"
                 "100% completed in this set.\n"
-                "This is recognition practice, not long-term or exam mastery.\n\n"
-                "Choose another topic below."
+                "This is recognition practice, not long-term or exam mastery.",
+                reply_markup=ReplyKeyboardMarkup(
+                    [[KeyboardButton(HOME)]], resize_keyboard=True, is_persistent=True,
+                ),
             )
             context.user_data.pop("study_set", None)
             context.user_data.pop("question", None)
             context.user_data.pop("mode", None)
-            await show_topics(message, int(context.user_data.get("viewer_id", 0)))
+            context.user_data.pop("concept_choices", None)
+            context.user_data.pop("requested_mode", None)
+            context.user_data.pop("selected_chapter", None)
             return
-        context.user_data["question"] = Question(
-            card.id, "concept", card.front, f"{card.definition}\n\n{card.key_rule}"
-        )
-        distractors = list(dict.fromkeys(
-            other.definition for other in study.cards()
-            if other.definition != card.definition
-        ))
-        choices = random.sample(distractors, min(3, len(distractors))) + [card.definition]
-        random.shuffle(choices)
+        exercise = study.set_exercise(card, context.user_data.get("session_mode", "learn"))
+        context.user_data["question"] = exercise.question
         context.user_data["concept_choices"] = {
-            f"{index + 1}️⃣ {definition}": definition == card.definition
-            for index, definition in enumerate(choices)
+            f"{index + 1}️⃣ {choice}": index == exercise.correct_index
+            for index, choice in enumerate(exercise.choices)
         }
         context.user_data["mode"] = "concept_choice"
         context.user_data["presented_at"] = time.monotonic()
         await message.reply_text(
             f"📖 {session.position}/{len(session.cards)} · {session.percentage}% completed in this set\n\n"
-            f"🧠 {card.front}\n\n❓ Which definition matches?",
+            + exercise.question.prompt,
             reply_markup=ReplyKeyboardMarkup(
                 [[KeyboardButton(label)] for label in context.user_data["concept_choices"]]
-                + [[KeyboardButton(DONT_KNOW)], [KeyboardButton(TOPICS), KeyboardButton(HOME)]],
+                + [
+                    [KeyboardButton(DONT_KNOW)],
+                    [KeyboardButton(HOME)],
+                ],
                 resize_keyboard=True, is_persistent=True,
             ),
         )
@@ -209,6 +222,8 @@ def build_handlers(
         context.user_data.pop("selected_chapter", None)
         context.user_data.pop("exercise", None)
         context.user_data["set_kind"] = "review"
+        context.user_data["session_mode"] = "learn"
+        context.user_data["requested_mode"] = "learn"
         context.user_data["study_set"] = StudySet(cards)
         await message.reply_text(f"🔁 Review · {len(cards)} cards from all topics")
         await present_set_card(message, context)
@@ -294,27 +309,31 @@ def build_handlers(
     async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         if await reject_if_unauthorized(update):
             return
-        message, _ = message_and_user(update)
+        message, user = message_and_user(update)
         if context.user_data is not None:
-            context.user_data.pop("selected_chapter", None)
+            context.user_data.clear()
+            context.user_data["viewer_id"] = user.id
         await send_menu(message, "👋✨ Welcome to Quantum Tutor! Choose a learning mode below.")
 
     async def topics(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         if not await reject_if_unauthorized(update):
             message, user = message_and_user(update)
-            await show_topics(message, user.id)
+            await choose_mode(message, context, user.id, "learn")
 
     async def learn(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         if not await reject_if_unauthorized(update):
-            await send_exercise(message_and_user(update)[0], context, reset=True)
+            message, user = message_and_user(update)
+            await choose_mode(message, context, user.id, "learn")
 
     async def laws(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         if not await reject_if_unauthorized(update):
-            await ask_flashcard(message_and_user(update)[0], context, "law", reset=True)
+            message, user = message_and_user(update)
+            await choose_mode(message, context, user.id, "law")
 
     async def formulas(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         if not await reject_if_unauthorized(update):
-            await ask_flashcard(message_and_user(update)[0], context, "formula", reset=True)
+            message, user = message_and_user(update)
+            await choose_mode(message, context, user.id, "formula")
 
     async def review(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         if not await reject_if_unauthorized(update):
@@ -345,7 +364,8 @@ def build_handlers(
 
         if text in {HOME, "/start"}:
             if context.user_data is not None:
-                context.user_data.pop("selected_chapter", None)
+                context.user_data.clear()
+                context.user_data["viewer_id"] = user.id
             await send_menu(message)
         elif text in topic_labels:
             await select_topic(message, context, topic_labels[text])
@@ -385,21 +405,23 @@ def build_handlers(
             await message.reply_text(
                 f"🧠 {card.front}\n\n❓ Explain the concept and its key rule.",
                 reply_markup=ReplyKeyboardMarkup(
-                    [[KeyboardButton(REVEAL)], [KeyboardButton(TOPICS), KeyboardButton(HOME)]],
+                    [[KeyboardButton(REVEAL)], [KeyboardButton(HOME)]],
                     resize_keyboard=True, is_persistent=True,
                 ),
             )
         elif text == LEARN:
-            await send_exercise(message, context, reset=True)
+            await choose_mode(message, context, user.id, "learn")
         elif text == NEXT:
-            category = context.user_data.get("session_category") if context.user_data else None
-            await send_exercise(message, context, category)
+            if context.user_data is not None and context.user_data.get("study_set") is not None:
+                await present_set_card(message, context)
+            else:
+                await choose_mode(message, context, user.id, "learn")
         elif text == LAWS:
-            await ask_flashcard(message, context, "law", reset=True)
+            await choose_mode(message, context, user.id, "law")
         elif text == FORMULAS:
-            await ask_flashcard(message, context, "formula", reset=True)
+            await choose_mode(message, context, user.id, "formula")
         elif text == TOPICS:
-            await show_topics(message, user.id)
+            await choose_mode(message, context, user.id, "learn")
         elif text == REVIEW:
             await show_review(message, user, context)
         elif text == PROGRESS:

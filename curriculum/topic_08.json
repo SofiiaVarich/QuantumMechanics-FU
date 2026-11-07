@@ -170,8 +170,8 @@
       "id": "C8-012",
       "section_id": "8.2.2",
       "front": "Normal Zeeman Hamiltonian",
-      "definition": "Hydrogen Hamiltonian in a z-directed field with quadratic term neglected; sign conventions follow the lecture.",
-      "key_rule": "H = H⁽⁰⁾ + (eB/2mc)L₃",
+      "definition": "Linear Zeeman Hamiltonian in Gaussian units for a z-directed field; e is the signed electron charge and the quadratic magnetic term is neglected.",
+      "key_rule": "H = H⁽⁰⁾ − (eB/2mc)L₃",
       "source_status": "Not started",
       "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
     },
@@ -323,8 +323,8 @@
       "id": "C8-029",
       "section_id": "8.3.3",
       "front": "Cyclotron frequency",
-      "definition": "Frequency formula as written in the lecture; unit/sign convention should be checked.",
-      "key_rule": "ωc = eB/m",
+      "definition": "Positive cyclotron angular frequency in Gaussian units, consistent with P − eA/c; B is the magnetic-field magnitude.",
+      "key_rule": "ωc = |e|B/(mc)",
       "source_status": "Not started",
       "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
     },
@@ -332,8 +332,8 @@
       "id": "C8-030",
       "section_id": "8.3.3",
       "front": "Landau levels",
-      "definition": "Quantized energies of transverse motion in a uniform magnetic field; lecture uses ω here.",
-      "key_rule": "Eₙ = ℏω(n+½), n = 0,1,2,…",
+      "definition": "Transverse orbital Landau levels, with ωc = |e|B/(mc) > 0 in Gaussian units; spin and longitudinal motion are not included.",
+      "key_rule": "Eₙ = ℏωc(n + ½), n = 0,1,2,…",
       "source_status": "Not started",
       "source_file": "QM_Chapter8_Concept_Learning_Cards.xlsx"
     },
@@ -502,6 +502,29 @@
       "original_section_title": "8.3.3 Landau levels",
       "equation_reference": "8.16 (discussion)",
       "source_reference": "QMChapter8(1).pdf"
+    }
+  },
+  "content_corrections": {
+    "C8-012": {
+      "original": {
+        "key_rule": "H = H⁽⁰⁾ + (eB/2mc)L₃",
+        "definition": "Hydrogen Hamiltonian in a z-directed field with quadratic term neglected; sign conventions follow the lecture."
+      },
+      "reason": "Mathematical consistency audit: explicit units, assumptions, or correction; not a verified lecture erratum."
+    },
+    "C8-029": {
+      "original": {
+        "key_rule": "ωc = eB/m",
+        "definition": "Frequency formula as written in the lecture; unit/sign convention should be checked."
+      },
+      "reason": "Mathematical consistency audit: explicit units, assumptions, or correction; not a verified lecture erratum."
+    },
+    "C8-030": {
+      "original": {
+        "key_rule": "Eₙ = ℏω(n+½), n = 0,1,2,…",
+        "definition": "Quantized energies of transverse motion in a uniform magnetic field; lecture uses ω here."
+      },
+      "reason": "Mathematical consistency audit: explicit units, assumptions, or correction; not a verified lecture erratum."
     }
   }
 }

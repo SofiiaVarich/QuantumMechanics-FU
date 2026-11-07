@@ -22,7 +22,7 @@
       "id": "EXP-029",
       "section_id": "18",
       "front": "Balmer series",
-      "definition": "Visible hydrogen series",
+      "definition": "Hydrogen emission transitions from n ≥ 3 to n = 2; higher-order Balmer lines extend into the ultraviolet.",
       "key_rule": "1/λ = R_H (1/2² − 1/n²), n ≥ 3",
       "source_status": "Not started",
       "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
@@ -61,6 +61,14 @@
       "source_status": "Standard conceptual explanation; not verified against Franke slides",
       "mapping_status": "Authored mapping of workbook lecture groups to existing experimental topics",
       "display_notation": "Plain-text equivalent; original formula retained"
+    }
+  },
+  "content_corrections": {
+    "EXP-029": {
+      "original": {
+        "definition": "Visible hydrogen series"
+      },
+      "reason": "Mathematical consistency audit: explicit units, assumptions, or correction; not a verified lecture erratum."
     }
   }
 }
