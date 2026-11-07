@@ -18,6 +18,12 @@ def test_curriculum_loads_chapters() -> None:
     assert len(ids) == len(set(ids))
 
 
+def test_curriculum_does_not_load_obsolete_catalog(tmp_path: Path) -> None:
+    (tmp_path / "chapter_01.json").write_text("not an active topic file")
+    (tmp_path / "experiments.json").write_text("not an active topic file")
+    assert CurriculumRepository(tmp_path).chapters() == []
+
+
 def test_formula_notation_contains_no_placeholder_stars() -> None:
     repository = CurriculumRepository(Path("curriculum"))
     forbidden = {"★", "⋆", "*"}

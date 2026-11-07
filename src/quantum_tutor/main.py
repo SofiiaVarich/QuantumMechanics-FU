@@ -25,7 +25,7 @@ def create_application(settings: Settings) -> Application:
         await application.bot.set_my_commands([
             BotCommand("start", "Open the clickable study menu"),
             BotCommand("learn", "Choose a topic for learning"),
-            BotCommand("topics", "Browse course chapters"),
+            BotCommand("topics", "Choose a chapter or experiment"),
             BotCommand("laws", "Choose a topic for laws and applications"),
             BotCommand("formulas", "Choose a topic for formula practice"),
             BotCommand("review", "Practice missed and due cards"),

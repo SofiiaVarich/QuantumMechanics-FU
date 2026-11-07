@@ -24,7 +24,7 @@ def test_buttons_and_commands_choose_topic_then_start_correct_set(tmp_path: Path
     asyncio.run(handlers[-1](update, context))
     assert context.user_data["requested_mode"] == mode
     assert "selected_chapter" not in context.user_data
-    assert "Choose a topic" in message.reply_text.call_args.args[0]
+    assert "Choose a chapter or experiment" in message.reply_text.call_args.args[0]
     message.text = "5️⃣ Drehimpuls und rotationsinvariante Probleme · 0%"
     asyncio.run(handlers[-1](update, context))
     session = context.user_data["study_set"]
@@ -41,6 +41,29 @@ def test_buttons_and_commands_choose_topic_then_start_correct_set(tmp_path: Path
     asyncio.run(handlers[index](update, context))
     assert "study_set" not in context.user_data
     assert context.user_data["requested_mode"] == mode
+
+
+def test_chapters_and_experiments_labels_are_clear_and_selectable(tmp_path: Path) -> None:
+    repository = CurriculumRepository(Path("curriculum"))
+    handler = build_handlers(StudyService(repository, ProgressRepository(tmp_path / "db")), repository, (123,))[-1]
+    message = SimpleNamespace(text=TOPICS, reply_text=AsyncMock())
+    update = SimpleNamespace(effective_message=message, effective_user=SimpleNamespace(id=123))
+    context = SimpleNamespace(user_data={})
+    asyncio.run(handler(update, context))
+    labels = [b.text for row in message.reply_text.call_args.kwargs["reply_markup"].keyboard for b in row]
+    assert len([label for label in labels if label.startswith("📖 Chapter ")]) == 10
+    assert len([label for label in labels if label.startswith("🔬 Experiment · ")]) == 10
+    assert "📖 Chapter 2️⃣ · Quantenzustände und Observablen · 0%" in labels
+    experiment = "🔬 Experiment · Schwarzkörperstrahlung · 03.11.2026 · 0%"
+    assert experiment in labels
+    message.text = experiment
+    asyncio.run(handler(update, context))
+    assert context.user_data["selected_chapter"] == 11
+    assert len(context.user_data["study_set"].cards) == 12
+    # A menu already sent under the old name still opens the new selector.
+    message.text = "🗂 Topics"
+    asyncio.run(handler(update, context))
+    assert "Choose a chapter or experiment" in message.reply_text.call_args.args[0]
 
 
 def test_unauthorized_new_mode_cannot_start_session(tmp_path: Path) -> None:

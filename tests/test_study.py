@@ -5,28 +5,19 @@ from quantum_tutor.infrastructure.curriculum import CurriculumRepository
 from quantum_tutor.infrastructure.database import ProgressRepository
 
 
-def test_adaptive_exercise_contains_one_correct_choice(tmp_path: Path) -> None:
-    service = StudyService(
-        CurriculumRepository(Path("curriculum")),
-        ProgressRepository(tmp_path / "progress.db"),
-    )
-    exercise = service.adaptive_exercise("formula")
-    assert exercise is not None
-    assert exercise.question.item_type == "formula"
-    assert 3 <= len(exercise.choices) <= 4
-    assert exercise.choices[exercise.correct_index] in exercise.question.answer
-    assert service.item_count("term") == 0
-    assert service.item_count("formula") == 12
-    assert service.item_count("all") == 12
-    assert service.item_count("law") == 12
-
-    law = service.random_law()
-    assert law is not None
-    assert "APPLICATION" in law.prompt
-    assert "LAW / FORMULA" in law.answer
-
-    chapter_three = service.adaptive_exercise("formula", chapter_number=3)
-    assert chapter_three is not None
-    assert chapter_three.question.item_id == "c3-schrodinger"
-    assert service.item_count("formula", chapter_number=3) == 1
-    assert service.adaptive_exercise(chapter_number=5) is None
+def test_active_catalog_combines_concepts_and_formulas(tmp_path: Path) -> None:
+    curriculum = CurriculumRepository(Path("curriculum"))
+    service = StudyService(curriculum, ProgressRepository(tmp_path / "progress.db"))
+    cards = service.cards()
+    expected = {
+        item.id
+        for chapter in curriculum.chapters()
+        for item in (*chapter.concepts, *chapter.formulas)
+    }
+    assert {card.id for card in cards} == expected
+    assert len(cards) == len(expected)
+    assert len(cards) == 555
+    assert {card.id for card in service.cards(3)} == {
+        item.id for item in (*curriculum.chapter(3).concepts, *curriculum.chapter(3).formulas)
+    }
+    assert service.cards(999) == ()

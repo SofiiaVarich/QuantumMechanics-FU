@@ -6,7 +6,7 @@ from unittest.mock import AsyncMock
 from quantum_tutor.application.study import StudyService
 from quantum_tutor.infrastructure.curriculum import CurriculumRepository
 from quantum_tutor.infrastructure.database import ProgressRepository
-from quantum_tutor.presentation.handlers import build_handlers, DONT_KNOW, HARD, EASY, OKAY
+from quantum_tutor.presentation.handlers import build_handlers, DONT_KNOW
 
 
 def test_concept_set_answers_retries_and_completion(tmp_path: Path) -> None:
@@ -24,7 +24,7 @@ def test_concept_set_answers_retries_and_completion(tmp_path: Path) -> None:
     assert "1/4 · 0%" in message.reply_text.call_args.args[0]
     labels = [b.text for row in message.reply_text.call_args.kwargs["reply_markup"].keyboard for b in row]
     assert DONT_KNOW in labels
-    assert not any(label in labels for label in (HARD, EASY, OKAY))
+    assert not any(label in labels for label in ("🟠 Hard", "🟢 Easy", "🔵 Okay"))
     first_id = context.user_data["question"].item_id
     message.text = DONT_KNOW
     asyncio.run(handler(update, context))

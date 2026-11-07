@@ -12,8 +12,7 @@ class CurriculumRepository:
 
     def chapters(self) -> list[Chapter]:
         paths = sorted(self.directory.glob("topic_*.json"))
-        if not paths:
-            paths = sorted(self.directory.glob("chapter_*.json"))
+
         chapters = [self._load(path) for path in paths]
         return sorted(chapters, key=lambda chapter: chapter.number)
 
