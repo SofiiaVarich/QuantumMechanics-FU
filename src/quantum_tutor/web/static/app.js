@@ -10,6 +10,7 @@
   let busy = false;
   let screenVersion = 0;
   let screen = 'home';
+  let disposeAtlas = () => {}; 
 
   function node(tag, text, className) {
     const el = document.createElement(tag);
@@ -25,6 +26,8 @@
     return el;
   }
   function renderScreen(name) {
+    disposeAtlas();
+    disposeAtlas = () => {};
     screen = name;
     screenVersion += 1;
     app.replaceChildren();
@@ -83,7 +86,7 @@
   }
   function math(container, latex, fallback) {
     if (latex && window.katex) {
-      try { window.katex.render(latex, container, { trust: false, throwOnError: false, strict: 'ignore', displayMode: false }); return; } catch (_) { /* Keep formulas readable when rendering is unavailable. */ }
+      try { window.katex.render(latex, container, { trust: false, throwOnError: true, strict: 'ignore', displayMode: false }); return; } catch (_) { /* Keep formulas readable when rendering is unavailable. */ }
     }
     container.textContent = fallback || latex || '';
   }
@@ -134,7 +137,9 @@
       const data = await api(`/topics?mode=${encodeURIComponent(mode)}`);
       if (version !== screenVersion) return;
       app.querySelector('.loading').remove();
+      renderAtlas(data.topics, review);
       app.append(button(review ? `Review all topics · ${data.review_count} due` : 'Practice all topics →', () => start(null, review), 'button primary wide'));
+      app.append(node('h2', 'Topic list · dates, cards & progress', 'atlas-list-heading'));
       if (!review) app.append(button(`Review this mode · ${data.review_count} due`, () => topics(selectedMode, true), 'text-button'));
       for (const [title, min, max] of [['Chapters', 1, 10], ['Experiments', 11, 20]]) {
         const group = node('section', null, 'topic-group');
@@ -153,6 +158,90 @@
         group.append(list); app.append(group);
       }
     } catch (error) { if (version === screenVersion) { app.querySelector('.loading')?.remove(); showError(error, () => topics(selectedMode, review)); } }
+  }
+
+  function renderAtlas(topics, review) {
+    const scene = node('section', null, 'atlas-scene');
+    scene.setAttribute('aria-label', 'Crystal Atlas: chapters 01–10 and experiments E1–E10');
+    const hint = node('p', 'CHOOSE YOUR ORBIT · ' + modes[mode][0].toUpperCase(), 'atlas-caption');
+    const core = button('', () => start(null, review), 'atlas-core');
+    core.setAttribute('aria-label', review ? 'Review all topics' : 'Practice all topics');
+    core.append(node('span', 'Q', 'atlas-crystal'), node('span', review ? 'REVIEW ALL TOPICS' : 'ALL TOPICS', 'atlas-core-label'));
+    scene.append(hint, core);
+    const spheres = [];
+    topics.filter(topic => topic.number >= 1 && topic.number <= 20)
+      .slice().sort((a, b) => a.number - b.number).forEach(topic => {
+        // Capture the API ID, never an animation index or mutable loop counter.
+        const topicId = topic.number;
+        const experiment = topicId > 10;
+        const label = experiment ? `E${topicId - 10}` : String(topicId).padStart(2, '0');
+        const sphere = button(label, () => start(topicId, review), `atlas-sphere ${experiment ? 'experiment' : 'theory'}`);
+        sphere.setAttribute('aria-label', `${experiment ? 'Experiment' : 'Chapter'} ${label}: ${topic.title_de || topic.title}`);
+        sphere.title = `${topic.title_de || topic.title} · ${review ? topic.review_count : topic.card_count} cards · ${percent(topic.percent)}%`;
+        sphere.dataset.topicId = String(topicId);
+        scene.append(sphere);
+        spheres.push(sphere);
+      });
+    app.append(scene, node('p', 'Select a sphere or use the topic list below. Motion pauses while the atlas has keyboard focus.', 'atlas-help'));
+
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let frameId = null;
+    let phase = 0;
+    let previous = null;
+    let focused = false;
+    let disposed = false;
+    function place() {
+      // Equal spacing on a perimeter keeps all twenty targets separate, even on mobile.
+      // The compact crystal stays inside the perimeter and cannot cover a sphere.
+      const width = Math.max(1, scene.clientWidth - 48);
+      const height = scene.clientHeight - 96;
+      const perimeter = 2 * (width + height);
+      spheres.forEach((sphere, index) => {
+        let distance = ((index / spheres.length + phase) % 1) * perimeter;
+        let x, y;
+        if (distance < width) { x = distance; y = 0; }
+        else if ((distance -= width) < height) { x = width; y = distance; }
+        else if ((distance -= height) < width) { x = width - distance; y = height; }
+        else { distance -= width; x = 0; y = height - distance; }
+        sphere.style.left = `${x + 24}px`;
+        sphere.style.top = `${y + 60}px`;
+      });
+    }
+    function stop() {
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null;
+      previous = null;
+    }
+    function frame(time) {
+      frameId = null;
+      if (disposed || document.hidden || reduced.matches || focused) return;
+      if (previous !== null) phase = (phase + Math.min(time - previous, 50) / 180000) % 1;
+      previous = time;
+      place();
+      frameId = requestAnimationFrame(frame);
+    }
+    function sync() {
+      stop();
+      place();
+      if (!disposed && !document.hidden && !reduced.matches && !focused) frameId = requestAnimationFrame(frame);
+    }
+    function focusIn() { focused = true; stop(); }
+    function focusOut(event) { focused = scene.contains(event.relatedTarget); sync(); }
+    scene.addEventListener('focusin', focusIn);
+    scene.addEventListener('focusout', focusOut);
+    document.addEventListener('visibilitychange', sync);
+    window.addEventListener('resize', sync);
+    reduced.addEventListener('change', sync);
+    disposeAtlas = () => {
+      disposed = true;
+      stop();
+      document.removeEventListener('visibilitychange', sync);
+      window.removeEventListener('resize', sync);
+      reduced.removeEventListener('change', sync);
+      scene.removeEventListener('focusin', focusIn);
+      scene.removeEventListener('focusout', focusOut);
+    };
+    sync();
   }
 
   async function start(topicId, review) {
@@ -214,14 +303,14 @@
       box.tabIndex = -1;
       box.append(node('h2', feedback.correct ? 'Correct. Nicely done.' : choiceIndex === null ? 'Let’s learn this one.' : 'Not quite — you’ll see this again.'));
       box.append(node('p', feedback.answer));
-      if (feedback.latex) { const formula = node('div', null, 'math feedback-math'); math(formula, feedback.latex, feedback.latex); box.append(formula); }
+      if (feedback.latex) { const formula = node('div', null, 'math feedback-math'); math(formula, feedback.latex, feedback.answer); box.append(formula); }
       if (feedback.source_note) box.append(node('p', feedback.source_note, 'source-note'));
       if (!feedback.correct) box.append(node('p', 'Added back to your practice queue.', 'retry-note'));
       box.append(button(session.complete ? 'See completion →' : 'Next question →', showSession, 'button primary wide'));
       app.append(box);
       announce(feedback.correct ? 'Correct answer.' : 'Answer revealed. This question will return for practice.');
       box.focus({ preventScroll: true });
-      box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      box.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' });
     } catch (error) {
       showError(error, reloadSession);
       // An uncertain response may already have been accepted. Never resubmit a stale token.

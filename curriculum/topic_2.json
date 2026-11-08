@@ -150,6 +150,7 @@
       "id": "concept-a873a0b7a61e40c1",
       "section_id": "2.1.1",
       "front": "Spin-½ state vector",
+      "formula_answer": "|ψ⟩ = α|0⟩ + β|1⟩; |α|² + |β|² = 1",
       "definition": "|ψ⟩ = α|0⟩ + β|1⟩",
       "key_rule": "|α|² + |β|² = 1",
       "source_status": "Not started",

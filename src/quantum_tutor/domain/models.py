@@ -37,6 +37,7 @@ class ConceptCard:
     page: int | None = None
     equation_reference: str = ""
     original_section_title: str = ""
+    formula_answer: str = ""
 
 
 @dataclass(frozen=True)

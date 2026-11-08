@@ -25,7 +25,9 @@ Send `/start` to open the main menu. Full navigation controls are shown on the m
 - A correct answer completes that unique card in the current set and advances automatically. Retries do not inflate the set size or completion percentage.
 - On completion, the keyboard contains **Main menu only**. Tap it to return to full navigation. Main menu also lets you leave an unfinished session.
 
-Telegram **chat** buttons still use Unicode/plain text. The **Mini App** is a web interface and can render supplied LaTeX directly inside answer buttons using KaTeX; cards without LaTeX fall back to readable text. It does not generate equation images. Original formulas and renderer metadata remain in the curriculum.
+Telegram **chat** buttons use Unicode/plain text. The **Mini App** uses KaTeX for formulas. Answer buttons preserve the exact answer text using escaped LaTeX text mode; they do not replace it with a broader or different equation from card metadata. Feedback additionally typesets supplied mathematical LaTeX. This means answer buttons are not yet fully converted to structural LaTeX fractions and matrices. Unsupported notation or unavailable KaTeX falls back to the readable original text, rather than displaying a red parser error. Original formulas and renderer metadata remain in the curriculum.
+
+Chapter 2 regression checks exclude equivalent spectral-theorem/unitary-diagonalization answers and overlapping spin-measurement/projection-postulate answers from each other's distractor pools. The spin-state-vector answer explicitly includes both the state expansion and normalization. Grading checks the selected index in the server-generated question, not the rendered HTML. These fixes address reproduced ambiguities; automatic distractor selection is still heuristic, not a proof that every alternative in every chapter is false.
 
 ### Review, progress, and reminders
 
@@ -69,6 +71,38 @@ Software consistency checks and mathematical review are **not full verification 
 
 ## Telegram Mini App
 
+### Interactive Spheres — Chapter and Experiment Navigation
+
+**Design requirements:** This section specifies the intended Quantum Atlas navigation. It is not a claim that the animated sphere interface is already implemented; the current Mini App uses topic cards.
+
+Every sphere (*Kugel*) in the Quantum Atlas represents **exactly one chapter or experiment** and acts as a clickable entry point to its exercises.
+
+- **10 Chapter Spheres (01–10):** Each sphere is assigned to one specific quantum mechanics chapter.
+- **10 Experiment Spheres (E1–E10):** Each sphere is assigned to one specific experimental topic.
+- **Unique Mapping:** Every sphere has its own stable topic ID, title, description, and exercise collection. Descriptions must reflect the corresponding curriculum, not placeholder content.
+- **Click Interaction:** Clicking or touching a sphere opens the exercises belonging exclusively to that chapter or experiment, filtered by the selected study mode where applicable.
+- **Exercise Content:** Questions, formulas, concepts, and explanations must be loaded through the existing exercise system from the corresponding curriculum file.
+- **Independent Progress:** Each chapter and experiment displays its own learning progress for the authenticated account, using the existing saved review history.
+- **Orbital Animation:** All 20 spheres move along their respective orbits while remaining clickable. Respect reduced-motion preferences by keeping spheres stationary when requested.
+
+#### Topic Mapping
+
+| Sphere | Stable topic ID | Curriculum | Content |
+|---|---|---|---|
+| 01–10 | 1–10 | `curriculum/topic_1.json` – `curriculum/topic_10.json` | Quantum mechanics chapters 1–10 |
+| E1–E10 | 11–20 | `curriculum/topic_11.json` – `curriculum/topic_20.json` | Experimental topics 1–10 |
+
+For experiment sphere E*n*, the stable topic ID is **10 + n**. Sphere labels are display names, not new curriculum IDs.
+
+#### Required Behavior
+
+**When a student taps Sphere 03, only Chapter 3 exercises must open (`topic_id: 3`). When a student taps Sphere E05, only Experiment 5 exercises must open (`topic_id: 15`).**
+
+The central **Q** may start a general study session, but it must not override the individual sphere-to-topic mapping. Whole-course sessions must be an explicit, separate action.
+
+The interface must use the existing authenticated Quantum Tutor exercise system rather than placeholder questions. Each sphere must preserve its assigned topic throughout animation, selection, and navigation. Animation may change a sphere's position, but never its identity, click target mapping, or curriculum source. Sphere selection must submit its stable topic ID to the existing `/api/session` endpoint; the server remains responsible for authentication, card selection, grading, retries, and saved progress.
+
+
 Configure `MINI_APP_URL=https://your-public-host/`, deploy the `web` service, and restart `bot`. Telegram then offers a **Study App** menu button, an **Open Mini App** reply-keyboard button, and `/app` to show the launcher. Existing chat commands keep working.
 
 The Mini App provides Learn, Formulas, Laws, whole-topic or whole-course sets, chapter/experiment browsing, missed/due review (optionally scoped to a topic), completion, progress, and resume while the web service remains running. Answers are submitted once using short-lived per-question nonces. Wrong answers and Don't know requeue cards. Feedback stays visible until Next is tapped; completion shows Main menu. Web and chat use separate in-memory active queues but share saved SQLite history.
@@ -91,6 +125,24 @@ docker compose logs --tail=100 preview
 ```
 
 The optional `preview` service uses a Cloudflare Quick Tunnel. Its `trycloudflare.com` address is public HTTPS but **not a permanent production address**: it can change when the tunnel restarts and has no availability guarantee. Set `MINI_APP_URL` to the emitted address, then recreate `bot`. For reliable production use, configure a permanent hostname/tunnel route once, set that stable URL, and stop the preview service. Do not share Cloudflare credentials or bot tokens in chat.
+
+### Finding your Mini App address
+
+Run these commands on the server, from the project directory:
+
+```sh
+cd /home/sofiia/workspace/QuantumMechanics-FU
+docker compose --profile preview up -d --build
+docker compose logs --tail=100 preview
+```
+
+Copy the **actual `https://….trycloudflare.com` URL printed in the logs**. Do not use `your-current-address.trycloudflare.com`: that is an example, not a working hostname. Edit the server's `.env` with `nano .env`, set `MINI_APP_URL` to the actual URL, then apply it:
+
+```sh
+docker compose up -d --force-recreate bot web
+```
+
+Open the bot in Telegram and send `/app` or `/start`. If Docker says “no configuration file provided,” you are not in the directory containing `compose.yaml`, or the updated project has not been deployed there. A temporary tunnel can change its address after restart; use a permanent HTTPS hostname for long-term hosting. Local edits are not automatically deployed to the server.
 
 ## Setup
 

@@ -52,6 +52,8 @@ class StudyService:
 
     @staticmethod
     def formula_text(card: ConceptCard) -> str:
+        if card.formula_answer:
+            return card.formula_answer
         symbols = ("=", "≥", "≤", "≈", "∝", "≠")
         for value in (card.key_rule, card.definition):
             if any(symbol in value for symbol in symbols):
@@ -80,6 +82,8 @@ class StudyService:
         overlap_groups = (
             {"C4-016", "C4-018", "C4-022", "C3-011", "concept-c52dc23213cf6e50"},
             {"C4-023", "C4-027", "C4-040", "C4-049", "C10-016"},
+            {"concept-bbf3c48cc71c54f5", "concept-09a186cab399efc8"},
+            {"concept-36e0507fcc738744", "concept-7bcd3378b1235038"},
             {"C7-008", "C7-015"},
             {"C7-007", "C7-045", "C8-017", "EXP-035"},
             {"C8-021", "EXP-048", "EXP-034"},
@@ -131,6 +135,8 @@ class StudyService:
         choices = distractors + [correct]
         random.shuffle(choices)
         answer = f"{card.definition}\n\n{card.key_rule}".strip()
+        if card.formula_answer:
+            answer = card.formula_answer
         for chapter in self.curriculum.chapters():
             note = chapter.content_review_required.get(card.id)
             if note:

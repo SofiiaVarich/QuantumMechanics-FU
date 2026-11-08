@@ -20,6 +20,17 @@ from quantum_tutor.web.auth import AuthenticationError, authenticate_init_data
 STATIC = Path(__file__).parent / "static"
 
 
+def latex_for_choice(text: str) -> str:
+    # Choices are excerpts, whereas card metadata can describe a different or
+    # longer equation. Preserve the excerpt literally rather than substituting it.
+    escapes = {
+        "\\": r"\textbackslash{}", "{": r"\{", "}": r"\}",
+        "$": r"\$", "&": r"\&", "#": r"\#", "%": r"\%",
+        "_": r"\_", "^": r"\textasciicircum{}", "~": r"\textasciitilde{}",
+    }
+    return r"\text{" + "".join(escapes.get(char, char) for char in text) + "}"
+
+
 @dataclass
 class Session:
     title: str
@@ -78,11 +89,6 @@ def create_web_app(settings: Settings) -> web.Application:
                 return latex, chapter.content_review_required.get(card_id, "")
         return "", ""
 
-    def latex_for_choice(text: str) -> str:
-        for card in study.cards():
-            if study.has_formula(card) and study.formula_text(card) == text:
-                return metadata(card.id)[0]
-        return ""
 
     def prepare(session: Session) -> None:
         card = session.study_set.current if session.study_set else None
