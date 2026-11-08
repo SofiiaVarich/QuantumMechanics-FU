@@ -90,11 +90,14 @@
     }
     container.textContent = fallback || latex || '';
   }
-  function navigation() { app.append(button('← Main menu', () => { if (!busy) home(); }, 'text-button')); }
+  function navigation() { app.append(button('← Crystal Atlas', () => { if (!busy) home(); }, 'text-button')); }
 
-  async function home() {
+  function home() { return topics(mode); }
+
+  async function dashboard() {
     if (busy) return;
-    const version = renderScreen('home');
+    const version = renderScreen('progress');
+    navigation();
     heading('A LITTLE PRACTICE, EVERY DAY', 'Make quantum mechanics click.', 'Explore your course, recall what matters, and see your understanding grow.');
     const grid = node('div', null, 'mode-grid');
     Object.entries(modes).forEach(([key, [title, description, index]]) => {
@@ -118,7 +121,7 @@
       review.append(node('span', '↻', 'review-icon'), node('span', `Review · ${progress.review_count} to revisit`), node('span', '→'));
       app.append(review);
       if (existing && !existing.complete) app.append(button('Continue your session →', () => { session = existing; showSession(); }, 'button primary wide'));
-    } catch (error) { if (version === screenVersion) showError(error, home); }
+    } catch (error) { if (version === screenVersion) showError(error, dashboard); }
   }
 
   function reviewSelection() {
@@ -130,15 +133,24 @@
   async function topics(selectedMode, review = false) {
     if (busy) return;
     mode = selectedMode;
-    const version = renderScreen('topics'); navigation();
-    heading(review ? 'REVIEW' : 'YOUR COURSE', modes[mode][0], review ? 'Revisit questions that need more practice.' : 'Choose a topic, or practice the whole course.');
+    const version = renderScreen(review ? 'review' : 'home');
+    if (review) navigation();
+    heading('STUDY THE INVISIBLE / 2026', 'TOUCH\nQUANTUM', 'Twenty worlds of physics. Turn the crystal, drag the spheres, and choose a chapter or experiment.');
     loading();
     try {
       const data = await api(`/topics?mode=${encodeURIComponent(mode)}`);
       if (version !== screenVersion) return;
       app.querySelector('.loading').remove();
       renderAtlas(data.topics, review);
-      app.append(button(review ? `Review all topics · ${data.review_count} due` : 'Practice all topics →', () => start(null, review), 'button primary wide'));
+      const controls = node('nav', null, 'atlas-modes');
+      controls.setAttribute('aria-label', 'Study mode');
+      Object.entries(modes).forEach(([key, [title]]) => {
+        const control = button(title, () => topics(key, review), 'button secondary');
+        control.setAttribute('aria-pressed', String(key === mode));
+        controls.append(control);
+      });
+      controls.append(button('Progress & review →', dashboard, 'text-button'));
+      app.append(controls);
       app.append(node('h2', 'Topic list · dates, cards & progress', 'atlas-list-heading'));
       if (!review) app.append(button(`Review this mode · ${data.review_count} due`, () => topics(selectedMode, true), 'text-button'));
       for (const [title, min, max] of [['Chapters', 1, 10], ['Experiments', 11, 20]]) {
@@ -164,53 +176,87 @@
     const scene = node('section', null, 'atlas-scene');
     scene.setAttribute('aria-label', 'Crystal Atlas: chapters 01–10 and experiments E1–E10');
     const hint = node('p', 'CHOOSE YOUR ORBIT · ' + modes[mode][0].toUpperCase(), 'atlas-caption');
-    const core = button('', () => start(null, review), 'atlas-core');
-    core.setAttribute('aria-label', review ? 'Review all topics' : 'Practice all topics');
-    core.append(node('span', 'Q', 'atlas-crystal'), node('span', review ? 'REVIEW ALL TOPICS' : 'ALL TOPICS', 'atlas-core-label'));
-    scene.append(hint, core);
+    const core = button('', () => {}, 'atlas-core');
+    core.setAttribute('aria-label', 'Interactive crystal: press to deform, drag to turn');
+    const canvas = node('canvas');
+    core.append(node('span', 'Q', 'atlas-crystal'), canvas);
+    const cta = node('div', null, 'atlas-cta');
+    cta.append(node('span', 'TOUCH & PRESS THE CRYSTAL'), button(review ? 'Q · REVIEW ALL TOPICS →' : 'Q · START GENERAL SESSION →', () => start(null, review), 'atlas-start'));
+    scene.append(hint, core, cta);
+    scene.dataset.filter = 'all';
+    const filters = node('div', null, 'atlas-filters');
+    filters.setAttribute('role', 'group');
+    filters.setAttribute('aria-label', 'Filter atlas topics');
     const spheres = [];
+    const filterButtons = [];
+    for (const [value, label] of [['all', 'ALL 20'], ['theory', '01—10 THEORY'], ['experiment', 'E1—E10 LAB']]) {
+      const control = button(label, () => {
+        scene.dataset.filter = value;
+        filterButtons.forEach(item => item.setAttribute('aria-pressed', String(item === control)));
+        spheres.forEach(sphere => { sphere.hidden = value !== 'all' && sphere.dataset.category !== value; });
+      }, 'button secondary');
+      control.setAttribute('aria-pressed', String(value === 'all'));
+      filterButtons.push(control);
+      filters.append(control);
+    }
     topics.filter(topic => topic.number >= 1 && topic.number <= 20)
       .slice().sort((a, b) => a.number - b.number).forEach(topic => {
         // Capture the API ID, never an animation index or mutable loop counter.
         const topicId = topic.number;
         const experiment = topicId > 10;
         const label = experiment ? `E${topicId - 10}` : String(topicId).padStart(2, '0');
-        const sphere = button(label, () => start(topicId, review), `atlas-sphere ${experiment ? 'experiment' : 'theory'}`);
+        let moved = false;
+        const sphere = button(label, () => { if (!moved) start(topicId, review); }, `atlas-sphere ${experiment ? 'experiment' : 'theory'}`);
+        const mini = node('canvas'); mini.width = mini.height = 92;
+        sphere.textContent = '';
+        sphere.append(mini, node('span', label, 'atlas-chip'));
         sphere.setAttribute('aria-label', `${experiment ? 'Experiment' : 'Chapter'} ${label}: ${topic.title_de || topic.title}`);
         sphere.title = `${topic.title_de || topic.title} · ${review ? topic.review_count : topic.card_count} cards · ${percent(topic.percent)}%`;
         sphere.dataset.topicId = String(topicId);
+        sphere.dataset.category = experiment ? 'experiment' : 'theory';
         scene.append(sphere);
         spheres.push(sphere);
+        let origin = null;
+        sphere.addEventListener('pointerdown', event => { moved = false; origin = [event.clientX, event.clientY]; sphere.setPointerCapture(event.pointerId); });
+        sphere.addEventListener('pointermove', event => {
+          if (!origin) return;
+          const dx = event.clientX - origin[0], dy = event.clientY - origin[1];
+          if (Math.hypot(dx, dy) > 5) moved = true;
+          sphere.style.translate = `${dx}px ${dy}px`;
+        });
+        sphere.addEventListener('pointerup', () => { origin = null; });
+        sphere.addEventListener('pointercancel', () => { origin = null; moved = true; });
+        sphere.addEventListener('keydown', () => { moved = false; });
       });
-    app.append(scene, node('p', 'Select a sphere or use the topic list below. Motion pauses while the atlas has keyboard focus.', 'atlas-help'));
+    app.append(scene, node('p', 'Select a sphere or use the topic list below. Motion pauses while the atlas has keyboard focus.', 'atlas-help'), filters);
 
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const crystal = window.createAtlasCrystal?.(core, canvas, reduced, () => scene.dataset.filter);
+    const minis = window.createAtlasMiniCrystals?.(spheres);
     let frameId = null;
     let phase = 0;
     let previous = null;
     let focused = false;
     let disposed = false;
     function place() {
-      // Equal spacing on a perimeter keeps all twenty targets separate, even on mobile.
-      // The compact crystal stays inside the perimeter and cannot cover a sphere.
-      const width = Math.max(1, scene.clientWidth - 48);
-      const height = scene.clientHeight - 96;
-      const perimeter = 2 * (width + height);
-      spheres.forEach((sphere, index) => {
-        let distance = ((index / spheres.length + phase) % 1) * perimeter;
-        let x, y;
-        if (distance < width) { x = distance; y = 0; }
-        else if ((distance -= width) < height) { x = width; y = distance; }
-        else if ((distance -= height) < width) { x = width - distance; y = height; }
-        else { distance -= width; x = 0; y = height - distance; }
-        sphere.style.left = `${x + 24}px`;
-        sphere.style.top = `${y + 60}px`;
+      const width = scene.clientWidth, height = scene.clientHeight;
+      spheres.forEach(sphere => {
+        const id = Number(sphere.dataset.topicId), experiment = id > 10;
+        const angle = ((id - 1) % 10) * Math.PI / 5 + (experiment ? .4 : 0) + phase * Math.PI * 2 * (experiment ? -1 : 1);
+        const x = width * (experiment ? .44 : .32) * Math.cos(angle);
+        const y = height * (experiment ? .36 : .22) * Math.sin(angle);
+        const tilt = experiment ? -.55 : .57;
+        sphere.style.left = `${width / 2 + x * Math.cos(tilt) - y * Math.sin(tilt)}px`;
+        sphere.style.top = `${height / 2 + x * Math.sin(tilt) + y * Math.cos(tilt)}px`;
+        sphere.style.zIndex = Math.sin(angle) > 0 ? 6 : 2;
       });
     }
+
     function stop() {
       if (frameId !== null) cancelAnimationFrame(frameId);
       frameId = null;
       previous = null;
+      crystal?.stop();
     }
     function frame(time) {
       frameId = null;
@@ -218,14 +264,17 @@
       if (previous !== null) phase = (phase + Math.min(time - previous, 50) / 180000) % 1;
       previous = time;
       place();
+      crystal?.draw();
+      minis?.draw(time);
       frameId = requestAnimationFrame(frame);
     }
     function sync() {
       stop();
       place();
+      if (!document.hidden) { crystal?.draw(); minis?.draw(reduced.matches ? 0 : performance.now()); }
       if (!disposed && !document.hidden && !reduced.matches && !focused) frameId = requestAnimationFrame(frame);
     }
-    function focusIn() { focused = true; stop(); }
+    function focusIn(event) { focused = !event?.target?.matches || event.target.matches(':focus-visible'); if (focused) stop(); }
     function focusOut(event) { focused = scene.contains(event.relatedTarget); sync(); }
     scene.addEventListener('focusin', focusIn);
     scene.addEventListener('focusout', focusOut);
@@ -235,6 +284,8 @@
     disposeAtlas = () => {
       disposed = true;
       stop();
+      crystal?.dispose();
+      minis?.dispose();
       document.removeEventListener('visibilitychange', sync);
       window.removeEventListener('resize', sync);
       reduced.removeEventListener('change', sync);
@@ -247,10 +298,18 @@
   async function start(topicId, review) {
     if (busy) return;
     busy = true;
+    const atlas = app.querySelector('.atlas-scene');
+    app.setAttribute('aria-busy', 'true');
+    atlas?.setAttribute('aria-busy', 'true');
     app.querySelectorAll('button').forEach(el => { el.disabled = true; });
     try { session = await api('/session', { mode, topic_id: topicId, review }); showSession(); }
     catch (error) { showError(error); }
-    finally { busy = false; app.querySelectorAll('button').forEach(el => { el.disabled = false; }); }
+    finally {
+      busy = false;
+      app.setAttribute('aria-busy', 'false');
+      atlas?.setAttribute('aria-busy', 'false');
+      app.querySelectorAll('button').forEach(el => { el.disabled = false; });
+    }
   }
   async function reloadSession() {
     if (busy) return;

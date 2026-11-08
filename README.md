@@ -73,7 +73,7 @@ Software consistency checks and mathematical review are **not full verification 
 
 ### Interactive Spheres — Chapter and Experiment Navigation
 
-**Design requirements:** This section specifies the intended Quantum Atlas navigation. It is not a claim that the animated sphere interface is already implemented; the current Mini App uses topic cards.
+**Crystal Atlas version 3:** The authenticated Mini App opens directly on the Atlas landing page, with cyan chapter spheres, mint experiment spheres, and the supplied design's interactive WebGL crystal. A static topic list remains an accessible alternative. The supplied HTML is the visual reference; its placeholder questions are not used. Three.js r128 loads from a pinned CDN URL; a CSS crystal remains visible if the library or WebGL is unavailable. Animation pauses when the page is hidden and respects reduced-motion preferences. Learn, Formulas, Laws, Review, and progress remain accessible from the Atlas.
 
 Every sphere (*Kugel*) in the Quantum Atlas represents **exactly one chapter or experiment** and acts as a clickable entry point to its exercises.
 

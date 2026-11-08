@@ -251,7 +251,7 @@ def create_web_app(settings: Settings) -> web.Application:
 
     async def static_file(request):
         name = request.match_info.get("name", "index.html")
-        if name not in {"index.html", "app.js", "styles.css"}:
+        if name not in {"index.html", "app.js", "styles.css", "crystal.js"}:
             raise web.HTTPNotFound()
         response = web.FileResponse(STATIC / name)
         response.headers["Cache-Control"] = "no-cache"
