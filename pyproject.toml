@@ -8,6 +8,7 @@ version = "0.1.0"
 description = "Telegram learning bot for FU Berlin quantum mechanics"
 requires-python = ">=3.11"
 dependencies = [
+  "aiohttp>=3.11,<4",
   "python-dotenv>=1.0,<2",
   "python-telegram-bot[job-queue]>=21,<23",
 ]
@@ -17,9 +18,13 @@ dev = ["pytest>=8,<10"]
 
 [project.scripts]
 quantum-tutor = "quantum_tutor.main:main"
+quantum-tutor-web = "quantum_tutor.web.server:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+"quantum_tutor.web" = ["static/*.html", "static/*.js", "static/*.css"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]

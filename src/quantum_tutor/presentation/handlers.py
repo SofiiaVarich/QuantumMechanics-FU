@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import time
 
-from telegram import KeyboardButton, Message, ReplyKeyboardMarkup, Update, User
+from telegram import KeyboardButton, Message, ReplyKeyboardMarkup, Update, User, WebAppInfo
 from telegram.ext import ContextTypes
 
 from quantum_tutor.application.study import StudyService
@@ -32,11 +32,23 @@ MAIN_MENU = ReplyKeyboardMarkup(
 )
 
 
+def main_keyboard(mini_app_url: str = "") -> ReplyKeyboardMarkup:
+    if not mini_app_url:
+        return MAIN_MENU
+    return ReplyKeyboardMarkup(
+        [[KeyboardButton("📱 Open Mini App", web_app=WebAppInfo(mini_app_url))]]
+        + [list(row) for row in MAIN_MENU.keyboard],
+        resize_keyboard=True, is_persistent=True,
+    )
+
+
 def build_handlers(
     study: StudyService,
     curriculum: CurriculumRepository,
     allowed_user_ids: tuple[int, ...],
+    mini_app_url: str = "",
 ):
+    main_menu = main_keyboard(mini_app_url)
     chapters = curriculum.chapters()
     digits = ("0️⃣", "1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣")
     number_emojis = tuple(
@@ -91,7 +103,7 @@ def build_handlers(
         return True
 
     async def send_menu(message: Message, text: str = "✨ What would you like to study?") -> None:
-        await message.reply_text(text, reply_markup=MAIN_MENU)
+        await message.reply_text(text, reply_markup=main_menu)
 
     def progress_label(ids: set[str], known: set[str]) -> str:
         if not ids:
@@ -217,7 +229,7 @@ def build_handlers(
     async def show_progress(message: Message, user: User) -> None:
         await message.reply_text(
             "📈 Your learning progress\n\n" + study.progress_text(user.id),
-            reply_markup=MAIN_MENU,
+            reply_markup=main_menu,
         )
 
     async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:

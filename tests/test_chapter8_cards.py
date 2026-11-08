@@ -27,7 +27,7 @@ def test_chapter8_import_and_sets(tmp_path: Path) -> None:
     assert first.id == "C8-001"
     assert first.key_rule == "H = (P − eA/c)²/(2m) + eΦ"
     assert first.definition == "Minimal coupling of a spinless charged particle to vector and scalar potentials."
-    metadata = json.loads(Path("curriculum/topic_08.json").read_text())["concept_metadata"]
+    metadata = json.loads(Path("curriculum/topic_8.json").read_text())["concept_metadata"]
     assert metadata[first.id]["equation_reference"] == "8.1"
     handler = build_handlers(
         StudyService(repository, ProgressRepository(tmp_path / "progress.db")), repository, (123,)

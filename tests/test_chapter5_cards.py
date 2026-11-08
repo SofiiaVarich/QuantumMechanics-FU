@@ -28,7 +28,7 @@ def test_chapter5_cards_and_automatic_sets(tmp_path: Path) -> None:
     assert first.id == "C5-001"
     assert first.key_rule == "L = X × P"
     assert first.definition == "Angular momentum is the cross product of position and momentum operators."
-    metadata = json.loads(Path("curriculum/topic_05.json").read_text())["concept_metadata"]
+    metadata = json.loads(Path("curriculum/topic_5.json").read_text())["concept_metadata"]
     assert metadata[first.id]["equation_reference"] == "5.1"
     assert sum(item["priority"] == "BOX" for item in metadata.values()) == 29
     assert {f"C5-{i:03}" for i in range(1, 60)}.issubset({card.id for card in chapter.concepts})

@@ -27,7 +27,7 @@ def test_chapter6_import_and_parent_set(tmp_path: Path) -> None:
     assert first.id == "C6-001"
     assert first.key_rule == "H⁽⁰⁾ = Σⱼ Eⱼ⁽⁰⁾ |ψⱼ⁽⁰⁾⟩⟨ψⱼ⁽⁰⁾|"
     assert first.definition == "Known eigenvalues and eigenvectors form the starting point."
-    metadata = json.loads(Path("curriculum/topic_06.json").read_text())["concept_metadata"]
+    metadata = json.loads(Path("curriculum/topic_6.json").read_text())["concept_metadata"]
     assert metadata[first.id]["equation_reference"] == "6.1"
     assert {f"C6-{i:03}" for i in range(1, 48)}.issubset({card.id for card in chapter.concepts})
     assert metadata[first.id]["formula_latex"].startswith(r"H^{(0)}=\sum_j")

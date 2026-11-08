@@ -1,6 +1,6 @@
 # Quantum Tutor
 
-A private German–English Telegram study bot for quantum mechanics, with multiple-choice topic practice, explanations, spaced review, progress tracking, and study reminders.
+A private Telegram bot **and Mini App** for quantum mechanics, sharing one curriculum and progress database. The chat bot handles study sessions and reminders; the Mini App adds a visual course browser, typeset formulas, answer buttons, review, and progress screens.
 
 This is an independent learning project, **not an official Freie Universität Berlin service or affiliated with Quizlet**. Recognition practice supports study but does not establish independent recall, derivation ability, problem-solving skill, or exam readiness. Confirm examination coverage, dates, rooms, and permitted aids with official FU sources.
 
@@ -25,7 +25,7 @@ Send `/start` to open the main menu. Full navigation controls are shown on the m
 - A correct answer completes that unique card in the current set and advances automatically. Retries do not inflate the set size or completion percentage.
 - On completion, the keyboard contains **Main menu only**. Tap it to return to full navigation. Main menu also lets you leave an unfinished session.
 
-Telegram answer buttons use **Unicode/plain text**, not native LaTeX or equation images. Raw LaTeX, renderer wrappers, and original formulas are retained as metadata where supplied; they are not typeset in buttons. Equation-image rendering and a Mini App are not implemented.
+Telegram **chat** buttons still use Unicode/plain text. The **Mini App** is a web interface and can render supplied LaTeX directly inside answer buttons using KaTeX; cards without LaTeX fall back to readable text. It does not generate equation images. Original formulas and renderer metadata remain in the curriculum.
 
 ### Review, progress, and reminders
 
@@ -39,7 +39,7 @@ SQLite review history and schedules survive restarts. Active sessions and their 
 
 ## Curriculum and source status
 
-The active catalog is **`curriculum/topic_*.json`**, covering 20 topics. Theory chapter IDs 1–10 and experimental topic IDs 11–20 are stable; do not renumber them into a proposed chronological study order. The duplicate legacy `chapter_01.json`–`chapter_10.json` and `experiments.json` catalog is retired, not an additional source to load or maintain.
+The active catalog is **`curriculum/topic_1.json` through `curriculum/topic_20.json`**, covering 20 topics. Theory chapter IDs 1–10 and experimental topic IDs 11–20 are stable; do not renumber them into a proposed chronological study order. The duplicate legacy `chapter_01.json`–`chapter_10.json` and `experiments.json` catalog is retired, not an additional source to load or maintain.
 
 Current catalog snapshot:
 
@@ -67,6 +67,31 @@ See [`CONTENT_AUDIT.md`](CONTENT_AUDIT.md) for **21 corrected/clarified records*
 
 Software consistency checks and mathematical review are **not full verification against the original lecture PDFs** or certification of examination coverage. Distractor filters reduce duplicate, overlapping, and ambiguous choices but do not prove every distractor is semantically false. Check source conventions, units, assumptions, and boundary conditions when studying.
 
+## Telegram Mini App
+
+Configure `MINI_APP_URL=https://your-public-host/`, deploy the `web` service, and restart `bot`. Telegram then offers a **Study App** menu button, an **Open Mini App** reply-keyboard button, and `/app` to show the launcher. Existing chat commands keep working.
+
+The Mini App provides Learn, Formulas, Laws, whole-topic or whole-course sets, chapter/experiment browsing, missed/due review (optionally scoped to a topic), completion, progress, and resume while the web service remains running. Answers are submitted once using short-lived per-question nonces. Wrong answers and Don't know requeue cards. Feedback stays visible until Next is tapped; completion shows Main menu. Web and chat use separate in-memory active queues but share saved SQLite history.
+
+### Authentication and privacy
+
+Open the Mini App **inside Telegram**, not as an ordinary browser link. Every API request validates the HMAC signature and age of Telegram `initData`, then checks the same user allowlist as the bot. Forged, stale, future-dated, or duplicate-field login data are rejected. There is no demo-user fallback, client-supplied trusted user ID, API token in frontend code, or cookie login. The public `/healthz` endpoint contains no personal data; curriculum/progress/session API routes require authentication. API responses are not cached, per-user requests are limited, and answer keys are withheld before submission.
+
+The Telegram SDK loads from `telegram.org`; pinned KaTeX 0.16.11 assets/fonts load from jsDelivr. Those hosts receive normal asset requests; study API data stays on your service. Math rendering disables trusted HTML features and uses text fallback when the renderer is unavailable. User authorization expires after one hour; close and reopen the Mini App to refresh it. Web session state expires after two idle hours and resets on deployment; saved answers persist.
+
+### HTTPS hosting
+
+The `web` service listens on port 8080 and binds the host port to **127.0.0.1 only**. Publish it through a reverse proxy or Cloudflare Tunnel with HTTPS. Use `http://web:8080` as the origin for a tunnel on the same Compose network, or `http://127.0.0.1:8080` for a host-based proxy. The bot and web service share the same named SQLite data volume; only `bot` polls Telegram.
+
+For a temporary live preview:
+
+```sh
+docker compose --profile preview up -d --build
+docker compose logs --tail=100 preview
+```
+
+The optional `preview` service uses a Cloudflare Quick Tunnel. Its `trycloudflare.com` address is public HTTPS but **not a permanent production address**: it can change when the tunnel restarts and has no availability guarantee. Set `MINI_APP_URL` to the emitted address, then recreate `bot`. For reliable production use, configure a permanent hostname/tunnel route once, set that stable URL, and stop the preview service. Do not share Cloudflare credentials or bot tokens in chat.
+
 ## Setup
 
 Requirements: Python **3.11+**, a Telegram bot created through **@BotFather**, numeric Telegram user IDs for permitted accounts, and internet access.
@@ -88,6 +113,8 @@ DATABASE_PATH=data/quantum_tutor.db
 CURRICULUM_PATH=curriculum
 TZ=Europe/Berlin
 REMINDER_TIMES=05:30,20:00
+# Optional until the HTTPS Mini App address is configured:
+MINI_APP_URL=
 ```
 
 - `TELEGRAM_ALLOWED_USER_IDS` accepts comma-separated numeric IDs. Each allowed account has its own progress, review history, and reminders. The legacy singular `TELEGRAM_ALLOWED_USER_ID` is also accepted when the plural setting is absent.
@@ -124,7 +151,7 @@ docker compose logs --tail=100 bot
 docker compose down
 ```
 
-The `bot` service reads `.env`, uses `restart: unless-stopped`, and mounts the named **`quantum-tutor-data`** volume at `/app/data`. With `DATABASE_PATH=data/quantum_tutor.db`, review history survives container replacement and ordinary `docker compose down` / `up` cycles. **Do not use `docker compose down -v` unless you intend to delete persisted data.**
+The `bot` and `web` services read `.env`, use `restart: unless-stopped`, and mount the named **`quantum-tutor-data`** volume at `/app/data`. With `DATABASE_PATH=data/quantum_tutor.db`, review history survives container replacement and ordinary `docker compose down` / `up` cycles. **Do not use `docker compose down -v` unless you intend to delete persisted data.**
 
 Back up SQLite consistently before deployments or migrations and protect database and `.env` permissions. A rebuild does not restore an in-memory study queue, but saved progress and review schedules remain. Continuous reminders require an always-on host and Docker service; a sleeping development laptop is not a substitute.
 
@@ -147,12 +174,13 @@ src/quantum_tutor/
 ├── presentation/      Telegram handlers and keyboards
 ├── config.py          Environment settings
 ├── scheduler.py       Reminder jobs
-└── main.py            Startup and application composition
+├── web/               Signed Telegram authentication, HTTP API, and Mini App static files
+└── main.py            Bot startup and application composition
 curriculum/            Active topic JSON, source index, staged imports
 tests/                 Automated tests
 ```
 
-Add active material to the appropriate **`curriculum/topic_NN.json`**, not a duplicate legacy catalog. Preserve stable, globally unique card IDs because saved history refers to them. Keep equations, meanings, symbols, assumptions, and usage conditions together; retain provenance and explicitly flag source-dependent claims. Do not promote staged image records to active exercises without suitable content and display support.
+Add active material to the appropriate **`curriculum/topic_N.json`**, where `N` is the topic number, not a duplicate legacy catalog. Preserve stable, globally unique card IDs because saved history refers to them. Keep equations, meanings, symbols, assumptions, and usage conditions together; retain provenance and explicitly flag source-dependent claims. Do not promote staged image records to active exercises without suitable content and display support.
 
 Distinguish official headings from original practice, check mathematical correctness and notation, and never claim examination coverage without instructor confirmation. Do not redistribute full lecture scripts or exercise sheets without permission.
 

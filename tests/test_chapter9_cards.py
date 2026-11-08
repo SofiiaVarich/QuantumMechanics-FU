@@ -28,7 +28,7 @@ def test_chapter9_import_and_sets(tmp_path: Path) -> None:
     assert first.front == "Absolute randomness"
     assert first.key_rule == "Quantum measurement outcomes are presented as intrinsically random."
     assert first.definition == "The chapter asks whether underlying local hidden variables could explain outcomes."
-    metadata = json.loads(Path("curriculum/topic_09.json").read_text())["concept_metadata"]
+    metadata = json.loads(Path("curriculum/topic_9.json").read_text())["concept_metadata"]
     assert metadata[first.id]["source_reference"] == "QMChapter9(1).pdf"
     assert metadata[first.id]["equation_reference"] == "—"
     handler = build_handlers(

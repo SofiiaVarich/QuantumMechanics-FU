@@ -1,6 +1,6 @@
 # Architecture
 
-Quantum Tutor is a single-process Telegram bot with a JSON curriculum and SQLite learning history. It runs by long polling in one Docker container on an always-on server. No web frontend or external AI service is required.
+Quantum Tutor is a Telegram bot plus an authenticated Telegram Mini App, backed by one JSON curriculum and SQLite learning history. Two Docker services run on the always-on server: `bot` is the only Telegram poller and reminder scheduler; `web` serves the Mini App and HTTP API. No external AI service is required.
 
 ## Repository layout
 
@@ -18,11 +18,15 @@ QuantumMechanics-FU/
 │   │   ├── models.py            Chapters, sections, concepts, formulas, review state
 │   │   ├── study_set.py         Queue, retries, and session completion
 │   │   └── spaced_repetition.py Deterministic review scheduling
-│   └── infrastructure/
-│       ├── curriculum.py       Active topic JSON loader
-│       └── database.py         SQLite queries and additive schema migration
+│   ├── infrastructure/
+│   │   ├── curriculum.py       Active topic JSON loader
+│   │   └── database.py         SQLite queries and additive schema migration
+│   └── web/
+│       ├── auth.py             Telegram initData HMAC, expiry, allowlist validation
+│       ├── server.py           aiohttp API, per-user sessions, static routes
+│       └── static/             HTML, CSS, and vanilla JavaScript Mini App
 ├── curriculum/
-│   ├── topic_01.json … topic_20.json  The only active curriculum catalog
+│   ├── topic_1.json … topic_20.json  The only active curriculum catalog
 │   ├── script_contents.tsv           Supplied 109-section source index
 │   └── imported/                     Staged, inactive formula-image workbook
 │       ├── import_workbook.py        Extractor for that image workbook
@@ -35,7 +39,7 @@ QuantumMechanics-FU/
 ├── ARCHITECTURE.md                   This document
 ├── pyproject.toml                    Package, dependencies, entry point, test configuration
 ├── Dockerfile                        Runtime image
-└── compose.yaml                      Single bot service and persistent data volume
+└── compose.yaml                      Bot, web, optional preview tunnel, shared data volume
 ```
 
 Python package `__init__.py` files are intentionally retained. They define package boundaries even when their only content is a docstring. Virtual environments, caches, logs, secrets, and databases are local runtime artifacts, not files to commit.
@@ -48,6 +52,11 @@ flowchart TD
     Main[main.py composition root] --> Handlers
     Main --> Service[StudyService]
     Main --> Reminders[Reminder scheduler]
+    Telegram --> MiniApp[Telegram Mini App]
+    MiniApp --> Auth[Signed initData authentication]
+    Auth --> API[HTTP API and web sessions]
+    API --> Service
+    API --> Session
     Handlers --> Service
     Handlers --> Session[StudySet queue]
     Service --> Models[Domain models and scheduling rules]
@@ -62,9 +71,9 @@ The domain does not import Telegram or SQLite. `StudyService` is framework-indep
 
 ## One curriculum source
 
-Only `curriculum/topic_*.json` is loaded. The duplicate legacy `chapter_*.json` catalog and obsolete `experiments.json` index have been removed; do not recreate them as a second source of truth.
+Only `curriculum/topic_*.json` is loaded. The files are named `topic_1.json` through `topic_20.json`. The duplicate legacy `chapter_*.json` catalog and obsolete `experiments.json` index have been removed; do not recreate them as a second source of truth.
 
-- The shared navigation button is labeled **Chapters & Experiments**. Theory entries show `Chapter` plus their number and original title; experimental entries show `Experiment` plus title and supplied date. `/topics` and old delivered labels remain compatible. These are display names; active filenames and IDs are unchanged.
+- The shared navigation button is labeled **Chapters & Experiments**. Theory entries show `Chapter` plus their number and original title; experimental entries show `Experiment` plus title and supplied date. `/topics` and old delivered labels remain compatible. These are display names; active filenames use the simple `topic_1.json`–`topic_20.json` scheme, while IDs remain unchanged.
 - Theory IDs **1–10** retain the original chapter numbering.
 - Experimental IDs **11–20** represent the ten experimental topic buttons.
 - Stable card IDs, not row positions or display names, connect content to progress.
@@ -123,9 +132,19 @@ Topic percentages use the current account's successfully recorded card states. A
 
 ## Formula and source metadata
 
-Topic JSON retains original workbook references, raw LaTeX, BOX priorities, source caveats, correction history, and pending source checks. Raw LaTeX is metadata: Telegram buttons accept plain text, not HTML, LaTeX rendering, or equation images. No math-image renderer or Mini App is implemented.
+Topic JSON retains original workbook references, raw LaTeX, BOX priorities, source caveats, correction history, and pending source checks. Telegram chat buttons accept plain text, not rendered LaTeX. The Mini App uses the saved LaTeX to render math inside its web answer buttons using pinned KaTeX assets, with trusted HTML disabled and readable text fallback. Raw renderer wrappers are not executed. No math-image renderer is implemented.
 
 Original author/source claims are not automatically official FU requirements. Supplied experimental dates are explicitly distinguished from independently verified schedules. Unresolved mathematical conventions display source-check warnings in feedback.
+
+## Mini App boundary
+
+`quantum-tutor-web` starts an aiohttp service on port 8080. The public frontend requires Telegram launch data for every `/api/` request. HMAC verification follows Telegram's WebAppData algorithm with constant-time hash comparison, a one-hour authentication age limit, duplicate-field rejection, and the configured account allowlist. User IDs are never trusted from request bodies. There are no CORS grants, API cookies, frontend bot tokens, or demo-user bypasses.
+
+The API exposes topics/progress plus session start/resume/end and answer submission. Before submission, responses contain choices but no correct index or explanation. A fresh unpredictable question nonce prevents stale or repeated submissions. Each user has a separate web `StudySet`; requests are processed in one event loop with no await between answer validation and nonce replacement. Responses are non-cacheable, request bodies are bounded, and per-user request rates are limited. In-memory web sessions expire after two idle hours. Chat and web queues are independent, but grades and review states share the same SQLite repository/volume.
+
+Static files are packaged with the Python application. The Telegram SDK and pinned KaTeX/font assets are external browser dependencies; they do not receive study API payloads. A CSP limits script/style origins. For an offline-asset deployment these libraries would need to be vendored separately.
+
+The `web` host binding is loopback-only. A permanent HTTPS reverse proxy/tunnel is required for production Telegram launch. The optional Cloudflare Quick Tunnel profile is a preview mechanism: it emits a temporary hostname that may change after a tunnel restart. `MINI_APP_URL` configures both the bot menu launcher and reply-keyboard launcher. It must use HTTPS. Only the bot service registers commands or polls Telegram.
 
 ## Operation and safety
 

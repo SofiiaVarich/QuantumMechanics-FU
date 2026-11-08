@@ -6,11 +6,9 @@ from zoneinfo import ZoneInfo
 
 from telegram.ext import Application
 
-from quantum_tutor.presentation.handlers import MAIN_MENU
+from quantum_tutor.presentation.handlers import main_keyboard
 
 logger = logging.getLogger(__name__)
-
-REMINDER_MENU = MAIN_MENU
 
 
 def parse_reminder_times(value: str) -> tuple[time, ...]:
@@ -60,5 +58,5 @@ async def send_study_reminder(context) -> None:
         text=("🔔 Quantum mechanics reminder\n\n"
               "A short session now: 5 min laws, 5 min formulas, "
               "and 10 min practice. This is a personal study reminder, not an official FU notice."),
-        reply_markup=REMINDER_MENU,
+        reply_markup=main_keyboard(context.application.bot_data.get("mini_app_url", "")),
     )

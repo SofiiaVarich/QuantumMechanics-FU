@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import logging
 
-from telegram import BotCommand
+from telegram import BotCommand, MenuButtonCommands, MenuButtonWebApp, WebAppInfo
 from telegram.ext import Application, CommandHandler, MessageHandler, filters
 
 from quantum_tutor.application.study import StudyService
@@ -18,12 +18,13 @@ def create_application(settings: Settings) -> Application:
     progress = ProgressRepository(settings.database_path)
     study = StudyService(curriculum, progress)
     start, topics, learn, laws, formulas, review, stats, text_input = build_handlers(
-        study, curriculum, settings.allowed_user_ids
+        study, curriculum, settings.allowed_user_ids, settings.mini_app_url
     )
 
     async def configure_bot(application: Application) -> None:
         await application.bot.set_my_commands([
             BotCommand("start", "Open the clickable study menu"),
+            BotCommand("app", "Open the Mini App launcher"),
             BotCommand("learn", "Choose a topic for learning"),
             BotCommand("topics", "Choose a chapter or experiment"),
             BotCommand("laws", "Choose a topic for laws and applications"),
@@ -31,6 +32,13 @@ def create_application(settings: Settings) -> Application:
             BotCommand("review", "Practice missed and due cards"),
             BotCommand("progress", "Show learning statistics"),
         ])
+        application.bot_data["mini_app_url"] = settings.mini_app_url
+        if settings.mini_app_url:
+            await application.bot.set_chat_menu_button(menu_button=MenuButtonWebApp(
+                text="Study App", web_app=WebAppInfo(settings.mini_app_url),
+            ))
+        else:
+            await application.bot.set_chat_menu_button(menu_button=MenuButtonCommands())
 
     application = (
         Application.builder()
@@ -43,7 +51,7 @@ def create_application(settings: Settings) -> Application:
         .post_init(configure_bot)
         .build()
     )
-    for name, handler in (("start", start), ("topics", topics), ("learn", learn), ("laws", laws),
+    for name, handler in (("start", start), ("app", start), ("topics", topics), ("learn", learn), ("laws", laws),
                           ("formulas", formulas), ("review", review), ("progress", stats)):
         application.add_handler(CommandHandler(name, handler))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, text_input))

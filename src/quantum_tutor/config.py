@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 from dataclasses import dataclass
 from pathlib import Path
+from urllib.parse import urlsplit
 
 from dotenv import load_dotenv
 
@@ -15,6 +16,7 @@ class Settings:
     allowed_user_ids: tuple[int, ...]
     timezone: str
     reminder_times: str
+    mini_app_url: str = ""
 
     @classmethod
     def from_env(cls) -> "Settings":
@@ -37,6 +39,11 @@ class Settings:
             ) from error
         if not allowed_user_ids:
             raise RuntimeError("At least one Telegram user ID is required")
+        mini_app_url = os.getenv("MINI_APP_URL", "").strip()
+        if mini_app_url:
+            parsed = urlsplit(mini_app_url)
+            if parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password:
+                raise RuntimeError("MINI_APP_URL must be a public HTTPS URL without credentials")
         return cls(
             telegram_token=token,
             database_path=Path(os.getenv("DATABASE_PATH", "quantum_tutor.db")),
@@ -44,4 +51,5 @@ class Settings:
             allowed_user_ids=allowed_user_ids,
             timezone=os.getenv("TZ", "Europe/Berlin"),
             reminder_times=os.getenv("REMINDER_TIMES", "05:30,20:00"),
+            mini_app_url=mini_app_url,
         )

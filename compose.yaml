@@ -6,5 +6,29 @@ services:
     volumes:
       - quantum-tutor-data:/app/data
 
+  web:
+    build: .
+    command: ["quantum-tutor-web"]
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - quantum-tutor-data:/app/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/healthz', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  preview:
+    image: cloudflare/cloudflared@sha256:4955524aeaa379e154023d5a027c250f7b35041a2e7e950cf13f144bc9b9c5ba
+    profiles: ["preview"]
+    command: ["tunnel", "--no-autoupdate", "--url", "http://web:8080"]
+    restart: unless-stopped
+    depends_on:
+      web:
+        condition: service_healthy
+
 volumes:
   quantum-tutor-data:

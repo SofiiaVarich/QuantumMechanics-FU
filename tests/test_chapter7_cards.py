@@ -28,7 +28,7 @@ def test_chapter7_import_and_sets(tmp_path: Path) -> None:
     assert first.id == "C7-001"
     assert first.key_rule == "H = L²(ℝ) ⊗ ℂ²"
     assert first.definition == "Tensor-product structure shown in the script."
-    metadata = json.loads(Path("curriculum/topic_07.json").read_text())["concept_metadata"]
+    metadata = json.loads(Path("curriculum/topic_7.json").read_text())["concept_metadata"]
     assert metadata[first.id]["equation_reference"] == "7.1"
     handler = build_handlers(
         StudyService(repository, ProgressRepository(tmp_path / "progress.db")), repository, (123,)
