@@ -16,6 +16,7 @@ def authenticate_init_data(
     bot_token: str,
     allowed_user_ids: tuple[int, ...],
     *,
+    public_access: bool = False,
     now: float | None = None,
     max_age: int = 3600,
 ) -> int:
@@ -39,10 +40,10 @@ def authenticate_init_data(
             raise ValueError("Expired authentication")
         user = json.loads(values["user"])
         user_id = user["id"]
-        if type(user_id) is not int:
+        if type(user_id) is not int or user_id <= 0:
             raise ValueError("Invalid user")
     except (ValueError, KeyError, TypeError) as error:
         raise AuthenticationError("Telegram sign-in is invalid or expired. Close and reopen the app.") from error
-    if user_id not in allowed_user_ids:
+    if not public_access and user_id not in allowed_user_ids:
         raise PermissionError("This is a private learning app.")
     return user_id

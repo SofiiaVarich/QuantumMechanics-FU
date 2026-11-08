@@ -62,6 +62,11 @@ assert.deepEqual(calls.pop(), [null, false]);
 assert.equal(frames.size, 1);
 const filters = app.children.find(el => el.className === 'atlas-filters');
 assert.equal(filters.role, 'group');
+assert.ok(app.children.indexOf(filters) < app.children.findIndex(el => el.className === 'atlas-foot'));
+const foot = app.children.find(el => el.className === 'atlas-foot');
+assert.equal(foot.children[0].children[0].textContent, 'CHOOSE YOUR ORBIT');
+assert.equal(foot.children[1].children[0].textContent, 'DRAG / TAP');
+assert.equal(scene.children.filter(el => el.className === 'atlas-dust').length, 14);
 for (const [index, category] of [[1, 'theory'], [2, 'experiment'], [0, 'all']]) {
   filters.children[index].action();
   assert.equal(scene.dataset.filter, category);
@@ -178,9 +183,8 @@ def test_live_integration_and_valid_shell():
     assert "Authorization: 'tma ' + tg.initData" in source
     assert "fallback || latex || ''" in source
     assert "three@0.128.0/build/three.min.js" in html
-    assert 'src="crystal.js?v=9"' in html
-    assert 'href="styles.css?v=9"' in html
-    assert 'src="app.js?v=9"' in html
+    for asset in ['crystal.js', 'styles.css', 'app.js']:
+        assert f'{asset}?v=' in html
     assert "function home() { return topics(mode); }" in source
     assert 'src="https://telegram.org/js/telegram-web-app.js"' in html
     assert html.count("</footer>") == 1
@@ -193,12 +197,31 @@ def test_crystal_fallback_without_three():
     source = (STATIC / "crystal.js").read_text()
     harness = """
 const assert = require('node:assert/strict');
-const window = {};
+const window = {location: {href: 'https://example.test/'}};
+const document = {
+  hidden: false,
+  currentScript: {src: 'https://example.test/crystal.js'},
+  addEventListener() {}, removeEventListener() {}
+};
 """
     checks = """
-const element = {classList: {remove() {}}, removeEventListener() {}};
+const handlers = new Map();
+const element = {
+  classList: {remove() {}},
+  addEventListener(type, handler) { handlers.set(type, handler); },
+  removeEventListener(type, handler) {
+    if (handlers.has(type)) assert.equal(handlers.get(type), handler);
+    handlers.delete(type);
+  },
+  setPointerCapture() {}
+};
 const crystal = window.createAtlasCrystal(element, {removeEventListener() {}}, {matches: true}, () => 'all');
+for (const type of ['pointerdown', 'pointermove', 'pointerup', 'pointercancel', 'lostpointercapture']) {
+  assert.equal(typeof handlers.get(type), 'function', `${type} survives without Three.js`);
+}
+handlers.get('pointerdown')({type: 'pointerdown', isTrusted: true, pointerId: 1, clientX: 0, clientY: 0});
 crystal.draw(); crystal.dispose(); crystal.dispose();
+assert.equal(handlers.size, 0, 'dispose removes fallback pointer handlers');
 assert.equal(typeof crystal.dispose, 'function');
 """
     result = subprocess.run(["node", "-e", harness + source + checks], capture_output=True, text=True, timeout=20)
@@ -261,10 +284,29 @@ def test_motion_lifecycle_and_shared_mini_renderer():
     assert "mesh.rotation.y+=(reduce?0:.004)" not in crystal
 
 
-def test_mini_crystals_without_webgl_and_version9_assets():
+def test_reference_geometry_and_layout_contract():
+    css = (STATIC / 'styles.css').read_text()
+    crystal = (STATIC / 'crystal.js').read_text()
+    minis = (STATIC / 'mini-crystals.js').read_text()
+    assert 'new THREE.IcosahedronGeometry(1,10)' in crystal
+    assert 'cam.position.z=5.2' in crystal
+    assert 'new THREE.SphereGeometry(1,110,70)' in minis
+    assert 'T=128,W=5*T,H=4*T' in minis
+    assert 'cam.updateMatrixWorld()' in minis
+    assert 'U.uLd.value.set(lx+.15*Math.sin(sec*.5+n),ly,.65).normalize()' in minis
+    assert '(1.-smoothstep(-.8,.0,r.x+.25*r.y))' in minis
+    assert '.atlas-scene::before { inset: 25% 15%; transform: rotate(33deg); }' in css
+    assert '.atlas-scene::after { inset: 12% 4%; transform: rotate(-32deg); opacity: .9; }' in css
+    assert 'border-width: 2px; border-color: #fff;' in css
+    assert 'width: 250px; height: 250px;' in css
+    assert 'background: #ffffffa6; backdrop-filter' in css
+    assert '.atlas-dust { animation: none; }' in css
+
+
+def test_mini_crystals_without_webgl_and_versioned_assets():
     html = (STATIC / "index.html").read_text()
     for asset in ["app.js", "crystal.js", "mini-crystals.js", "inertia.js", "styles.css"]:
-        assert f"{asset}?v=9" in html
+        assert f"{asset}?v=" in html
     assert html.count('src="https://') == 3
     if not shutil.which("node"):
         pytest.skip("Node is required")

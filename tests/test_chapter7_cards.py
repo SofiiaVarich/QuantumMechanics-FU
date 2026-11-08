@@ -34,7 +34,11 @@ def test_chapter7_import_and_sets(tmp_path: Path) -> None:
         StudyService(repository, ProgressRepository(tmp_path / "progress.db")), repository, (123,)
     )[-1]
     message = SimpleNamespace(text="7.1.1 Spin operators · 0%", reply_text=AsyncMock())
-    update = SimpleNamespace(effective_message=message, effective_user=SimpleNamespace(id=123))
+    update = SimpleNamespace(
+        effective_message=message,
+        effective_user=SimpleNamespace(id=123),
+        effective_chat=SimpleNamespace(id=123, type="private"),
+    )
     context = SimpleNamespace(user_data={})
     asyncio.run(handler(update, context))
     assert "1/6" in message.reply_text.call_args.args[0]

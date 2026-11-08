@@ -14,7 +14,11 @@ def test_actual_answer_keyboard_shows_equations_in_learn_mode(tmp_path: Path) ->
     service = StudyService(repository, ProgressRepository(tmp_path / "db"))
     handler = build_handlers(service, repository, (123,))[-1]
     message = SimpleNamespace(text="3️⃣ Quantendynamik · 0%", reply_text=AsyncMock())
-    update = SimpleNamespace(effective_message=message, effective_user=SimpleNamespace(id=123))
+    update = SimpleNamespace(
+        effective_message=message,
+        effective_user=SimpleNamespace(id=123),
+        effective_chat=SimpleNamespace(id=123, type="private"),
+    )
     context = SimpleNamespace(user_data={})
     asyncio.run(handler(update, context))
     labels = [button.text for row in message.reply_text.call_args.kwargs["reply_markup"].keyboard for button in row]

@@ -38,6 +38,7 @@ class ConceptCard:
     equation_reference: str = ""
     original_section_title: str = ""
     formula_answer: str = ""
+    formula_answer_latex: str = ""
 
 
 @dataclass(frozen=True)

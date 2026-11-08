@@ -1,24 +1,82 @@
 'use strict';
+const crystalScriptURL = document.currentScript?.src || new URL('crystal.js', window.location.href).href;
 // Shader and shard geometry adapted from the supplied Crystal Atlas reference.
 // Requires the reference's pinned Three.js r128; CSS remains the fallback.
 window.createAtlasCrystal = function (element, cv, reduced, getMode) {
   const listeners = [];
+  let audio = null, soundButton = null, disposed = false, audioTime = 0;
+  let metal = null, rollingReady = false, rollingToken = 0, dragSpeed = 0, dragTime = 0;
+  let muted = false;
+  try { muted = localStorage.getItem('crystal-muted') === 'true'; } catch (_) {}
+  function attachMetalAudio() {
+    if (!disposed && !metal && window.MetalBallAudio) {
+      metal = new window.MetalBallAudio({ maxVoices: 1 });
+      metal.setMuted(audio ? audio.muted : muted);
+    }
+  }
+  function roll(speed) {
+    if (!rollingReady || disposed || reduced.matches || document.hidden) return;
+    metal?.setRolling('crystal', { velocity: Math.min(1, Math.abs(speed) / 8), x: .5 });
+  }
+  function attachAudio() {
+    if (disposed || audio || !window.createCrystalAudio) return;
+    audio = window.createCrystalAudio();
+    muted = audio.muted;
+    metal?.setMuted(muted);
+    if (!element.parentNode || !document.createElement) return;
+    soundButton = document.createElement('button');
+    soundButton.type = 'button';
+    soundButton.className = 'crystal-sound-toggle';
+    const label = () => {
+      soundButton.textContent = audio.muted ? 'Sound off' : 'Sound on';
+      soundButton.setAttribute('aria-label', 'Crystal sound');
+      soundButton.setAttribute('aria-pressed', String(!audio.muted));
+    };
+    soundButton.addEventListener('click', e => { muted = !audio.muted; audio.setMuted(muted); metal?.setMuted(muted); if (muted) { rollingReady = false; rollingToken++; } else { audio.unlock(e); attachMetalAudio(); metal?.unlock(e); } label(); });
+    label();
+    element.parentNode.insertBefore(soundButton, element.nextSibling);
+  }
+  attachMetalAudio();
+  if (window.createCrystalAudio) attachAudio();
+  else if (typeof document !== 'undefined' && document.createElement && document.head) {
+    if (!window.crystalAudioReady) window.crystalAudioReady = new Promise(resolve => {
+      const script = document.createElement('script');
+      script.src = new URL('crystal-audio.js', crystalScriptURL).href;
+      script.onload = resolve; script.onerror = resolve;
+      document.head.appendChild(script);
+    });
+    window.crystalAudioReady.then(attachAudio);
+  }
   const core = { addEventListener(type, fn) { element.addEventListener(type, fn); listeners.push([type, fn]); }, setPointerCapture(id) { element.setPointerCapture(id); } };
   const THREE = window.THREE;
   let drawImpl = null, rdCleanup = null;
   let cd=false, press=false, hit=false, lx=0, ly=0, vx=0, vy2=0;
   let pointer=null, samples=[], previous=null;
-  function stop() { cd=press=hit=false; vx=vy2=0; samples=[]; previous=null; if(pointer!==null && element.hasPointerCapture?.(pointer)) element.releasePointerCapture(pointer); pointer=null; }
+  function stop() { rollingToken++; rollingReady=false; dragSpeed=0; metal?.stopAll(); audio?.end(true); cd=press=hit=false; vx=vy2=0; samples=[]; previous=null; if(pointer!==null && element.hasPointerCapture?.(pointer)) element.releasePointerCapture(pointer); pointer=null; }
   let reduce = reduced.matches, mode = getMode();
-  function draw() { reduce = reduced.matches; mode = getMode(); if (drawImpl) drawImpl(); }
+  function draw() { reduce = reduced.matches; mode = getMode(); if ((typeof document !== 'undefined' && document.hidden)) stop(); if (drawImpl) drawImpl(); }
+  const hidden = () => { if (document.hidden) stop(); };
+  const reducedChanged = () => { if (reduced.matches) { vx=vy2=0; metal?.stopAll(); } };
+  if (typeof document !== 'undefined') document.addEventListener('visibilitychange', hidden);
+  window.addEventListener?.('pagehide', stop);
+  reduced.addEventListener?.('change', reducedChanged);
   function dispose() {
+    disposed = true;
     stop();
+    audio?.dispose();
+    metal?.dispose();
+    if (typeof document !== 'undefined') document.removeEventListener('visibilitychange', hidden);
+    window.removeEventListener?.('pagehide', stop);
+    reduced.removeEventListener?.('change', reducedChanged);
+    soundButton?.remove();
     listeners.forEach(([type, fn]) => element.removeEventListener(type, fn));
         cv.removeEventListener('webglcontextlost', dispose);
     if (rdCleanup) { rdCleanup(); rdCleanup=null; }
     drawImpl = null;
     element.classList.remove('webgl-ready');
   }
+  let aim = () => { hit=true; };
+  let moveVisual = () => {}, releaseVisual = () => {};
   if (THREE) try {
 const VS=`uniform vec3 uPt;uniform float uAmp,uWave,uT;varying vec3 vV,vO;varying float vG;
 void main(){vec3 dir=normalize(position);float d=distance(dir,uPt);float g=exp(-d*d/.2);
@@ -62,25 +120,28 @@ const mesh=new THREE.Mesh(g,new THREE.ShaderMaterial({uniforms:U,vertexShader:VS
 const releaseRenderer = rdCleanup; rdCleanup = () => { g.dispose(); mesh.material.dispose(); releaseRenderer(); };
 mesh.rotation.set(-.3,.6,0);scn.add(mesh);
 const ray=new THREE.Raycaster(),sph=new THREE.Sphere(new THREE.Vector3(),1.05),hp=new THREE.Vector3();
-function aim(e){const r=cv.getBoundingClientRect();ray.setFromCamera({x:((e.clientX-r.left)/r.width)*2-1,y:-(((e.clientY-r.top)/r.height)*2-1)},cam);mesh.updateMatrixWorld();
+aim = function(e){const r=cv.getBoundingClientRect();ray.setFromCamera({x:((e.clientX-r.left)/r.width)*2-1,y:-(((e.clientY-r.top)/r.height)*2-1)},cam);mesh.updateMatrixWorld();
 if(ray.ray.intersectSphere(sph,hp)){mesh.worldToLocal(hp);U.uPt.value.copy(hp).normalize();hit=true}else hit=false}
 let amp=0,ampV=0,wave=0,t=0,rotUntil=0,mixCur=1,loadUntil=performance.now()+1200;const CC={sil:'#C9D8EA',touch:'#477BFF',rot:'#9470E8',chap:'#56D9E8',exp:'#73D8B8',load:'#343F91'},tgt=new THREE.Color();
 drawImpl=()=>{const clock=performance.now(),dt=previous===null?0:(clock-previous)/1000;previous=clock;t+=reduce?0:dt;
 if(reduce){vx=vy2=0;}
 if(!cd){const x=window.AtlasInertia.step(vx,dt),y=window.AtlasInertia.step(vy2,dt);mesh.rotation.y+=x.delta;mesh.rotation.x+=y.delta;vx=x.velocity;vy2=y.velocity;}
+if (cd) roll(clock-dragTime <= 120 ? dragSpeed : 0); else roll(Math.sign(Math.abs(vx)>=Math.abs(vy2)?vx:vy2)*Math.hypot(vx,vy2));
 const target=(press&&hit)?1:hit?.25:0;
 if(reduce)amp=target;else{ampV+=(target-amp)*.14;ampV*=.76;amp+=ampV}
 wave*=.95;const now=performance.now();let key='sil',mx=.4;if(now<loadUntil){key='load';mx=1}else if(now<rotUntil){key='rot';mx=1}else if(hit||press){key='touch';mx=1}else if(mode==='theory'){key='chap';mx=.9}else if(mode==='experiment'){key='exp';mx=.9}tgt.set(CC[key]);U.uAcc.value.lerp(tgt,reduce?1:.08);mixCur+=(mx-mixCur)*.08;
 U.uT.value=t;U.uAmp.value=amp;U.uWave.value=wave;U.uMix.value=mixCur;rd.render(scn,cam)};
-core.addEventListener('pointerdown',e=>{if(pointer!==null)return;stop();pointer=e.pointerId;cd=press=true;lx=e.clientX;ly=e.clientY;samples=[{x:lx,y:ly,t:performance.now()}];aim(e);core.setPointerCapture(e.pointerId);draw()});
-core.addEventListener('pointermove',e=>{if(pointer!==null&&e.pointerId!==pointer)return;aim(e);if(cd){const dx=e.clientX-lx,dy=e.clientY-ly;mesh.rotation.y+=dx*.01;mesh.rotation.x+=dy*.01;lx=e.clientX;ly=e.clientY;const now=performance.now();samples.push({x:lx,y:ly,t:now});samples=samples.filter(s=>now-s.t<=120);rotUntil=now+500;}draw()});
-core.addEventListener('pointerup',e=>{if(e.pointerId!==pointer)return;const velocity=window.AtlasInertia.release(samples,performance.now(),reduced.matches);cd=press=false;pointer=null;samples=[];vx=velocity.x;vy2=velocity.y;wave=1;draw()});
-core.addEventListener('pointerleave',()=>{if(!cd)hit=false});
-core.addEventListener('pointercancel',stop);core.addEventListener('lostpointercapture',()=>{if(pointer!==null)stop();});
+moveVisual = (dx,dy) => { mesh.rotation.y+=dx*.01; mesh.rotation.x+=dy*.01; rotUntil=performance.now()+500; };
+releaseVisual = () => { wave=1; };
 drawImpl();
 
     element.classList.add('webgl-ready');
     cv.addEventListener('webglcontextlost', dispose);
-  } catch (_) { dispose(); }
-  return { draw, dispose, stop };
+  } catch (_) { if (rdCleanup) { rdCleanup(); rdCleanup=null; } drawImpl=null; aim=()=>{hit=true;}; moveVisual=()=>{}; releaseVisual=()=>{}; }
+  core.addEventListener('pointerdown',e=>{if(pointer!==null)return;stop();pointer=e.pointerId;cd=press=true;audioTime=performance.now();lx=e.clientX;ly=e.clientY;samples=[{x:lx,y:ly,t:performance.now()}];aim(e);if(hit && e.isTrusted === true && e.type === 'pointerdown' && !document.hidden){audio?.begin(e);attachMetalAudio();const token=++rollingToken; if(metal) metal.unlock(e).then(ok=>{if(ok && token===rollingToken && !disposed && !document.hidden && !metal.muted)rollingReady=true;}).catch(()=>{});}core.setPointerCapture(e.pointerId);draw()});
+core.addEventListener('pointermove',e=>{if(pointer!==null&&e.pointerId!==pointer)return;aim(e);if(cd){const dx=e.clientX-lx,dy=e.clientY-ly;moveVisual(dx,dy);lx=e.clientX;ly=e.clientY;const now=performance.now();audio?.update({speed:Math.hypot(dx,dy)*1000/Math.max(1,now-audioTime),pressure:e.pressure || .5});dragSpeed=Math.hypot(dx,dy)*.01*1000/Math.max(1,now-audioTime);dragTime=now;audioTime=now;samples.push({x:lx,y:ly,t:now});samples=samples.filter(s=>now-s.t<=120);}draw()});
+core.addEventListener('pointerup',e=>{if(e.pointerId!==pointer)return;audio?.end();const velocity=window.AtlasInertia.release(samples,performance.now(),reduced.matches);cd=press=false;pointer=null;samples=[];vx=velocity.x;vy2=velocity.y;releaseVisual();draw()});
+core.addEventListener('pointerleave',()=>{if(!cd)hit=false});
+core.addEventListener('pointercancel',stop);core.addEventListener('lostpointercapture',()=>{if(pointer!==null)stop();});
+  return { draw, dispose, stop, attachMetalAudio };
 };

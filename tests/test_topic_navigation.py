@@ -14,7 +14,11 @@ def test_topic_starts_all_cards_without_subsection_selection(tmp_path: Path) -> 
     service = StudyService(repository, ProgressRepository(tmp_path / "test.db"))
     text_handler = build_handlers(service, repository, (123,))[-1]
     message = SimpleNamespace(text="2️⃣ Quantenzustände und Observablen · 0%", reply_text=AsyncMock())
-    update = SimpleNamespace(effective_message=message, effective_user=SimpleNamespace(id=123))
+    update = SimpleNamespace(
+        effective_message=message,
+        effective_user=SimpleNamespace(id=123),
+        effective_chat=SimpleNamespace(id=123, type="private"),
+    )
     context = SimpleNamespace(user_data={})
     asyncio.run(text_handler(update, context))
     session = context.user_data["study_set"]

@@ -18,7 +18,8 @@ def create_application(settings: Settings) -> Application:
     progress = ProgressRepository(settings.database_path)
     study = StudyService(curriculum, progress)
     start, topics, learn, laws, formulas, review, stats, text_input = build_handlers(
-        study, curriculum, settings.allowed_user_ids, settings.mini_app_url
+        study, curriculum, settings.allowed_user_ids, settings.mini_app_url,
+        public_access=settings.public_access,
     )
 
     async def configure_bot(application: Application) -> None:

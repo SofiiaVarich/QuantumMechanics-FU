@@ -41,7 +41,11 @@ def test_experimental_topic_set_and_review(tmp_path: Path) -> None:
     service = StudyService(repository, ProgressRepository(tmp_path / "progress.db"))
     handler = build_handlers(service, repository, (123,))[-1]
     message = SimpleNamespace(text="🔬 03.11.2026 · Schwarzkörperstrahlung · 0%", reply_text=AsyncMock())
-    update = SimpleNamespace(effective_message=message, effective_user=SimpleNamespace(id=123))
+    update = SimpleNamespace(
+        effective_message=message,
+        effective_user=SimpleNamespace(id=123),
+        effective_chat=SimpleNamespace(id=123, type="private"),
+    )
     context = SimpleNamespace(user_data={})
     asyncio.run(handler(update, context))
     assert len(context.user_data["study_set"].cards) == len(service.cards(11)) == 12

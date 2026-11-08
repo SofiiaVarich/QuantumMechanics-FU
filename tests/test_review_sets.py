@@ -28,7 +28,11 @@ def test_review_includes_missed_and_due_cards_from_all_topics(tmp_path: Path) ->
     assert service.review_cards(456) == ()  # Stale/unknown IDs cannot produce playable cards.
     handler = build_handlers(service, repository, (123,))[-1]
     message = SimpleNamespace(text=REVIEW, reply_text=AsyncMock())
-    update = SimpleNamespace(effective_message=message, effective_user=SimpleNamespace(id=123))
+    update = SimpleNamespace(
+        effective_message=message,
+        effective_user=SimpleNamespace(id=123),
+        effective_chat=SimpleNamespace(id=123, type="private"),
+    )
     context = SimpleNamespace(user_data={"selected_chapter": 2})
     asyncio.run(handler(update, context))
     assert context.user_data["set_kind"] == "review"

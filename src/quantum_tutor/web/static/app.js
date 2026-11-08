@@ -228,7 +228,20 @@
         sphere.addEventListener('pointercancel', () => { origin = null; moved = true; });
         sphere.addEventListener('keydown', () => { moved = false; });
       });
-    app.append(scene, node('p', 'Select a sphere or use the topic list below. Motion pauses while the atlas has keyboard focus.', 'atlas-help'), filters);
+    const foot = node('div', null, 'atlas-foot');
+        for (const [title, detail] of [['CHOOSE YOUR ORBIT', 'Tap a sphere to open its exercises.'], ['DRAG / TAP', 'Interactive study map']]) {
+          const column = node('span');
+          column.append(node('b', title), node('br'), node('span', detail));
+          foot.append(column);
+        }
+        app.append(scene, filters, foot, node('p', 'Select a sphere or use the topic list below. Motion pauses while the atlas has keyboard focus.', 'sr-only'));
+        for (let k = 0; k < 14; k++) {
+          const dust = node('i', null, 'atlas-dust');
+          dust.setAttribute('aria-hidden', 'true');
+          const size = 2 + (k * 7 % 5);
+          dust.style.cssText = `width:${size}px;height:${size}px;left:${(k * 37 + 11) % 100}%;top:${5 + (k * 23 % 90)}%;animation-delay:-${k % 9}s;opacity:${.4 + (k % 5) * .1}`;
+          scene.append(dust);
+        }
 
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
     const crystal = window.createAtlasCrystal?.(core, canvas, reduced, () => scene.dataset.filter);
@@ -249,6 +262,7 @@
         sphere.style.left = `${width / 2 + x * Math.cos(tilt) - y * Math.sin(tilt)}px`;
         sphere.style.top = `${height / 2 + x * Math.sin(tilt) + y * Math.cos(tilt)}px`;
         sphere.style.zIndex = Math.sin(angle) > 0 ? 6 : 2;
+                sphere.style.scale = String(.85 + .15 * (1 + Math.sin(angle)) / 2);
       });
     }
 

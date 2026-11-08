@@ -24,7 +24,7 @@ quantum-tutor-web = "quantum_tutor.web.server:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-"quantum_tutor.web" = ["static/*.html", "static/*.js", "static/*.css"]
+"quantum_tutor.web" = ["static/*.html", "static/*.js", "static/*.css", "static/*.mp3"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]

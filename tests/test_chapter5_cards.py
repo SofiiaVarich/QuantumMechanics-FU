@@ -37,7 +37,11 @@ def test_chapter5_cards_and_automatic_sets(tmp_path: Path) -> None:
         StudyService(repository, ProgressRepository(tmp_path / "progress.db")), repository, (123,)
     )[-1]
     message = SimpleNamespace(text="5.1.1 Definition · 0%", reply_text=AsyncMock())
-    update = SimpleNamespace(effective_message=message, effective_user=SimpleNamespace(id=123))
+    update = SimpleNamespace(
+        effective_message=message,
+        effective_user=SimpleNamespace(id=123),
+        effective_chat=SimpleNamespace(id=123, type="private"),
+    )
     context = SimpleNamespace(user_data={})
     asyncio.run(handler(update, context))
     assert "1/7" in message.reply_text.call_args.args[0]

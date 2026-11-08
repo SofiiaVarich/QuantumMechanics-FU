@@ -16,19 +16,13 @@ from quantum_tutor.domain.study_set import StudySet
 from quantum_tutor.infrastructure.curriculum import CurriculumRepository
 from quantum_tutor.infrastructure.database import ProgressRepository
 from quantum_tutor.web.auth import AuthenticationError, authenticate_init_data
+from quantum_tutor.web.math_rendering import answer_latex, blocks, literal_latex
 
 STATIC = Path(__file__).parent / "static"
 
 
 def latex_for_choice(text: str) -> str:
-    # Choices are excerpts, whereas card metadata can describe a different or
-    # longer equation. Preserve the excerpt literally rather than substituting it.
-    escapes = {
-        "\\": r"\textbackslash{}", "{": r"\{", "}": r"\}",
-        "$": r"\$", "&": r"\&", "#": r"\#", "%": r"\%",
-        "_": r"\_", "^": r"\textasciicircum{}", "~": r"\textasciitilde{}",
-    }
-    return r"\text{" + "".join(escapes.get(char, char) for char in text) + "}"
+    return literal_latex(text)
 
 
 @dataclass
@@ -56,7 +50,8 @@ def create_web_app(settings: Settings) -> web.Application:
                 if not authorization.startswith("tma "):
                     raise AuthenticationError("Open this app from Telegram.")
                 user_id = authenticate_init_data(
-                    authorization[4:], settings.telegram_token, settings.allowed_user_ids
+                    authorization[4:], settings.telegram_token, settings.allowed_user_ids,
+                    public_access=settings.public_access,
                 )
                 request["user_id"] = user_id
                 now = time.monotonic()
@@ -79,15 +74,19 @@ def create_web_app(settings: Settings) -> web.Application:
 
     app = web.Application(middlewares=[security], client_max_size=32768)
 
-    def metadata(card_id: str) -> tuple[str, str]:
-        for chapter in curriculum.chapters():
-            if any(card.id == card_id for card in chapter.concepts):
-                path = settings.curriculum_path / f"topic_{chapter.number}.json"
-                with path.open(encoding="utf-8") as source:
-                    data = json.load(source)
-                latex = data.get("concept_metadata", {}).get(card_id, {}).get("formula_latex", "")
-                return latex, chapter.content_review_required.get(card_id, "")
-        return "", ""
+    catalog = {card.id: card for card in study.cards()}
+    source_notes = {card_id: note for chapter in curriculum.chapters()
+                    for card_id, note in chapter.content_review_required.items()}
+
+    def choice_payload(exercise: Exercise, index: int, formula: bool) -> dict:
+        text = exercise.choices[index]
+        source_id = exercise.choice_card_ids[index] if exercise.choice_card_ids else ""
+        card = catalog.get(source_id)
+        # Identity alone is insufficient: the selected excerpt must also match.
+        paired = card if card and study.formula_text(card) == text else None
+        latex = answer_latex(text, paired) if formula else ""
+        return {"text": text, "latex": latex,
+                "blocks": [{"type": "math" if latex else "text", "text": text, "latex": latex}]}
 
 
     def prepare(session: Session) -> None:
@@ -111,10 +110,9 @@ def create_web_app(settings: Settings) -> web.Application:
                 "id": session.question_id,
                 "card_id": exercise.question.item_id,
                 "prompt": exercise.question.prompt,
-                "choices": [
-                    {"text": choice, "latex": latex_for_choice(choice) if formula else ""}
-                    for choice in exercise.choices
-                ],
+                "prompt_blocks": blocks(exercise.question.prompt),
+                "choices": [choice_payload(exercise, index, formula)
+                            for index in range(len(exercise.choices))],
             }
         return {
             "complete": complete,
@@ -229,7 +227,9 @@ def create_web_app(settings: Settings) -> web.Application:
             raise ValueError("Invalid answer choice")
         exercise = session.exercise
         correct = choice is not None and choice == exercise.correct_index
-        latex, note = metadata(exercise.question.item_id)
+        note = source_notes.get(exercise.question.item_id, "")
+        card = catalog.get(exercise.question.item_id)
+        latex = answer_latex(exercise.question.answer, card) if card and study.has_formula(card) else ""
         # No await between validating the nonce and replacing it: duplicate submissions
         # cannot record the same question twice in this single-event-loop service.
         study.record(
@@ -238,7 +238,11 @@ def create_web_app(settings: Settings) -> web.Application:
             response_ms=max(0, round((time.monotonic() - session.started) * 1000)),
         )
         session.study_set.grade("okay" if correct else "repeat")
-        feedback = {"correct": correct, "answer": exercise.question.answer, "latex": latex, "source_note": note}
+        answer_blocks = blocks(exercise.question.answer)
+        if card and exercise.question.answer == card.formula_answer and card.formula_answer_latex:
+            answer_blocks = [{"type": "math", "text": exercise.question.answer, "latex": latex}]
+        feedback = {"correct": correct, "answer": exercise.question.answer, "latex": latex,
+                    "answer_blocks": answer_blocks, "source_note": note}
         prepare(session)
         return web.json_response({"feedback": feedback, "state": state(session)})
 
@@ -251,7 +255,7 @@ def create_web_app(settings: Settings) -> web.Application:
 
     async def static_file(request):
         name = request.match_info.get("name", "index.html")
-        if name not in {"index.html", "app.js", "styles.css", "crystal.js"}:
+        if name not in {"index.html", "app.js", "styles.css", "crystal.js", "inertia.js", "mini-crystals.js", "crystal-audio.js", "crystal-crumple.mp3", "metal-ball-audio.js"}:
             raise web.HTTPNotFound()
         response = web.FileResponse(STATIC / name)
         response.headers["Cache-Control"] = "no-cache"

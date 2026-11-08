@@ -24,6 +24,7 @@ class Exercise:
     question: Question
     choices: tuple[str, ...]
     correct_index: int
+    choice_card_ids: tuple[str, ...] = ()
 
 
 class StudyService:
@@ -112,6 +113,7 @@ class StudyService:
         random.shuffle(candidates)
         candidates.sort(key=lambda other: other.section_id.split(".")[0] != card.section_id.split(".")[0])
         distractors = []
+        choice_sources = {correct: card.id}
         seen = {normalized}
         for other in candidates:
             if other.id in blocked or self._normalized(other.front) == front:
@@ -130,6 +132,7 @@ class StudyService:
                 continue
             seen.add(key)
             distractors.append(value)
+            choice_sources[value] = other.id
             if len(distractors) == 3:
                 break
         choices = distractors + [correct]
@@ -142,7 +145,8 @@ class StudyService:
             if note:
                 answer += f"\n\n🔴 Source check needed: {note}"
                 break
-        return Exercise(Question(card.id, "concept", prompt, answer), tuple(choices), choices.index(correct))
+        return Exercise(Question(card.id, "concept", prompt, answer), tuple(choices), choices.index(correct),
+                                tuple(choice_sources[value] for value in choices))
 
     def review_cards(self, user_id: int) -> tuple[ConceptCard, ...]:
         catalog = {card.id: card for card in self.cards()}

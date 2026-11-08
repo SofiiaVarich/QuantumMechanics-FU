@@ -18,12 +18,9 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_choice_latex_preserves_literal_text():
-    assert latex_for_choice("E = hν") == r"\text{E = hν}"
-    assert latex_for_choice("ψ(x) = A; E ≠ 0") == r"\text{ψ(x) = A; E ≠ 0}"
-    assert latex_for_choice(r"\frac{x_1}{y^2} & 50% #$~") == (
-        r"\text{\textbackslash{}frac\{x\_1\}\{y\textasciicircum{}2\}"
-        r" \& 50\% \#\$\textasciitilde{}}"
-    )
+    assert latex_for_choice("E = hν") == r"E = h\nu "
+    assert latex_for_choice("ψ(x) = A; E ≠ 0") == r"\psi (x) = A; E \ne  0"
+    assert latex_for_choice(r"\frac{x_1}{y^2} & 50% #$~") == ""
 
 
 def test_formula_api_uses_exact_choice_text_and_retains_feedback_metadata(tmp_path):
@@ -42,12 +39,17 @@ def test_formula_api_uses_exact_choice_text_and_retains_feedback_metadata(tmp_pa
                 if state["complete"]:
                     continue
                 question = state["question"]
+                assert "correct_index" not in question and "answer" not in question
+                assert "".join(block["text"] for block in question["prompt_blocks"]) == question["prompt"]
                 for choice in question["choices"]:
                     assert choice["latex"] == latex_for_choice(choice["text"])
+                    assert choice["blocks"][0]["text"] == choice["text"]
                 response = await client.post("/api/answer", headers=headers, json={"question_id": question["id"], "choice_index": None})
                 assert response.status == 200
                 feedback = (await response.json())["feedback"]
-                assert feedback["latex"] == catalog.get(question["card_id"], {}).get("formula_latex", "")
+                assert "".join(block["text"] for block in feedback["answer_blocks"]) == feedback["answer"]
+                assert "source_note" in feedback
+                assert feedback["latex"] == latex_for_choice(feedback["answer"])
 
     asyncio.run(scenario())
 

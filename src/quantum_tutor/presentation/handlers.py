@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import time
 
-from telegram import KeyboardButton, Message, ReplyKeyboardMarkup, Update, User, WebAppInfo
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, KeyboardButton, Message, ReplyKeyboardMarkup, Update, User, WebAppInfo
 from telegram.ext import ContextTypes
 
 from quantum_tutor.application.study import StudyService
@@ -19,6 +19,7 @@ PROGRESS = "📈 Progress"
 NEXT = "➡️ Next exercise"
 HOME = "🏠 Main menu"
 DONT_KNOW = "🔁 Don't know"
+OPEN_APP = "📱 Open Mini App"
 
 MAIN_MENU = ReplyKeyboardMarkup(
     [
@@ -36,7 +37,7 @@ def main_keyboard(mini_app_url: str = "") -> ReplyKeyboardMarkup:
     if not mini_app_url:
         return MAIN_MENU
     return ReplyKeyboardMarkup(
-        [[KeyboardButton("📱 Open Mini App", web_app=WebAppInfo(mini_app_url))]]
+        [[KeyboardButton(OPEN_APP)]]
         + [list(row) for row in MAIN_MENU.keyboard],
         resize_keyboard=True, is_persistent=True,
     )
@@ -47,6 +48,8 @@ def build_handlers(
     curriculum: CurriculumRepository,
     allowed_user_ids: tuple[int, ...],
     mini_app_url: str = "",
+    *,
+    public_access: bool = False,
 ):
     main_menu = main_keyboard(mini_app_url)
     chapters = curriculum.chapters()
@@ -96,11 +99,28 @@ def build_handlers(
 
     async def reject_if_unauthorized(update: Update) -> bool:
         user = update.effective_user
-        if user is not None and user.id in allowed_user_ids:
+        chat = update.effective_chat
+        if chat is None or chat.type != "private":
+            if update.effective_message is not None:
+                await update.effective_message.reply_text("🔒 Please use this bot in a private chat.")
+            return True
+        if (user is not None and type(user.id) is int and user.id > 0
+                and (public_access or user.id in allowed_user_ids)):
             return False
         if update.effective_message is not None:
             await update.effective_message.reply_text("🔒 This is a private study bot.")
         return True
+
+    async def send_app_launcher(message: Message) -> None:
+        if not mini_app_url:
+            await message.reply_text("The Mini App address has not been configured yet.")
+            return
+        await message.reply_text(
+            "📱 Open Quantum Tutor securely inside Telegram:",
+            reply_markup=InlineKeyboardMarkup([[
+                InlineKeyboardButton(OPEN_APP, web_app=WebAppInfo(mini_app_url)),
+            ]]),
+        )
 
     async def send_menu(message: Message, text: str = "✨ What would you like to study?") -> None:
         await message.reply_text(text, reply_markup=main_menu)
@@ -236,6 +256,9 @@ def build_handlers(
         if await reject_if_unauthorized(update):
             return
         message, user = message_and_user(update)
+        if (message.text or "").split("@", 1)[0].split()[0:1] == ["/app"]:
+            await send_app_launcher(message)
+            return
         if context.user_data is not None:
             context.user_data.clear()
             context.user_data["viewer_id"] = user.id
@@ -276,6 +299,9 @@ def build_handlers(
             return
         message, user = message_and_user(update)
         text = message.text or ""
+        if text in {OPEN_APP, "🌐 Open Mini App", "Open Mini App"}:
+            await send_app_launcher(message)
+            return
         if context.user_data is not None:
             context.user_data["viewer_id"] = user.id
         # Old keyboard percentages may be stale after another answer; route by stable label.

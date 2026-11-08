@@ -17,6 +17,7 @@ class Settings:
     timezone: str
     reminder_times: str
     mini_app_url: str = ""
+    public_access: bool = False
 
     @classmethod
     def from_env(cls) -> "Settings":
@@ -24,10 +25,14 @@ class Settings:
         token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
         if not token:
             raise RuntimeError("TELEGRAM_BOT_TOKEN is missing. Copy .env.example to .env and set it.")
+        public_value = os.getenv("PUBLIC_ACCESS", "false").strip().lower()
+        if public_value not in {"true", "false"}:
+            raise RuntimeError("PUBLIC_ACCESS must be true or false")
+        public_access = public_value == "true"
         user_ids = os.getenv("TELEGRAM_ALLOWED_USER_IDS", "").strip()
         if not user_ids:
             user_ids = os.getenv("TELEGRAM_ALLOWED_USER_ID", "").strip()
-        if not user_ids:
+        if not user_ids and not public_access:
             raise RuntimeError("TELEGRAM_ALLOWED_USER_IDS is missing from .env")
         try:
             allowed_user_ids = tuple(
@@ -37,7 +42,9 @@ class Settings:
             raise RuntimeError(
                 "TELEGRAM_ALLOWED_USER_IDS must contain comma-separated numeric IDs"
             ) from error
-        if not allowed_user_ids:
+        if any(user_id <= 0 for user_id in allowed_user_ids):
+            raise RuntimeError("TELEGRAM_ALLOWED_USER_IDS must contain positive IDs")
+        if not allowed_user_ids and not public_access:
             raise RuntimeError("At least one Telegram user ID is required")
         mini_app_url = os.getenv("MINI_APP_URL", "").strip()
         if mini_app_url:
@@ -52,4 +59,5 @@ class Settings:
             timezone=os.getenv("TZ", "Europe/Berlin"),
             reminder_times=os.getenv("REMINDER_TIMES", "05:30,20:00"),
             mini_app_url=mini_app_url,
+            public_access=public_access,
         )

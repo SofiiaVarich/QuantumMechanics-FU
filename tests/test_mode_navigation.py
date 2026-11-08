@@ -19,7 +19,11 @@ def test_buttons_and_commands_choose_topic_then_start_correct_set(tmp_path: Path
     service = StudyService(repository, ProgressRepository(tmp_path / "db.sqlite"))
     handlers = build_handlers(service, repository, (123,))
     message = SimpleNamespace(text=button, reply_text=AsyncMock())
-    update = SimpleNamespace(effective_message=message, effective_user=SimpleNamespace(id=123))
+    update = SimpleNamespace(
+        effective_message=message,
+        effective_user=SimpleNamespace(id=123),
+        effective_chat=SimpleNamespace(id=123, type="private"),
+    )
     context = SimpleNamespace(user_data={"selected_chapter": 1, "mode": "old"})
     asyncio.run(handlers[-1](update, context))
     assert context.user_data["requested_mode"] == mode
@@ -47,7 +51,11 @@ def test_chapters_and_experiments_labels_are_clear_and_selectable(tmp_path: Path
     repository = CurriculumRepository(Path("curriculum"))
     handler = build_handlers(StudyService(repository, ProgressRepository(tmp_path / "db")), repository, (123,))[-1]
     message = SimpleNamespace(text=TOPICS, reply_text=AsyncMock())
-    update = SimpleNamespace(effective_message=message, effective_user=SimpleNamespace(id=123))
+    update = SimpleNamespace(
+        effective_message=message,
+        effective_user=SimpleNamespace(id=123),
+        effective_chat=SimpleNamespace(id=123, type="private"),
+    )
     context = SimpleNamespace(user_data={})
     asyncio.run(handler(update, context))
     labels = [b.text for row in message.reply_text.call_args.kwargs["reply_markup"].keyboard for b in row]
@@ -70,7 +78,11 @@ def test_unauthorized_new_mode_cannot_start_session(tmp_path: Path) -> None:
     repository = CurriculumRepository(Path("curriculum"))
     handler = build_handlers(StudyService(repository, ProgressRepository(tmp_path / "db")), repository, (123,))[-1]
     message = SimpleNamespace(text=FORMULAS, reply_text=AsyncMock())
-    update = SimpleNamespace(effective_message=message, effective_user=SimpleNamespace(id=456))
+    update = SimpleNamespace(
+        effective_message=message,
+        effective_user=SimpleNamespace(id=456),
+        effective_chat=SimpleNamespace(id=456, type="private"),
+    )
     context = SimpleNamespace(user_data={})
     asyncio.run(handler(update, context))
     assert context.user_data == {}

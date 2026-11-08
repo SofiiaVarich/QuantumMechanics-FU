@@ -1,6 +1,6 @@
 # Quantum Tutor
 
-A private Telegram bot **and Mini App** for quantum mechanics, sharing one curriculum and progress database. The chat bot handles study sessions and reminders; the Mini App adds a visual course browser, typeset formulas, answer buttons, review, and progress screens.
+A Telegram bot **and Mini App**, with public or allowlist-restricted access, for quantum mechanics, sharing one curriculum and progress database. The chat bot handles study sessions and reminders; the Mini App adds a visual course browser, typeset formulas, answer buttons, review, and progress screens.
 
 This is an independent learning project, **not an official Freie Universität Berlin service or affiliated with Quizlet**. Recognition practice supports study but does not establish independent recall, derivation ability, problem-solving skill, or exam readiness. Confirm examination coverage, dates, rooms, and permitted aids with official FU sources.
 
@@ -73,7 +73,7 @@ Software consistency checks and mathematical review are **not full verification 
 
 ### Interactive Spheres — Chapter and Experiment Navigation
 
-**Crystal Atlas version 3:** The authenticated Mini App opens directly on the Atlas landing page, with cyan chapter spheres, mint experiment spheres, and the supplied design's interactive WebGL crystal. A static topic list remains an accessible alternative. The supplied HTML is the visual reference; its placeholder questions are not used. Three.js r128 loads from a pinned CDN URL; a CSS crystal remains visible if the library or WebGL is unavailable. Animation pauses when the page is hidden and respects reduced-motion preferences. Learn, Formulas, Laws, Review, and progress remain accessible from the Atlas.
+**Crystal Atlas version 9:** The authenticated Mini App opens directly on the Atlas landing page, with cyan chapter spheres, mint experiment spheres, and the supplied design's interactive WebGL crystal. A static topic list remains an accessible alternative. The supplied HTML is the visual reference; its placeholder questions are not used. Three.js r128 loads from a pinned CDN URL; a CSS crystal remains visible if the library or WebGL is unavailable. Small spheres use liquid-metal mini crystals with readable number chips, rendered through one shared WebGL renderer. Orbit paths have stronger outlines and glow. Dragging the large crystal produces direction-preserving momentum that gradually slows to a stop; there is no automatic reversal or idle spin. Stale releases, cancelled gestures, page hiding, and reduced-motion preferences stop momentum. Animation pauses when the page is hidden and respects reduced-motion preferences. Learn, Formulas, Laws, Review, and progress remain accessible from the Atlas.
 
 Every sphere (*Kugel*) in the Quantum Atlas represents **exactly one chapter or experiment** and acts as a clickable entry point to its exercises.
 
@@ -109,7 +109,7 @@ The Mini App provides Learn, Formulas, Laws, whole-topic or whole-course sets, c
 
 ### Authentication and privacy
 
-Open the Mini App **inside Telegram**, not as an ordinary browser link. Every API request validates the HMAC signature and age of Telegram `initData`, then checks the same user allowlist as the bot. Forged, stale, future-dated, or duplicate-field login data are rejected. There is no demo-user fallback, client-supplied trusted user ID, API token in frontend code, or cookie login. The public `/healthz` endpoint contains no personal data; curriculum/progress/session API routes require authentication. API responses are not cached, per-user requests are limited, and answer keys are withheld before submission.
+Open the Mini App **inside Telegram**, not as an ordinary browser link. Every API request validates the HMAC signature and age of Telegram `initData`, then checks the same access policy as the bot: any authenticated Telegram account in public mode, or allowlisted accounts in private mode. Forged, stale, future-dated, or duplicate-field login data are rejected. There is no demo-user fallback, client-supplied trusted user ID, API token in frontend code, or cookie login. The public `/healthz` endpoint contains no personal data; curriculum/progress/session API routes require authentication. API responses are not cached, per-user requests are limited, and answer keys are withheld before submission.
 
 The Telegram SDK loads from `telegram.org`; pinned KaTeX 0.16.11 assets/fonts load from jsDelivr. Those hosts receive normal asset requests; study API data stays on your service. Math rendering disables trusted HTML features and uses text fallback when the renderer is unavailable. User authorization expires after one hour; close and reopen the Mini App to refresh it. Web session state expires after two idle hours and resets on deployment; saved answers persist.
 
@@ -160,6 +160,7 @@ Create a local `.env` file with these settings, replacing the illustrative token
 
 ```dotenv
 TELEGRAM_BOT_TOKEN=replace_with_private_bot_token
+PUBLIC_ACCESS=true
 TELEGRAM_ALLOWED_USER_IDS=123456789,987654321
 DATABASE_PATH=data/quantum_tutor.db
 CURRICULUM_PATH=curriculum
@@ -169,6 +170,8 @@ REMINDER_TIMES=05:30,20:00
 MINI_APP_URL=
 ```
 
+- `PUBLIC_ACCESS=true` allows any Telegram user to study in a private chat with the bot and open the authenticated Mini App. Telegram signature checks and separate per-account progress remain mandatory; this does not enable anonymous browser access. Set `PUBLIC_ACCESS=false` to restore allowlist-only access. Only `true` and `false` are accepted.
+- Public users are not automatically subscribed to reminders. Configured `TELEGRAM_ALLOWED_USER_IDS` remain the reminder recipients; this list may be empty in public mode.
 - `TELEGRAM_ALLOWED_USER_IDS` accepts comma-separated numeric IDs. Each allowed account has its own progress, review history, and reminders. The legacy singular `TELEGRAM_ALLOWED_USER_ID` is also accepted when the plural setting is absent.
 - `REMINDER_TIMES` accepts comma-separated 24-hour times in the configured timezone.
 - Keep `DATABASE_PATH` under `data/` for Docker persistence with the supplied Compose configuration.
