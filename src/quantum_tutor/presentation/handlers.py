@@ -256,7 +256,7 @@ def build_handlers(
         if await reject_if_unauthorized(update):
             return
         message, user = message_and_user(update)
-        if (message.text or "").split("@", 1)[0].split()[0:1] == ["/app"]:
+        if (getattr(message, "text", None) or "").split("@", 1)[0].split()[0:1] == ["/app"]:
             await send_app_launcher(message)
             return
         if context.user_data is not None:

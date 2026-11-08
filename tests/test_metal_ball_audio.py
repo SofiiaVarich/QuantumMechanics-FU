@@ -34,6 +34,9 @@ vm.runInThisContext(fs.readFileSync(process.argv[1],'utf8'));
  assert.equal(await a.unlock({isTrusted:false,type:'click'}),false);
  const pending=a.unlock({isTrusted:true,type:'pointerdown'});resume();assert.equal(await pending,true);
  assert.equal(contexts,1);
+ a.ctx.state='interrupted';
+ const interrupted=a.unlock({isTrusted:true,type:'click'});assert.equal(a.ctx.state,'interrupted');
+ resume();assert.equal(await interrupted,true);assert.equal(contexts,1);
  a.setRolling('a',{velocity:1,x:NaN});
  const roll=a.rolling.get('a');assert.ok(roll.source.started);assert.equal(roll.gain.gain.value,.045);
  a.setRolling('a',{velocity:.2});assert.ok(roll.gain.gain.value<.045);
@@ -49,4 +52,5 @@ vm.runInThisContext(fs.readFileSync(process.argv[1],'utf8'));
  const c=new window.MetalBallAudio();c.unlock({isTrusted:true,type:'pointerdown'});resume();await Promise.resolve();await c.dispose();
 })().catch(e=>{console.error(e);process.exitCode=1;});
 """
-    subprocess.run(['node', '-e', harness, str(STATIC / 'metal-ball-audio.js')], check=True, capture_output=True, text=True, timeout=15)
+    result = subprocess.run(['node', '-e', harness, str(STATIC / 'metal-ball-audio.js')], capture_output=True, text=True, timeout=15)
+    assert result.returncode == 0, result.stdout + result.stderr

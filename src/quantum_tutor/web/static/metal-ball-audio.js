@@ -32,7 +32,8 @@ window.MetalBallAudio = class MetalBallAudio {
       for (let i = 0; i < samples.length; i++) samples[i] = Math.random() * 2 - 1;
       this.noiseBuffer = buffer;
     }
-    // Safari can report "interrupted" after an audio-route(this.ctx.state === 'suspended') await this.ctx.resume();
+    // Safari can report "interrupted" after an audio-route change.
+    if (this.ctx.state === 'suspended' || this.ctx.state === 'interrupted') await this.ctx.resume();
     return !this.disposed && this.ctx?.state === 'running';
     } catch (_) { return false; }
   }

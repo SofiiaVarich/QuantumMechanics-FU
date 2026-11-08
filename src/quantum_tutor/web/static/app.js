@@ -10,6 +10,7 @@
   let busy = false;
   let screenVersion = 0;
   let screen = 'home';
+  let disposeExercise = () => {};
   let disposeAtlas = () => {}; 
 
   function node(tag, text, className) {
@@ -26,6 +27,9 @@
     return el;
   }
   function renderScreen(name) {
+    disposeExercise();
+    disposeExercise = () => {};
+    document.body.classList.toggle('exercise-session', name === 'session');
     disposeAtlas();
     disposeAtlas = () => {};
     screen = name;
@@ -342,18 +346,39 @@
   function showSession() {
     renderScreen('session');
     if (session.complete) { completion(); return; }
-    app.append(button('← End session', endSession, 'text-button'));
-    heading('ACTIVE RECALL', session.title, 'Choose an answer. Take your time.');
+    const toolbar = node('div', null, 'exercise-toolbar');
+    toolbar.append(button('End session', endSession, 'text-button'));
+    const title = button(session.title, () => {
+      const dialog = document.getElementById('session-title-dialog');
+      dialog.querySelector('h2').textContent = session.title;
+      dialog.showModal();
+    }, 'session-title');
+    title.setAttribute('aria-label', `Full session title: ${session.title}`);
+    title.setAttribute('aria-haspopup', 'dialog');
+    toolbar.append(title); app.append(toolbar);
     const progress = node('div', null, 'session-progress');
     progress.append(node('span', `${session.completed} / ${session.total} completed`), node('span', `${percent(session.percent)}%`), meter(session.percent, 'Session progress'));
     app.append(progress);
     const question = session.question;
     if (!question) { showError(new Error('No question is available. Reload your session.'), reloadSession); return; }
     const card = node('section', null, 'question-panel');
-    card.append(node('p', `QUESTION ${session.position}`, 'eyebrow'), node('h2', question.prompt, 'question-prompt'));
+    const prompt = node('div', null, 'exercise-question');
+    prompt.id = 'exercise-question';
+    prompt.append(node('p', `QUESTION ${session.position}`, 'eyebrow'), node('h2', question.prompt, 'question-prompt'));
+    prompt.tabIndex = 0;
+    prompt.setAttribute('aria-label', 'Question, scroll for full content');
+    card.append(prompt);
     const choices = node('div', null, 'choices');
     question.choices.forEach((choice, index) => {
       const answer = button('', () => submit(question.id, index, choices), 'choice');
+      answer.setAttribute('aria-label', `${String.fromCharCode(65 + index)}: ${choice.text}`);
+      answer.addEventListener('keydown', event => {
+        const formula = answer.querySelector('.math');
+        if (formula && formula.scrollWidth > formula.clientWidth && ['ArrowLeft', 'ArrowRight'].includes(event.key)) {
+          event.preventDefault();
+          formula.scrollLeft += event.key === 'ArrowRight' ? 80 : -80;
+        }
+      });
       const content = node('span', null, 'choice-content');
       if (choice.latex) { const formula = node('span', null, 'math'); math(formula, choice.latex, choice.text); content.append(formula); }
       else if (choice.text) content.append(node('span', choice.text));
@@ -361,7 +386,62 @@
       choices.append(answer);
     });
     choices.append(button('I don’t know — practice again', () => submit(question.id, null, choices), 'button secondary unknown'));
-    card.append(choices); app.append(card);
+    choices.id = 'exercise-answers';
+    const switcher = node('div', null, 'exercise-switcher');
+    switcher.hidden = true;
+    const explanation = node('p', 'Full content cannot fit together at a readable size. Switch views; scroll within each view or formula to read everything.', 'focus-explanation');
+    let view = 'question';
+    const select = next => { view = next; applyView(); };
+    const questionView = button('Question', () => select('question'), 'button secondary');
+    const answerView = button('Answers', () => select('answers'), 'button secondary');
+    questionView.setAttribute('aria-controls', prompt.id);
+    answerView.setAttribute('aria-controls', choices.id);
+    switcher.append(explanation, questionView, answerView);
+    card.append(switcher, choices); app.append(card);
+    function applyView() {
+      const focused = card.dataset.layout === 'focus';
+      prompt.hidden = focused && view !== 'question';
+      choices.hidden = focused && view !== 'answers';
+      questionView.setAttribute('aria-pressed', String(view === 'question'));
+      answerView.setAttribute('aria-pressed', String(view === 'answers'));
+    }
+    let frame = 0;
+    let disposed = false;
+    function measure() {
+      frame = 0;
+      if (disposed || app.querySelector('.feedback')) return;
+      // Measure intrinsic content, not the constrained/hidden fallback views.
+      card.dataset.layout = 'measure';
+      prompt.hidden = false; choices.hidden = false; switcher.hidden = true;
+      const available = card.clientHeight - 20;
+      const needed = prompt.scrollHeight + choices.scrollHeight + 8;
+      const focused = needed > available;
+      card.dataset.layout = focused ? 'focus' : 'together';
+      switcher.hidden = !focused;
+      applyView();
+    }
+    const schedule = () => { if (!disposed && !frame) frame = requestAnimationFrame(measure); };
+    const observer = new ResizeObserver(schedule);
+    observer.observe(app);
+    observer.observe(prompt);
+    observer.observe(choices);
+    window.addEventListener('resize', schedule);
+    window.visualViewport?.addEventListener('resize', schedule);
+    tg?.onEvent?.('viewportChanged', schedule);
+    tg?.onEvent?.('safeAreaChanged', schedule);
+    tg?.onEvent?.('contentSafeAreaChanged', schedule);
+    document.fonts?.addEventListener('loadingdone', schedule);
+    document.fonts?.ready.then(schedule);
+    schedule(); // KaTeX rendering above is synchronous; font metrics may settle later.
+    disposeExercise = () => {
+      disposed = true; cancelAnimationFrame(frame); observer.disconnect();
+      window.removeEventListener('resize', schedule);
+      window.visualViewport?.removeEventListener('resize', schedule);
+      tg?.offEvent?.('viewportChanged', schedule);
+      tg?.offEvent?.('safeAreaChanged', schedule);
+      tg?.offEvent?.('contentSafeAreaChanged', schedule);
+      document.fonts?.removeEventListener('loadingdone', schedule);
+    };
   }
   async function submit(questionId, choiceIndex, choices) {
     if (busy || !session || session.question?.id !== questionId) return;
@@ -380,6 +460,15 @@
       if (feedback.source_note) box.append(node('p', feedback.source_note, 'source-note'));
       if (!feedback.correct) box.append(node('p', 'Added back to your practice queue.', 'retry-note'));
       box.append(button(session.complete ? 'See completion →' : 'Next question →', showSession, 'button primary wide'));
+      disposeExercise();
+      disposeExercise = () => {};
+      app.querySelector('.question-panel')?.remove();
+      const next = box.lastElementChild;
+      const detail = node('div', null, 'feedback-detail');
+      detail.tabIndex = 0;
+      detail.setAttribute('aria-label', 'Answer explanation, scroll for full content');
+      while (box.firstChild && box.firstChild !== next) detail.append(box.firstChild);
+      box.prepend(detail);
       app.append(box);
       announce(feedback.correct ? 'Correct answer.' : 'Answer revealed. This question will return for practice.');
       box.focus({ preventScroll: true });

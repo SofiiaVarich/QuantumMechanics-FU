@@ -68,10 +68,11 @@ const flush=async()=>{for(let i=0;i<12;i++) await Promise.resolve();};
  window.handlers.pagehide(); assert.ok(sources.at(-1).stopped); b.dispose();
 })().catch(error=>{console.error(error);process.exitCode=1;});
 """
-    subprocess.run(
+    result = subprocess.run(
         ["node", "-e", harness, str(STATIC / "crystal-audio.js")],
-        check=True, capture_output=True, text=True, timeout=15,
+        capture_output=True, text=True, timeout=15,
     )
+    assert result.returncode == 0, result.stdout + result.stderr
 
 
 def test_audio_asset_is_small_mp3():
@@ -123,6 +124,7 @@ vm.runInThisContext(fs.readFileSync(process.argv[2],'utf8'));
  crystal.dispose();
 })().catch(e=>{console.error(e);process.exitCode=1;});
 """
-    subprocess.run(["node", "-e", harness, str(STATIC / "crystal-audio.js"),
-                    str(STATIC / "crystal.js"), str(STATIC / "metal-ball-audio.js")], check=True, capture_output=True,
-                   text=True, timeout=15)
+    result = subprocess.run(["node", "-e", harness, str(STATIC / "crystal-audio.js"),
+                             str(STATIC / "crystal.js"), str(STATIC / "metal-ball-audio.js")], capture_output=True,
+                            text=True, timeout=15)
+    assert result.returncode == 0, result.stdout + result.stderr
