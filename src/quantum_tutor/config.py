@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+from datetime import date
 from dataclasses import dataclass
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -18,6 +19,7 @@ class Settings:
     reminder_times: str
     mini_app_url: str = ""
     public_access: bool = False
+    exam_date: date | None = None
 
     @classmethod
     def from_env(cls) -> "Settings":
@@ -51,6 +53,11 @@ class Settings:
             parsed = urlsplit(mini_app_url)
             if parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password:
                 raise RuntimeError("MINI_APP_URL must be a public HTTPS URL without credentials")
+        exam_value = os.getenv("EXAM_DATE", "").strip()
+        try:
+            exam_date = date.fromisoformat(exam_value) if exam_value else None
+        except ValueError as error:
+            raise RuntimeError("EXAM_DATE must be a valid date in YYYY-MM-DD format") from error
         return cls(
             telegram_token=token,
             database_path=Path(os.getenv("DATABASE_PATH", "quantum_tutor.db")),
@@ -60,4 +67,5 @@ class Settings:
             reminder_times=os.getenv("REMINDER_TIMES", "05:30,20:00"),
             mini_app_url=mini_app_url,
             public_access=public_access,
+            exam_date=exam_date,
         )

@@ -11,15 +11,35 @@ from quantum_tutor.domain.study_set import StudySet
 from quantum_tutor.infrastructure.curriculum import CurriculumRepository
 
 LEARN = "🎯 Learn"
-LAWS = "⚖️ Laws & Rules"
+LAWS = "⚖️ Laws"
 FORMULAS = "🧮 Formulas"
-TOPICS = "🗂 Chapters & Experiments"
+TOPICS = "🗂 Topics"
 REVIEW = "🔁 Review"
 PROGRESS = "📈 Progress"
 NEXT = "➡️ Next exercise"
-HOME = "🏠 Main menu"
+HOME = "🏠 Menu"
 DONT_KNOW = "🔁 Don't know"
-OPEN_APP = "📱 Open Mini App"
+OPEN_APP = "📱 App"
+
+# Normalize labels from previously delivered keyboards before dispatching controls.
+LEGACY_CONTROL_LABELS = {
+    "⚖️ Laws & Rules": LAWS,
+    "🗂 Chapters & Experiments": TOPICS,
+    "🏠 Main menu": HOME,
+    "📱 Open Mini App": OPEN_APP,
+    "🌐 Open Mini App": OPEN_APP,
+    "Open Mini App": OPEN_APP,
+}
+
+SHORT_TOPIC_TITLES = {
+    1: "Einführung",
+    2: "Zustände & Observablen",
+    5: "Drehimpuls",
+    7: "Drehimpulsaddition",
+    8: "Elektromagnetische Felder",
+    10: "Atome, Moleküle & Quantencomputer",
+    16: "Deutung der Wellenfunktion",
+}
 
 MAIN_MENU = ReplyKeyboardMarkup(
     [
@@ -58,7 +78,7 @@ def build_handlers(
         "🔟" if number == 10 else "".join(digits[int(digit)] for digit in str(number))
         for number in range(1, max((chapter.number for chapter in chapters), default=0) + 1)
     )
-    topic_labels = {
+    previous_topic_labels = {
         (
             f"📖 Chapter {number_emojis[chapter.number - 1]} · {chapter.title_de}"
             if chapter.professor == "Eisert"
@@ -75,7 +95,21 @@ def build_handlers(
         ): chapter.number
         for chapter in chapters
     }
-    selectable_labels = {**legacy_topic_labels, **topic_labels}
+    experiments = [chapter for chapter in chapters if chapter.professor != "Eisert"]
+    experiment_numbers = {chapter.number: index for index, chapter in enumerate(experiments, 1)}
+    topic_labels = {
+        (
+            f"📖 {number_emojis[chapter.number - 1]} · {SHORT_TOPIC_TITLES.get(chapter.number, chapter.title_de)}"
+            if chapter.professor == "Eisert"
+            else f"🔬 E{experiment_numbers[chapter.number]} · {SHORT_TOPIC_TITLES.get(chapter.number, chapter.title_de)}"
+        ): chapter.number
+        for chapter in chapters
+    }
+    selectable_labels = {**legacy_topic_labels, **previous_topic_labels, **topic_labels}
+    experiment_dates = "\n".join(
+        f"E{experiment_numbers[chapter.number]} · {chapter.title_de} · {chapter.date or 'Termin offen'}"
+        for chapter in experiments
+    )
     section_labels = {
         f"{section.id} {section.title}": (chapter.number, section)
         for chapter in chapters
@@ -142,7 +176,8 @@ def build_handlers(
         )
         await message.reply_text(
             f"{ {'learn': LEARN, 'formula': FORMULAS, 'law': LAWS}.get(study_mode, TOPICS)} · Choose a chapter or experiment\n\n"
-            "📖 Chapters 1️⃣–🔟 · Eisert\n🔬 Experiments · Franke\n\nSelect one entry to start its full card set.",
+            "📖 Chapters 1️⃣–🔟 · Eisert\n🔬 Experiments · Franke\n\n"
+            f"{experiment_dates}\n\nSelect one entry to start its full card set.",
             reply_markup=keyboard,
         )
 
@@ -299,7 +334,8 @@ def build_handlers(
             return
         message, user = message_and_user(update)
         text = message.text or ""
-        if text in {OPEN_APP, "🌐 Open Mini App", "Open Mini App"}:
+        text = LEGACY_CONTROL_LABELS.get(text, text)
+        if text == OPEN_APP:
             await send_app_launcher(message)
             return
         if context.user_data is not None:
@@ -353,7 +389,7 @@ def build_handlers(
             await choose_mode(message, context, user.id, "law")
         elif text == FORMULAS:
             await choose_mode(message, context, user.id, "formula")
-        elif text in {TOPICS, "🗂 Topics"}:
+        elif text == TOPICS:
             await choose_mode(message, context, user.id, "learn")
         elif text == REVIEW:
             await show_review(message, user, context)

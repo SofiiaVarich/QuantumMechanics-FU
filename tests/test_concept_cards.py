@@ -49,4 +49,4 @@ def test_concept_set_answers_retries_and_completion(tmp_path: Path) -> None:
     calls = message.reply_text.call_args_list
     assert any("100% completed in this set" in call.args[0] for call in calls)
     labels = [button.text for row in calls[-1].kwargs["reply_markup"].keyboard for button in row]
-    assert labels == ["🏠 Main menu"]
+    assert labels == ["🏠 Menu"]

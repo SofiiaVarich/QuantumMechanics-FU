@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import logging
-from datetime import time
+from datetime import date, datetime, time
 from zoneinfo import ZoneInfo
 
 from telegram.ext import Application
@@ -52,11 +52,25 @@ def schedule_reminders(
         logger.info("Scheduled study reminder at %s %s", reminder_time.strftime("%H:%M"), timezone_name)
 
 
+def exam_countdown(exam_date: date | None, today: date) -> str:
+    if exam_date is None or exam_date < today:
+        return ""
+    days = (exam_date - today).days
+    if days == 0:
+        return "⏳ Exam today — good luck!"
+    return f"⏳ {days} {'day' if days == 1 else 'days'} until the exam · {exam_date:%d.%m.%Y}"
+
+
 async def send_study_reminder(context) -> None:
+    data = context.application.bot_data
+    today = datetime.now(ZoneInfo(data.get("timezone", "Europe/Berlin"))).date()
+    countdown = exam_countdown(data.get("exam_date"), today)
+    text = ("🔔 Quantum mechanics reminder\n\n"
+            "A short session now: 5 min laws, 5 min formulas, and 10 min practice.")
+    if countdown:
+        text += f"\n\n{countdown}"
     await context.bot.send_message(
         chat_id=context.job.chat_id,
-        text=("🔔 Quantum mechanics reminder\n\n"
-              "A short session now: 5 min laws, 5 min formulas, "
-              "and 10 min practice. This is a personal study reminder, not an official FU notice."),
+        text=text,
         reply_markup=main_keyboard(context.application.bot_data.get("mini_app_url", "")),
     )

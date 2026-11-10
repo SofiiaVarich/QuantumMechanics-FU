@@ -114,9 +114,12 @@ def test_atlas_session_loading_resets_on_success_and_failure():
         pytest.skip("Node is required for the mocked DOM navigation test")
     source = (STATIC / "app.js").read_text()
     start = source[source.index("  async function start("):source.index("  async function reloadSession(")]
+    lock_controls = source[source.index("  function lockControls("):source.index("  let screenVersion")]
     harness = r"""
 const assert = require('node:assert/strict');
 let busy = false, session = null, mode = 'law', resolve, reject, shown = 0, errors = 0;
+let screenVersion = 0, uncertainAnswer = null;
+const reloadSession = () => {};
 const atlas = {setAttribute(key, value) { this[key] = value; }};
 const buttons = [{disabled: false}, {disabled: false}];
 const app = {
@@ -129,8 +132,13 @@ const api = (path, body) => {
   assert.deepEqual(body, {mode: 'law', topic_id: 15, review: true});
   return new Promise((yes, no) => { resolve = yes; reject = no; });
 };
-const showSession = () => { shown++; };
-const showError = () => { errors++; };
+const showSession = () => { shown++; screenVersion++; };
+const showError = (error, retry, label) => {
+  assert.equal(error.message, 'offline');
+  assert.equal(retry, reloadSession);
+  assert.equal(label, 'Resume session');
+  errors++;
+};
 """
     checks = r"""
 (async () => {
@@ -152,7 +160,7 @@ const showError = () => { errors++; };
   assert.equal(errors, 1);
 })().catch(error => { console.error(error); process.exitCode = 1; });
 """
-    result = subprocess.run(["node", "-e", harness + start + checks], capture_output=True, text=True, timeout=20)
+    result = subprocess.run(["node", "-e", harness + lock_controls + start + checks], capture_output=True, text=True, timeout=20)
     assert result.returncode == 0, result.stdout + result.stderr
 
 

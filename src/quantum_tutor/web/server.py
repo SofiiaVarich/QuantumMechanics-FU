@@ -47,10 +47,15 @@ def create_web_app(settings: Settings) -> web.Application:
         try:
             if request.path.startswith("/api/"):
                 authorization = request.headers.get("Authorization", "")
-                if not authorization.startswith("tma "):
-                    raise AuthenticationError("Open this app from Telegram.")
+                if not authorization:
+                    raise AuthenticationError("Open this app from Telegram.", "auth_missing")
+                scheme, separator, init_data = authorization.partition(" ")
+                if scheme.lower() != "tma":
+                    raise AuthenticationError("Invalid Telegram authorization header.")
+                if not separator or not init_data:
+                    raise AuthenticationError("Telegram sign-in data is missing.", "auth_missing")
                 user_id = authenticate_init_data(
-                    authorization[4:], settings.telegram_token, settings.allowed_user_ids,
+                    init_data, settings.telegram_token, settings.allowed_user_ids,
                     public_access=settings.public_access,
                 )
                 request["user_id"] = user_id
@@ -61,9 +66,9 @@ def create_web_app(settings: Settings) -> web.Application:
                 requests[user_id] = recent + [now]
             response = await handler(request)
         except AuthenticationError as error:
-            response = web.json_response({"error": str(error)}, status=401)
+            response = web.json_response({"error": str(error), "code": error.code}, status=401)
         except PermissionError as error:
-            response = web.json_response({"error": str(error)}, status=403)
+            response = web.json_response({"error": str(error), "code": "auth_forbidden"}, status=403)
         except (json.JSONDecodeError, ValueError, TypeError):
             response = web.json_response({"error": "Invalid request data."}, status=400)
         response.headers["X-Content-Type-Options"] = "nosniff"

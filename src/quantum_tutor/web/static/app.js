@@ -8,6 +8,21 @@
   let mode = 'learn';
   let session = null;
   let busy = false;
+  let uncertainAnswer = null;
+  const REQUEST_TIMEOUT_MS = 15000;
+
+  function lockControls() {
+    busy = true;
+    app.setAttribute('aria-busy', 'true');
+    const controls = Array.from(app.querySelectorAll('button'), el => [el, el.disabled]);
+    controls.forEach(([el]) => { el.disabled = true; });
+    return () => {
+      busy = false;
+      app.setAttribute('aria-busy', 'false');
+      controls.forEach(([el, disabled]) => { el.disabled = disabled; });
+      if (uncertainAnswer) app.querySelectorAll('.choices button').forEach(el => { el.disabled = true; });
+    };
+  }
   let screenVersion = 0;
   let screen = 'home';
   let disposeExercise = () => {};
@@ -50,35 +65,62 @@
   }
   function loading() { app.append(node('p', 'Loading…', 'loading')); }
   function errorMessage(error) {
-    if (error.status === 401 || error.status === 403) return 'Your Telegram authorization could not be verified. Close this Mini App and reopen it from the bot.';
+    if (error.status === 403) return 'This is a private learning app. Your Telegram account is not on the access list. Contact the bot owner; reopening the app will not grant access.';
+    if (error.code === 'auth_missing') return 'Telegram sign-in data is missing. Open Quantum Tutor from the bot’s Mini App button; browser previews are not supported.';
+    if (error.code === 'auth_expired') return 'Your Telegram sign-in has expired. Close this Mini App completely and reopen it from the bot to start a fresh session.';
+    if (error.status === 401) return 'Telegram sign-in data is invalid. Close this Mini App and reopen it from the bot. If it still fails, contact the bot owner.';
     if (error.status === 409) return 'This question has changed or was already answered. Reload the current session before continuing.';
     return error.message || 'Something went wrong. Please try again.';
   }
-  function showError(error, retry) {
+  function showError(error, retry, retryLabel = 'Try again') {
     announce(errorMessage(error));
     const box = node('section', null, 'notice error');
     box.setAttribute('role', 'alert');
     box.append(node('p', errorMessage(error)));
-    if (retry && error.status !== 401 && error.status !== 403) box.append(button('Try again', retry, 'button secondary'));
+    if (retry && error.status !== 401 && error.status !== 403) box.append(button(retryLabel, retry, 'button secondary'));
     app.append(box);
   }
   async function api(path, body) {
-    if (!tg || !tg.initData) throw new Error('Open Quantum Tutor inside Telegram using the bot’s Mini App button. Telegram authorization is required; browser previews and demo accounts are not supported.');
-    let response;
+    if (!tg || !tg.initData) {
+      const error = new Error('Telegram sign-in data is missing.');
+      error.status = 401;
+      error.code = 'auth_missing';
+      throw error;
+    }
+    const controller = new AbortController();
+    let timer;
+    const timeout = new Promise((_, reject) => {
+      timer = setTimeout(() => {
+        reject(new Error('The request timed out. Check your connection, then retry or resume your session.'));
+        controller.abort();
+      }, REQUEST_TIMEOUT_MS);
+    });
     try {
-      response = await fetch(`/api${path}`, {
+      return await Promise.race([timeout, (async () => {
+      const response = await fetch(`/api${path}`, {
         method: body === undefined ? 'GET' : 'POST',
         headers: { Authorization: 'tma ' + tg.initData, ...(body === undefined ? {} : { 'Content-Type': 'application/json' }) },
         ...(body === undefined ? {} : { body: JSON.stringify(body) }),
-        cache: 'no-store'
+        cache: 'no-store',
+        signal: controller.signal
       });
-    } catch (_) { throw new Error('Unable to connect. Check your connection and try again.'); }
     if (!response.ok) {
       const error = new Error(response.status >= 500 ? 'The study service is temporarily unavailable. Please try again.' : 'The request could not be completed. Please try again.');
       error.status = response.status;
+      if (response.status === 401 || response.status === 403) {
+        try {
+          const payload = await response.json();
+          if (typeof payload?.code === 'string') error.code = payload.code;
+        } catch (_) { /* Keep status-based guidance for non-JSON error responses. */ }
+      }
       throw error;
     }
-    return response.json();
+    return await response.json();
+      })()]);
+    } catch (error) {
+      if (error.status || controller.signal.aborted) throw error;
+      throw new Error('Unable to connect or read the response. Check your connection, then retry or resume your session.');
+    } finally { clearTimeout(timer); }
   }
   function percent(value) { return Math.max(0, Math.min(100, Number(value) || 0)); }
   function meter(value, label) {
@@ -94,11 +136,11 @@
     }
     container.textContent = fallback || latex || '';
   }
-  function navigation() { app.append(button('← Crystal Atlas', () => { if (!busy) home(); }, 'text-button')); }
+  function navigation() { app.append(button('← Atlas', () => { if (!busy) home(); }, 'text-button')); }
 
   function home() { return topics(mode); }
 
-  async function dashboard() {
+  async function dashboardScreen() {
     if (busy) return;
     const version = renderScreen('progress');
     navigation();
@@ -122,16 +164,16 @@
       });
       dashboard.append(stats, meter(progress.total ? progress.known / progress.total * 100 : 0, 'Known cards'));
       const review = button('', () => reviewSelection(), 'review-card');
-      review.append(node('span', '↻', 'review-icon'), node('span', `Review · ${progress.review_count} to revisit`), node('span', '→'));
+      review.append(node('span', '↻', 'review-icon'), node('span', `Review · ${progress.review_count}`), node('span', '→'));
       app.append(review);
-      if (existing && !existing.complete) app.append(button('Continue your session →', () => { session = existing; showSession(); }, 'button primary wide'));
-    } catch (error) { if (version === screenVersion) showError(error, dashboard); }
+      if (existing && !existing.complete) app.append(button('Resume', () => { session = existing; showSession(); }, 'button primary wide'));
+    } catch (error) { if (version === screenVersion) showError(error, () => dashboardScreen()); }
   }
 
   function reviewSelection() {
     renderScreen('review'); navigation();
     heading('SPACED PRACTICE', 'A second look. A stronger memory.', 'Choose a mode, then review a topic or all topics. Missed questions return to the queue.');
-    Object.entries(modes).forEach(([key, [title]]) => app.append(button(`Review ${title.toLowerCase()} →`, () => topics(key, true), 'button secondary wide')));
+    Object.entries(modes).forEach(([key, [title]]) => app.append(button(title, () => topics(key, true), 'button secondary wide')));
   }
 
   async function topics(selectedMode, review = false) {
@@ -153,10 +195,10 @@
         control.setAttribute('aria-pressed', String(key === mode));
         controls.append(control);
       });
-      controls.append(button('Progress & review →', dashboard, 'text-button'));
+      controls.append(button('Progress', dashboardScreen, 'text-button'));
       app.append(controls);
       app.append(node('h2', 'Topic list · dates, cards & progress', 'atlas-list-heading'));
-      if (!review) app.append(button(`Review this mode · ${data.review_count} due`, () => topics(selectedMode, true), 'text-button'));
+      if (!review) app.append(button(`Review · ${data.review_count}`, () => topics(selectedMode, true), 'text-button'));
       for (const [title, min, max] of [['Chapters', 1, 10], ['Experiments', 11, 20]]) {
         const group = node('section', null, 'topic-group');
         group.append(node('h2', title));
@@ -185,7 +227,7 @@
     const canvas = node('canvas');
     core.append(node('span', 'Q', 'atlas-crystal'), canvas);
     const cta = node('div', null, 'atlas-cta');
-    cta.append(node('span', 'TOUCH & PRESS THE CRYSTAL'), button(review ? 'Q · REVIEW ALL TOPICS →' : 'Q · START GENERAL SESSION →', () => start(null, review), 'atlas-start'));
+    cta.append(node('span', 'TOUCH & PRESS THE CRYSTAL'), button(review ? 'REVIEW ALL' : 'STUDY ALL', () => start(null, review), 'atlas-start'));
     scene.append(hint, core, cta);
     scene.dataset.filter = 'all';
     const filters = node('div', null, 'atlas-filters');
@@ -315,33 +357,50 @@
 
   async function start(topicId, review) {
     if (busy) return;
-    busy = true;
+    const version = screenVersion;
+    const unlock = lockControls();
     const atlas = app.querySelector('.atlas-scene');
     app.setAttribute('aria-busy', 'true');
     atlas?.setAttribute('aria-busy', 'true');
     app.querySelectorAll('button').forEach(el => { el.disabled = true; });
-    try { session = await api('/session', { mode, topic_id: topicId, review }); showSession(); }
-    catch (error) { showError(error); }
+    try {
+      const state = await api('/session', { mode, topic_id: topicId, review });
+      if (version !== screenVersion) return;
+      session = state; uncertainAnswer = null; showSession();
+    }
+    catch (error) { if (version === screenVersion) showError(error, reloadSession, 'Resume session'); }
     finally {
-      busy = false;
-      app.setAttribute('aria-busy', 'false');
       atlas?.setAttribute('aria-busy', 'false');
-      app.querySelectorAll('button').forEach(el => { el.disabled = false; });
+      unlock();
     }
   }
   async function reloadSession() {
     if (busy) return;
-    busy = true;
-    try { session = await api('/session'); showSession(); }
-    catch (error) { if (error.status === 404) { busy = false; home(); } else showError(error); }
-    finally { busy = false; }
+    const version = screenVersion;
+    const unlock = lockControls();
+    try {
+      const state = await api('/session');
+      if (version !== screenVersion) return;
+      session = state; uncertainAnswer = null; showSession();
+    }
+    catch (error) {
+      if (version !== screenVersion) return;
+      if (error.status === 404) { session = null; uncertainAnswer = null; busy = false; home(); }
+      else showError(error, reloadSession, 'Resume session');
+    }
+    finally { unlock(); }
   }
   async function endSession() {
     if (busy) return;
-    busy = true;
-    try { await api('/session/end', {}); session = null; busy = false; home(); }
-    catch (error) { showError(error, endSession); }
-    finally { busy = false; }
+    const version = screenVersion;
+    const unlock = lockControls();
+    try {
+      await api('/session/end', {});
+      if (version !== screenVersion) return;
+      session = null; uncertainAnswer = null; busy = false; home();
+    }
+    catch (error) { if (version === screenVersion) showError(error, reloadSession, 'Resume session'); }
+    finally { unlock(); }
   }
   function showSession() {
     renderScreen('session');
@@ -385,7 +444,11 @@
       answer.append(node('span', String.fromCharCode(65 + index), 'choice-letter'), content);
       choices.append(answer);
     });
-    choices.append(button('I don’t know — practice again', () => submit(question.id, null, choices), 'button secondary unknown'));
+    choices.append(button('Don’t know', () => submit(question.id, null, choices), 'button secondary unknown'));
+    if (uncertainAnswer) {
+      choices.querySelectorAll('button').forEach(el => { el.disabled = true; });
+      showError(new Error('Your previous answer is unconfirmed. Resume the session before answering again.'), reloadSession, 'Resume session');
+    }
     choices.id = 'exercise-answers';
     const switcher = node('div', null, 'exercise-switcher');
     switcher.hidden = true;
@@ -444,12 +507,14 @@
     };
   }
   async function submit(questionId, choiceIndex, choices) {
-    if (busy || !session || session.question?.id !== questionId) return;
-    busy = true;
-    choices.querySelectorAll('button').forEach(el => { el.disabled = true; });
-    app.querySelectorAll('.text-button').forEach(el => { el.disabled = true; });
+    if (busy || uncertainAnswer || !session || session.question?.id !== questionId) return;
+    const version = screenVersion;
+    const unlock = lockControls();
+    uncertainAnswer = questionId;
     try {
       const result = await api('/answer', { question_id: questionId, choice_index: choiceIndex });
+      if (version !== screenVersion) return;
+      uncertainAnswer = null;
       session = result.state;
       const feedback = result.feedback;
       const box = node('section', null, `feedback ${feedback.correct ? 'correct' : 'incorrect'}`);
@@ -459,7 +524,7 @@
       if (feedback.latex) { const formula = node('div', null, 'math feedback-math'); math(formula, feedback.latex, feedback.answer); box.append(formula); }
       if (feedback.source_note) box.append(node('p', feedback.source_note, 'source-note'));
       if (!feedback.correct) box.append(node('p', 'Added back to your practice queue.', 'retry-note'));
-      box.append(button(session.complete ? 'See completion →' : 'Next question →', showSession, 'button primary wide'));
+      box.append(button(session.complete ? 'Finish' : 'Next', showSession, 'button primary wide'));
       disposeExercise();
       disposeExercise = () => {};
       app.querySelector('.question-panel')?.remove();
@@ -474,18 +539,18 @@
       box.focus({ preventScroll: true });
       box.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' });
     } catch (error) {
-      showError(error, reloadSession);
+      if (version !== screenVersion) return;
+      showError(error, reloadSession, 'Resume session');
       // An uncertain response may already have been accepted. Never resubmit a stale token.
       announce('Unable to confirm your answer. Reload the session to continue safely.');
     } finally {
-      busy = false;
-      app.querySelectorAll('.text-button').forEach(el => { el.disabled = false; });
+      unlock();
     }
   }
   function completion() {
     heading('SESSION COMPLETE', 'A little more understood.', session.title);
     const panel = node('section', null, 'completion panel');
-    panel.append(node('div', '✓', 'completion-icon'), node('h2', 'Practice complete'), node('p', `${session.completed} / ${session.total} completed · ${percent(session.percent)}%`, 'muted'), button('Main menu', endSession, 'button primary wide'));
+    panel.append(node('div', '✓', 'completion-icon'), node('h2', 'Practice complete'), node('p', `${session.completed} / ${session.total} completed · ${percent(session.percent)}%`, 'muted'), button('Menu', endSession, 'button primary wide'));
     app.append(panel);
     announce('Session complete.');
   }

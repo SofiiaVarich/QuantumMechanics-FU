@@ -166,6 +166,8 @@ DATABASE_PATH=data/quantum_tutor.db
 CURRICULUM_PATH=curriculum
 TZ=Europe/Berlin
 REMINDER_TIMES=05:30,20:00
+# Optional confirmed exam date, YYYY-MM-DD; leave blank until known:
+EXAM_DATE=
 # Optional until the HTTPS Mini App address is configured:
 MINI_APP_URL=
 ```
@@ -174,6 +176,7 @@ MINI_APP_URL=
 - Public users are not automatically subscribed to reminders. Configured `TELEGRAM_ALLOWED_USER_IDS` remain the reminder recipients; this list may be empty in public mode.
 - `TELEGRAM_ALLOWED_USER_IDS` accepts comma-separated numeric IDs. Each allowed account has its own progress, review history, and reminders. The legacy singular `TELEGRAM_ALLOWED_USER_ID` is also accepted when the plural setting is absent.
 - `REMINDER_TIMES` accepts comma-separated 24-hour times in the configured timezone.
+- `EXAM_DATE` optionally adds a days-until-exam countdown to reminders, calculated in `TZ`. On the date it says “Exam today”; after the date the countdown is omitted. Leave blank until the exam date is confirmed.
 - Keep `DATABASE_PATH` under `data/` for Docker persistence with the supplied Compose configuration.
 - Never put tokens in commits, chats, screenshots, or logs. Revoke an exposed token through @BotFather and replace it.
 

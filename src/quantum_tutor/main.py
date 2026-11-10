@@ -34,6 +34,8 @@ def create_application(settings: Settings) -> Application:
             BotCommand("progress", "Show learning statistics"),
         ])
         application.bot_data["mini_app_url"] = settings.mini_app_url
+        application.bot_data["exam_date"] = settings.exam_date
+        application.bot_data["timezone"] = settings.timezone
         if settings.mini_app_url:
             await application.bot.set_chat_menu_button(menu_button=MenuButtonWebApp(
                 text="Study App", web_app=WebAppInfo(settings.mini_app_url),

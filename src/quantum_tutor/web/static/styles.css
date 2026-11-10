@@ -245,3 +245,83 @@ body.exercise-session { --session-gap: 8px; }
 .exercise-session .completion { overflow: auto; min-height: 0; }
 #session-title-dialog { max-width: min(90vw, 600px); max-height: 85dvh; overflow: auto; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); color: var(--text); padding: 20px; overflow-wrap: anywhere; }
 #session-title-dialog::backdrop { background: #18263888; backdrop-filter: blur(5px); }
+
+/* Keep the session palette coherent rather than mixing root and atlas themes. */
+.exercise-session .app-shell {
+  color-scheme: light;
+  --bg: #dce8f5;
+  --surface: #f4f8ff;
+  --text: #20304c;
+  --muted: #354764;
+  --border: #526987;
+  --session-answer: #ffffff;
+  --session-hover: #e3eeff;
+  --session-active: #d2e2fa;
+  --session-accent: #234c85;
+  --green: #14532d;
+  --green-soft: #e8f5ec;
+  --red: #861b2c;
+  --red-soft: #fff0f2;
+  background: var(--bg);
+  color: var(--text);
+}
+:root[data-theme='dark'] .exercise-session .app-shell {
+  color-scheme: dark;
+  --bg: #172238;
+  --surface: #23334d;
+  --text: #f1f6ff;
+  --muted: #d0dff5;
+  --border: #a0b8d8;
+  --session-answer: #293d59;
+  --session-hover: #304766;
+  --session-active: #385170;
+  --session-accent: #b8d5ff;
+  --green: #a3efbd;
+  --green-soft: #183c2b;
+  --red: #ffc2cd;
+  --red-soft: #492631;
+}
+.exercise-session .question-panel { background: var(--surface); }
+.exercise-session .choice, .exercise-session .unknown {
+  background: var(--session-answer);
+  color: var(--text);
+  border-color: var(--border);
+  opacity: 1;
+  -webkit-text-fill-color: currentColor;
+}
+.exercise-session .choice:disabled, .exercise-session .unknown:disabled {
+  opacity: 1;
+  -webkit-text-fill-color: currentColor;
+}
+.exercise-session .choice-letter {
+  background: var(--session-answer);
+  color: var(--text);
+  border-color: var(--border);
+}
+.exercise-session .choice:not(:disabled):hover, .exercise-session .unknown:not(:disabled):hover {
+  background: var(--session-hover);
+  border-color: var(--session-accent);
+}
+.exercise-session .choice:not(:disabled):active, .exercise-session .unknown:not(:disabled):active {
+  background: var(--session-active);
+  border-color: var(--session-accent);
+}
+.exercise-session :focus-visible { outline-color: var(--session-accent); }
+.exercise-session .text-button:not(.unknown), .exercise-session .eyebrow { color: var(--session-accent); }
+.exercise-session .choice .math, .exercise-session .choice .katex,
+.exercise-session .feedback .math, .exercise-session .feedback .katex {
+  color: inherit;
+  -webkit-text-fill-color: currentColor;
+}
+.exercise-session .feedback.correct { background: var(--green-soft); color: var(--text); border-color: var(--green); }
+.exercise-session .feedback.correct h2 { color: var(--green); }
+.exercise-session .feedback.incorrect { background: var(--red-soft); color: var(--text); border-color: var(--red); }
+.exercise-session .feedback.incorrect h2 { color: var(--red); }
+@media (forced-colors: active) {
+  .exercise-session .choice, .exercise-session .unknown, .exercise-session .choice-letter {
+    background: Canvas;
+    color: CanvasText;
+    border-color: ButtonText;
+  }
+  .exercise-session :focus-visible { outline-color: Highlight; }
+}

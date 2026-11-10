@@ -1,7 +1,8 @@
 'use strict';
 window.createAtlasMiniCrystals = function (spheres) {
 const THREE=window.THREE; let rd,g,mat,disposed=false;
-function dispose(){if(disposed)return;disposed=true;spheres.forEach(s=>s.classList?.remove('mini-ready'));g?.dispose();mat?.dispose();if(rd){rd.domElement.removeEventListener('webglcontextlost',dispose);rd.dispose();rd.forceContextLoss();}}
+const contextLost=()=>dispose(true);
+function dispose(contextLostAlready=false){if(disposed)return;disposed=true;spheres.forEach(s=>s.classList?.remove('mini-ready'));g?.dispose();mat?.dispose();if(rd){rd.domElement.removeEventListener('webglcontextlost',contextLost);rd.dispose();if(!contextLostAlready)rd.forceContextLoss();}}
 if(!THREE)return {draw(){},dispose};
 try{
 const VS=`uniform float uT;varying vec3 vV,vO;
@@ -37,15 +38,15 @@ col+=fres*vec3(.85,.92,1.)*.3;gl_FragColor=vec4(pow(col,vec3(.92)),1.);}`;
 
 const atlas=document.createElement('canvas'),T=128,W=5*T,H=4*T;
 rd=new THREE.WebGLRenderer({canvas:atlas,alpha:true,antialias:true});rd.setPixelRatio(1);rd.setSize(W,H,false);rd.setClearColor(0,0);rd.autoClear=false;
-atlas.addEventListener('webglcontextlost',dispose);
+atlas.addEventListener('webglcontextlost',contextLost);
 const scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(30,1,.1,20);cam.position.z=4.3;cam.updateMatrixWorld();
 const U={uT:{value:0},uWarm:{value:0},uLd:{value:new THREE.Vector3(-.5,.6,.65).normalize()}};
 g=new THREE.SphereGeometry(1,110,70);mat=new THREE.ShaderMaterial({uniforms:U,vertexShader:VS,fragmentShader:FS,extensions:{derivatives:true}});
 const mesh=new THREE.Mesh(g,mat);scene.add(mesh);
 let seed=3;const random=()=>(seed=(seed*16807)%2147483647)/2147483647;
 const tiles=spheres.map((sphere,n)=>({sphere,n,ctx:sphere.querySelector('canvas').getContext('2d'),rx:(random()-.5)*2.4,ry:random()*6.28,rz:(random()-.5)*1.2,w:(random()-.5)*.5,lx:-.5+(random()-.5)*.6,ly:.55+(random()-.5)*.4,t0:random()*40}));let last=-Infinity;
-function draw(now=0){if(disposed||(now>=last&&now-last<33))return;last=now;rd.setScissorTest(false);rd.clear();rd.setScissorTest(true);
-for(const {sphere,n,ctx,rx,ry,rz,w,lx,ly,t0} of tiles){if(!ctx)continue;const x=n%5*T,y=Math.floor(n/5)*T,sec=now/1000;
+function draw(now=0){if(disposed||document.hidden||(now>=last&&now-last<33))return;last=now;rd.setScissorTest(false);rd.clear();rd.setScissorTest(true);
+for(const {sphere,n,ctx,rx,ry,rz,w,lx,ly,t0} of tiles){if(!ctx||sphere.hidden)continue;const x=n%5*T,y=Math.floor(n/5)*T,sec=now/1000;
 rd.setViewport(x,H-y-T,T,T);rd.setScissor(x,H-y-T,T,T);mesh.rotation.set(rx,ry+w*sec,rz);
 U.uT.value=t0+sec;U.uWarm.value=sphere.dataset.category==='experiment'?.9:.05;
 U.uLd.value.set(lx+.15*Math.sin(sec*.5+n),ly,.65).normalize();

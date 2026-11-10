@@ -105,6 +105,36 @@ def test_reminders_only_configured_recipients(tmp_path, ids):
     assert [call.args[1] for call in schedule.call_args_list] == list(ids)
 
 
+@pytest.mark.parametrize("public", [False, True])
+def test_api_auth_error_contract(tmp_path, public):
+    async def scenario():
+        async with TestClient(TestServer(create_web_app(settings(tmp_path, (123,), public)))) as client:
+            now = int(time.time())
+            cases = [
+                (None, 401, "auth_missing"),
+                ("tma ", 401, "auth_missing"),
+                ("Bearer " + signed_data(123, now), 401, "auth_invalid"),
+                ("tma user=fake", 401, "auth_invalid"),
+                ("tma " + signed_data(123, now - 3601), 401, "auth_expired"),
+                ("tma " + signed_data(123, now + 100), 401, "auth_invalid"),
+            ]
+            if not public:
+                cases.append(("tma " + signed_data(789, now), 403, "auth_forbidden"))
+            for header, status, code in cases:
+                response = await client.get("/api/topics", headers={} if header is None else {"Authorization": header})
+                assert response.status == status
+                payload = await response.json()
+                assert payload["code"] == code
+                assert payload["error"]
+                assert response.headers["Cache-Control"] == "no-store"
+            for scheme in ("tma", "TMA"):
+                response = await client.get("/api/topics", headers={
+                    "Authorization": scheme + " " + signed_data(789 if public else 123, now, signature="new-signature")
+                })
+                assert response.status == 200
+    asyncio.run(scenario())
+
+
 def test_public_api_auth_replay_and_account_isolation(tmp_path):
     async def scenario():
         async with TestClient(TestServer(create_web_app(settings(tmp_path)))) as client:

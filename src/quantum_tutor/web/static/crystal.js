@@ -49,18 +49,25 @@ window.createAtlasCrystal = function (element, cv, reduced, getMode) {
   }
   const core = { addEventListener(type, fn) { element.addEventListener(type, fn); listeners.push([type, fn]); }, setPointerCapture(id) { element.setPointerCapture(id); } };
   const THREE = window.THREE;
-  let drawImpl = null, rdCleanup = null;
+  let drawImpl = null, rdCleanup = null, frameId = null;
+    function cancelDraw() { if (frameId !== null) { cancelAnimationFrame(frameId); frameId = null; } }
+    function scheduleDraw() {
+      if (disposed || !drawImpl || document.hidden || frameId !== null) return;
+      frameId = requestAnimationFrame(() => { frameId = null; draw(); });
+    }
   let cd=false, press=false, hit=false, lx=0, ly=0, vx=0, vy2=0;
   let pointer=null, samples=[], previous=null;
-  function stop() { rollingToken++; rollingReady=false; dragSpeed=0; metal?.stopAll(); audio?.end(true); cd=press=hit=false; vx=vy2=0; samples=[]; previous=null; if(pointer!==null && element.hasPointerCapture?.(pointer)) element.releasePointerCapture(pointer); pointer=null; }
+  function stop() { cancelDraw(); rollingToken++; rollingReady=false; dragSpeed=0; metal?.stopAll(); audio?.end(true); cd=press=hit=false; vx=vy2=0; samples=[]; previous=null; if(pointer!==null && element.hasPointerCapture?.(pointer)) element.releasePointerCapture(pointer); pointer=null; }
   let reduce = reduced.matches, mode = getMode();
-  function draw() { reduce = reduced.matches; mode = getMode(); if ((typeof document !== 'undefined' && document.hidden)) stop(); if (drawImpl) drawImpl(); }
+  function draw() { cancelDraw(); if (disposed) return; if (document.hidden) { stop(); return; } reduce = reduced.matches; mode = getMode(); if (drawImpl) drawImpl(); }
   const hidden = () => { if (document.hidden) stop(); };
   const reducedChanged = () => { if (reduced.matches) { vx=vy2=0; metal?.stopAll(); } };
   if (typeof document !== 'undefined') document.addEventListener('visibilitychange', hidden);
   window.addEventListener?.('pagehide', stop);
   reduced.addEventListener?.('change', reducedChanged);
-  function dispose() {
+  const contextLost = () => dispose(true);
+  function dispose(contextLostAlready = false) {
+    if (disposed) return;
     disposed = true;
     stop();
     audio?.dispose();
@@ -70,8 +77,10 @@ window.createAtlasCrystal = function (element, cv, reduced, getMode) {
     reduced.removeEventListener?.('change', reducedChanged);
     soundButton?.remove();
     listeners.forEach(([type, fn]) => element.removeEventListener(type, fn));
-        cv.removeEventListener('webglcontextlost', dispose);
-    if (rdCleanup) { rdCleanup(); rdCleanup=null; }
+    cv.removeEventListener('webglcontextlost', contextLost);
+    const cleanup = rdCleanup; rdCleanup = null;
+    drawImpl = null;
+    if (cleanup) cleanup(!contextLostAlready);
     drawImpl = null;
     element.classList.remove('webgl-ready');
   }
@@ -104,7 +113,7 @@ col+=pow(1.-NdV,3.)*vec3(.35,.4,.5)*.35;col+=vG*.18;gl_FragColor=vec4(pow(col,ve
 const vn=(()=>{const h=(x,y,z)=>{const n=Math.sin(x*127.1+y*311.7+z*74.7)*43758.5453;return n-Math.floor(n)},l=(a,b,t)=>a+(b-a)*t,u=t=>t*t*(3-2*t);
 return(x,y,z)=>{const ix=Math.floor(x),iy=Math.floor(y),iz=Math.floor(z),fx=u(x-ix),fy=u(y-iy),fz=u(z-iz);
 return l(l(l(h(ix,iy,iz),h(ix+1,iy,iz),fx),l(h(ix,iy+1,iz),h(ix+1,iy+1,iz),fx),fy),l(l(h(ix,iy,iz+1),h(ix+1,iy,iz+1),fx),l(h(ix,iy+1,iz+1),h(ix+1,iy+1,iz+1),fx),fy),fz)}})();
-const rd=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});rdCleanup = () => { rd.dispose(); rd.forceContextLoss(); };rd.setPixelRatio(Math.min(devicePixelRatio||1,2));rd.setSize(250,250,false);rd.setClearColor(0,0);
+const rd=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});rdCleanup = (force = true) => { rd.dispose(); if (force) rd.forceContextLoss(); };rd.setPixelRatio(Math.min(devicePixelRatio||1,2));rd.setSize(250,250,false);rd.setClearColor(0,0);
 const scn=new THREE.Scene(),cam=new THREE.PerspectiveCamera(30,1,.1,20);cam.position.z=5.2;cam.updateMatrixWorld();
 const g=new THREE.IcosahedronGeometry(1,10),pos=g.attributes.position,P=pos.array,v=new THREE.Vector3();
 for(let i=0;i<pos.count;i++){v.fromArray(P,i*3).normalize();
@@ -117,7 +126,7 @@ const n=Math.sin(Math.round(cx_*60)*12.9+Math.round(cy_*60)*78.2+Math.round(cz_*
 pos.needsUpdate=true;
 const U={uT:{value:0},uAcc:{value:new THREE.Color('#343F91')},uDeep:{value:new THREE.Color('#343F91')},uSil:{value:new THREE.Color('#C9D8EA')},uTch:{value:new THREE.Color('#477BFF')},uMix:{value:.4},uPt:{value:new THREE.Vector3(0,0,1)},uAmp:{value:0},uWave:{value:0}};
 const mesh=new THREE.Mesh(g,new THREE.ShaderMaterial({uniforms:U,vertexShader:VS,fragmentShader:FS,side:THREE.DoubleSide,extensions:{derivatives:true}}));
-const releaseRenderer = rdCleanup; rdCleanup = () => { g.dispose(); mesh.material.dispose(); releaseRenderer(); };
+const releaseRenderer = rdCleanup; rdCleanup = (force = true) => { g.dispose(); mesh.material.dispose(); releaseRenderer(force); };
 mesh.rotation.set(-.3,.6,0);scn.add(mesh);
 const ray=new THREE.Raycaster(),sph=new THREE.Sphere(new THREE.Vector3(),1.05),hp=new THREE.Vector3();
 aim = function(e){const r=cv.getBoundingClientRect();ray.setFromCamera({x:((e.clientX-r.left)/r.width)*2-1,y:-(((e.clientY-r.top)/r.height)*2-1)},cam);mesh.updateMatrixWorld();
@@ -136,11 +145,11 @@ releaseVisual = () => { wave=1; };
 drawImpl();
 
     element.classList.add('webgl-ready');
-    cv.addEventListener('webglcontextlost', dispose);
+    cv.addEventListener('webglcontextlost', contextLost);
   } catch (_) { if (rdCleanup) { rdCleanup(); rdCleanup=null; } drawImpl=null; aim=()=>{hit=true;}; moveVisual=()=>{}; releaseVisual=()=>{}; }
-  core.addEventListener('pointerdown',e=>{if(pointer!==null)return;stop();pointer=e.pointerId;cd=press=true;audioTime=performance.now();lx=e.clientX;ly=e.clientY;samples=[{x:lx,y:ly,t:performance.now()}];aim(e);if(hit && e.isTrusted === true && e.type === 'pointerdown' && !document.hidden){audio?.begin(e);attachMetalAudio();const token=++rollingToken; if(metal) metal.unlock(e).then(ok=>{if(ok && token===rollingToken && !disposed && !document.hidden && !metal.muted)rollingReady=true;}).catch(()=>{});}core.setPointerCapture(e.pointerId);draw()});
-core.addEventListener('pointermove',e=>{if(pointer!==null&&e.pointerId!==pointer)return;aim(e);if(cd){const dx=e.clientX-lx,dy=e.clientY-ly;moveVisual(dx,dy);lx=e.clientX;ly=e.clientY;const now=performance.now();audio?.update({speed:Math.hypot(dx,dy)*1000/Math.max(1,now-audioTime),pressure:e.pressure || .5});dragSpeed=Math.hypot(dx,dy)*.01*1000/Math.max(1,now-audioTime);dragTime=now;audioTime=now;samples.push({x:lx,y:ly,t:now});samples=samples.filter(s=>now-s.t<=120);}draw()});
-core.addEventListener('pointerup',e=>{if(e.pointerId!==pointer)return;audio?.end();const velocity=window.AtlasInertia.release(samples,performance.now(),reduced.matches);cd=press=false;pointer=null;samples=[];vx=velocity.x;vy2=velocity.y;releaseVisual();draw()});
+  core.addEventListener('pointerdown',e=>{if(pointer!==null)return;stop();pointer=e.pointerId;cd=press=true;audioTime=performance.now();lx=e.clientX;ly=e.clientY;samples=[{x:lx,y:ly,t:performance.now()}];aim(e);if(hit && e.isTrusted === true && e.type === 'pointerdown' && !document.hidden){audio?.begin(e);attachMetalAudio();const token=++rollingToken; if(metal) metal.unlock(e).then(ok=>{if(ok && token===rollingToken && !disposed && !document.hidden && !metal.muted)rollingReady=true;}).catch(()=>{});}core.setPointerCapture(e.pointerId);scheduleDraw()});
+core.addEventListener('pointermove',e=>{if(pointer!==null&&e.pointerId!==pointer)return;aim(e);if(cd){const dx=e.clientX-lx,dy=e.clientY-ly;moveVisual(dx,dy);lx=e.clientX;ly=e.clientY;const now=performance.now();audio?.update({speed:Math.hypot(dx,dy)*1000/Math.max(1,now-audioTime),pressure:e.pressure || .5});dragSpeed=Math.hypot(dx,dy)*.01*1000/Math.max(1,now-audioTime);dragTime=now;audioTime=now;samples.push({x:lx,y:ly,t:now});samples=samples.filter(s=>now-s.t<=120);}scheduleDraw()});
+core.addEventListener('pointerup',e=>{if(e.pointerId!==pointer)return;audio?.end();const velocity=window.AtlasInertia.release(samples,performance.now(),reduced.matches);cd=press=false;pointer=null;samples=[];vx=velocity.x;vy2=velocity.y;releaseVisual();scheduleDraw()});
 core.addEventListener('pointerleave',()=>{if(!cd)hit=false});
 core.addEventListener('pointercancel',stop);core.addEventListener('lostpointercapture',()=>{if(pointer!==null)stop();});
   return { draw, dispose, stop, attachMetalAudio };
