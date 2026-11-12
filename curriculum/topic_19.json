@@ -13,10 +13,12 @@
       "id": "EXP-033",
       "section_id": "19",
       "front": "Franck–Hertz excitation",
-      "definition": "Voltage spacing and excitation energy, idealized",
+      "definition": "Voltage spacing and excitation energy, idealized. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "eΔU ≈ ΔE",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Atomic Transitions and Spectroscopy; experimental derivations additionally use standard atomic physics."
     },
     {
       "id": "EXP-047",
@@ -25,7 +27,52 @@
       "definition": "Discrete energy transfer in electron–atom collisions demonstrates quantized atomic excitation energies.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Atomic Transitions and Spectroscopy; experimental derivations additionally use standard atomic physics."
+    },
+    {
+      "id": "EXP-BOOK-19-01",
+      "section_id": "19",
+      "front": "Franck–Hertz apparatus",
+      "definition": "Accelerated electrons collide with a gas; a retarding region selects electrons that retain sufficient kinetic energy.",
+      "key_rule": "K≈eU (idealized)",
+      "when_to_use": "Interpret current versus accelerating voltage with contact potentials and apparatus geometry in mind.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Atomic Transitions and Spectroscopy; experimental derivations additionally use standard atomic physics.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-19-02",
+      "section_id": "19",
+      "front": "Inelastic excitation threshold",
+      "definition": "When electron kinetic energy reaches an atomic excitation energy, inelastic collisions reduce the collector current.",
+      "key_rule": "ΔE_exc≈eΔU",
+      "when_to_use": "Voltage spacing approximates the excitation energy; experimental offsets may occur.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Atomic Transitions and Spectroscopy; experimental derivations additionally use standard atomic physics.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-19-03",
+      "section_id": "19",
+      "front": "Franck–Hertz periodic current minima",
+      "definition": "Repeated current dips occur as electrons can undergo additional inelastic collisions at higher accelerating voltages.",
+      "key_rule": "Uₙ₊₁−Uₙ≈ΔE_exc/e",
+      "when_to_use": "Spacing is more reliable than absolute threshold without contact-potential corrections.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Atomic Transitions and Spectroscopy; experimental derivations additionally use standard atomic physics.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-19-04",
+      "section_id": "19",
+      "front": "Excitation versus ionization",
+      "definition": "Atomic excitation changes an internal energy level, while ionization removes an electron from the atom.",
+      "key_rule": "E_ion>E_exc (for a given bound excited level)",
+      "when_to_use": "Distinguish discrete excitation thresholds from ionization onset.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Atomic Transitions and Spectroscopy; experimental derivations additionally use standard atomic physics.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
     }
   ],
   "concept_metadata": {
