@@ -53,6 +53,66 @@
       "key_rule": "",
       "source_status": "Not started",
       "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "PHOTO-ELECTRON-07",
+      "section_id": "15",
+      "front": "Electron: de Broglie momentum",
+      "definition": "An electron with momentum p has matter wavelength λ=h/p.",
+      "key_rule": "p=h/λ=ℏk",
+      "when_to_use": "p is momentum magnitude and k=2π/λ.",
+      "source_status": "User-supplied lecture slide; explanatory notation clarified",
+      "source_file": "Slide photograph supplied by user"
+    },
+    {
+      "id": "PHOTO-ELECTRON-08",
+      "section_id": "15",
+      "front": "Electron: nonrelativistic kinetic energy",
+      "definition": "For electron speed much smaller than c, kinetic energy is quadratic in momentum.",
+      "key_rule": "Ekin=p²/(2mₑ)=ℏ²k²/(2mₑ)",
+      "when_to_use": "Nonrelativistic approximation v≪c.",
+      "source_status": "User-supplied lecture slide; explanatory notation clarified",
+      "source_file": "Slide photograph supplied by user"
+    },
+    {
+      "id": "PHOTO-ELECTRON-09",
+      "section_id": "15",
+      "front": "Electron: spin magnitude",
+      "definition": "An electron is a spin-½ particle, with fixed total spin magnitude.",
+      "key_rule": "|S|=√[s(s+1)]ℏ=√3ℏ/2, s=1/2",
+      "when_to_use": "Spin projection along any axis is ±ℏ/2.",
+      "source_status": "User-supplied lecture slide; explanatory notation clarified",
+      "source_file": "Slide photograph supplied by user"
+    },
+    {
+      "id": "PHOTO-ELECTRON-10",
+      "section_id": "15",
+      "front": "Electron: electric charge",
+      "definition": "An electron carries negative elementary electric charge.",
+      "key_rule": "qₑ=−e≈−1.602176634×10⁻¹⁹ C",
+      "when_to_use": "e is the positive elementary charge magnitude.",
+      "source_status": "User-supplied lecture slide; explanatory notation clarified",
+      "source_file": "Slide photograph supplied by user"
+    },
+    {
+      "id": "PHOTO-ELECTRON-11",
+      "section_id": "15",
+      "front": "Electron: relativistic energy",
+      "definition": "Relativistic energy and momentum satisfy the invariant energy relation.",
+      "key_rule": "E²=(pc)²+(mₑc²)²; γ=1/√(1−v²/c²)",
+      "when_to_use": "The slide uses speed-dependent relativistic mass; modern convention keeps invariant mass mₑ fixed.",
+      "source_status": "User-supplied lecture slide; explanatory notation clarified",
+      "source_file": "Slide photograph supplied by user; convention clarified"
+    },
+    {
+      "id": "PHOTO-ELECTRON-12",
+      "section_id": "15",
+      "front": "Electron versus photon comparison",
+      "definition": "Photon energy is proportional to frequency, whereas free-electron kinetic energy depends on momentum and mass.",
+      "key_rule": "Eγ=pc; Ekin,e≈p²/(2mₑ)",
+      "when_to_use": "Electron expression assumes nonrelativistic speed.",
+      "source_status": "User-supplied lecture slide; explanatory notation clarified",
+      "source_file": "Slide photograph supplied by user"
     }
   ],
   "concept_metadata": {
