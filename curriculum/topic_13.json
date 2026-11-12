@@ -33,28 +33,34 @@
       "id": "EXP-013",
       "section_id": "13",
       "front": "Einstein photoelectric equation",
-      "definition": "Maximum photoelectron kinetic energy",
+      "definition": "Maximum photoelectron kinetic energy. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "K_max = hν − W_A",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Photoelectric Effect."
     },
     {
       "id": "EXP-014",
       "section_id": "13",
       "front": "Stopping potential",
-      "definition": "Magnitude of electron charge",
+      "definition": "Magnitude of electron charge. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "eU_s = K_max",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Photoelectric Effect."
     },
     {
       "id": "EXP-015",
       "section_id": "13",
       "front": "Threshold frequency",
-      "definition": "Photoemission threshold",
+      "definition": "Photoemission threshold. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "ν₀ = W_A/h",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Photoelectric Effect."
     },
     {
       "id": "EXP-041",
@@ -63,7 +69,52 @@
       "definition": "In the single-photon regime, no photoemission occurs below the material threshold hν < W_A. Multiphoton processes are outside this approximation.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Photoelectric Effect."
+    },
+    {
+      "id": "EXP-BOOK-13-01",
+      "section_id": "13",
+      "front": "Intensity versus photon frequency",
+      "definition": "Above threshold, increasing light intensity generally increases electron count; increasing frequency raises maximum electron energy.",
+      "key_rule": "Kmax=hν−W_A",
+      "when_to_use": "The ordinary one-photon photoelectric model assumes a clean material surface.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Photoelectric Effect.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-13-02",
+      "section_id": "13",
+      "front": "Stopping-voltage measurement",
+      "definition": "A retarding electric field can stop the most energetic emitted photoelectrons, allowing an estimate of Kmax.",
+      "key_rule": "eUstop=Kmax",
+      "when_to_use": "Use the magnitude of stopping voltage; sign conventions differ.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Photoelectric Effect.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-13-03",
+      "section_id": "13",
+      "front": "Photoelectric threshold wavelength",
+      "definition": "The longest vacuum wavelength capable of producing one-photon emission follows from the work function.",
+      "key_rule": "λthreshold=hc/W_A",
+      "when_to_use": "Below threshold frequency (above threshold wavelength), one-photon emission is absent.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Photoelectric Effect.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-13-04",
+      "section_id": "13",
+      "front": "Einstein plot and Planck constant",
+      "definition": "Plotting stopping voltage against light frequency yields a straight line in the ideal model.",
+      "key_rule": "Ustop=(h/e)ν−W_A/e",
+      "when_to_use": "Slope h/e gives Planck's constant; intercept estimates the work function.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Photoelectric Effect.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
     }
   ],
   "concept_metadata": {
