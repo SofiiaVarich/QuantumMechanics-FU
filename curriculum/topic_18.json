@@ -13,10 +13,12 @@
       "id": "EXP-028",
       "section_id": "18",
       "front": "Rydberg formula",
-      "definition": "Hydrogen emission n2>n1",
+      "definition": "Hydrogen emission n2>n1. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "1/λ = R_H (1/n₁² − 1/n₂²)",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Shankar (2nd ed.), Ch. 13: Hydrogen Atom; Zettili (2nd ed.), Ch. 1: Atomic Transitions and Spectroscopy."
     },
     {
       "id": "EXP-029",
@@ -25,7 +27,8 @@
       "definition": "Hydrogen emission transitions from n ≥ 3 to n = 2; higher-order Balmer lines extend into the ultraviolet.",
       "key_rule": "1/λ = R_H (1/2² − 1/n²), n ≥ 3",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "textbook_context": "Shankar (2nd ed.), Ch. 13: Hydrogen Atom; Zettili (2nd ed.), Ch. 1: Atomic Transitions and Spectroscopy."
     },
     {
       "id": "EXP-046",
@@ -34,7 +37,52 @@
       "definition": "Hydrogen spectral lines corresponding to transitions from higher principal quantum numbers to n=2.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "textbook_context": "Shankar (2nd ed.), Ch. 13: Hydrogen Atom; Zettili (2nd ed.), Ch. 1: Atomic Transitions and Spectroscopy."
+    },
+    {
+      "id": "EXP-BOOK-18-01",
+      "section_id": "18",
+      "front": "Balmer alpha line",
+      "definition": "The Hα line is the n=3 to n=2 hydrogen transition in the Balmer series.",
+      "key_rule": "1/λ_Hα=R_H(1/2²−1/3²)",
+      "when_to_use": "Its wavelength is about 656 nm in air (vacuum value slightly different).",
+      "textbook_context": "Shankar (2nd ed.), Ch. 13: Hydrogen Atom; Zettili (2nd ed.), Ch. 1: Atomic Transitions and Spectroscopy.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-18-02",
+      "section_id": "18",
+      "front": "Balmer series limit",
+      "definition": "As the upper principal quantum number grows, Balmer wavelengths approach a short-wavelength series limit.",
+      "key_rule": "λlimit=4/R_H≈364.6 nm (vacuum)",
+      "when_to_use": "This is the threshold from n=2 to the continuum.",
+      "textbook_context": "Shankar (2nd ed.), Ch. 13: Hydrogen Atom; Zettili (2nd ed.), Ch. 1: Atomic Transitions and Spectroscopy.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-18-03",
+      "section_id": "18",
+      "front": "Lyman versus Balmer versus Paschen",
+      "definition": "Hydrogen emission series differ by their final principal quantum number.",
+      "key_rule": "nfinal=1 (Lyman), 2 (Balmer), 3 (Paschen)",
+      "when_to_use": "Lyman is ultraviolet, Balmer largely visible, Paschen infrared.",
+      "textbook_context": "Shankar (2nd ed.), Ch. 13: Hydrogen Atom; Zettili (2nd ed.), Ch. 1: Atomic Transitions and Spectroscopy.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-18-04",
+      "section_id": "18",
+      "front": "Hydrogen emission and absorption",
+      "definition": "An emission line releases a photon while absorption raises the atom to a higher energy level.",
+      "key_rule": "hν=|Eᵢ−E_f|",
+      "when_to_use": "The same level spacing appears in absorption and emission when transitions are allowed.",
+      "textbook_context": "Shankar (2nd ed.), Ch. 13: Hydrogen Atom; Zettili (2nd ed.), Ch. 1: Atomic Transitions and Spectroscopy.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
     }
   ],
   "concept_metadata": {
