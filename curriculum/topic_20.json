@@ -16,34 +16,41 @@
       "definition": "Spin–orbit interaction for a central potential energy V(r), including the Thomas factor; V is not the electric potential.",
       "key_rule": "H_SO = [1/(2mₑ²c²r)] (dV/dr) L · S",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "textbook_context": "Shankar (2nd ed.), Ch. 12: Angular Momentum, Ch. 13: Hydrogen Atom, Ch. 17: Time-Independent Perturbation Theory; Griffiths & Schroeter (3rd ed.), Ch. 4 and Ch. 7."
     },
     {
       "id": "EXP-035",
       "section_id": "20",
       "front": "Total angular momentum",
-      "definition": "Orbital plus spin",
+      "definition": "Orbital plus spin. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "J = L + S (vectors)",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Shankar (2nd ed.), Ch. 12: Angular Momentum, Ch. 13: Hydrogen Atom, Ch. 17: Time-Independent Perturbation Theory; Griffiths & Schroeter (3rd ed.), Ch. 4 and Ch. 7."
     },
     {
       "id": "EXP-036",
       "section_id": "20",
       "front": "Spin–orbit scalar product",
-      "definition": "Useful angular momentum identity",
+      "definition": "Useful angular momentum identity. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "L · S = ½(J² − L² − S²)",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Shankar (2nd ed.), Ch. 12: Angular Momentum, Ch. 13: Hydrogen Atom, Ch. 17: Time-Independent Perturbation Theory; Griffiths & Schroeter (3rd ed.), Ch. 4 and Ch. 7."
     },
     {
       "id": "EXP-037",
       "section_id": "20",
       "front": "Eigenvalue of L dot S",
-      "definition": "In coupled angular-momentum eigenstate",
+      "definition": "In coupled angular-momentum eigenstate. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "⟨L · S⟩ = (ℏ²/2)[j(j+1) − l(l+1) − s(s+1)]",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Shankar (2nd ed.), Ch. 12: Angular Momentum, Ch. 13: Hydrogen Atom, Ch. 17: Time-Independent Perturbation Theory; Griffiths & Schroeter (3rd ed.), Ch. 4 and Ch. 7."
     },
     {
       "id": "EXP-048",
@@ -52,7 +59,63 @@
       "definition": "Coupling between orbital angular momentum and intrinsic spin; contributes to atomic fine structure.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "textbook_context": "Shankar (2nd ed.), Ch. 12: Angular Momentum, Ch. 13: Hydrogen Atom, Ch. 17: Time-Independent Perturbation Theory; Griffiths & Schroeter (3rd ed.), Ch. 4 and Ch. 7."
+    },
+    {
+      "id": "EXP-BOOK-20-01",
+      "section_id": "20",
+      "front": "Spin–orbit coupling in a central potential",
+      "definition": "In a central potential energy V(r), the nonrelativistic fine-structure interaction is proportional to L·S.",
+      "key_rule": "H_SO=[1/(2mₑ²c²r)](dV/dr)L·S",
+      "when_to_use": "Includes the Thomas factor; this V is potential energy, not electric potential.",
+      "textbook_context": "Shankar (2nd ed.), Ch. 12: Angular Momentum, Ch. 13: Hydrogen Atom, Ch. 17: Time-Independent Perturbation Theory; Griffiths & Schroeter (3rd ed.), Ch. 4 and Ch. 7.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-20-02",
+      "section_id": "20",
+      "front": "Allowed j values for electron spin",
+      "definition": "Combining orbital l with spin s=1/2 yields total angular momenta j=l±1/2, except l=0 has j=1/2 only.",
+      "key_rule": "j=|l−s|,…,l+s",
+      "when_to_use": "Use angular-momentum addition rules.",
+      "textbook_context": "Shankar (2nd ed.), Ch. 12: Angular Momentum, Ch. 13: Hydrogen Atom, Ch. 17: Time-Independent Perturbation Theory; Griffiths & Schroeter (3rd ed.), Ch. 4 and Ch. 7.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-20-03",
+      "section_id": "20",
+      "front": "Expectation of L dot S",
+      "definition": "In states of fixed l,s,j, the spin–orbit scalar product has a definite eigenvalue.",
+      "key_rule": "⟨L·S⟩=ℏ²[j(j+1)−l(l+1)−s(s+1)]/2",
+      "when_to_use": "Useful for first-order spin–orbit energy shifts.",
+      "textbook_context": "Shankar (2nd ed.), Ch. 12: Angular Momentum, Ch. 13: Hydrogen Atom, Ch. 17: Time-Independent Perturbation Theory; Griffiths & Schroeter (3rd ed.), Ch. 4 and Ch. 7.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-20-04",
+      "section_id": "20",
+      "front": "Fine structure versus Zeeman splitting",
+      "definition": "Spin–orbit coupling produces fine structure without an applied field; Zeeman splitting arises from external magnetic fields.",
+      "key_rule": "ΔE_Z≈μ_Bg_Jm_JB",
+      "when_to_use": "The linear Zeeman formula assumes a suitable weak-field coupling regime.",
+      "textbook_context": "Shankar (2nd ed.), Ch. 12: Angular Momentum, Ch. 13: Hydrogen Atom, Ch. 17: Time-Independent Perturbation Theory; Griffiths & Schroeter (3rd ed.), Ch. 4 and Ch. 7.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-20-05",
+      "section_id": "20",
+      "front": "Landé g factor",
+      "definition": "The Landé factor gives the effective magnetic moment of an LS-coupled state in the weak-field regime.",
+      "key_rule": "g_J≈1+[j(j+1)+s(s+1)−l(l+1)]/[2j(j+1)]",
+      "when_to_use": "Formula assumes g_L≈1 and g_S≈2 and requires j>0.",
+      "textbook_context": "Shankar (2nd ed.), Ch. 12: Angular Momentum, Ch. 13: Hydrogen Atom, Ch. 17: Time-Independent Perturbation Theory; Griffiths & Schroeter (3rd ed.), Ch. 4 and Ch. 7.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
     }
   ],
   "concept_metadata": {
