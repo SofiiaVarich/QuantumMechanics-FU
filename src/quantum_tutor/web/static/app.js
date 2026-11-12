@@ -215,24 +215,15 @@
       data.topics.filter(t => t.number >= 1 && t.number <= 10).forEach(t => theoryList.append(makeTopicCard(t)));
       theory.append(theoryList); app.append(theory);
       const franke = node('section', null, 'topic-group');
-      franke.append(node('h2', 'Katharina Franke · Vorlesungen nach Termin und Thema'));
-      const lectureSessions = [
-        ['03.11.2026', 'Schwarzkörperstrahlung', [11]],
-        ['05.11.2026', 'Stefan–Boltzmann-Gesetz', [12]],
-        ['10.11.2026', 'Photoeffekt und Compton-Effekt', [13, 14]],
-        ['12.11.2026', 'Elektronenbeugung', [15]],
-        ['17.11.2026', 'Statistische Deutung der Wellenfunktion', [16]],
-        ['Termin offen', 'Atommodelle, Balmer-Serie und Franck–Hertz-Versuch', [17, 18, 19]],
-        ['Termin offen', 'Spin–Bahn-Kopplung', [20]]
-      ];
-      lectureSessions.forEach(([date, title, ids], index) => {
-        const session = node('section', null, 'topic-group lecture-session');
-        session.append(node('h3', `Vorlesung ${index + 1} · ${title}`));
-        session.append(node('p', `📅 ${date} · ${ids.length} ${ids.length === 1 ? 'Thema' : 'Themen'}`, 'topic-meta'));
-        const list = node('div', null, 'topic-list');
-        ids.map(id => data.topics.find(t => t.number === id)).filter(Boolean).forEach(t => list.append(makeTopicCard(t)));
-        if (list.childElementCount) { session.append(list); franke.append(session); }
-      });
+      franke.append(node('h2', 'Katharina Franke · Vorlesungsthemen'));
+      // Present Franke topics exactly like Eisert chapters: one selectable card
+      // per named lecture topic, with its scheduled date in the metadata.
+      const frankeList = node('div', null, 'topic-list');
+      data.topics.filter(t => t.number >= 11 && t.number <= 20)
+        .sort((a, b) => a.number - b.number)
+        .forEach(t => frankeList.append(makeTopicCard(t)));
+      if (!frankeList.childElementCount) frankeList.append(node('p', 'No lecture topics available.', 'muted'));
+      franke.append(frankeList);
       app.append(franke);
     } catch (error) { if (version === screenVersion) { app.querySelector('.loading')?.remove(); showError(error, () => topics(selectedMode, review)); } }
   }
