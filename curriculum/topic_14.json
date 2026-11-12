@@ -36,25 +36,30 @@
       "definition": "Photon wavelength shift after scattering from a free electron initially at rest; θ is the photon scattering angle.",
       "key_rule": "Δλ = h/(mₑc) · (1 − cos θ)",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Compton Effect."
     },
     {
       "id": "EXP-017",
       "section_id": "14",
       "front": "Compton wavelength",
-      "definition": "Electron Compton wavelength",
+      "definition": "Electron Compton wavelength. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "λ_C = h/(mₑc)",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Compton Effect."
     },
     {
       "id": "EXP-018",
       "section_id": "14",
       "front": "Photon momentum",
-      "definition": "Photon momentum magnitude",
+      "definition": "Photon momentum magnitude. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "p_γ = h/λ",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Compton Effect."
     },
     {
       "id": "EXP-042",
@@ -63,7 +68,52 @@
       "definition": "Photon scattering on an electron changes photon wavelength; evidence for photon momentum.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Compton Effect."
+    },
+    {
+      "id": "EXP-BOOK-14-01",
+      "section_id": "14",
+      "front": "Compton energy-angle relation",
+      "definition": "A scattered photon loses energy when it transfers recoil energy to an initially resting free electron.",
+      "key_rule": "E'=E/[1+(E/(mₑc²))(1−cosθ)]",
+      "when_to_use": "Applicable to free electrons initially at rest.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Compton Effect.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-14-02",
+      "section_id": "14",
+      "front": "Compton recoil electron",
+      "definition": "Energy conservation links incident and scattered photon energies to recoil-electron kinetic energy.",
+      "key_rule": "Kₑ=E−E'",
+      "when_to_use": "Neglect initial electron motion and binding energy.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Compton Effect.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-14-03",
+      "section_id": "14",
+      "front": "Compton maximum shift",
+      "definition": "The largest wavelength shift occurs for backward photon scattering.",
+      "key_rule": "Δλmax=2h/(mₑc)",
+      "when_to_use": "At θ=180°, the photon reverses direction.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Compton Effect.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-14-04",
+      "section_id": "14",
+      "front": "Thomson limit",
+      "definition": "At low photon energies compared with electron rest energy, recoil is small and scattering approaches the classical Thomson regime.",
+      "key_rule": "E≪mₑc²",
+      "when_to_use": "The photon wavelength shift is then small compared with its wavelength.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Compton Effect.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
     }
   ],
   "concept_metadata": {
