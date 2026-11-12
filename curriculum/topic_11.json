@@ -51,64 +51,78 @@
       "id": "EXP-001",
       "section_id": "11",
       "front": "Photon energy",
-      "definition": "Photon energy",
+      "definition": "Photon energy. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "E=hν=ℏω",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations."
     },
     {
       "id": "EXP-002",
       "section_id": "11",
       "front": "Quantized oscillator",
-      "definition": "Oscillator energy including zero-point energy",
+      "definition": "Oscillator energy including zero-point energy. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "Eₙ = (n + ½)hν",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations."
     },
     {
       "id": "EXP-003",
       "section_id": "11",
       "front": "Thermal occupation",
-      "definition": "Mean thermal occupation",
+      "definition": "Mean thermal occupation. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "n̄ = 1 / (exp(hν/(k_B T)) − 1)",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations."
     },
     {
       "id": "EXP-004",
       "section_id": "11",
       "front": "Mean thermal energy",
-      "definition": "Thermal part, excludes zero-point energy",
+      "definition": "Thermal part, excludes zero-point energy. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "Ē_th = hν / (exp(hν/(k_B T)) − 1)",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations."
     },
     {
       "id": "EXP-005",
       "section_id": "11",
       "front": "Planck law frequency",
-      "definition": "Spectral energy density per frequency",
+      "definition": "Spectral energy density per frequency. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "u_ν(T) = (8πhν³/c³) / (exp(hν/(k_B T)) − 1)",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations."
     },
     {
       "id": "EXP-006",
       "section_id": "11",
       "front": "Planck law wavelength",
-      "definition": "Spectral energy density per wavelength",
+      "definition": "Spectral energy density per wavelength. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "u_λ(T) = (8πhc/λ⁵) / (exp(hc/(λk_B T)) − 1)",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations."
     },
     {
       "id": "EXP-007",
       "section_id": "11",
       "front": "Rayleigh–Jeans law",
-      "definition": "Low-frequency approximation",
+      "definition": "Low-frequency approximation. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "u_ν(T) ≈ 8πν²k_B T / c³",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations."
     },
     {
       "id": "EXP-008",
@@ -117,7 +131,8 @@
       "definition": "Temperature times the peak wavelength of the per-wavelength blackbody spectrum; the per-frequency peak is different.",
       "key_rule": "λ_max T = b",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations."
     },
     {
       "id": "EXP-038",
@@ -126,7 +141,8 @@
       "definition": "Ideal absorber and emitter of electromagnetic radiation; spectral distribution depends on temperature.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations."
     },
     {
       "id": "EXP-039",
@@ -135,17 +151,20 @@
       "definition": "Classical Rayleigh–Jeans theory predicts unphysical divergence of radiation energy at high frequencies.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations."
     },
     {
       "id": "PHOTO-ELECTRON-01",
       "section_id": "11",
       "front": "Photon: frequency and wavelength",
-      "definition": "For light in vacuum frequency and wavelength satisfy ν=c/λ.",
+      "definition": "For light in vacuum frequency and wavelength satisfy ν=c/λ. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "ν=c/λ",
       "when_to_use": "For electromagnetic waves in vacuum; in a medium use phase velocity.",
       "source_status": "User-supplied lecture slide; explanatory notation clarified",
-      "source_file": "Slide photograph supplied by user"
+      "source_file": "Slide photograph supplied by user",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations."
     },
     {
       "id": "PHOTO-ELECTRON-02",
@@ -155,17 +174,20 @@
       "key_rule": "E=hν=hc/λ ≈ (1240 eV·nm)/λ[nm]",
       "when_to_use": "Use λ in nm for the numerical approximation.",
       "source_status": "User-supplied lecture slide; explanatory notation clarified",
-      "source_file": "Slide photograph supplied by user"
+      "source_file": "Slide photograph supplied by user",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations."
     },
     {
       "id": "PHOTO-ELECTRON-03",
       "section_id": "11",
       "front": "Photon: momentum",
-      "definition": "A photon has momentum despite zero invariant rest mass.",
+      "definition": "A photon has momentum despite zero invariant rest mass. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "p=E/c=h/λ",
       "when_to_use": "Use vacuum wavelength and photon energy.",
       "source_status": "User-supplied lecture slide; explanatory notation clarified",
-      "source_file": "Slide photograph supplied by user"
+      "source_file": "Slide photograph supplied by user",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations."
     },
     {
       "id": "PHOTO-ELECTRON-04",
@@ -175,7 +197,8 @@
       "key_rule": "J·p̂=±ℏ",
       "when_to_use": "Helicity is the spin projection, not a classical spinning object.",
       "source_status": "User-supplied lecture slide; explanatory notation clarified",
-      "source_file": "Slide photograph supplied by user"
+      "source_file": "Slide photograph supplied by user",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations."
     },
     {
       "id": "PHOTO-ELECTRON-05",
@@ -185,7 +208,8 @@
       "key_rule": "m₀=0; E=pc",
       "when_to_use": "Do not confuse invariant mass with E/c².",
       "source_status": "User-supplied lecture slide; explanatory notation clarified",
-      "source_file": "Slide photograph supplied by user"
+      "source_file": "Slide photograph supplied by user",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations."
     },
     {
       "id": "PHOTO-ELECTRON-06",
@@ -195,7 +219,52 @@
       "key_rule": "k=2π/λ; ν̃=1/λ",
       "when_to_use": "k has units rad/m; ν̃ is often reported in cm⁻¹.",
       "source_status": "User-supplied lecture slide; explanatory notation clarified",
-      "source_file": "Slide photograph supplied by user; notation clarified"
+      "source_file": "Slide photograph supplied by user; notation clarified",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations."
+    },
+    {
+      "id": "EXP-BOOK-11-01",
+      "section_id": "11",
+      "front": "Cavity mode counting",
+      "definition": "The density of electromagnetic standing-wave modes in a large cavity grows quadratically with frequency; this is why classical equipartition fails at high frequency.",
+      "key_rule": "g(ν)/V=8πν²/c³",
+      "when_to_use": "Use for deriving Rayleigh–Jeans and Planck spectral energy density.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-11-02",
+      "section_id": "11",
+      "front": "Planck mean oscillator energy",
+      "definition": "Quantized thermal oscillators have a Bose-like mean excitation energy, not the classical kBT at every frequency.",
+      "key_rule": "⟨E⟩=hν/(exp(hν/kBT)−1)",
+      "when_to_use": "Zero-point energy does not contribute to the thermal radiation law.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-11-03",
+      "section_id": "11",
+      "front": "Spectral-variable conversion",
+      "definition": "Spectral densities per unit frequency and per unit wavelength cannot be compared without a Jacobian.",
+      "key_rule": "Bλ=Bν·|dν/dλ|=Bν c/λ²",
+      "when_to_use": "Their maxima occur at different converted coordinates; do not substitute λ=c/ν into Bν without the Jacobian.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-11-04",
+      "section_id": "11",
+      "front": "Blackbody Wien and Rayleigh–Jeans limits",
+      "definition": "Planck radiation reproduces the classical low-frequency limit and the exponentially suppressed high-frequency limit.",
+      "key_rule": "hν≪kBT: Bν≈2ν²kBT/c²; hν≫kBT: Bν≈(2hν³/c²)e^(−hν/kBT)",
+      "when_to_use": "Use to explain the ultraviolet catastrophe and its resolution.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Origins of Quantum Physics — Blackbody Radiation; Griffiths & Schroeter (3rd ed.), Ch. 1 for wavefunction foundations.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
     }
   ],
   "concept_metadata": {
