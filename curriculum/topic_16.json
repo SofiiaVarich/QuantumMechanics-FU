@@ -13,46 +13,56 @@
       "id": "EXP-023",
       "section_id": "16",
       "front": "Born rule density",
-      "definition": "Position probability density",
+      "definition": "Position probability density. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "ρ(x,t) = |ψ(x,t)|²",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Griffiths & Schroeter (3rd ed.), Ch. 1: Statistical Interpretation, Probability, Normalization, Momentum, Uncertainty; Shankar (2nd ed.), Ch. 4: Postulates."
     },
     {
       "id": "EXP-024",
       "section_id": "16",
       "front": "Probability interval",
-      "definition": "Probability in interval",
+      "definition": "Probability in interval. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "P(a ≤ x ≤ b) = ∫ₐᵇ |ψ(x,t)|² dx",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Griffiths & Schroeter (3rd ed.), Ch. 1: Statistical Interpretation, Probability, Normalization, Momentum, Uncertainty; Shankar (2nd ed.), Ch. 4: Postulates."
     },
     {
       "id": "EXP-025",
       "section_id": "16",
       "front": "Normalization",
-      "definition": "Normalized wavefunction in one dimension",
+      "definition": "Normalized wavefunction in one dimension. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "∫₋∞⁺∞ |ψ(x,t)|² dx = 1",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Griffiths & Schroeter (3rd ed.), Ch. 1: Statistical Interpretation, Probability, Normalization, Momentum, Uncertainty; Shankar (2nd ed.), Ch. 4: Postulates."
     },
     {
       "id": "EXP-026",
       "section_id": "16",
       "front": "Expectation of position",
-      "definition": "Mean position",
+      "definition": "Mean position. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "⟨x⟩ = ∫ x|ψ(x,t)|² dx",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Griffiths & Schroeter (3rd ed.), Ch. 1: Statistical Interpretation, Probability, Normalization, Momentum, Uncertainty; Shankar (2nd ed.), Ch. 4: Postulates."
     },
     {
       "id": "EXP-027",
       "section_id": "16",
       "front": "Heisenberg uncertainty",
-      "definition": "Standard-deviation uncertainty",
+      "definition": "Standard-deviation uncertainty. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "Δx Δp ≥ ℏ/2",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Griffiths & Schroeter (3rd ed.), Ch. 1: Statistical Interpretation, Probability, Normalization, Momentum, Uncertainty; Shankar (2nd ed.), Ch. 4: Postulates."
     },
     {
       "id": "EXP-044",
@@ -61,7 +71,8 @@
       "definition": "The squared modulus of the wavefunction is a position probability density.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "textbook_context": "Griffiths & Schroeter (3rd ed.), Ch. 1: Statistical Interpretation, Probability, Normalization, Momentum, Uncertainty; Shankar (2nd ed.), Ch. 4: Postulates."
     },
     {
       "id": "EXP-045",
@@ -70,7 +81,52 @@
       "definition": "The integral of probability density over all space equals one.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "textbook_context": "Griffiths & Schroeter (3rd ed.), Ch. 1: Statistical Interpretation, Probability, Normalization, Momentum, Uncertainty; Shankar (2nd ed.), Ch. 4: Postulates."
+    },
+    {
+      "id": "EXP-BOOK-16-01",
+      "section_id": "16",
+      "front": "Probability current in one dimension",
+      "definition": "The Schrödinger equation for a real scalar potential implies transport of probability via a current.",
+      "key_rule": "j=(ℏ/m)Im(ψ*∂ₓψ)",
+      "when_to_use": "For a charged particle with vector potential the current requires a gauge-covariant term.",
+      "textbook_context": "Griffiths & Schroeter (3rd ed.), Ch. 1: Statistical Interpretation, Probability, Normalization, Momentum, Uncertainty; Shankar (2nd ed.), Ch. 4: Postulates.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-16-02",
+      "section_id": "16",
+      "front": "Probability continuity equation",
+      "definition": "Unitary Schrödinger evolution conserves total probability locally.",
+      "key_rule": "∂ₜ|ψ|²+∇·j=0",
+      "when_to_use": "Integrate over space and use boundary conditions to recover norm conservation.",
+      "textbook_context": "Griffiths & Schroeter (3rd ed.), Ch. 1: Statistical Interpretation, Probability, Normalization, Momentum, Uncertainty; Shankar (2nd ed.), Ch. 4: Postulates.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-16-03",
+      "section_id": "16",
+      "front": "Variance and uncertainty",
+      "definition": "Measurement spread is described by variance; noncommuting observables obey Robertson's uncertainty bound.",
+      "key_rule": "(ΔA)²=⟨A²⟩−⟨A⟩²; ΔxΔp≥ℏ/2",
+      "when_to_use": "An uncertainty bound concerns state preparation statistics, not measurement-device error alone.",
+      "textbook_context": "Griffiths & Schroeter (3rd ed.), Ch. 1: Statistical Interpretation, Probability, Normalization, Momentum, Uncertainty; Shankar (2nd ed.), Ch. 4: Postulates.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-16-04",
+      "section_id": "16",
+      "front": "Position measurement and Born statistics",
+      "definition": "For a normalized state, a position detector's interval probability is an integral of |ψ|².",
+      "key_rule": "P(a≤x≤b)=∫ₐᵇ|ψ(x,t)|²dx",
+      "when_to_use": "The probability at an exact continuous point is zero; |ψ(x)|² is a density.",
+      "textbook_context": "Griffiths & Schroeter (3rd ed.), Ch. 1: Statistical Interpretation, Probability, Normalization, Momentum, Uncertainty; Shankar (2nd ed.), Ch. 4: Postulates.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
     }
   ],
   "concept_metadata": {
