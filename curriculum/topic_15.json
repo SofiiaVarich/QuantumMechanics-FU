@@ -173,6 +173,126 @@
       "textbook_context": "Zettili (2nd ed.), Ch. 1: de Broglie's Hypothesis and Experimental Confirmation.",
       "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
       "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-SLIDE-15-01",
+      "section_id": "15",
+      "front": "Debye–Scherrer geometry",
+      "definition": "A polycrystalline specimen contains randomly oriented microcrystals. Those satisfying Bragg's condition diffract electrons into cones; the screen intersects these cones as rings.",
+      "key_rule": "2d sinθ=nλ",
+      "when_to_use": "Use to explain why rings rather than isolated spots appear.",
+      "source_status": "Transcribed and explained from user-provided lecture photographs; approximations stated explicitly",
+      "source_file": "Katharina Franke lecture photo, Slide 35"
+    },
+    {
+      "id": "EXP-SLIDE-15-02",
+      "section_id": "15",
+      "front": "Bragg angle versus scattering angle",
+      "definition": "θ is the Bragg angle to a reflecting crystal plane; the angle between the incident and diffracted beam is 2θ.",
+      "key_rule": "scattering angle=2θ",
+      "when_to_use": "Do not confuse θ with the full beam-deflection angle.",
+      "source_status": "Transcribed and explained from user-provided lecture photographs; approximations stated explicitly",
+      "source_file": "Katharina Franke lecture photo, Slide 35"
+    },
+    {
+      "id": "EXP-SLIDE-15-03",
+      "section_id": "15",
+      "front": "Diffraction ring geometry",
+      "definition": "In the lecture's detector geometry, the ring radius r, effective distance D and scattering angle obey a tangent relation.",
+      "key_rule": "tan(2θ)=r/D",
+      "when_to_use": "Use the lecture diagram's definitions of r and D; if a different apparatus defines ring diameter, divide it by two first.",
+      "source_status": "Transcribed and explained from user-provided lecture photographs; approximations stated explicitly",
+      "source_file": "Katharina Franke lecture photo, Slides 35 and photographed blackboard"
+    },
+    {
+      "id": "EXP-SLIDE-15-04",
+      "section_id": "15",
+      "front": "Small-angle diffraction ring approximation",
+      "definition": "For small angles in radians, tan(2θ)≈2θ and sinθ≈θ. Combining detector geometry with Bragg's law yields the ring-radius relation.",
+      "key_rule": "r≈nDλ/d",
+      "when_to_use": "Requires small θ and consistent distance/radius definitions.",
+      "source_status": "Transcribed and explained from user-provided lecture photographs; approximations stated explicitly",
+      "source_file": "Katharina Franke lecture photo, Photographed blackboard"
+    },
+    {
+      "id": "EXP-SLIDE-15-05",
+      "section_id": "15",
+      "front": "Crystal spacing from ring radius",
+      "definition": "For a measured diffraction-ring radius and known electron wavelength, Bragg's law estimates the lattice-plane spacing.",
+      "key_rule": "d≈nDλ/r",
+      "when_to_use": "The diffraction order n must be identified; use the small-angle regime.",
+      "source_status": "Transcribed and explained from user-provided lecture photographs; approximations stated explicitly",
+      "source_file": "Katharina Franke lecture photo, Photographed blackboard"
+    },
+    {
+      "id": "EXP-SLIDE-15-06",
+      "section_id": "15",
+      "front": "Electron diffraction voltage scaling",
+      "definition": "For electrons accelerated through potential U from rest, nonrelativistic momentum p≈√(2mₑeU), so wavelength and ring radius decrease with increasing voltage.",
+      "key_rule": "λ=h/√(2mₑeU); r∝U^(−1/2)",
+      "when_to_use": "Assumes fixed d, D, n and nonrelativistic electron energy.",
+      "source_status": "Transcribed and explained from user-provided lecture photographs; approximations stated explicitly",
+      "source_file": "Katharina Franke lecture photo, Slides 35–36 and photographed blackboard"
+    },
+    {
+      "id": "EXP-SLIDE-15-07",
+      "section_id": "15",
+      "front": "Debye–Scherrer wavelength ordering",
+      "definition": "For the same d and diffraction order, longer de Broglie wavelength requires a larger Bragg angle and thus a larger diffraction ring.",
+      "key_rule": "λ₁>λ₂>λ₃ ⇒ θ₁>θ₂>θ₃",
+      "when_to_use": "Compare the same lattice planes and order; angles must remain physically allowed.",
+      "source_status": "Transcribed and explained from user-provided lecture photographs; approximations stated explicitly",
+      "source_file": "Katharina Franke lecture photo, Slide 35"
+    },
+    {
+      "id": "EXP-SLIDE-15-08",
+      "section_id": "15",
+      "front": "de Broglie wavelength from kinetic energy",
+      "definition": "For a nonrelativistic particle, momentum p=mv=√(2mEkin), giving wavelength λ=h/p.",
+      "key_rule": "λ=h/p=h/(mv)=h/√(2mEkin)",
+      "when_to_use": "Do not use p=mv at relativistic speeds.",
+      "source_status": "Transcribed and explained from user-provided lecture photographs; approximations stated explicitly",
+      "source_file": "Katharina Franke lecture photo, Slide 36"
+    },
+    {
+      "id": "EXP-SLIDE-15-09",
+      "section_id": "15",
+      "front": "Electron wavelength numerical rule",
+      "definition": "The slide gives an electron de Broglie wavelength in ångströms when kinetic energy is inserted in electronvolts.",
+      "key_rule": "λ[Å]=√(150.4/E[eV])",
+      "when_to_use": "Nonrelativistic approximation; E is electron kinetic energy.",
+      "source_status": "Transcribed and explained from user-provided lecture photographs; approximations stated explicitly",
+      "source_file": "Katharina Franke lecture photo, Slide 36"
+    },
+    {
+      "id": "EXP-SLIDE-15-10",
+      "section_id": "15",
+      "front": "Helium atom wavelength numerical rule",
+      "definition": "The slide gives a helium-atom de Broglie wavelength in ångströms when kinetic energy is inserted in millielectronvolts.",
+      "key_rule": "λ[Å]=√(20.9/E[meV])",
+      "when_to_use": "For helium atoms, not electrons; nonrelativistic kinetic energy.",
+      "source_status": "Transcribed and explained from user-provided lecture photographs; approximations stated explicitly",
+      "source_file": "Katharina Franke lecture photo, Slide 36"
+    },
+    {
+      "id": "EXP-SLIDE-15-11",
+      "section_id": "15",
+      "front": "Particle energy ranges for crystal diffraction",
+      "definition": "The lecture compares electrons of about 10–500 eV and helium atoms of about 10–100 meV as probes with wavelengths comparable to atomic spacings.",
+      "key_rule": "electrons: 10–500 eV; He atoms: 10–100 meV",
+      "when_to_use": "Use these as the example ranges on the slide, not universal experimental limits.",
+      "source_status": "Transcribed and explained from user-provided lecture photographs; approximations stated explicitly",
+      "source_file": "Katharina Franke lecture photo, Slide 36"
+    },
+    {
+      "id": "EXP-SLIDE-15-12",
+      "section_id": "15",
+      "front": "Electron diffraction data analysis",
+      "definition": "Record ring radii at several acceleration voltages and compare r with the de Broglie scaling predicted by Bragg diffraction.",
+      "key_rule": "r≈(nDh/d)/√(2mₑeU)",
+      "when_to_use": "Check whether r is a radius or diameter and whether nonrelativistic and small-angle approximations hold.",
+      "source_status": "Transcribed and explained from user-provided lecture photographs; approximations stated explicitly",
+      "source_file": "Katharina Franke lecture photo, Photographed spreadsheet and blackboard"
     }
   ],
   "concept_metadata": {
