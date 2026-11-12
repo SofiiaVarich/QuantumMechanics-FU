@@ -34,37 +34,45 @@
       "id": "EXP-009",
       "section_id": "12",
       "front": "Stefan–Boltzmann radiant exitance",
-      "definition": "Ideal blackbody total radiant power per area",
+      "definition": "Ideal blackbody total radiant power per area. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "M=σ T^4",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Blackbody Radiation (integrated radiation laws)."
     },
     {
       "id": "EXP-010",
       "section_id": "12",
       "front": "Total emitted power",
-      "definition": "Greybody emissivity approximation",
+      "definition": "Greybody emissivity approximation. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "P = εσAT⁴",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Blackbody Radiation (integrated radiation laws)."
     },
     {
       "id": "EXP-011",
       "section_id": "12",
       "front": "Net radiative exchange",
-      "definition": "Simple radiative exchange approximation",
+      "definition": "Simple radiative exchange approximation. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "P_net = εσA(T⁴ − T_env⁴)",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Blackbody Radiation (integrated radiation laws)."
     },
     {
       "id": "EXP-012",
       "section_id": "12",
       "front": "Stefan–Boltzmann constant",
-      "definition": "Fundamental-constant expression",
+      "definition": "Fundamental-constant expression. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "σ = 2π⁵k_B⁴ / (15h³c²)",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Blackbody Radiation (integrated radiation laws)."
     },
     {
       "id": "EXP-040",
@@ -73,7 +81,41 @@
       "definition": "Radiant power per unit area of a blackbody scales as the fourth power of absolute temperature.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Blackbody Radiation (integrated radiation laws)."
+    },
+    {
+      "id": "EXP-BOOK-12-01",
+      "section_id": "12",
+      "front": "Stefan–Boltzmann law from Planck integration",
+      "definition": "Integrating Planck's spectral radiance over all frequencies and the outward hemisphere yields total blackbody radiant exitance.",
+      "key_rule": "M=π∫₀∞Bνdν=σT⁴",
+      "when_to_use": "Bν is radiance per steradian; the factor π assumes a Lambertian blackbody.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Blackbody Radiation (integrated radiation laws).",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-12-02",
+      "section_id": "12",
+      "front": "Emissivity and greybody model",
+      "definition": "Real surfaces are approximated by a wavelength-independent emissivity ε in a greybody model.",
+      "key_rule": "P=εσAT⁴, 0≤ε≤1",
+      "when_to_use": "Real emissivity may depend on wavelength, temperature and direction.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Blackbody Radiation (integrated radiation laws).",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-12-03",
+      "section_id": "12",
+      "front": "Temperature measurement by radiation",
+      "definition": "An idealized radiation measurement can infer temperature from total exitance or a calibrated spectral profile.",
+      "key_rule": "T=(M/σ)^(1/4)",
+      "when_to_use": "Requires blackbody behavior or a known emissivity and measurement geometry.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: Blackbody Radiation (integrated radiation laws).",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
     }
   ],
   "concept_metadata": {
