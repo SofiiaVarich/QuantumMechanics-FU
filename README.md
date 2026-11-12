@@ -1,4 +1,13 @@
 # Quantum Tutor
+<div align="center">
+
+📚 **Explore · Experiment · Learn** 📚
+
+![Animated project banner](https://readme-typing-svg.demolab.com?font=Fira+Code&size=19&pause=1100&color=8B5CF6&center=true&vCenter=true&width=620&lines=QuantumMechanics%20FU;Built%20with%20curiosity%20and%20code)
+
+</div>
+
+
 
 A Telegram bot **and Mini App**, with public or allowlist-restricted access, for quantum mechanics, sharing one curriculum and progress database. The chat bot handles study sessions and reminders; the Mini App adds a visual course browser, typeset formulas, answer buttons, review, and progress screens.
 
