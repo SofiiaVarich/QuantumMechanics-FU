@@ -136,6 +136,66 @@
       "key_rule": "",
       "source_status": "Not started",
       "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+    },
+    {
+      "id": "PHOTO-ELECTRON-01",
+      "section_id": "11",
+      "front": "Photon: frequency and wavelength",
+      "definition": "For light in vacuum frequency and wavelength satisfy ν=c/λ.",
+      "key_rule": "ν=c/λ",
+      "when_to_use": "For electromagnetic waves in vacuum; in a medium use phase velocity.",
+      "source_status": "User-supplied lecture slide; explanatory notation clarified",
+      "source_file": "Slide photograph supplied by user"
+    },
+    {
+      "id": "PHOTO-ELECTRON-02",
+      "section_id": "11",
+      "front": "Photon: energy from wavelength",
+      "definition": "Photon energy is inversely proportional to its vacuum wavelength.",
+      "key_rule": "E=hν=hc/λ ≈ (1240 eV·nm)/λ[nm]",
+      "when_to_use": "Use λ in nm for the numerical approximation.",
+      "source_status": "User-supplied lecture slide; explanatory notation clarified",
+      "source_file": "Slide photograph supplied by user"
+    },
+    {
+      "id": "PHOTO-ELECTRON-03",
+      "section_id": "11",
+      "front": "Photon: momentum",
+      "definition": "A photon has momentum despite zero invariant rest mass.",
+      "key_rule": "p=E/c=h/λ",
+      "when_to_use": "Use vacuum wavelength and photon energy.",
+      "source_status": "User-supplied lecture slide; explanatory notation clarified",
+      "source_file": "Slide photograph supplied by user"
+    },
+    {
+      "id": "PHOTO-ELECTRON-04",
+      "section_id": "11",
+      "front": "Photon: polarization and helicity",
+      "definition": "Circularly polarized photon states have helicities ±ℏ along the propagation direction.",
+      "key_rule": "J·p̂=±ℏ",
+      "when_to_use": "Helicity is the spin projection, not a classical spinning object.",
+      "source_status": "User-supplied lecture slide; explanatory notation clarified",
+      "source_file": "Slide photograph supplied by user"
+    },
+    {
+      "id": "PHOTO-ELECTRON-05",
+      "section_id": "11",
+      "front": "Photon: zero invariant mass",
+      "definition": "Photons have zero invariant mass but nonzero energy and momentum.",
+      "key_rule": "m₀=0; E=pc",
+      "when_to_use": "Do not confuse invariant mass with E/c².",
+      "source_status": "User-supplied lecture slide; explanatory notation clarified",
+      "source_file": "Slide photograph supplied by user"
+    },
+    {
+      "id": "PHOTO-ELECTRON-06",
+      "section_id": "11",
+      "front": "Wavenumber convention",
+      "definition": "Angular wavenumber k differs from spectroscopic wavenumber ν̃.",
+      "key_rule": "k=2π/λ; ν̃=1/λ",
+      "when_to_use": "k has units rad/m; ν̃ is often reported in cm⁻¹.",
+      "source_status": "User-supplied lecture slide; explanatory notation clarified",
+      "source_file": "Slide photograph supplied by user; notation clarified"
     }
   ],
   "concept_metadata": {
