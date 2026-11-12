@@ -13,10 +13,12 @@
       "id": "EXP-019",
       "section_id": "15",
       "front": "de Broglie wavelength",
-      "definition": "Matter wavelength",
+      "definition": "Matter wavelength. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "λ=h/p",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: de Broglie's Hypothesis and Experimental Confirmation."
     },
     {
       "id": "EXP-020",
@@ -25,25 +27,30 @@
       "definition": "Nonrelativistic electron accelerated from negligible initial kinetic energy through voltage magnitude U; e > 0 is the charge magnitude and eU ≪ mₑc².",
       "key_rule": "λ ≈ h / √(2mₑeU)",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: de Broglie's Hypothesis and Experimental Confirmation."
     },
     {
       "id": "EXP-021",
       "section_id": "15",
       "front": "Bragg law",
-      "definition": "Crystal diffraction",
+      "definition": "Crystal diffraction. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "2d sin θ = nλ",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: de Broglie's Hypothesis and Experimental Confirmation."
     },
     {
       "id": "EXP-022",
       "section_id": "15",
       "front": "Constructive interference",
-      "definition": "Two-path grating condition, geometry dependent",
+      "definition": "Two-path grating condition, geometry dependent. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "d sin θ = nλ",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: de Broglie's Hypothesis and Experimental Confirmation."
     },
     {
       "id": "EXP-043",
@@ -52,17 +59,20 @@
       "definition": "Electrons form interference/diffraction patterns, demonstrating wave properties of matter.",
       "key_rule": "",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: de Broglie's Hypothesis and Experimental Confirmation."
     },
     {
       "id": "PHOTO-ELECTRON-07",
       "section_id": "15",
       "front": "Electron: de Broglie momentum",
-      "definition": "An electron with momentum p has matter wavelength λ=h/p.",
+      "definition": "An electron with momentum p has matter wavelength λ=h/p. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "p=h/λ=ℏk",
       "when_to_use": "p is momentum magnitude and k=2π/λ.",
       "source_status": "User-supplied lecture slide; explanatory notation clarified",
-      "source_file": "Slide photograph supplied by user"
+      "source_file": "Slide photograph supplied by user",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: de Broglie's Hypothesis and Experimental Confirmation."
     },
     {
       "id": "PHOTO-ELECTRON-08",
@@ -72,7 +82,8 @@
       "key_rule": "Ekin=p²/(2mₑ)=ℏ²k²/(2mₑ)",
       "when_to_use": "Nonrelativistic approximation v≪c.",
       "source_status": "User-supplied lecture slide; explanatory notation clarified",
-      "source_file": "Slide photograph supplied by user"
+      "source_file": "Slide photograph supplied by user",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: de Broglie's Hypothesis and Experimental Confirmation."
     },
     {
       "id": "PHOTO-ELECTRON-09",
@@ -82,17 +93,20 @@
       "key_rule": "|S|=√[s(s+1)]ℏ=√3ℏ/2, s=1/2",
       "when_to_use": "Spin projection along any axis is ±ℏ/2.",
       "source_status": "User-supplied lecture slide; explanatory notation clarified",
-      "source_file": "Slide photograph supplied by user"
+      "source_file": "Slide photograph supplied by user",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: de Broglie's Hypothesis and Experimental Confirmation."
     },
     {
       "id": "PHOTO-ELECTRON-10",
       "section_id": "15",
       "front": "Electron: electric charge",
-      "definition": "An electron carries negative elementary electric charge.",
+      "definition": "An electron carries negative elementary electric charge. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "qₑ=−e≈−1.602176634×10⁻¹⁹ C",
       "when_to_use": "e is the positive elementary charge magnitude.",
       "source_status": "User-supplied lecture slide; explanatory notation clarified",
-      "source_file": "Slide photograph supplied by user"
+      "source_file": "Slide photograph supplied by user",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: de Broglie's Hypothesis and Experimental Confirmation."
     },
     {
       "id": "PHOTO-ELECTRON-11",
@@ -102,7 +116,8 @@
       "key_rule": "E²=(pc)²+(mₑc²)²; γ=1/√(1−v²/c²)",
       "when_to_use": "The slide uses speed-dependent relativistic mass; modern convention keeps invariant mass mₑ fixed.",
       "source_status": "User-supplied lecture slide; explanatory notation clarified",
-      "source_file": "Slide photograph supplied by user; convention clarified"
+      "source_file": "Slide photograph supplied by user; convention clarified",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: de Broglie's Hypothesis and Experimental Confirmation."
     },
     {
       "id": "PHOTO-ELECTRON-12",
@@ -112,7 +127,52 @@
       "key_rule": "Eγ=pc; Ekin,e≈p²/(2mₑ)",
       "when_to_use": "Electron expression assumes nonrelativistic speed.",
       "source_status": "User-supplied lecture slide; explanatory notation clarified",
-      "source_file": "Slide photograph supplied by user"
+      "source_file": "Slide photograph supplied by user",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: de Broglie's Hypothesis and Experimental Confirmation."
+    },
+    {
+      "id": "EXP-BOOK-15-01",
+      "section_id": "15",
+      "front": "Davisson–Germer crystal experiment",
+      "definition": "Electron scattering from a nickel crystal yields diffraction peaks consistent with the de Broglie wavelength.",
+      "key_rule": "λ=h/p",
+      "when_to_use": "Connect observed peak angles with crystal-plane spacing and electron acceleration energy.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: de Broglie's Hypothesis and Experimental Confirmation.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-15-02",
+      "section_id": "15",
+      "front": "Bragg geometry",
+      "definition": "Constructive reflection from adjacent crystal planes requires an integer path difference in the standard Bragg geometry.",
+      "key_rule": "2d sinθ=nλ",
+      "when_to_use": "θ is the angle to the lattice planes; experimental detector angles may use another convention.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: de Broglie's Hypothesis and Experimental Confirmation.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-15-03",
+      "section_id": "15",
+      "front": "Relativistic electron wavelength",
+      "definition": "At higher acceleration voltages, the relativistic momentum relation corrects the nonrelativistic de Broglie wavelength.",
+      "key_rule": "pc=√[K(K+2mₑc²)]; λ=hc/√[K(K+2mₑc²)]",
+      "when_to_use": "Use K≈eU for an electron accelerated from rest through voltage U.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: de Broglie's Hypothesis and Experimental Confirmation.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-15-04",
+      "section_id": "15",
+      "front": "Single-electron interference",
+      "definition": "Even electrons sent one at a time build an interference distribution when path information is unavailable.",
+      "key_rule": "P(x)=|ψ₁(x)+ψ₂(x)|²",
+      "when_to_use": "Interference is lost if which-path information destroys coherence.",
+      "textbook_context": "Zettili (2nd ed.), Ch. 1: de Broglie's Hypothesis and Experimental Confirmation.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
     }
   ],
   "concept_metadata": {
