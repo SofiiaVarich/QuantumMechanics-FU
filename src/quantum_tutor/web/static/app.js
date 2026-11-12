@@ -199,22 +199,41 @@
       app.append(controls);
       app.append(node('h2', 'Topic list · dates, cards & progress', 'atlas-list-heading'));
       if (!review) app.append(button(`Review · ${data.review_count}`, () => topics(selectedMode, true), 'text-button'));
-      for (const [title, min, max] of [['Chapters', 1, 10], ['Experiments', 11, 20]]) {
-        const group = node('section', null, 'topic-group');
-        group.append(node('h2', title));
+      // Eisert: one card group per chapter. Franke: lecture dates with topic cards underneath.
+      const makeTopicCard = topic => {
+        const item = button('', () => start(topic.number, review), 'topic-card');
+        const content = node('div', null, 'topic-content');
+        content.append(node('h3', topic.title_de || topic.title || ''));
+        const metadata = [topic.professor, topic.date || (topic.number > 10 ? 'Termin offen' : null), `${review ? topic.review_count : topic.card_count} cards`].filter(Boolean);
+        content.append(node('p', metadata.join(' · '), 'topic-meta'), meter(topic.percent, `${topic.title || topic.title_de}: ${percent(topic.percent)}%`));
+        item.append(node('span', topic.number > 10 ? `E${topic.number - 10}` : String(topic.number).padStart(2, '0'), 'topic-number'), content, node('span', `${percent(topic.percent)}%`, 'topic-percent'));
+        return item;
+      };
+      const theory = node('section', null, 'topic-group');
+      theory.append(node('h2', 'Jens Eisert · Kapitel 1–10'));
+      const theoryList = node('div', null, 'topic-list');
+      data.topics.filter(t => t.number >= 1 && t.number <= 10).forEach(t => theoryList.append(makeTopicCard(t)));
+      theory.append(theoryList); app.append(theory);
+      const franke = node('section', null, 'topic-group');
+      franke.append(node('h2', 'Katharina Franke · Vorlesungen nach Termin und Thema'));
+      const lectureSessions = [
+        ['03.11.2026', 'Schwarzkörperstrahlung', [11]],
+        ['05.11.2026', 'Stefan–Boltzmann-Gesetz', [12]],
+        ['10.11.2026', 'Photoeffekt und Compton-Effekt', [13, 14]],
+        ['12.11.2026', 'Elektronenbeugung', [15]],
+        ['17.11.2026', 'Statistische Deutung der Wellenfunktion', [16]],
+        ['Termin offen', 'Atommodelle, Balmer-Serie und Franck–Hertz-Versuch', [17, 18, 19]],
+        ['Termin offen', 'Spin–Bahn-Kopplung', [20]]
+      ];
+      lectureSessions.forEach(([date, title, ids], index) => {
+        const session = node('section', null, 'topic-group lecture-session');
+        session.append(node('h3', `Vorlesung ${index + 1} · ${title}`));
+        session.append(node('p', `📅 ${date} · ${ids.length} ${ids.length === 1 ? 'Thema' : 'Themen'}`, 'topic-meta'));
         const list = node('div', null, 'topic-list');
-        data.topics.filter(topic => topic.number >= min && topic.number <= max).forEach(topic => {
-          const item = button('', () => start(topic.number, review), 'topic-card');
-          const content = node('div', null, 'topic-content');
-          content.append(node('h3', topic.title_de || topic.title || '')); 
-          const metadata = [topic.professor, topic.date, `${review ? topic.review_count : topic.card_count} cards`].filter(value => value !== null && value !== undefined && value !== '');
-          content.append(node('p', metadata.join(' · '), 'topic-meta'), meter(topic.percent, `${topic.title || topic.title_de}: ${percent(topic.percent)}%`));
-          item.append(node('span', String(topic.number).padStart(2, '0'), 'topic-number'), content, node('span', `${percent(topic.percent)}%`, 'topic-percent'));
-          list.append(item);
-        });
-        if (!list.childElementCount) list.append(node('p', 'No topics available in this group.', 'muted'));
-        group.append(list); app.append(group);
-      }
+        ids.map(id => data.topics.find(t => t.number === id)).filter(Boolean).forEach(t => list.append(makeTopicCard(t)));
+        if (list.childElementCount) { session.append(list); franke.append(session); }
+      });
+      app.append(franke);
     } catch (error) { if (version === screenVersion) { app.querySelector('.loading')?.remove(); showError(error, () => topics(selectedMode, review)); } }
   }
 
