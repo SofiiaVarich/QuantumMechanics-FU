@@ -13,28 +13,78 @@
       "id": "EXP-030",
       "section_id": "17",
       "front": "Bohr energies",
-      "definition": "Hydrogen energy levels",
+      "definition": "Hydrogen energy levels. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "Eₙ ≈ −13.6 eV / n²",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Shankar (2nd ed.), Ch. 13: Hydrogen Atom; Griffiths & Schroeter (3rd ed.), Ch. 4: Quantum Mechanics in Three Dimensions."
     },
     {
       "id": "EXP-031",
       "section_id": "17",
       "front": "Transition photon",
-      "definition": "Energy conservation for atomic transition",
+      "definition": "Energy conservation for atomic transition. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "hν = |Eᵢ − E_f|",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Shankar (2nd ed.), Ch. 13: Hydrogen Atom; Griffiths & Schroeter (3rd ed.), Ch. 4: Quantum Mechanics in Three Dimensions."
     },
     {
       "id": "EXP-032",
       "section_id": "17",
       "front": "Bohr angular momentum",
-      "definition": "Bohr model quantization",
+      "definition": "Bohr model quantization. This concept is used to interpret the observable physical effect, its measured variables, and the quantitative prediction represented by the formula.",
       "key_rule": "mₑvr = nℏ",
       "source_status": "Not started",
-      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx"
+      "source_file": "QM_Experimental_Topics_Concept_Learning_Cards.xlsx",
+      "study_guidance": "Explain the physical meaning of each symbol, identify the approximation, and predict the result of changing one experimental parameter.",
+      "textbook_context": "Shankar (2nd ed.), Ch. 13: Hydrogen Atom; Griffiths & Schroeter (3rd ed.), Ch. 4: Quantum Mechanics in Three Dimensions."
+    },
+    {
+      "id": "EXP-BOOK-17-01",
+      "section_id": "17",
+      "front": "Rutherford scattering and nuclear atom",
+      "definition": "Large-angle alpha scattering established that atoms contain a small, dense positively charged nucleus.",
+      "key_rule": "Coulomb force F∝1/r²",
+      "when_to_use": "The classical nuclear atom alone cannot explain stable electron orbits and line spectra.",
+      "textbook_context": "Shankar (2nd ed.), Ch. 13: Hydrogen Atom; Griffiths & Schroeter (3rd ed.), Ch. 4: Quantum Mechanics in Three Dimensions.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-17-02",
+      "section_id": "17",
+      "front": "Bohr radius",
+      "definition": "The Bohr model combines Coulomb attraction and angular-momentum quantization to predict a characteristic hydrogen length scale.",
+      "key_rule": "a₀=4πε₀ℏ²/(mₑe²)≈0.529 Å",
+      "when_to_use": "Reduced mass yields a small correction for hydrogen.",
+      "textbook_context": "Shankar (2nd ed.), Ch. 13: Hydrogen Atom; Griffiths & Schroeter (3rd ed.), Ch. 4: Quantum Mechanics in Three Dimensions.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-17-03",
+      "section_id": "17",
+      "front": "Bohr model limitations",
+      "definition": "Bohr's quantized orbits explain hydrogen-like spectra but not general many-electron atoms or line intensities.",
+      "key_rule": "Eₙ∝−Z²/n²",
+      "when_to_use": "Modern orbital wavefunctions replace classical electron trajectories.",
+      "textbook_context": "Shankar (2nd ed.), Ch. 13: Hydrogen Atom; Griffiths & Schroeter (3rd ed.), Ch. 4: Quantum Mechanics in Three Dimensions.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
+    },
+    {
+      "id": "EXP-BOOK-17-04",
+      "section_id": "17",
+      "front": "Hydrogen-like ions",
+      "definition": "A one-electron ion of nuclear charge Z has energies scaling approximately with Z squared.",
+      "key_rule": "Eₙ≈−13.6 eV·Z²/n²",
+      "when_to_use": "Nonrelativistic approximation with infinite nuclear mass.",
+      "textbook_context": "Shankar (2nd ed.), Ch. 13: Hydrogen Atom; Griffiths & Schroeter (3rd ed.), Ch. 4: Quantum Mechanics in Three Dimensions.",
+      "source_status": "Original explanatory card based on textbook topic coverage; not a verbatim quotation",
+      "source_file": "Publisher tables of contents and standard quantum-mechanics derivations"
     }
   ],
   "concept_metadata": {
